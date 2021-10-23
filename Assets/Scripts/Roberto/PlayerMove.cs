@@ -12,6 +12,9 @@ public class PlayerMove : MonoBehaviour
     [Header("Camera")]
     [SerializeField]
     private Camera CameraPrincipale;
+    [Header("Cursor")]
+    [SerializeField]
+    private GameObject cursore;
     [Header("Altro")]
     [SerializeField]
     Vector3 forward, right;
@@ -20,6 +23,7 @@ public class PlayerMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.visible = false; 
         forward = Camera.main.transform.forward;
         forward.y = 0;
         forward = Vector3.Normalize(forward);
@@ -34,14 +38,16 @@ public class PlayerMove : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Ray cameraRay = CameraPrincipale.ScreenPointToRay(Input.mousePosition);
-         Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
+        Ray cameraRay = CameraPrincipale.ScreenPointToRay(Input.mousePosition); //traccio un punto tramite Ray nella posizione del mouse
+        Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
         float rayLenght;
         if(groundPlane.Raycast(cameraRay, out rayLenght))
         {
-            Vector3 pointToLook = cameraRay.GetPoint(rayLenght);
+            Vector3 pointToLook = cameraRay.GetPoint(rayLenght); //il punto da guardare è nel punto calcolato del Ray
             Debug.DrawLine(cameraRay.origin, pointToLook, Color.blue);
-            if(Input.GetMouseButton(1))
+            cursore.transform.position = pointToLook; //il mouse avrà posizione del PuntoGuardato
+
+            if (Input.GetMouseButton(1)) //Se premo mouse destro allora il personaggio guerderà in posizione del mouse
             {
                 testo.SetActive(true);
                 transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z));
