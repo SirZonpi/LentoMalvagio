@@ -7,8 +7,8 @@ public class PlayerMove : MonoBehaviour
     //RobertoNiciforo
     [Header("Valori")]
     public float MoveSpeed = 4f;
-    [SerializeField]
     public float roatitionSpeed = 0f;
+    public float rollForce = 0f;
     [Header("Camera")]
     [SerializeField]
     private Camera CameraPrincipale;
@@ -17,12 +17,20 @@ public class PlayerMove : MonoBehaviour
     private GameObject cursore;
     [Header("Altro")]
     [SerializeField]
-    Vector3 forward, right;
+    private Rigidbody rb;
+    [SerializeField]
+    private Animator anim;
+    [SerializeField]
+    Vector3 forward;
+    [SerializeField]
+    Vector3 right;
     public GameObject testo;
+    bool rolling;
 
     // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
         Cursor.visible = false; 
         forward = Camera.main.transform.forward;
         forward.y = 0;
@@ -62,23 +70,37 @@ public class PlayerMove : MonoBehaviour
         {
             Move();
         }
+
     }
 
     private void Move()
     {
+        
         Vector3 direction = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         Vector3 rightMovement = right * MoveSpeed * Time.fixedDeltaTime * Input.GetAxis("Horizontal"); 
         Vector3 upMovement = forward * MoveSpeed * Time.fixedDeltaTime * Input.GetAxis("Vertical");
-
         Vector3 heading = Vector3.Normalize(rightMovement + upMovement);
-
         if(!Input.GetMouseButton(1))
         {
             transform.forward = Vector3.Lerp(transform.forward, heading * roatitionSpeed, 0.1f);
         }
-       
+
+        if (Input.GetKey(KeyCode.Space) && rolling == false)
+        {
+            anim.SetTrigger("rollAnim");
+            rb.AddForce(heading * rollForce, ForceMode.Impulse);
+            StartCoroutine(CanRoll());
+        }
 
         transform.position += rightMovement;
         transform.position += upMovement;
+    }
+
+    IEnumerator CanRoll()
+    {
+        rolling = true;
+        yield return new WaitForSeconds(1.5f);
+        rolling = false;
+
     }
 }
