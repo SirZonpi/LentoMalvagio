@@ -9,6 +9,7 @@ public class PlayerMove : MonoBehaviour
     public float MoveSpeed = 4f;
     public float roatitionSpeed = 0f;
     public float rollForce = 0f;
+    public float StandardMoveSpeed;
     [Header("Camera")]
     [SerializeField]
     private Camera CameraPrincipale;
@@ -22,14 +23,20 @@ public class PlayerMove : MonoBehaviour
     private Animator anim;
     [SerializeField]
     Vector3 forward;
+    Vector3 direction;
+    Vector3 rightMovement;
+    Vector3 upMovement;
+    Vector3 heading;
     [SerializeField]
     Vector3 right;
-    public GameObject testo;
     bool rolling;
+    bool puoiMuoverti = true;
+    bool puoiRotolare = true;
 
     // Start is called before the first frame update
     void Start()
     {
+        MoveSpeed = StandardMoveSpeed;
         rb = GetComponent<Rigidbody>();
         Cursor.visible = false; 
         forward = Camera.main.transform.forward;
@@ -41,7 +48,7 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void FixedUpdate()
@@ -57,13 +64,14 @@ public class PlayerMove : MonoBehaviour
 
             if (Input.GetMouseButton(1)) //Se premo mouse destro allora il personaggio guerderà in posizione del mouse
             {
-                testo.SetActive(true);
                 transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z));
+                puoiMuoverti = false;
             }
             else
             {
-                testo.SetActive(false);
+                puoiMuoverti = true;
             }
+
 
         }
         if(Input.anyKey)
@@ -75,12 +83,26 @@ public class PlayerMove : MonoBehaviour
 
     private void Move()
     {
-        
-        Vector3 direction = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        Vector3 rightMovement = right * MoveSpeed * Time.fixedDeltaTime * Input.GetAxis("Horizontal"); 
-        Vector3 upMovement = forward * MoveSpeed * Time.fixedDeltaTime * Input.GetAxis("Vertical");
-        Vector3 heading = Vector3.Normalize(rightMovement + upMovement);
-        if(!Input.GetMouseButton(1))
+        if(puoiMuoverti) //se posso muoverti allora il player cammina, prende i varii input ecc.
+        {
+            direction = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+            rightMovement = right * MoveSpeed * Time.fixedDeltaTime * Input.GetAxis("Horizontal");
+            upMovement = forward * MoveSpeed * Time.fixedDeltaTime * Input.GetAxis("Vertical");
+            MoveSpeed = StandardMoveSpeed;
+            puoiRotolare = true;
+        }
+        else //se non posso muovermi il player non cammina. La velocità è a 0.
+        {
+            MoveSpeed = 0f;
+            rightMovement = right * MoveSpeed * Time.fixedDeltaTime * Input.GetAxis("Horizontal");
+            upMovement = forward * MoveSpeed * Time.fixedDeltaTime * Input.GetAxis("Vertical");
+            puoiRotolare = false;
+        }
+        //direziono il giocatore
+        heading = Vector3.Normalize(rightMovement + upMovement);
+
+
+        if (!Input.GetMouseButton(1))
         {
             transform.forward = Vector3.Lerp(transform.forward, heading * roatitionSpeed, 0.1f);
         }
@@ -101,6 +123,5 @@ public class PlayerMove : MonoBehaviour
         rolling = true;
         yield return new WaitForSeconds(1.5f);
         rolling = false;
-
     }
 }
