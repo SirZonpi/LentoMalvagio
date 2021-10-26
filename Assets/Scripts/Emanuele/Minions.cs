@@ -29,7 +29,7 @@ public class Minions : MonoBehaviour
         if (Vector3.Distance(transform.position, newPos) > 0.2f)
         {
             //_enemyStateManager.SwitchState(_enemyStateManager.scaredState);
-           // _enemyStateManager.SwitchState(_enemyStateManager.walkState);
+            _enemyStateManager.SwitchState(_enemyStateManager.walkState);
         }
         else if(Vector3.Distance(transform.position,newPos) <0.2f)
         {

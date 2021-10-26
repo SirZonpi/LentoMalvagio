@@ -33,6 +33,8 @@ public class PlayerMove : MonoBehaviour
     bool puoiMuoverti = true;
     bool puoiRotolare = true;
 
+    [SerializeField] PlayerStateManager playerStatemanager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,7 +50,8 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        Debug.Log("move speed player " + MoveSpeed);
+        Attack();
     }
 
     private void FixedUpdate()
@@ -79,6 +82,14 @@ public class PlayerMove : MonoBehaviour
             Move();
         }
 
+    }
+
+    public void Attack()
+    {
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            playerStatemanager.SwitchState(playerStatemanager.attackState);
+        }
     }
 
     private void Move()
