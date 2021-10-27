@@ -11,10 +11,10 @@ public class Enemy : Entity
         base.KillEnemy();
     }
 
-    public override void TakeDamage()
+    public override void TakeDamage(int amount)
     {
         Debug.Log("Un nemico ha preso danno");
-        base.TakeDamage();
+        base.TakeDamage(amount);
     }
 
     // Start is called before the first frame update
@@ -26,9 +26,10 @@ public class Enemy : Entity
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.K))
+
+        if (Input.GetKeyDown(KeyCode.O))
         {
-            TakeDamage();
+            TakeDamage(5);
         }
     }
 }

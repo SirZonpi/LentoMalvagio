@@ -13,6 +13,8 @@ public class PlayerIdleState : PlayerBaseState
         anim.SetBool("cammina", false);
         anim.SetBool("attacca", false); 
         anim.SetBool("attacca2", false);
+        anim.SetBool("attacca3", false);
+        anim.SetBool("damage", false);
     }
 
     public override void onCollisionEnter(PlayerStateManager player)
@@ -25,17 +27,16 @@ public class PlayerIdleState : PlayerBaseState
         Animator anim = player.GetComponent<Animator>();
         anim.SetBool("idle", true);
         anim.SetBool("cammina", false);
+
+        PlayerMove playerMove = GetComponent<PlayerMove>();
+
+        if (playerMove.siMuove == true)
+        {
+            player.SwitchState(player.walkState);
+        }
+
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+   
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

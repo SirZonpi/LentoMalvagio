@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerData  
 {
     public int health;
-    public float[] position;
+    public float[] position; //non posso serializzare un vector...amarezza
     //public int itemRaccolti;
 
     public PlayerData(Player player) //costruttore
@@ -14,9 +14,9 @@ public class PlayerData
         health = player.Health;
 
         position = new float[3];
-        position[0] = player.transform.position.x;
-        position[1] = player.transform.position.y;
-        position[2] = player.transform.position.z;
+        position[0] = CheckPoints.GetActiveCheckPointPosition().x;
+        position[1] = player.transform.position.y; //voglio salvare per quanto riguarda la y la pos del player e non quella del checkpoint
+        position[2] = CheckPoints.GetActiveCheckPointPosition().z;
 
     }
 

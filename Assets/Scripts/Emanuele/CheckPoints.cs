@@ -1,11 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CheckPoints : MonoBehaviour
 {
     public bool activated = false;
     public static GameObject[] checkPointsList;
+
+    [SerializeField] GameObject saveCanvas;
+    [SerializeField] ParticleSystem ps;
+
+    [SerializeField] Player playerHealth;
+
+    public void Rigenera()
+    {
+        playerHealth.RestoreHealth();
+    }
 
     public static Vector3 GetActiveCheckPointPosition()                                                                     
     {
@@ -50,10 +61,29 @@ public class CheckPoints : MonoBehaviour
         if (other.gameObject.CompareTag("Player") && !this.activated)                                                                                         
         {
             Debug.Log("checkpoint attivato");
-            ActivateCheckPoint();                                                               
-            //AudioManag.AudioBello[3].Play();                                                                                         
-           // particles.Play();                                                                                                
+            ActivateCheckPoint();
+            Rigenera();
+            
+
+            if (ps != null)
+            {
+                ps.Play();
+            }                                                                                             
             //GameManager.instance.audioManager.PlaySound("checkpoint");
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player") && this.activated)
+        {
+            saveCanvas.SetActive(true);
+        }
+    }private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player") && this.activated)
+        {
+            saveCanvas.SetActive(false);
         }
     }
 
@@ -61,11 +91,9 @@ public class CheckPoints : MonoBehaviour
     void Start()
     {
         checkPointsList = GameObject.FindGameObjectsWithTag("CheckPoint"); //cerchiamo tutti i checkpoint in scena usando una tag
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+        saveCanvas.SetActive(false);
         
     }
+
+
 }

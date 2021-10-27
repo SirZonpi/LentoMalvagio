@@ -32,14 +32,17 @@ public class GameManager : MonoBehaviour
     {
         PlayerData playerData = SaveSystem.LoadPlayer();
 
-        int health = player.Health;
+        player.Health = playerData.health;
 
-        Vector3 position= CheckPoints.GetActiveCheckPointPosition(); //posizione ultimo checkpoint attivato
-        /*
+        //Vector3 position= CheckPoints.GetActiveCheckPointPosition(); //posizione ultimo checkpoint attivato
+
+        Vector3 position;
+
+       
         position.x = playerData.position[0];
         position.y = playerData.position[1];
         position.z = playerData.position[2];
-        */
+        
         player.transform.position = position;
 
     }

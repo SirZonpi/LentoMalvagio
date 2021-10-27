@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAttack2State : PlayerBaseState
+public class PlayerAttack3State : PlayerBaseState
 {
     public int cambia;
 
@@ -12,12 +12,11 @@ public class PlayerAttack2State : PlayerBaseState
 
         Animator anim = player.GetComponent<Animator>();
 
-        anim.SetBool("attacca", true);
-        anim.SetBool("attacca2", true);
+        anim.SetBool("attacca3", true);
+        //anim.SetBool("attacca2", true);
         anim.SetBool("idle", false);
         anim.SetBool("cammina", false);
-      
-       
+        //anim.SetBool("attacca", true);
     }
 
     public override void onCollisionEnter(PlayerStateManager player)
@@ -27,13 +26,6 @@ public class PlayerAttack2State : PlayerBaseState
 
     public override void UpdateState(PlayerStateManager player)
     {
-        Animator anim = player.GetComponent<Animator>();
-        if (Input.GetKeyDown(KeyCode.M) && anim.GetBool("attacca") == true && anim.GetBool("attacca2") == true)
-        {
-            // anim.SetBool("attacca2", true);
-            player.SwitchState(player.attack3State);
-        }
-
         if (cambia == 0)
         {
             player.SwitchState(player.idleState);
@@ -41,10 +33,10 @@ public class PlayerAttack2State : PlayerBaseState
         }
     }
 
-    public void Cambia2(int _cambia) //da cambiare con una stringa, è un animaton event
+    public void Cambia3(int _cambia) //da cambiare con una stringa, è un animaton event
     {
         cambia = _cambia;
-  
+
     }
 
 }

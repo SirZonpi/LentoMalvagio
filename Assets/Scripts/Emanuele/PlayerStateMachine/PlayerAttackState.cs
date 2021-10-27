@@ -8,12 +8,12 @@ public class PlayerAttackState : PlayerBaseState
     public override void EnterState(PlayerStateManager player)
     {
         cambia = 1;
-        //Debug.Log("init cambia " + cambia);
+         
 
         Animator anim = player.GetComponent<Animator>();
         anim.SetBool("idle", false);
         anim.SetBool("cammina", false);
-        anim.SetBool("attacca2", false);
+        //anim.SetBool("attacca2", false);
         anim.SetBool("attacca", true);
     }
 
@@ -26,10 +26,11 @@ public class PlayerAttackState : PlayerBaseState
     {
      
         Animator anim = player.GetComponent<Animator>();
-        if (Input.GetKeyDown(KeyCode.N))
+        if (Input.GetKeyDown(KeyCode.M) && anim.GetBool("attacca")==true)
         {
-           
-            anim.SetBool("attacca2", true);
+
+            // anim.SetBool("attacca2", true);
+            player.SwitchState(player.attack2State);
         }
  
         if (cambia == 0)
@@ -37,11 +38,11 @@ public class PlayerAttackState : PlayerBaseState
             player.SwitchState(player.idleState);
 
         }
- 
+        
         
     }
 
-    public void Cambia(int _cambia) //da cambiare con una stringa, è un animaton event
+    public void Cambia1(int _cambia) //da cambiare con una stringa, è un animaton event
     {
         cambia = _cambia;
 

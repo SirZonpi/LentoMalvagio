@@ -24,16 +24,17 @@ public class PlayerMove : MonoBehaviour
     [SerializeField]
     Vector3 forward;
     Vector3 direction;
-    Vector3 rightMovement;
+    public Vector3 rightMovement;
     Vector3 upMovement;
     Vector3 heading;
     [SerializeField]
     Vector3 right;
     bool rolling;
-    bool puoiMuoverti = true;
+    public bool puoiMuoverti = true;
     bool puoiRotolare = true;
 
     [SerializeField] PlayerStateManager playerStatemanager;
+
 
     // Start is called before the first frame update
     void Start()
@@ -50,13 +51,17 @@ public class PlayerMove : MonoBehaviour
     /// <summary>
     ///  emanuele
     public bool passaAttaccoDue = false;
+    public bool siMuove;
     /// </summary>
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("move speed player " + MoveSpeed);
+        Debug.Log("si muov " + siMuove );
+        Debug.Log("movespeed " + MoveSpeed);
         Attack();
+
+
     }
 
     private void FixedUpdate()
@@ -85,13 +90,15 @@ public class PlayerMove : MonoBehaviour
         if(Input.anyKey)
         {
             Move();
+            siMuove = true;
         }
+        else { siMuove = false; }
 
     }
 
     public void Attack()
     {
-        if (Input.GetKeyDown(KeyCode.M))
+        if (Input.GetKeyDown(KeyCode.M) && anim.GetBool("attacca")==false)
         {
             playerStatemanager.SwitchState(playerStatemanager.attackState);
         }
@@ -99,8 +106,11 @@ public class PlayerMove : MonoBehaviour
 
     private void Move()
     {
-        if(puoiMuoverti) //se posso muoverti allora il player cammina, prende i varii input ecc.
+   
+        if (puoiMuoverti) //se posso muoverti allora il player cammina, prende i varii input ecc.
         {
+            ////playerStatemanager.SwitchState(playerStatemanager.walkState);//////////
+
             direction = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
             rightMovement = right * MoveSpeed * Time.fixedDeltaTime * Input.GetAxis("Horizontal");
             upMovement = forward * MoveSpeed * Time.fixedDeltaTime * Input.GetAxis("Vertical");

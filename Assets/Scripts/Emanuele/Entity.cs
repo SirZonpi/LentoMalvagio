@@ -21,15 +21,19 @@ public class Entity : MonoBehaviour
                 else if (gameObject.GetComponent<Player>()) //se è il player lo facciamo respawnare
                     RespawnPlayer();
             }
+            else if (currentHealth > maxHealth)
+            {
+                currentHealth = maxHealth;
+            }
         }
 
     }
 
     public GameObject mesh;
 
-    public virtual void TakeDamage() //danno base, override per eventuali cambiamenti
+    public virtual void TakeDamage(int amount) //danno base, override per eventuali cambiamenti
     {
-        Health -= 5;
+        Health -= amount;
         Debug.Log("current health = " + Health);
     }
 
