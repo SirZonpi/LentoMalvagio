@@ -5,9 +5,10 @@ using UnityEngine;
 public class PlayerStateManager : MonoBehaviour
 {
     PlayerBaseState currentPlayerState;
-    public PlayerAttackState attackState = new PlayerAttackState();
-    public PlayerIdleState idleState = new PlayerIdleState();
-    public PlayerWalkState walkState = new PlayerWalkState();
+    public PlayerAttackState attackState; // = new PlayerAttackState();
+    public PlayerIdleState idleState; // = new PlayerIdleState();
+    public PlayerWalkState walkState; // = new PlayerWalkState();
+    public PlayerAttack2State attack2State;
 
     public void SwitchState(PlayerBaseState playerState)
     {

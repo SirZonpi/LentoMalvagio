@@ -4,15 +4,16 @@ using UnityEngine;
   
 public class EnemyIdleState : EnemyBaseState
 {
-   
+    public Minions minions;
 
     public override void EnterState(EnemyStateManager enemy)
     {
         Debug.Log("CIAO A TUTTI DALLO STATE INIZIALE!");
 
         Animator anim = enemy.GetComponent<Animator>();
-        anim.SetBool("idle", true);
         anim.SetBool("cammina", false);
+        anim.SetBool("idle", true);
+        
 
     }
 
@@ -23,21 +24,20 @@ public class EnemyIdleState : EnemyBaseState
 
     public override void UpdateState(EnemyStateManager enemy)
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        float distance = Vector3.Distance(transform.position, minions.playerTransform.transform.position);
+
+        if (distance < minions.enemyDistanceRun)
         {
             enemy.SwitchState(enemy.walkState);
+            /*
+            Vector3 dirToPlayer = transform.position - minions.playerTransform.transform.position;
+            minions.newPos = transform.position + dirToPlayer;
+
+            minions._agent.SetDestination(minions.newPos);
+            */
         }
+
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-         
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

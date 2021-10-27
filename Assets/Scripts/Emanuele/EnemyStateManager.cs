@@ -6,10 +6,10 @@ public class EnemyStateManager : MonoBehaviour
 {
 
     EnemyBaseState currentEnemyState;
-    public EnemyAttackState attackState = new EnemyAttackState();
-    public EnemyIdleState idleState = new EnemyIdleState();
-    public EnemyWalkState walkState = new EnemyWalkState();
-    public EnemyScaredState scaredState = new EnemyScaredState();
+    public EnemyAttackState attackState;//= new EnemyAttackState();
+    public EnemyIdleState idleState; //= new EnemyIdleState();
+    public EnemyWalkState walkState; // = new EnemyWalkState();
+    public EnemyScaredState scaredState; // = new EnemyScaredState();
 
     public void SwitchState(EnemyBaseState enemyState)
     {

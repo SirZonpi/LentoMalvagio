@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public Player player;
 
     public List<GameObject> oggettidaDisattivare;
+    public TimeManager timeManager;
 
     private void Awake()
     {
@@ -51,6 +52,9 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            timeManager.SlowMotion();
+        }
     }
 }

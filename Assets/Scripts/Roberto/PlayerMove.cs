@@ -47,6 +47,11 @@ public class PlayerMove : MonoBehaviour
         right = Quaternion.Euler(new Vector3(0, 90, 0)) * forward;
     }
 
+    /// <summary>
+    ///  emanuele
+    public bool passaAttaccoDue = false;
+    /// </summary>
+
     // Update is called once per frame
     void Update()
     {

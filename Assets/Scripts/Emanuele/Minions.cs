@@ -6,13 +6,13 @@ using UnityEngine.AI;
 public class Minions : MonoBehaviour
 {
 
-    NavMeshAgent _agent;
+    public NavMeshAgent _agent;
     public float enemyDistanceRun=default;
     public GameObject playerTransform;
 
     Rigidbody _rb;
     EnemyStateManager _enemyStateManager;
-    Vector3 newPos;
+    public Vector3 newPos;
 
     void Start()
     {
@@ -25,6 +25,7 @@ public class Minions : MonoBehaviour
   
     void Update()
     {
+        /*
         Debug.Log("ora " + transform.position + "prossima " + newPos);
         if (Vector3.Distance(transform.position, newPos) > 0.2f)
         {
@@ -35,6 +36,8 @@ public class Minions : MonoBehaviour
         {
             _enemyStateManager.SwitchState(_enemyStateManager.idleState);
         }
+
+        ////
 
         float distance = Vector3.Distance(transform.position, playerTransform.transform.position);
 
@@ -48,5 +51,7 @@ public class Minions : MonoBehaviour
 
         }
         
+        */
+
     }
 }

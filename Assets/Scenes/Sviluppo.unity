@@ -106,7 +106,7 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.5
+    agentRadius: 0.1
     agentHeight: 2
     agentSlope: 47
     agentClimb: 0.4
@@ -114,7 +114,7 @@ NavMeshSettings:
     maxJumpAcrossDistance: 0
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.16666667
+    cellSize: 0.033333335
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
@@ -4934,7 +4934,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 27138024}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0000009536743, y: -0.0000009536743, z: -30.000002}
+  m_LocalPosition: {x: 9.27017, y: 1.191474, z: -27.936306}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 638200119}
@@ -5299,7 +5299,7 @@ Transform:
   m_GameObject: {fileID: 184939737}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -1.02, z: 0}
-  m_LocalScale: {x: 27.828, y: 1.9352, z: 25.574705}
+  m_LocalScale: {x: 133.9946, y: 1.9352, z: 70.2486}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -5819,7 +5819,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 968985454}
+  m_Follow: {fileID: 1524961741}
   m_Lens:
     FieldOfView: 40
     OrthographicSize: 12
@@ -6100,6 +6100,7 @@ MonoBehaviour:
   forward: {x: 0, y: 0, z: 0}
   right: {x: 0, y: 0, z: 0}
   playerStatemanager: {fileID: 0}
+  passaAttaccoDue: 0
 --- !u!136 &968985453
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12240,6 +12241,7 @@ MonoBehaviour:
   attackState: {fileID: 1524961734}
   idleState: {fileID: 1524961733}
   walkState: {fileID: 1524961732}
+  attack2State: {fileID: 0}
 --- !u!114 &1524961736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12259,10 +12261,11 @@ MonoBehaviour:
   CameraPrincipale: {fileID: 1303423104}
   cursore: {fileID: 410424345}
   rb: {fileID: 0}
-  anim: {fileID: 1181189854}
+  anim: {fileID: 1524961740}
   forward: {x: 0, y: 0, z: 0}
   right: {x: 0, y: 0, z: 0}
   playerStatemanager: {fileID: 1524961735}
+  passaAttaccoDue: 0
 --- !u!114 &1524961737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12308,6 +12311,18 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!95 &1524961740 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9500000, guid: 75bf79f8876829a44bb388ccd90400a7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1524961730}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1524961741 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400016, guid: 75bf79f8876829a44bb388ccd90400a7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1524961730}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1547881736
 GameObject:
   m_ObjectHideFlags: 0
@@ -12758,6 +12773,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1847061320}
   - component: {fileID: 1847061319}
+  - component: {fileID: 1847061321}
   m_Layer: 0
   m_Name: GAME MANAGER
   m_TagString: Untagged
@@ -12780,6 +12796,7 @@ MonoBehaviour:
   audioManager: {fileID: 1110542953}
   player: {fileID: 968985456}
   oggettidaDisattivare: []
+  timeManager: {fileID: 1847061321}
 --- !u!4 &1847061320
 Transform:
   m_ObjectHideFlags: 0
@@ -12794,6 +12811,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1847061321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847061318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41e1c2a4d6c5cf54ca9d3f48bb2bbe33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slowdownFactor: 0.05
+  slowdownLenght: 2
 --- !u!1 &1865744562
 GameObject:
   m_ObjectHideFlags: 0

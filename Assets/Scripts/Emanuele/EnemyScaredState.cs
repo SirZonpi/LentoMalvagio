@@ -36,7 +36,7 @@ public class EnemyScaredState : EnemyBaseState
     }
     private void Update()
     {
-        Debug.Log("CAMBIA " + cambia);
+
     }
 
 }
