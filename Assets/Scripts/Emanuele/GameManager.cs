@@ -47,9 +47,10 @@ public class GameManager : MonoBehaviour
 
     }
 
+    Enemy[] enemies;
     void Start()
     {
-        
+         
     }
 
     // Update is called once per frame
@@ -59,5 +60,7 @@ public class GameManager : MonoBehaviour
         {
             timeManager.SlowMotion();
         }
+
+         
     }
 }
