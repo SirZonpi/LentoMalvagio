@@ -1,14 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
+
 
 public class PlayerAttack3State : PlayerBaseState
 {
     public int cambia;
 
+    public CinemachineVirtualCamera vcam;
+
+    public float zoomSpeed = 1;
+    public float targetOrtho;
+    public float startOrtho;
+    public float smoothSpeed = 2.0f;
+    public float minOrtho = 1.0f;
+    public float maxOrtho = 20.0f;
+
     public override void EnterState(PlayerStateManager player)
     {
         cambia = 1;
+
+        startOrtho = vcam.m_Lens.OrthographicSize; 
 
         Animator anim = player.GetComponent<Animator>();
 
@@ -26,6 +39,11 @@ public class PlayerAttack3State : PlayerBaseState
 
     public override void UpdateState(PlayerStateManager player)
     {
+        /*
+        vcam.m_Lens.OrthographicSize = Mathf.MoveTowards(vcam.m_Lens.OrthographicSize, 2, 10 * Time.deltaTime);
+        GameManager.instance.timeManager.SlowMotion();
+        */
+
         if (cambia == 0)
         {
             player.SwitchState(player.idleState);

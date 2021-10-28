@@ -13780,6 +13780,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cambia: 0
+  vcam: {fileID: 638200120}
+  zoomSpeed: 1
+  targetOrtho: 0
+  startOrtho: 0
+  smoothSpeed: 2
+  minOrtho: 1
+  maxOrtho: 20
 --- !u!1 &1524930422
 GameObject:
   m_ObjectHideFlags: 0
@@ -13884,6 +13891,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 136d08aa0f3bc2a45bc43c8fd0485725, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vcam: {fileID: 638200120}
 --- !u!114 &1524961734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15709,7 +15717,12 @@ PrefabInstance:
     - target: {fileID: 3756935334182608138, guid: 02c6417ed7964224fa7a75f49a7cabec,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3756935334182608138, guid: 02c6417ed7964224fa7a75f49a7cabec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 3856913097159253413, guid: 02c6417ed7964224fa7a75f49a7cabec,
         type: 3}

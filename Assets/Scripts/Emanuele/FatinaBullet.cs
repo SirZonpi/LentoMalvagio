@@ -7,7 +7,7 @@ public class FatinaBullet : MonoBehaviour
     GameObject playerTransform;
     Vector3 direzione;
     Rigidbody rb;
-    float speed = 2f;
+    float speed = 25f;
 
 
     public void Setup(Vector3 shootDir)
@@ -24,8 +24,8 @@ public class FatinaBullet : MonoBehaviour
 
     IEnumerator disattiva()
     {
-        yield return new WaitForSeconds(1f);
-        this.gameObject.SetActive(false);
+        yield return new WaitForSeconds(0.5f);
+        Destroy(this.gameObject);
         yield return null;
     }
 
@@ -38,15 +38,6 @@ public class FatinaBullet : MonoBehaviour
     {
         StartCoroutine(disattiva());
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }
