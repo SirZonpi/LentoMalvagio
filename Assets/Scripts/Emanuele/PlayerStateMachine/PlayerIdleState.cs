@@ -35,6 +35,9 @@ public class PlayerIdleState : PlayerBaseState
          Animator anim = player.GetComponent<Animator>();
         anim.SetBool("idle", true);
         anim.SetBool("cammina", false);
+        anim.SetBool("attacca", false);
+        anim.SetBool("attacca2", false);
+        anim.SetBool("attacca3", false);
 
         PlayerMove playerMove = GetComponent<PlayerMove>();
 

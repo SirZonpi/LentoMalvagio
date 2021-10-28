@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerAttackState : PlayerBaseState
 {
     public int cambia ;
+   // public Rigidbody checkerRb;
+
     public override void EnterState(PlayerStateManager player)
     {
         cambia = 1;
@@ -24,7 +26,9 @@ public class PlayerAttackState : PlayerBaseState
 
     public override void UpdateState(PlayerStateManager player)
     {
-     
+        Debug.Log("ATTACCO 1");
+        //Debug.Log("rb " + checkerRb.velocity.magnitude);
+
         Animator anim = player.GetComponent<Animator>();
         if (Input.GetKeyDown(KeyCode.M) && anim.GetBool("attacca")==true)
         {
@@ -33,7 +37,7 @@ public class PlayerAttackState : PlayerBaseState
             player.SwitchState(player.attack2State);
         }
  
-        if (cambia == 0)
+        if (cambia == 0 /*|| checkerRb.velocity.magnitude!=0*/)
         {
             player.SwitchState(player.idleState);
 
@@ -46,7 +50,7 @@ public class PlayerAttackState : PlayerBaseState
     {
         cambia = _cambia;
 
-        Debug.Log("attacco cambia " + cambia);
+       // Debug.Log("attacco cambia " + cambia);
     }
  
 

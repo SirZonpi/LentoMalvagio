@@ -13904,7 +13904,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_Extents: {x: 0.25, y: 0.25, z: 0.25}
   m_MoveThreshold: 0.1
   m_Carve: 0
   m_CarveOnlyStationary: 1
@@ -18145,13 +18145,17 @@ GameObject:
   - component: {fileID: 2634292641838110159}
   - component: {fileID: 8300605815454382931}
   - component: {fileID: 8300605815454382930}
+  - component: {fileID: 8300605815454382934}
+  - component: {fileID: 8300605815454382933}
+  - component: {fileID: 8300605815454382935}
+  - component: {fileID: 8300605815454382932}
   m_Layer: 0
   m_Name: goblin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &8300605815454382930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18176,6 +18180,7 @@ MonoBehaviour:
   timer: 0
   nextTime: 2
   inRange: 0
+  _agent: {fileID: 8300605815454382931}
 --- !u!195 &8300605815454382931
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -18198,6 +18203,60 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &8300605815454382932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8300605815454382929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 197f78bcd1914a245a1be587bc057d26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackState: {fileID: 8300605815454382935}
+  idleState: {fileID: 8300605815454382934}
+  walkState: {fileID: 8300605815454382933}
+--- !u!114 &8300605815454382933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8300605815454382929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8deaf6494d9d7241b5057be159846e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _goblin: {fileID: 8300605815454382930}
+--- !u!114 &8300605815454382934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8300605815454382929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bd5acefc29faff45b911586c5135baf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goblin: {fileID: 8300605815454382930}
+--- !u!114 &8300605815454382935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8300605815454382929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fddbacab68328734a8c4c00c1b3ff820, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _goblin: {fileID: 8300605815454382930}
 --- !u!1 &8451273912151970009
 GameObject:
   m_ObjectHideFlags: 0
@@ -18362,7 +18421,7 @@ Animator:
   m_GameObject: {fileID: 8300605815454382929}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 75bf79f8876829a44bb388ccd90400a7, type: 3}
-  m_Controller: {fileID: 9100000, guid: 321b11ba44d502146ae44fa6325b60fa, type: 2}
+  m_Controller: {fileID: 9100000, guid: bbd9c0b67553a4845bc506ad614530eb, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

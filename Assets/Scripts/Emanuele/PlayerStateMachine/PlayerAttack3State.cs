@@ -39,13 +39,21 @@ public class PlayerAttack3State : PlayerBaseState
 
     public override void UpdateState(PlayerStateManager player)
     {
+        Debug.Log("ATTACCO 3");
+
+        Animator anim = player.GetComponent<Animator>();
+
         /*
         vcam.m_Lens.OrthographicSize = Mathf.MoveTowards(vcam.m_Lens.OrthographicSize, 2, 10 * Time.deltaTime);
         GameManager.instance.timeManager.SlowMotion();
         */
 
-        if (cambia == 0)
+        if (cambia == 0 )
         {
+            anim.SetBool("attacca3", false);
+            anim.SetBool("attacca2", false);
+            anim.SetBool("attacca", false);
+            
             player.SwitchState(player.idleState);
 
         }

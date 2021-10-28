@@ -14,22 +14,23 @@ public class Goblin : Enemy
 
     int currentPoint;
 
-    [SerializeField] float timer;
-    [SerializeField] float nextTime = 8;
-    [SerializeField] bool inRange;
+    public float timer;
+    public float nextTime = default;
+    public bool inRange;
 
-    NavMeshAgent _agent;
+    public NavMeshAgent _agent;
 
     // Start is called before the first frame update
     void Start()
     {
-        _agent = GetComponent<NavMeshAgent>();
-        MoveToPath();
+       // _agent = GetComponent<NavMeshAgent>();
+       // MoveToPath();
     }
 
     // Update is called once per frame
     void  Update()
     {
+        /*
         float distance = Vector3.Distance(transform.position, playerTransform.transform.position);
 
         if(distance<= attackRadius)
@@ -51,20 +52,21 @@ public class Goblin : Enemy
             inRange = false;
             MoveToPath();
         }
-
+        */
     }
 
-
-    private void MoveToPath()
+  
+    public void MoveToPath()
     {
         if(!inRange && _agent.remainingDistance < 0.5f)
         {
             _agent.destination= path[currentPoint].position;
             UpdateCurrentPoint();
+ 
         }
     }
 
-    private void UpdateCurrentPoint()
+    public void UpdateCurrentPoint()
     {
         if(currentPoint == path.Length-1) //siamo nell ultimo nodo della path
         {
