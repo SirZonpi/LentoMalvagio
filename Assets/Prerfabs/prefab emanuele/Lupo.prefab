@@ -1510,12 +1510,16 @@ MonoBehaviour:
   currentHealth: 0
   mesh: {fileID: 0}
   playerTransform: {fileID: 0}
-  attackRadius: 5
+  attackRadius: 7
   timer: 0
   nextTime: 2
   inRange: 0
   _agent: {fileID: 5927351093778837604}
   loadSpell: 0
+  bulletPrefab: {fileID: 4422533476881487543, guid: 1b817366e117b16448f6554df490fbf6,
+    type: 3}
+  spellSpawnPoint: {fileID: 5927351094246587318}
+  enemyDistance: 0
 --- !u!1 &5927351093833904953
 GameObject:
   m_ObjectHideFlags: 0
