@@ -48,7 +48,7 @@ public class PlayerAttack3State : PlayerBaseState
         GameManager.instance.timeManager.SlowMotion();
         */
 
-        if (cambia == 0 )
+        if (cambia == 0 && anim.GetBool("attacca3") == true)
         {
             anim.SetBool("attacca3", false);
             anim.SetBool("attacca2", false);

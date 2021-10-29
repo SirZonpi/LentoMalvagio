@@ -32,7 +32,7 @@ public class PlayerAttack2State : PlayerBaseState
         //Debug.Log("rb " + checkerRb.velocity.magnitude);
 
         Animator anim = player.GetComponent<Animator>();
-        if (Input.GetKeyDown(KeyCode.M) && anim.GetBool("attacca") == true && anim.GetBool("attacca2") == true)
+        if (Input.GetKeyDown(KeyCode.M) /* && anim.GetBool("attacca") == true && anim.GetBool("attacca2") == true*/)
         {
             // anim.SetBool("attacca2", true);
             player.SwitchState(player.attack3State);
