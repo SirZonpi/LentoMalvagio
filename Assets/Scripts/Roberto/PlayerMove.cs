@@ -57,8 +57,8 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("si muov " + siMuove );
-        Debug.Log("movespeed " + MoveSpeed);
+        Debug.Log("ilright " + heading );
+
         Attack();
 
 
@@ -67,7 +67,7 @@ public class PlayerMove : MonoBehaviour
     private void FixedUpdate()
     {
         Ray cameraRay = CameraPrincipale.ScreenPointToRay(Input.mousePosition); //traccio un punto tramite Ray nella posizione del mouse
-        Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
+        Plane groundPlane = new Plane(Vector3.up*20, Vector3.zero*20);
         float rayLenght;
         if(groundPlane.Raycast(cameraRay, out rayLenght))
         {
@@ -98,7 +98,7 @@ public class PlayerMove : MonoBehaviour
 
     public void Attack()
     {
-        if (Input.GetKeyDown(KeyCode.M) && anim.GetBool("attacca")==false)
+        if (Input.GetMouseButton(0) && anim.GetBool("attacca")==false)
         {
             playerStatemanager.SwitchState(playerStatemanager.attackState);
         }
