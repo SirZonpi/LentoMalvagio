@@ -5,7 +5,7 @@ using Cinemachine;
 
 public class PlayerIdleState : PlayerBaseState
 {
-    public CinemachineVirtualCamera vcam;
+    //public CinemachineVirtualCamera vcam;
 
     public override void EnterState(PlayerStateManager player)
     {

@@ -8,7 +8,7 @@ public class PlayerAttack3State : PlayerBaseState
 {
     public int cambia;
 
-    public CinemachineVirtualCamera vcam;
+    //public CinemachineVirtualCamera vcam;
 
     public float zoomSpeed = 1;
     public float targetOrtho;
@@ -21,7 +21,7 @@ public class PlayerAttack3State : PlayerBaseState
     {
         cambia = 1;
 
-        startOrtho = vcam.m_Lens.OrthographicSize; 
+       //startOrtho = vcam.m_Lens.OrthographicSize; 
 
         Animator anim = player.GetComponent<Animator>();
 

@@ -32,6 +32,7 @@ public class ptSemovente : MonoBehaviour
         }
         //muovo l piattaforma in un punto
         transform.position = Vector3.MoveTowards(transform.position, points[i].position, speed * Time.deltaTime);
+        /*
         if (this.gameObject.CompareTag("Enemy"))
         {
             if (Vector3.Distance(transform.position, points[i].position) < 0.02f) //faccio flippare lo sprite.. se mi muovo verso destra gira verso destra e viceversa.
@@ -47,8 +48,10 @@ public class ptSemovente : MonoBehaviour
             {
                 transform.eulerAngles = new Vector3(0, 0, 0);
             }
+       
         }
+         */
     }
 
-    
+
 }

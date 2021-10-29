@@ -41,7 +41,7 @@ public class PlayerMove : MonoBehaviour
     {
         MoveSpeed = StandardMoveSpeed;
         rb = GetComponent<Rigidbody>();
-        Cursor.visible = false; 
+        Cursor.visible = false;
         forward = Camera.main.transform.forward;
         forward.y = 0;
         forward = Vector3.Normalize(forward);
@@ -57,8 +57,8 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("ilright " + heading );
-
+        Debug.Log("si muov " + siMuove);
+        Debug.Log("movespeed " + MoveSpeed);
         Attack();
 
 
@@ -69,7 +69,7 @@ public class PlayerMove : MonoBehaviour
         Ray cameraRay = CameraPrincipale.ScreenPointToRay(Input.mousePosition); //traccio un punto tramite Ray nella posizione del mouse
         Plane groundPlane = new Plane(Vector3.up, transform.position);
         float rayLenght;
-        if(groundPlane.Raycast(cameraRay, out rayLenght))
+        if (groundPlane.Raycast(cameraRay, out rayLenght))
         {
             Vector3 pointToLook = cameraRay.GetPoint(rayLenght); //il punto da guardare è nel punto calcolato del Ray
             Debug.DrawLine(cameraRay.origin, pointToLook, Color.blue);
@@ -87,7 +87,7 @@ public class PlayerMove : MonoBehaviour
 
 
         }
-        if(Input.anyKey)
+        if (Input.anyKey)
         {
             Move();
             siMuove = true;
@@ -98,7 +98,7 @@ public class PlayerMove : MonoBehaviour
 
     public void Attack()
     {
-        if (Input.GetMouseButton(0) && anim.GetBool("attacca")==false)
+        if (Input.GetKeyDown(KeyCode.M) && anim.GetBool("attacca") == false)
         {
             playerStatemanager.SwitchState(playerStatemanager.attackState);
         }
@@ -106,7 +106,7 @@ public class PlayerMove : MonoBehaviour
 
     private void Move()
     {
-   
+
         if (puoiMuoverti) //se posso muoverti allora il player cammina, prende i varii input ecc.
         {
             ////playerStatemanager.SwitchState(playerStatemanager.walkState);//////////
