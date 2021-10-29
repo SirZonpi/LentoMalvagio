@@ -67,7 +67,7 @@ public class PlayerMove : MonoBehaviour
     private void FixedUpdate()
     {
         Ray cameraRay = CameraPrincipale.ScreenPointToRay(Input.mousePosition); //traccio un punto tramite Ray nella posizione del mouse
-        Plane groundPlane = new Plane(Vector3.up*20, Vector3.zero*20);
+        Plane groundPlane = new Plane(Vector3.up, transform.position);
         float rayLenght;
         if(groundPlane.Raycast(cameraRay, out rayLenght))
         {
