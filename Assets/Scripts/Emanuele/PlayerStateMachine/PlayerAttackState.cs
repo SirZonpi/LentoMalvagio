@@ -5,10 +5,13 @@ using UnityEngine;
 public class PlayerAttackState : PlayerBaseState
 {
     public int cambia ;
+   // public Rigidbody checkerRb;
+
     public override void EnterState(PlayerStateManager player)
     {
         cambia = 1;
-         
+
+        Debug.Log("DIOMERDA" + cambia);
 
         Animator anim = player.GetComponent<Animator>();
         anim.SetBool("idle", false);
@@ -24,17 +27,20 @@ public class PlayerAttackState : PlayerBaseState
 
     public override void UpdateState(PlayerStateManager player)
     {
-     
+        Debug.Log("ATTACCO 1");
+
         Animator anim = player.GetComponent<Animator>();
-        if (Input.GetKeyDown(KeyCode.M) && anim.GetBool("attacca")==true)
+        if (Input.GetKeyDown(KeyCode.M)  && anim.GetBool("attacca")==true )
         {
 
             // anim.SetBool("attacca2", true);
             player.SwitchState(player.attack2State);
         }
  
-        if (cambia == 0)
+        if (cambia == 0 && anim.GetBool("attacca2") == false)
         {
+            
+
             player.SwitchState(player.idleState);
 
         }
@@ -46,7 +52,7 @@ public class PlayerAttackState : PlayerBaseState
     {
         cambia = _cambia;
 
-        Debug.Log("attacco cambia " + cambia);
+       // Debug.Log("attacco cambia " + cambia);
     }
  
 

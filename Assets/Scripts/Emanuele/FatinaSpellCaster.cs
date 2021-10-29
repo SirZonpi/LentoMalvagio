@@ -14,6 +14,7 @@ public class FatinaSpellCaster : Enemy
     [SerializeField] GameObject spellSpawnPoint;
 
     Vector3 dir ;
+    float timeRate = 0f;
 
     // Start is called before the first frame update
     void Start()
@@ -24,18 +25,24 @@ public class FatinaSpellCaster : Enemy
     public void CastSpell()
     {
         Debug.Log("spella");
-        transform.LookAt(playerTransform.transform);
+        
         GameObject bulletSpell = Instantiate(bulletPrefab, spellSpawnPoint.transform.position, Quaternion.identity) as GameObject;
         FatinaBullet fb = bulletSpell.GetComponent<FatinaBullet>();
+        dir = (transform.forward);
+        if(bulletPrefab != null)
         fb.Setup(dir);
-        //bulletSpell.transform.position += playerTransform.transform.position;
+
      }
+
+   
 
     // Update is called once per frame
     void Update()
     {
-    
+      
         float distance = Vector3.Distance(transform.position, playerTransform.transform.position);
+
+        Debug.Log("distance " + distance);
 
         if (distance < enemyDistance)
         {
@@ -46,10 +53,32 @@ public class FatinaSpellCaster : Enemy
             _agent.SetDestination(newPos);
 
         }
-        if(distance >= enemyDistance)
+        if(distance >= enemyDistance && distance <= 10f )
         {
-            dir = spellSpawnPoint.transform.right; ////
-            CastSpell();
+            Vector3 direction = playerTransform.transform.position - transform.position;
+            Quaternion rotation = Quaternion.LookRotation(direction);
+            transform.rotation = Quaternion.Lerp(transform.rotation, rotation, Time.deltaTime * 10);
+             
+            // transform.LookAt(playerTransform.transform);
+
+            Ray ray = new Ray(spellSpawnPoint.transform.position, spellSpawnPoint.transform.forward);
+            RaycastHit hit;
+            Physics.Raycast(ray, out hit, 8f);
+
+            if (hit.transform != null && hit.transform.CompareTag("Player"))
+            {
+
+                timeRate += Time.deltaTime;
+
+                if (timeRate >= 1)
+                {
+                    //Debug.Log("time " + timeRate);
+ 
+                    CastSpell();
+                    timeRate = 0;
+                }
+            }
         }
+     
     }
 }

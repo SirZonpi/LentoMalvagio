@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerAttack2State : PlayerBaseState
 {
     public int cambia;
+   // public Rigidbody checkerRb;
 
     public override void EnterState(PlayerStateManager player)
     {
@@ -27,14 +28,17 @@ public class PlayerAttack2State : PlayerBaseState
 
     public override void UpdateState(PlayerStateManager player)
     {
+        Debug.Log("ATTACCO 2");
+        //Debug.Log("rb " + checkerRb.velocity.magnitude);
+
         Animator anim = player.GetComponent<Animator>();
-        if (Input.GetKeyDown(KeyCode.M) && anim.GetBool("attacca") == true && anim.GetBool("attacca2") == true)
+        if (Input.GetKeyDown(KeyCode.M) /* && anim.GetBool("attacca") == true && anim.GetBool("attacca2") == true*/)
         {
             // anim.SetBool("attacca2", true);
             player.SwitchState(player.attack3State);
         }
 
-        if (cambia == 0)
+        if (cambia == 0 /*|| checkerRb.velocity.magnitude != 0*/)
         {
             player.SwitchState(player.idleState);
 
