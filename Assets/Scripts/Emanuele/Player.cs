@@ -4,10 +4,23 @@ using UnityEngine;
 
 public class Player : Entity
 {
-    // Start is called before the first frame update
+
+    public static int minionsKilled;
+    public string currentLevel;
+
+
     void Start()
     {
-        
+        if (GameManager.isLoaded == true)
+        {
+            GameManager.instance.LoadPlayer();
+
+        }
+    }
+
+    private void Awake()
+    {
+        currentLevel = "Scena1";
     }
 
     //override dei metodi della classe base Entity

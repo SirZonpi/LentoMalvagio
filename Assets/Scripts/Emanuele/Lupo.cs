@@ -2,7 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
- 
+
+/*
+Allora il lupo mentre carica il colpo salta qua e là per schivare i colpi del player o allontanarsi dal play.
+nel momento in cui deve sparare il colpo, spara e rimane fermo per tipo 1-2 sec (da stabilire) in quel momento il giocatore, 
+    intanto schiva il colpo del lupo e prima che ritorna a muoversi o lo colpisce da vicino (se è abbastanza veloce) o gli spara qualche magia.
+*/
 
 public class Lupo : Enemy
 {
@@ -22,6 +27,7 @@ public class Lupo : Enemy
     public GameObject spellSpawnPoint;
 
     Vector3 dir;
+    Vector3 newPos;
 
     [SerializeField] float enemyDistance;
 
@@ -29,7 +35,11 @@ public class Lupo : Enemy
     // Start is called before the first frame update
     void Start()
     {
-        
+        // playerTransform = GameObject.FindGameObjectWithTag("Player");///
+
+        playerTransform = GameManager.instance.player.transform.gameObject;
+
+
     }
 
     public void CastSpell()
@@ -63,6 +73,16 @@ public class Lupo : Enemy
         }
         else { loadSpell = false; }
 
+        /*
+        if (distance < 2)
+        {
+            Vector3 dirToPlayer = transform.position - playerTransform.transform.position;
+           newPos = transform.position + dirToPlayer;
+
+           _agent.SetDestination(newPos);
+        }
+        */
+
         if (loadSpell)
         {
 
@@ -85,8 +105,8 @@ public class Lupo : Enemy
         {
            
         }
-            //else { return; }
+          
 
 
-        }
+    }
 }

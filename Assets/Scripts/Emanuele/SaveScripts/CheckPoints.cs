@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CheckPoints : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class CheckPoints : MonoBehaviour
     [SerializeField] ParticleSystem ps;
 
     [SerializeField] Player playerHealth;
+
+    public static string level; ////
 
     public void Rigenera()
     {
@@ -68,8 +71,10 @@ public class CheckPoints : MonoBehaviour
             if (ps != null)
             {
                 ps.Play();
-            }                                                                                             
+            }
             //GameManager.instance.audioManager.PlaySound("checkpoint");
+            GetScenename();
+
         }
     }
 
@@ -87,12 +92,42 @@ public class CheckPoints : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+
+       // saveCanvas = GameObject.FindGameObjectWithTag("savecanvas");///
+
+       checkPointsList = GameObject.FindGameObjectsWithTag("CheckPoint"); //cerchiamo tutti i checkpoint in scena usando una tag
+
+        //  playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+
+       
+    }
+
+    private void Awake()
+    {
+       
+    }
+
+    public void  GetScenename()
+    {
+        level = gameObject.scene.name;///
+        Debug.Log("scena : " + level);
+        playerHealth.currentLevel = level;
+        //return level;
+    }
+
+
     // Start is called before the first frame update
     void Start()
     {
-        checkPointsList = GameObject.FindGameObjectsWithTag("CheckPoint"); //cerchiamo tutti i checkpoint in scena usando una tag
+        playerHealth = GameManager.instance.player;
+        saveCanvas = GameManager.instance.saveCanvas;
+
+        level = gameObject.scene.name;///
+
         saveCanvas.SetActive(false);
-        
+
     }
 
 

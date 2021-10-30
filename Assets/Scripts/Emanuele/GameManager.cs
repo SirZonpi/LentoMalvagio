@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,6 +11,10 @@ public class GameManager : MonoBehaviour
 
     public List<GameObject> oggettidaDisattivare;
     public TimeManager timeManager;
+
+    public GameObject saveCanvas;
+
+    public string levelToLoad;
 
     private void Awake()
     {
@@ -21,6 +26,10 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this);
         }
+
+
+        levelToLoad = player.currentLevel;
+
     }
 
     public void SavePlayer()
@@ -34,10 +43,9 @@ public class GameManager : MonoBehaviour
 
         player.Health = playerData.health;
 
-        //Vector3 position= CheckPoints.GetActiveCheckPointPosition(); //posizione ultimo checkpoint attivato
+        levelToLoad = playerData.level;
 
         Vector3 position;
-
        
         position.x = playerData.position[0];
         position.y = playerData.position[1];
@@ -48,19 +56,43 @@ public class GameManager : MonoBehaviour
     }
 
     Enemy[] enemies;
+
     void Start()
     {
+        Debug.Log("scena nel GM " + levelToLoad);
+
+        SceneManager.LoadSceneAsync(levelToLoad, LoadSceneMode.Additive);
          
+    }
+
+    private void OnEnable()
+    {
+       // Debug.Log("CARICA : " + levelToLoad);
+    }
+
+    public static bool isLoaded = false;
+    public void LoadGame()
+    {
+        isLoaded = true;
+        SceneManager.LoadScene("ScenaPrincipale");
+        //LoadPlayer();
+    }
+
+    public void NewGame()
+    {
+        isLoaded = false;
+        SceneManager.LoadScene("ScenaPrincipale");
+        //LoadPlayer();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.L))
+        if (Input.GetKeyDown(KeyCode.L)) //PER DEBUG
         {
             timeManager.SlowMotion();
         }
 
-         
+   
     }
 }

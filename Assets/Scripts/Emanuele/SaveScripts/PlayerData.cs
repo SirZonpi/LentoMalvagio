@@ -7,11 +7,13 @@ public class PlayerData
 {
     public int health;
     public float[] position; //non posso serializzare un vector...amarezza
+    public string level;
     //public int itemRaccolti;
 
     public PlayerData(Player player) //costruttore
     {
         health = player.Health;
+        level = player.currentLevel;
 
         position = new float[3];
         position[0] = CheckPoints.GetActiveCheckPointPosition().x;
