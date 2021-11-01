@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CheckPoints : MonoBehaviour
 {
@@ -10,18 +11,22 @@ public class CheckPoints : MonoBehaviour
 
     [SerializeField] GameObject saveCanvas;
     [SerializeField] ParticleSystem ps;
+    
 
     [SerializeField] Player playerHealth;
+
+    public static string level; ////
 
     public void Rigenera()
     {
         playerHealth.RestoreHealth();
     }
 
+
     public static Vector3 GetActiveCheckPointPosition()                                                                     
     {
         // se il player muore senza aver toccato un checkpoint lo riposiziniamo in un punto predefinito
-        Vector3 result = new Vector3(0f, 0f, 0f);                                                                             
+        Vector3 result = new Vector3(0f, 0f, 0f);
 
         if (checkPointsList != null)
         {
@@ -41,6 +46,7 @@ public class CheckPoints : MonoBehaviour
 
     private void ActivateCheckPoint()
     {
+
         // controlliamo tutti i checkpoint in scena
         foreach (GameObject cp in checkPointsList)
         {
@@ -68,8 +74,10 @@ public class CheckPoints : MonoBehaviour
             if (ps != null)
             {
                 ps.Play();
-            }                                                                                             
+            }
             //GameManager.instance.audioManager.PlaySound("checkpoint");
+            GetScenename();
+
         }
     }
 
@@ -87,12 +95,42 @@ public class CheckPoints : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+
+       // saveCanvas = GameObject.FindGameObjectWithTag("savecanvas");///
+
+       checkPointsList = GameObject.FindGameObjectsWithTag("CheckPoint"); //cerchiamo tutti i checkpoint in scena usando una tag
+
+        //  playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+
+       
+    }
+
+    private void Awake()
+    {
+       
+    }
+
+    public void  GetScenename()
+    {
+        level = gameObject.scene.name;///
+        Debug.Log("scena : " + level);
+        playerHealth.currentLevel = level;
+        //return level;
+    }
+
+
     // Start is called before the first frame update
     void Start()
     {
-        checkPointsList = GameObject.FindGameObjectsWithTag("CheckPoint"); //cerchiamo tutti i checkpoint in scena usando una tag
+        playerHealth = GameManager.instance.player;
+        saveCanvas = GameManager.instance.saveCanvas;
+
+        level = gameObject.scene.name;///
+
         saveCanvas.SetActive(false);
-        
+
     }
 
 

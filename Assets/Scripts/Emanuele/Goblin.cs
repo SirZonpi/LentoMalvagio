@@ -23,8 +23,9 @@ public class Goblin : Enemy
     // Start is called before the first frame update
     void Start()
     {
-       // _agent = GetComponent<NavMeshAgent>();
-       // MoveToPath();
+        playerTransform = GameManager.instance.player.transform.gameObject;///
+        // _agent = GetComponent<NavMeshAgent>();
+        // MoveToPath();
     }
 
     // Update is called once per frame

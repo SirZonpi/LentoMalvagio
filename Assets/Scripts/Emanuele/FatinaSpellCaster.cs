@@ -20,6 +20,7 @@ public class FatinaSpellCaster : Enemy
     void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
+        playerTransform = GameManager.instance.player.transform.gameObject;
     }
 
     public void CastSpell()

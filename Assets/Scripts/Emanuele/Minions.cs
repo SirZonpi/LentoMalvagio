@@ -16,6 +16,11 @@ public class Minions : MonoBehaviour
 
     void Start()
     {
+        // playerTransform = GameObject.FindGameObjectWithTag("Player");///
+
+        playerTransform = GameManager.instance.player.transform.gameObject;
+
+
         newPos = transform.position;
         _enemyStateManager = GetComponent<EnemyStateManager>();
         _agent = GetComponent<NavMeshAgent>();
