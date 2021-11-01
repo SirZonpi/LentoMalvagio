@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
@@ -15,6 +16,12 @@ public class GameManager : MonoBehaviour
     public GameObject saveCanvas;
 
     public string levelToLoad;
+
+    public string currentLivelloDifficolta;
+
+    //public LivelloDifficolta currentLivelloDifficolta = LivelloDifficolta.Normale;  ///aggiunto oggi
+    public int diffDifficile = 500;
+    public int diffFolle = 1000;
 
     private void Awake()
     {
@@ -30,7 +37,12 @@ public class GameManager : MonoBehaviour
 
         levelToLoad = player.currentLevel;
 
+       currentLivelloDifficolta =player.livelloDifficolta;
+
     }
+
+   
+
 
     public void SavePlayer()
     {
@@ -44,6 +56,10 @@ public class GameManager : MonoBehaviour
         player.Health = playerData.health;
 
         levelToLoad = playerData.level;
+
+        string stringadelporco = playerData.difficoltà.ToString();
+
+        player.livelloDifficolta = playerData.difficoltà;
 
         Vector3 position;
        
@@ -85,6 +101,29 @@ public class GameManager : MonoBehaviour
         //LoadPlayer();
     }
 
+    /*
+    public void IncrementaDifficolta(string lvlDif)  ///aggiunto oggi
+    {
+        switch (lvlDif)
+        {
+            case LivelloDifficolta.Normale:
+                break;
+            case LivelloDifficolta.Difficile:
+
+                Enemy[] enemies = GameObject.FindObjectsOfType<Enemy>();
+
+                foreach (Enemy enemy in enemies)
+                {
+                    enemy.maxHealth += 10;
+                }
+
+                break;
+            case LivelloDifficolta.Folle:
+                break;
+        }
+    }
+    */
+
     // Update is called once per frame
     void Update()
     {
@@ -93,6 +132,30 @@ public class GameManager : MonoBehaviour
             timeManager.SlowMotion();
         }
 
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            player.livelloDifficolta = "Difficile";
+
+           // Debug.Log("MEDDA " + System.Enum.GetName(typeof(LivelloDifficolta), player.livelloDifficolta).ToString());
+
+        }
+
+        if(player.livelloDifficolta == "Difficile")
+        {
+            Enemy[] enemies = GameObject.FindObjectsOfType<Enemy>();
+
+
+
+            foreach (Enemy enemy in enemies)
+            {
+                if (enemy.gameObject.scene.name == player.currentLevel)
+                {
+
+                    enemy.maxHealth = 30;
+                  //  enemy.Health = enemy.maxHealth;
+                }
+            }
+        }
    
     }
 }

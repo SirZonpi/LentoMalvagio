@@ -5,9 +5,10 @@ using UnityEngine;
 public class Player : Entity
 {
 
-    public static int minionsKilled;
+    public int minionsKilled=1000; //1000 per debug
     public string currentLevel;
 
+    public string livelloDifficolta;  ///aggiunto oggi
 
     void Start()
     {
@@ -21,7 +22,13 @@ public class Player : Entity
     private void Awake()
     {
         currentLevel = "Scena1";
+        livelloDifficolta = "Normale";  ///aggiunto oggi
     }
+
+
+    
+
+   
 
     //override dei metodi della classe base Entity
     public override void TakeDamage(int amount)

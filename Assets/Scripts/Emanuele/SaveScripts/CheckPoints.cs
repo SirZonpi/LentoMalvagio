@@ -11,6 +11,7 @@ public class CheckPoints : MonoBehaviour
 
     [SerializeField] GameObject saveCanvas;
     [SerializeField] ParticleSystem ps;
+    
 
     [SerializeField] Player playerHealth;
 
@@ -21,10 +22,11 @@ public class CheckPoints : MonoBehaviour
         playerHealth.RestoreHealth();
     }
 
+
     public static Vector3 GetActiveCheckPointPosition()                                                                     
     {
         // se il player muore senza aver toccato un checkpoint lo riposiziniamo in un punto predefinito
-        Vector3 result = new Vector3(0f, 0f, 0f);                                                                             
+        Vector3 result = new Vector3(0f, 0f, 0f);
 
         if (checkPointsList != null)
         {
@@ -44,6 +46,7 @@ public class CheckPoints : MonoBehaviour
 
     private void ActivateCheckPoint()
     {
+
         // controlliamo tutti i checkpoint in scena
         foreach (GameObject cp in checkPointsList)
         {
