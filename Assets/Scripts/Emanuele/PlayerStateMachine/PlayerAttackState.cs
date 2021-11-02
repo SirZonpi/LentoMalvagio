@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerAttackState : PlayerBaseState
 {
     public int cambia ;
+    public Collider spadaCollider;
    // public Rigidbody checkerRb;
 
     public override void EnterState(PlayerStateManager player)
@@ -44,8 +45,8 @@ public class PlayerAttackState : PlayerBaseState
             player.SwitchState(player.idleState);
 
         }
-        
-        
+
+         
     }
 
     public void Cambia1(int _cambia) //da cambiare con una stringa, è un animaton event
@@ -54,6 +55,14 @@ public class PlayerAttackState : PlayerBaseState
 
        // Debug.Log("attacco cambia " + cambia);
     }
- 
+    
+
+    public void AttivaSpada()
+    {
+        spadaCollider.enabled = true;
+        
+    }
+
+
 
 }

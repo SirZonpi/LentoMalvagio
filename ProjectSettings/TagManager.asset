@@ -6,6 +6,8 @@ TagManager:
   tags:
   - CheckPoint
   - Enemy
+  - savecanvas
+  - EnemyHit
   layers:
   - Default
   - TransparentFX

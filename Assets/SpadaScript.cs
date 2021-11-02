@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class SpadaScript : MonoBehaviour
 {
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag("EnemyHit"))
         {
-            other.GetComponent<Enemy>().TakeDamage(5);
+            other.transform.parent.GetComponent<Enemy>().TakeDamage(5);
+
         }
 
     }

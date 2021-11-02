@@ -12,12 +12,16 @@ public class Player : Entity
 
     void Start()
     {
+
         if (GameManager.isLoaded == true)
         {
             GameManager.instance.LoadPlayer();
 
         }
-
+        else
+        {
+            Health = maxHealth;
+        }
 
     }
 
@@ -25,8 +29,17 @@ public class Player : Entity
     {
         currentLevel = "Scena1";
         livelloDifficolta = "Normale";  ///aggiunto oggi
+
+
+
     }
 
+    /*
+    private void OnEnable() //increedibilemnte anche se vuoto bloccava l'aggiunta della hp bar sul player...
+    {
+   
+    }
+    */
 
     //override dei metodi della classe base Entity
     public override void TakeDamage(int amount)

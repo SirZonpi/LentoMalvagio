@@ -14,7 +14,7 @@ public class PlayerData
 
     public PlayerData(Player player) //costruttore
     {
-        health = player.Health;
+        health = player.Health; //nota: per adesso è praticamente inutile perchè il checkpoint ricarica tutta la vita. 
         level = player.currentLevel;
 
         difficoltà = player.livelloDifficolta; ///aggiunto oggi

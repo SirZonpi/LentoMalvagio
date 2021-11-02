@@ -41,6 +41,7 @@ public class GameManager : MonoBehaviour
     public void SavePlayer()
     {
         SaveSystem.SavePlayer(player);
+        Debug.Log("vita salvata" + player.Health);
     }
 
     public void LoadPlayer()
@@ -124,6 +125,9 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("IS LOADED " + isLoaded);
+
+
         if (Input.GetKeyDown(KeyCode.L)) //PER DEBUG
         {
             timeManager.SlowMotion();
