@@ -17,11 +17,10 @@ public class GameManager : MonoBehaviour
 
     public string levelToLoad;
 
-    public string currentLivelloDifficolta;
-
-    //public LivelloDifficolta currentLivelloDifficolta = LivelloDifficolta.Normale;  ///aggiunto oggi
+   // public string currentLivelloDifficolta;  ///aggiunto oggi
     public int diffDifficile = 500;
     public int diffFolle = 1000;
+
 
     private void Awake()
     {
@@ -34,14 +33,9 @@ public class GameManager : MonoBehaviour
             Destroy(this);
         }
 
-
-        levelToLoad = player.currentLevel;
-
-       currentLivelloDifficolta =player.livelloDifficolta;
+       levelToLoad = player.currentLevel;
 
     }
-
-   
 
 
     public void SavePlayer()
@@ -57,8 +51,6 @@ public class GameManager : MonoBehaviour
 
         levelToLoad = playerData.level;
 
-        string stringadelporco = playerData.difficoltà.ToString();
-
         player.livelloDifficolta = playerData.difficoltà;
 
         Vector3 position;
@@ -71,19 +63,21 @@ public class GameManager : MonoBehaviour
 
     }
 
-    Enemy[] enemies;
+
 
     void Start()
     {
         Debug.Log("scena nel GM " + levelToLoad);
 
         SceneManager.LoadSceneAsync(levelToLoad, LoadSceneMode.Additive);
-         
+
+       // currentLivelloDifficolta = player.livelloDifficolta;
+
     }
 
     private void OnEnable()
     {
-       // Debug.Log("CARICA : " + levelToLoad);
+
     }
 
     public static bool isLoaded = false;
@@ -91,14 +85,14 @@ public class GameManager : MonoBehaviour
     {
         isLoaded = true;
         SceneManager.LoadScene("ScenaPrincipale");
-        //LoadPlayer();
+     
     }
 
     public void NewGame()
     {
         isLoaded = false;
         SceneManager.LoadScene("ScenaPrincipale");
-        //LoadPlayer();
+      
     }
 
     /*
@@ -124,6 +118,9 @@ public class GameManager : MonoBehaviour
     }
     */
 
+    public bool doOnce1 = true;
+    public bool doOnce2 = true;
+
     // Update is called once per frame
     void Update()
     {
@@ -132,30 +129,44 @@ public class GameManager : MonoBehaviour
             timeManager.SlowMotion();
         }
 
-        if (Input.GetKeyDown(KeyCode.Z))
+      
+
+        if(player.livelloDifficolta == "Difficile" && doOnce1  )
         {
-            player.livelloDifficolta = "Difficile";
 
-           // Debug.Log("MEDDA " + System.Enum.GetName(typeof(LivelloDifficolta), player.livelloDifficolta).ToString());
-
-        }
-
-        if(player.livelloDifficolta == "Difficile")
-        {
             Enemy[] enemies = GameObject.FindObjectsOfType<Enemy>();
-
-
 
             foreach (Enemy enemy in enemies)
             {
+              
                 if (enemy.gameObject.scene.name == player.currentLevel)
                 {
 
-                    enemy.maxHealth = 30;
-                  //  enemy.Health = enemy.maxHealth;
+                    enemy.maxHealth = 20;
+                    enemy.Health = enemy.maxHealth;
+                    doOnce1 = false;
+
                 }
             }
+
         }
-   
+
+        if (player.livelloDifficolta == "Folle" && doOnce2)
+        {
+            Enemy[] enemies = GameObject.FindObjectsOfType<Enemy>();
+
+            foreach (Enemy enemy in enemies)
+            {
+
+                if (enemy.gameObject.scene.name == player.currentLevel)
+                {
+                    enemy.maxHealth = 40;
+                    enemy.Health = enemy.maxHealth;
+                    doOnce2 = false;
+                }
+            }
+
+        }
+
     }
 }

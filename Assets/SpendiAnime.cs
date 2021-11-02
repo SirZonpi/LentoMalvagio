@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SpendiAnime : MonoBehaviour
 {
     Player player;
+
+    //Text buttonText;
 
     public void UseMinionsPoints(int amount) ///aggiunto oggi
     {
@@ -15,12 +18,20 @@ public class SpendiAnime : MonoBehaviour
 
     public void IncrementaDifficiolta()
     {
-        if( player.minionsKilled >= GameManager.instance.diffDifficile)
+        if( player.minionsKilled >= GameManager.instance.diffDifficile && player.livelloDifficolta == "Normale")
         {
             UseMinionsPoints(GameManager.instance.diffDifficile);
             player.livelloDifficolta = "Difficile";
 
         }
+
+        else if (player.minionsKilled >= GameManager.instance.diffFolle && player.livelloDifficolta != "Folle" && player.livelloDifficolta == "Difficile" )
+        {
+            UseMinionsPoints(GameManager.instance.diffFolle);
+            player.livelloDifficolta = "Folle";
+
+        }
+
     }
 
 

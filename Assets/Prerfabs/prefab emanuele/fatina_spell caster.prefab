@@ -1056,7 +1056,7 @@ GameObject:
   - component: {fileID: 6601115372407520127}
   m_Layer: 0
   m_Name: fatina_spell caster
-  m_TagString: Player
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

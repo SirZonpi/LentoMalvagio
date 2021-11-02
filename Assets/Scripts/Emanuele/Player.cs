@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : Entity
 {
 
-    public int minionsKilled=1000; //1000 per debug
+    public int minionsKilled = default; //1000 per debug
     public string currentLevel;
 
     public string livelloDifficolta;  ///aggiunto oggi
@@ -17,6 +17,8 @@ public class Player : Entity
             GameManager.instance.LoadPlayer();
 
         }
+
+
     }
 
     private void Awake()
@@ -25,10 +27,6 @@ public class Player : Entity
         livelloDifficolta = "Normale";  ///aggiunto oggi
     }
 
-
-    
-
-   
 
     //override dei metodi della classe base Entity
     public override void TakeDamage(int amount)
