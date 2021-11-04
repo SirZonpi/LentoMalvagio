@@ -12,6 +12,9 @@ public class PlayerMove : MonoBehaviour
     public float StandardMoveSpeed;
     public float rollDistance = 0.3f;
     public float timeRoll;
+    public float attDistance;
+    public float frenataRoll;
+    public float frenataAtt;
     [Header("Camera")]
     [SerializeField]
     private Camera CameraPrincipale;
@@ -35,7 +38,9 @@ public class PlayerMove : MonoBehaviour
     bool rolling;
     public bool puoiMuoverti = true;
     bool puoiRotolare = true;
-
+    Ray cameraRay;
+    Plane groundPlane;
+    float rayLenght;
     [SerializeField] PlayerStateManager playerStatemanager;
 
 
@@ -69,9 +74,9 @@ public class PlayerMove : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Ray cameraRay = CameraPrincipale.ScreenPointToRay(Input.mousePosition); //traccio un punto tramite Ray nella posizione del mouse
-        Plane groundPlane = new Plane(Vector3.up, transform.position);
-        float rayLenght;
+        cameraRay = CameraPrincipale.ScreenPointToRay(Input.mousePosition); //traccio un punto tramite Ray nella posizione del mouse
+        groundPlane = new Plane(Vector3.up, transform.position);
+
         if (groundPlane.Raycast(cameraRay, out rayLenght))
         {
             Vector3 pointToLook = cameraRay.GetPoint(rayLenght); //il punto da guardare è nel punto calcolato del Ray
@@ -101,10 +106,17 @@ public class PlayerMove : MonoBehaviour
 
     public void Attack()
     {
-        if (Input.GetKeyDown(KeyCode.M) && anim.GetBool("attacca") == false)
-        {
-            playerStatemanager.SwitchState(playerStatemanager.attackState);
-        }
+        //if (groundPlane.Raycast(cameraRay, out rayLenght))
+        //{
+            //Vector3 pointToLook = cameraRay.GetPoint(rayLenght);
+            if (Input.GetMouseButton(0) && anim.GetBool("attacca") == false)
+            {
+                //transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z));
+                StartCoroutine(AttDash());
+                playerStatemanager.SwitchState(playerStatemanager.attackState);
+            }
+        //}
+           
     }
 
     private void Move()
@@ -136,7 +148,7 @@ public class PlayerMove : MonoBehaviour
             transform.forward = Vector3.Lerp(transform.forward, heading * roatitionSpeed, 0.1f);
         }
 
-        if (Input.GetKey(KeyCode.Space) && rolling == false)
+        if (Input.GetKey(KeyCode.Space) && rolling == false && puoiRotolare)
         {
             anim.SetTrigger("rollAnim");
             StartCoroutine(Rolling());
@@ -156,8 +168,15 @@ public class PlayerMove : MonoBehaviour
 
     IEnumerator Rolling()
     {
-        rb.AddForce(heading * rollForce, ForceMode.Impulse);
+        rb.AddForce(transform.forward * rollForce, ForceMode.Impulse);
         yield return new WaitForSeconds(rollDistance);
-        rb.AddForce(-Fermati * rollForce, ForceMode.Impulse);
+        rb.AddForce(-transform.forward * frenataRoll, ForceMode.Impulse);
+    }
+
+    IEnumerator AttDash()
+    {
+        rb.AddForce(transform.forward * rollForce, ForceMode.Impulse);
+        yield return new WaitForSeconds(attDistance);
+        rb.AddForce(-transform.forward * frenataAtt, ForceMode.Impulse);
     }
 }

@@ -1557,6 +1557,21 @@ PrefabInstance:
       propertyPath: timeRoll
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1679442612504966696, guid: 572f75e7e04a0034e8ee47a678b2f332,
+        type: 3}
+      propertyPath: attDistance
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679442612504966696, guid: 572f75e7e04a0034e8ee47a678b2f332,
+        type: 3}
+      propertyPath: frenataRoll
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679442612504966696, guid: 572f75e7e04a0034e8ee47a678b2f332,
+        type: 3}
+      propertyPath: frenataAtt
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1679442612504966697, guid: 572f75e7e04a0034e8ee47a678b2f332,
         type: 3}
       propertyPath: animePerse
@@ -2565,6 +2580,9 @@ MonoBehaviour:
   StandardMoveSpeed: 4
   rollDistance: 0.3
   timeRoll: 0
+  attDistance: 0
+  frenataRoll: 0
+  frenataAtt: 0
   CameraPrincipale: {fileID: 1303423104}
   cursore: {fileID: 410424345}
   rb: {fileID: 0}
