@@ -10,6 +10,8 @@ public class PlayerMove : MonoBehaviour
     public float roatitionSpeed = 0f;
     public float rollForce = 0f;
     public float StandardMoveSpeed;
+    public float rollDistance = 0.3f;
+    public float timeRoll;
     [Header("Camera")]
     [SerializeField]
     private Camera CameraPrincipale;
@@ -24,9 +26,10 @@ public class PlayerMove : MonoBehaviour
     [SerializeField]
     Vector3 forward;
     Vector3 direction;
-    public Vector3 rightMovement;
+    Vector3 rightMovement;
     Vector3 upMovement;
     Vector3 heading;
+    Vector3 Fermati;
     [SerializeField]
     Vector3 right;
     bool rolling;
@@ -126,7 +129,7 @@ public class PlayerMove : MonoBehaviour
         }
         //direziono il giocatore
         heading = Vector3.Normalize(rightMovement + upMovement);
-
+        Fermati = Vector3.Normalize(gameObject.transform.position + gameObject.transform.position);
 
         if (!Input.GetMouseButton(1))
         {
@@ -136,7 +139,7 @@ public class PlayerMove : MonoBehaviour
         if (Input.GetKey(KeyCode.Space) && rolling == false)
         {
             anim.SetTrigger("rollAnim");
-            rb.AddForce(heading * rollForce, ForceMode.Impulse);
+            StartCoroutine(Rolling());
             StartCoroutine(CanRoll());
         }
 
@@ -147,7 +150,14 @@ public class PlayerMove : MonoBehaviour
     IEnumerator CanRoll()
     {
         rolling = true;
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(timeRoll);
         rolling = false;
+    }
+
+    IEnumerator Rolling()
+    {
+        rb.AddForce(heading * rollForce, ForceMode.Impulse);
+        yield return new WaitForSeconds(rollDistance);
+        rb.AddForce(-Fermati * rollForce, ForceMode.Impulse);
     }
 }
