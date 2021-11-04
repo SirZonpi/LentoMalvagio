@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviour
     public AudioManager audioManager;
     public Player player;
 
+    [SerializeField] GameObject panelPause;
+    public static bool isPause = false;
+
     public List<GameObject> oggettidaDisattivare;
     public TimeManager timeManager;
 
@@ -72,6 +75,8 @@ public class GameManager : MonoBehaviour
 
         SceneManager.LoadSceneAsync(levelToLoad, LoadSceneMode.Additive);
 
+        panelPause.SetActive(false);
+
        // currentLivelloDifficolta = player.livelloDifficolta;
 
     }
@@ -94,6 +99,23 @@ public class GameManager : MonoBehaviour
         isLoaded = false;
         SceneManager.LoadScene("ScenaPrincipale");
       
+    }
+
+    public void Pausa()
+    {
+        panelPause.SetActive(true);
+        timeManager.enabled = false;
+        Time.timeScale = 0f;
+        isPause = true;
+    }
+
+    public void Resume()
+    {
+        panelPause.SetActive(false);
+        timeManager.enabled = true;
+
+        Time.timeScale = 1f;
+        isPause = false;
     }
 
     /*
@@ -133,9 +155,23 @@ public class GameManager : MonoBehaviour
             timeManager.SlowMotion();
         }
 
-      
+        if (Input.GetKeyDown(KeyCode.Escape)) //PER DEBUG
+        {
+            if (isPause)
+            {
+                Resume();
+                Debug.Log("no pausa");
+            }
+            else
+            {
+                Pausa();
+                Debug.Log("pausa");
+            }
+           
+        }
 
-        if(player.livelloDifficolta == "Difficile" && doOnce1  )
+
+        if (player.livelloDifficolta == "Difficile" && doOnce1  )
         {
 
             Enemy[] enemies = GameObject.FindObjectsOfType<Enemy>();

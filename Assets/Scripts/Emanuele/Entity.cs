@@ -91,8 +91,9 @@ public class Entity : MonoBehaviour
         Health = maxHealth;
     }
 
+
     public virtual void RespawnPlayer()
-    {    
+    {      
         RestoreHealth();
         transform.position = CheckPoints.GetActiveCheckPointPosition();
     }

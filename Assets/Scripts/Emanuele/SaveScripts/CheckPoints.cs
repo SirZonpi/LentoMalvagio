@@ -26,7 +26,7 @@ public class CheckPoints : MonoBehaviour
     public static Vector3 GetActiveCheckPointPosition()                                                                     
     {
         // se il player muore senza aver toccato un checkpoint lo riposiziniamo in un punto predefinito
-        Vector3 result = new Vector3(0f, 0f, 0f);
+        Vector3 result = new Vector3(0f, 25f, 0f);
 
         if (checkPointsList != null)
         {
