@@ -29,24 +29,32 @@ public class PlayerAttackState : PlayerBaseState
     public override void UpdateState(PlayerStateManager player)
     {
         Debug.Log("ATTACCO 1");
+        Debug.Log("CAMBIALO " + cambia);
+
+
 
         Animator anim = player.GetComponent<Animator>();
-        if (Input.GetKeyDown(KeyCode.M)  && anim.GetBool("attacca")==true )
+
+        if (Input.GetMouseButtonDown(0) && anim.GetBool("attacca")==true && cambia == 1)
         {
 
             // anim.SetBool("attacca2", true);
+            Debug.Log("CAMBIALO " + cambia);
             player.SwitchState(player.attack2State);
-        }
- 
-        if (cambia == 0 && anim.GetBool("attacca2") == false)
-        {
-            
 
+
+         //   Debug.Log("LOSTATODELLAMERDA " + player.attack2State);
+
+        }
+
+        if (cambia == 0 /*|| checkerRb.velocity.magnitude != 0*/)
+        {
             player.SwitchState(player.idleState);
 
         }
 
-         
+       
+
     }
 
     public void Cambia1(int _cambia) //da cambiare con una stringa, è un animaton event

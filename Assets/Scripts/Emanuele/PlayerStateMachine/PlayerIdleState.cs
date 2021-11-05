@@ -41,10 +41,18 @@ public class PlayerIdleState : PlayerBaseState
 
         PlayerMove playerMove = GetComponent<PlayerMove>();
 
+        
+        if (Input.GetMouseButtonDown(0) && anim.GetBool("attacca") == false)
+        {
+            player.SwitchState(player.attackState);
+        }
+        
+        
         if (playerMove.siMuove == true)
         {
             player.SwitchState(player.walkState);
         }
+        
 
     }
 

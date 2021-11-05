@@ -8,7 +8,7 @@ public class PlayerAttack3State : PlayerBaseState
 {
     public int cambia;
 
-    //public CinemachineVirtualCamera vcam;
+   public CinemachineVirtualCamera vcam;
 
     public float zoomSpeed = 1;
     public float targetOrtho;
@@ -30,6 +30,12 @@ public class PlayerAttack3State : PlayerBaseState
         anim.SetBool("idle", false);
         anim.SetBool("cammina", false);
         //anim.SetBool("attacca", true);
+
+      
+        //vcam.m_Lens.OrthographicSize = Mathf.MoveTowards(vcam.m_Lens.OrthographicSize, 2, 10 * Time.deltaTime);
+     //   GameManager.instance.timeManager.SlowMotion();
+    
+
     }
 
     public override void onCollisionEnter(PlayerStateManager player)
@@ -43,10 +49,7 @@ public class PlayerAttack3State : PlayerBaseState
 
         Animator anim = player.GetComponent<Animator>();
 
-        /*
-        vcam.m_Lens.OrthographicSize = Mathf.MoveTowards(vcam.m_Lens.OrthographicSize, 2, 10 * Time.deltaTime);
-        GameManager.instance.timeManager.SlowMotion();
-        */
+        //vcam.m_Lens.OrthographicSize = Mathf.MoveTowards(vcam.m_Lens.OrthographicSize, 2, 10 * Time.deltaTime);
 
         if (cambia == 0 && anim.GetBool("attacca3") == true)
         {

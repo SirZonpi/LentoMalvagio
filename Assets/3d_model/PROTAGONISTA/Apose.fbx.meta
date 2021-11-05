@@ -18,7 +18,8 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
-    rigImportErrors: 
+    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
+      human bone 'LeftUpperLeg' not found\n"
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
@@ -76,7 +77,127 @@ ModelImporter:
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton: []
+    skeleton:
+    - name: Apose(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: lowpoly
+      parentName: Apose(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.01, y: 0.01, z: 0.01}
+    - name: controller_tutto_corpo
+      parentName: Apose(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.01, y: 0.01, z: 0.01}
+    - name: controller_centrale
+      parentName: controller_tutto_corpo
+      position: {x: 0.000000026726422, y: 80.2564, z: 0}
+      rotation: {x: 0.9832549, y: -3.2743663e-10, z: -0, w: 0.18223563}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform2
+      parentName: controller_centrale
+      position: {x: -0.000000026726422, y: -80.2564, z: 0}
+      rotation: {x: -0.93025756, y: 3.0978778e-10, z: 8.644403e-10, w: 0.3669073}
+      scale: {x: 12.952278, y: 12.952278, z: 12.952278}
+    - name: tutti_joint
+      parentName: transform2
+      position: {x: 0.0000000020634534, y: 6.196316, z: 0}
+      rotation: {x: 0.06963788, y: 0.46777666, z: 0.86927015, w: 0.14389223}
+      scale: {x: 1.0000002, y: 1, z: 1.0000002}
+    - name: joint_collo
+      parentName: tutti_joint
+      position: {x: -0, y: 1.0381345, z: 0}
+      rotation: {x: -0, y: -0.70080876, z: -0, w: 0.7133492}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: joint_testa
+      parentName: joint_collo
+      position: {x: -0, y: 2.1400218, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 0.99999994, y: 1, z: 0.99999994}
+    - name: joint_braccio_sx
+      parentName: tutti_joint
+      position: {x: 0.006186104, y: 0.00000008818336, z: -1.9503641}
+      rotation: {x: 0.3473732, y: -0.47424012, z: 0.49997574, w: 0.6359657}
+      scale: {x: 1, y: 1.0000002, z: 1.0000001}
+    - name: joint_gomito_sx
+      parentName: joint_braccio_sx
+      position: {x: -1.7142992, y: -0.089214526, z: 0}
+      rotation: {x: 0.0032065057, y: -0.12255612, z: -0.006810902, w: 0.9924331}
+      scale: {x: 1, y: 0.99999994, z: 1.0000002}
+    - name: joint_mano_sx
+      parentName: joint_gomito_sx
+      position: {x: -2.523683, y: -0.00081502483, z: -8.6736174e-19}
+      rotation: {x: 0.000000016190507, y: 0.000000088495746, z: -0.033914164, w: 0.99942476}
+      scale: {x: 1, y: 1.0000002, z: 0.99999964}
+    - name: joint_braccio_dx
+      parentName: tutti_joint
+      position: {x: 0.0061861, y: 0.0000043228024, z: 1.95036}
+      rotation: {x: -0.6003845, y: -0.5438643, z: 0.47920734, w: -0.33780232}
+      scale: {x: 1.0000005, y: 1.0000002, z: 1}
+    - name: joint_gomito_dx
+      parentName: joint_braccio_dx
+      position: {x: -1.7143046, y: -0.08921889, z: 0}
+      rotation: {x: 0.0032475288, y: -0.123999074, z: 0.052005164, w: 0.99091333}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: joint_mano_dx
+      parentName: joint_gomito_dx
+      position: {x: -2.523686, y: -0.0008144831, z: 5.126108e-16}
+      rotation: {x: -0.0000000132528, y: 0.0000000430477, z: -0.03391422, w: 0.9994248}
+      scale: {x: 1.0000002, y: 0.99999994, z: 0.99999994}
+    - name: joint_bacino
+      parentName: tutti_joint
+      position: {x: -0, y: -1.8502508, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000002, y: 1, z: 1.0000002}
+    - name: joint_gamba_sx
+      parentName: joint_bacino
+      position: {x: -0, y: -1.4748749, z: -1.1470274}
+      rotation: {x: 0.07264913, y: 0.89119035, z: -0.01896724, w: 0.44737244}
+      scale: {x: 0.99999994, y: 1.0000001, z: 1.0000001}
+    - name: joint_ginocchio_sx
+      parentName: joint_gamba_sx
+      position: {x: -0.12556107, y: -1.2818301, z: -0.0000026880268}
+      rotation: {x: -0.115357764, y: 0.10924567, z: -0.16287833, w: 0.9737703}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: joint_piede_sx
+      parentName: joint_ginocchio_sx
+      position: {x: 0.19631736, y: -1.345842, z: 0}
+      rotation: {x: -0, y: -0, z: 0.000000009313225, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: joint_gamba_dx
+      parentName: joint_bacino
+      position: {x: -0, y: -1.4748749, z: 1.14703}
+      rotation: {x: -0.44455063, y: 0.20299014, z: 0.823957, w: 0.2868179}
+      scale: {x: 1.0000004, y: 1, z: 1.0000004}
+    - name: joint_ginocchio_dx
+      parentName: joint_gamba_dx
+      position: {x: -0.12556107, y: -1.2818257, z: -0.0000000040817274}
+      rotation: {x: -0.007131568, y: -0.7040605, z: 0.036058646, w: 0.70918816}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: joint_piede_dx
+      parentName: joint_ginocchio_dx
+      position: {x: 0.19631736, y: -1.3458462, z: -6.661338e-15}
+      rotation: {x: -4.6566123e-10, y: -0, z: 4.6566123e-10, w: 1}
+      scale: {x: 1, y: 1.0000004, z: 1}
+    - name: spada
+      parentName: Apose(Clone)
+      position: {x: -84.83191, y: -41.02135, z: 5.382251}
+      rotation: {x: -0.0029519415, y: 0.034330767, z: -0.085618325, w: 0.995732}
+      scale: {x: 0.01, y: 0.01, z: 0.01}
+    - name: joint_spada1
+      parentName: Apose(Clone)
+      position: {x: 0.7385797, y: 0.54667705, z: -0.0008012403}
+      rotation: {x: 0.00000000461896, y: 0.7071068, z: -0.0000000034261423, w: 0.7071068}
+      scale: {x: 0.010000001, y: 0.01, z: 0.010000001}
+    - name: joint_spada2
+      parentName: joint_spada1
+      position: {x: -118.48185, y: 39.430344, z: 22.625244}
+      rotation: {x: -0.000000003226938, y: -0, z: -0.1543875, w: 0.98801035}
+      scale: {x: 1.0000002, y: 1, z: 1.0000004}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -91,7 +212,7 @@ ModelImporter:
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 3
+  animationType: 2
   humanoidOversampling: 1
   avatarSetup: 1
   additionalBone: 0

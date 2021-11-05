@@ -9,6 +9,8 @@ public class PlayerAttack2State : PlayerBaseState
 
     public override void EnterState(PlayerStateManager player)
     {
+        Debug.Log("SUPERMEGAPORCODIO");
+
         cambia = 1;
 
         Animator anim = player.GetComponent<Animator>();
@@ -29,10 +31,12 @@ public class PlayerAttack2State : PlayerBaseState
     public override void UpdateState(PlayerStateManager player)
     {
         Debug.Log("ATTACCO 2");
+        Debug.Log("CAMBIALO2 " + cambia);
+
         //Debug.Log("rb " + checkerRb.velocity.magnitude);
 
         Animator anim = player.GetComponent<Animator>();
-        if (Input.GetKeyDown(KeyCode.M) /* && anim.GetBool("attacca") == true && anim.GetBool("attacca2") == true*/)
+        if (Input.GetMouseButtonDown(0) /* && anim.GetBool("attacca") == true && anim.GetBool("attacca2") == true*/)
         {
             // anim.SetBool("attacca2", true);
             player.SwitchState(player.attack3State);
@@ -42,6 +46,11 @@ public class PlayerAttack2State : PlayerBaseState
         {
             player.SwitchState(player.idleState);
 
+        }
+
+        if (anim.GetBool("cammina"))
+        {
+            player.SwitchState(player.walkState);
         }
     }
 

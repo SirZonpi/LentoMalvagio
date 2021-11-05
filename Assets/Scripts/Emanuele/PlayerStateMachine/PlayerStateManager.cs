@@ -27,6 +27,10 @@ public class PlayerStateManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("LOSTATODELLAMERDA " + currentPlayerState);
+
         currentPlayerState.UpdateState(this);
+
+   
     }
 }

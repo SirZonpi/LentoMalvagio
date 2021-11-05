@@ -59,7 +59,7 @@ public class PlayerMove : MonoBehaviour
     {
         Debug.Log("si muov " + siMuove);
         Debug.Log("movespeed " + MoveSpeed);
-        Attack();
+       // Attack();
 
 
     }
@@ -87,7 +87,7 @@ public class PlayerMove : MonoBehaviour
 
 
         }
-        if (Input.anyKey)
+        if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
         {
             Move();
             siMuove = true;
@@ -99,7 +99,7 @@ public class PlayerMove : MonoBehaviour
     public void Attack()
     {
         if (Input.GetKeyDown(KeyCode.M) && anim.GetBool("attacca") == false)
-        {
+        {          
             playerStatemanager.SwitchState(playerStatemanager.attackState);
         }
     }
