@@ -10,6 +10,7 @@ public class PlayerStateManager : MonoBehaviour
     public PlayerWalkState walkState; // = new PlayerWalkState();
     public PlayerAttack2State attack2State;
     public PlayerAttack3State attack3State;
+    public PlayerEsecuzioneState esecuzione;
 
     public void SwitchState(PlayerBaseState playerState)
     {

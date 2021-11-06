@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Enemy : Entity
 {
+    public int animeDrop;
+
     //override dei metodi della classe base Entity
     public override void KillEnemy()
     {

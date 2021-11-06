@@ -184,6 +184,7 @@ public class GameManager : MonoBehaviour
 
                     enemy.maxHealth = 20;
                     enemy.Health = enemy.maxHealth;
+                    enemy.animeDrop += ((int)enemy.animeDrop * 20 / 100); ///
                     doOnce1 = false;
 
                 }
@@ -202,6 +203,7 @@ public class GameManager : MonoBehaviour
                 {
                     enemy.maxHealth = 40;
                     enemy.Health = enemy.maxHealth;
+                    enemy.animeDrop += ((int)enemy.animeDrop * 50 / 100); ///
                     doOnce2 = false;
                 }
             }

@@ -47,6 +47,8 @@ public class PlayerAttack3State : PlayerBaseState
     {
         Debug.Log("ATTACCO 3");
 
+        PlayerMove playerMove = GetComponent<PlayerMove>();
+
         Animator anim = player.GetComponent<Animator>();
 
         //vcam.m_Lens.OrthographicSize = Mathf.MoveTowards(vcam.m_Lens.OrthographicSize, 2, 10 * Time.deltaTime);
@@ -60,6 +62,13 @@ public class PlayerAttack3State : PlayerBaseState
             player.SwitchState(player.idleState);
 
         }
+
+        if (playerMove.siMuove == true)
+        {
+            player.SwitchState(player.walkState);
+        }
+
+
     }
 
     public void Cambia3(int _cambia) //da cambiare con una stringa, è un animaton event

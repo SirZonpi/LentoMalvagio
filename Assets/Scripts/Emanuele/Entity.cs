@@ -56,7 +56,7 @@ public class Entity : MonoBehaviour
 
     }
 
-    public GameObject mesh;
+
 
     public virtual void TakeDamage(int amount) //danno base, override per eventuali cambiamenti nelle classi figlie
     {

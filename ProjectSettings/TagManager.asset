@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - savecanvas
   - EnemyHit
+  - Trappola
   layers:
   - Default
   - TransparentFX

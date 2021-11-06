@@ -1,18 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerAttackState : PlayerBaseState
 {
     public int cambia ;
+    public int vaAdAttacco2 = 0;
     public Collider spadaCollider;
+
+    public GameObject textprefab;
+    public string textToDisplay;
    // public Rigidbody checkerRb;
 
     public override void EnterState(PlayerStateManager player)
     {
         cambia = 1;
-
-        Debug.Log("DIOMERDA" + cambia);
+        vaAdAttacco2 = 0;
 
         Animator anim = player.GetComponent<Animator>();
         anim.SetBool("idle", false);
@@ -31,20 +35,35 @@ public class PlayerAttackState : PlayerBaseState
         Debug.Log("ATTACCO 1");
         Debug.Log("CAMBIALO " + cambia);
 
+        Debug.Log("vaadttacco2  " + vaAdAttacco2);
 
+        PlayerMove playerMove = GetComponent<PlayerMove>();
 
         Animator anim = player.GetComponent<Animator>();
 
         if (Input.GetMouseButtonDown(0) && anim.GetBool("attacca")==true && cambia == 1)
         {
+            Quaternion rotazione = new Quaternion (0, 45, 0, 90);
 
-            // anim.SetBool("attacca2", true);
-            Debug.Log("CAMBIALO " + cambia);
+            GameObject testo = Instantiate(textprefab, transform.position, rotazione);
+            testo.transform.GetChild(0).GetComponent<TextMeshPro>().SetText(textToDisplay);
+
+             Debug.Log("CAMBIALO " + cambia);    
+           // player.SwitchState(player.attack2State);
+
+
+         //   Debug.Log("LOSTATOCORRENTE " + player.attack2State);
+
+        }
+
+        if (Input.GetMouseButtonDown(0) && vaAdAttacco2 == 1)
+        {
             player.SwitchState(player.attack2State);
-
-
-         //   Debug.Log("LOSTATODELLAMERDA " + player.attack2State);
-
+        }
+       
+        if (Input.GetMouseButtonDown(0) && vaAdAttacco2 == 0)
+        {
+            player.SwitchState(player.attackState);
         }
 
         if (cambia == 0 /*|| checkerRb.velocity.magnitude != 0*/)
@@ -53,7 +72,10 @@ public class PlayerAttackState : PlayerBaseState
 
         }
 
-       
+        if (playerMove.siMuove == true)
+        {
+            player.SwitchState(player.walkState);
+        }
 
     }
 
@@ -62,6 +84,13 @@ public class PlayerAttackState : PlayerBaseState
         cambia = _cambia;
 
        // Debug.Log("attacco cambia " + cambia);
+    }
+
+
+
+    public void VaAdAttacco2(int _vaAdAttacco2)
+    {
+        vaAdAttacco2 = _vaAdAttacco2;
     }
     
 

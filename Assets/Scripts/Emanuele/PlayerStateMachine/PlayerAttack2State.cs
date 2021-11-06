@@ -5,13 +5,15 @@ using UnityEngine;
 public class PlayerAttack2State : PlayerBaseState
 {
     public int cambia;
-   // public Rigidbody checkerRb;
+    public int vaAdAttacco3 = 0;
+    // public Rigidbody checkerRb;
 
     public override void EnterState(PlayerStateManager player)
     {
         Debug.Log("SUPERMEGAPORCODIO");
 
         cambia = 1;
+        vaAdAttacco3 = 0;
 
         Animator anim = player.GetComponent<Animator>();
 
@@ -35,12 +37,17 @@ public class PlayerAttack2State : PlayerBaseState
 
         //Debug.Log("rb " + checkerRb.velocity.magnitude);
 
+        PlayerMove playerMove = GetComponent<PlayerMove>();
+
         Animator anim = player.GetComponent<Animator>();
-        if (Input.GetMouseButtonDown(0) /* && anim.GetBool("attacca") == true && anim.GetBool("attacca2") == true*/)
+
+        /*
+        if (Input.GetMouseButtonDown(0)   && anim.GetBool("attacca") == true && anim.GetBool("attacca2") == true )
         {
             // anim.SetBool("attacca2", true);
             player.SwitchState(player.attack3State);
         }
+        */
 
         if (cambia == 0 /*|| checkerRb.velocity.magnitude != 0*/)
         {
@@ -48,7 +55,13 @@ public class PlayerAttack2State : PlayerBaseState
 
         }
 
-        if (anim.GetBool("cammina"))
+
+        if (Input.GetMouseButtonDown(0) && vaAdAttacco3 == 1)
+        {
+            player.SwitchState(player.attack3State);
+        }
+
+        if (playerMove.siMuove == true)
         {
             player.SwitchState(player.walkState);
         }
@@ -58,6 +71,11 @@ public class PlayerAttack2State : PlayerBaseState
     {
         cambia = _cambia;
   
+    }
+
+    public void VaAdAttacco3(int _vaAdAttacco3)
+    {
+        vaAdAttacco3 = _vaAdAttacco3;
     }
 
 }
