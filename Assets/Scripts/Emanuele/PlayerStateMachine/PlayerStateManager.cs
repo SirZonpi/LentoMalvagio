@@ -10,6 +10,7 @@ public class PlayerStateManager : MonoBehaviour
     public PlayerWalkState walkState; // = new PlayerWalkState();
     public PlayerAttack2State attack2State;
     public PlayerAttack3State attack3State;
+    public PlayerEsecuzioneState esecuzione;
 
     public void SwitchState(PlayerBaseState playerState)
     {
@@ -27,6 +28,10 @@ public class PlayerStateManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("LOSTATODELLAMERDA " + currentPlayerState);
+
         currentPlayerState.UpdateState(this);
+
+   
     }
 }

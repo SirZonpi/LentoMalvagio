@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviour
     public AudioManager audioManager;
     public Player player;
 
+    [SerializeField] GameObject panelPause;
+    public static bool isPause = false;
+
     public List<GameObject> oggettidaDisattivare;
     public TimeManager timeManager;
 
@@ -17,11 +20,10 @@ public class GameManager : MonoBehaviour
 
     public string levelToLoad;
 
-    public string currentLivelloDifficolta;
-
-    //public LivelloDifficolta currentLivelloDifficolta = LivelloDifficolta.Normale;  ///aggiunto oggi
+   // public string currentLivelloDifficolta;  ///aggiunto oggi
     public int diffDifficile = 500;
     public int diffFolle = 1000;
+
 
     private void Awake()
     {
@@ -34,19 +36,15 @@ public class GameManager : MonoBehaviour
             Destroy(this);
         }
 
-
-        levelToLoad = player.currentLevel;
-
-       currentLivelloDifficolta =player.livelloDifficolta;
+       levelToLoad = player.currentLevel;
 
     }
-
-   
 
 
     public void SavePlayer()
     {
         SaveSystem.SavePlayer(player);
+        Debug.Log("vita salvata" + player.Health);
     }
 
     public void LoadPlayer()
@@ -56,8 +54,6 @@ public class GameManager : MonoBehaviour
         player.Health = playerData.health;
 
         levelToLoad = playerData.level;
-
-        string stringadelporco = playerData.difficoltà.ToString();
 
         player.livelloDifficolta = playerData.difficoltà;
 
@@ -71,19 +67,23 @@ public class GameManager : MonoBehaviour
 
     }
 
-    Enemy[] enemies;
+
 
     void Start()
     {
         Debug.Log("scena nel GM " + levelToLoad);
 
         SceneManager.LoadSceneAsync(levelToLoad, LoadSceneMode.Additive);
-         
+
+        panelPause.SetActive(false);
+
+       // currentLivelloDifficolta = player.livelloDifficolta;
+
     }
 
     private void OnEnable()
     {
-       // Debug.Log("CARICA : " + levelToLoad);
+
     }
 
     public static bool isLoaded = false;
@@ -91,14 +91,31 @@ public class GameManager : MonoBehaviour
     {
         isLoaded = true;
         SceneManager.LoadScene("ScenaPrincipale");
-        //LoadPlayer();
+     
     }
 
     public void NewGame()
     {
         isLoaded = false;
         SceneManager.LoadScene("ScenaPrincipale");
-        //LoadPlayer();
+      
+    }
+
+    public void Pausa()
+    {
+        panelPause.SetActive(true);
+        timeManager.enabled = false;
+        Time.timeScale = 0f;
+        isPause = true;
+    }
+
+    public void Resume()
+    {
+        panelPause.SetActive(false);
+        timeManager.enabled = true;
+
+        Time.timeScale = 1f;
+        isPause = false;
     }
 
     /*
@@ -124,38 +141,74 @@ public class GameManager : MonoBehaviour
     }
     */
 
+    public bool doOnce1 = true;
+    public bool doOnce2 = true;
+
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("IS LOADED " + isLoaded);
+
+
         if (Input.GetKeyDown(KeyCode.L)) //PER DEBUG
         {
             timeManager.SlowMotion();
         }
 
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.Escape)) //PER DEBUG
         {
-            player.livelloDifficolta = "Difficile";
-
-           // Debug.Log("MEDDA " + System.Enum.GetName(typeof(LivelloDifficolta), player.livelloDifficolta).ToString());
-
+            if (isPause)
+            {
+                Resume();
+                Debug.Log("no pausa");
+            }
+            else
+            {
+                Pausa();
+                Debug.Log("pausa");
+            }
+           
         }
 
-        if(player.livelloDifficolta == "Difficile")
+
+        if (player.livelloDifficolta == "Difficile" && doOnce1  )
         {
+
             Enemy[] enemies = GameObject.FindObjectsOfType<Enemy>();
-
-
 
             foreach (Enemy enemy in enemies)
             {
+              
                 if (enemy.gameObject.scene.name == player.currentLevel)
                 {
 
-                    enemy.maxHealth = 30;
-                  //  enemy.Health = enemy.maxHealth;
+                    enemy.maxHealth = 20;
+                    enemy.Health = enemy.maxHealth;
+                    enemy.animeDrop += ((int)enemy.animeDrop * 20 / 100); ///
+                    doOnce1 = false;
+
                 }
             }
+
         }
-   
+
+        if (player.livelloDifficolta == "Folle" && doOnce2)
+        {
+            Enemy[] enemies = GameObject.FindObjectsOfType<Enemy>();
+
+            foreach (Enemy enemy in enemies)
+            {
+
+                if (enemy.gameObject.scene.name == player.currentLevel)
+                {
+                    enemy.maxHealth = 40;
+                    enemy.Health = enemy.maxHealth;
+                    enemy.animeDrop += ((int)enemy.animeDrop * 50 / 100); ///
+                    doOnce2 = false;
+                }
+            }
+
+        }
+
     }
 }

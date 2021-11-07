@@ -68,7 +68,7 @@ public class FatinaSpellCaster : Enemy
 
             if (hit.transform != null && hit.transform.CompareTag("Player"))
             {
-
+                Debug.Log("FATINA SPARA");
                 timeRate += Time.deltaTime;
 
                 if (timeRate >= 1)

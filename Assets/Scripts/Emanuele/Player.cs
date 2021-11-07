@@ -5,36 +5,38 @@ using UnityEngine;
 public class Player : Entity
 {
 
-    public int minionsKilled=1000; //1000 per debug
+    public int minionsKilled = default; //1000 per debug
+    public GameObject prefabAnime;
+
     public string currentLevel;
 
-    public string livelloDifficolta;  ///aggiunto oggi
+    public string livelloDifficolta;
+
+    public List<GameObject> animeRecuperabili;
+
 
     void Start()
     {
+
         if (GameManager.isLoaded == true)
         {
             GameManager.instance.LoadPlayer();
 
         }
+        else
+        {
+            Health = maxHealth;
+        }
+
+        animeRecuperabili = new List<GameObject>();
+
     }
 
     private void Awake()
     {
         currentLevel = "Scena1";
         livelloDifficolta = "Normale";  ///aggiunto oggi
-    }
 
-
-    
-
-   
-
-    //override dei metodi della classe base Entity
-    public override void TakeDamage(int amount)
-    {
-        Debug.Log("Il player ha subito danno");
-        base.TakeDamage(amount);
     }
 
     IEnumerator IncrementaHpCo()
@@ -49,7 +51,7 @@ public class Player : Entity
 
             if (tmp >= 0.2f)
             {
-                
+
                 Health++;
                 tmp = 0f;
             }
@@ -57,6 +59,43 @@ public class Player : Entity
             yield return null;
         }
         yield return null;
+
+    }
+
+
+    /*
+    private void OnEnable() //increedibilemnte anche se vuoto bloccava l'aggiunta della hp bar sul player...
+    {
+   
+    }
+    */
+
+    //override dei metodi della classe base Entity
+    public override void TakeDamage(int amount)
+    {
+        Debug.Log("Il player ha subito danno");
+        base.TakeDamage(amount);
+    }
+
+
+    public override void RespawnPlayer() ///override fatto oggi
+    {
+  
+
+        if (animeRecuperabili.Count != 0)
+        {
+            Destroy(animeRecuperabili[0].gameObject);
+            animeRecuperabili.Remove(animeRecuperabili[0]);
+        }
+
+            GameObject anime = Instantiate(prefabAnime, transform); //istanzio il particellare delle anime perdute
+            anime.transform.SetParent(null); //tolgo il parent al prefab
+            RecuperaAnime.animeDaRecuperare = minionsKilled; //assegno il valore delle anime raccolte fin qui alla var statica animedarecuperare
+            minionsKilled = 0; //resetto il valore delle anime raccolte
+
+        animeRecuperabili.Add(anime);
+
+        base.RespawnPlayer(); //le operazioni del metodo originario che si trova nella base class
 
     }
 

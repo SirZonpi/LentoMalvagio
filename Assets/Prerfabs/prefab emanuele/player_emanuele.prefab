@@ -404,7 +404,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 136d08aa0f3bc2a45bc43c8fd0485725, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vcam: {fileID: 0}
 --- !u!114 &1679442612504966694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -444,7 +443,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cambia: 0
-  vcam: {fileID: 0}
   zoomSpeed: 1
   targetOrtho: 0
   startOrtho: 0
@@ -510,6 +508,9 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 0
   mesh: {fileID: 0}
+  minionsKilled: 0
+  currentLevel: 
+  livelloDifficolta: 
 --- !u!208 &1679442612504932503
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -1880,6 +1881,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1679442612505095364}
+  - component: {fileID: 3563513760952949555}
+  - component: {fileID: 4354161863318812079}
   m_Layer: 0
   m_Name: stick
   m_TagString: Untagged
@@ -1901,6 +1904,31 @@ Transform:
   m_Father: {fileID: 1679442612505095362}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 37.980755, y: 110.82693, z: 145.9971}
+--- !u!114 &3563513760952949555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1679442612504932644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69effe074d55bcf4da88f5258375de86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &4354161863318812079
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1679442612504932644}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.19905195, y: 0.24881297, z: 0.14879844}
+  m_Center: {x: -0.00000072843494, y: 0.7009139, z: 0.013448778}
 --- !u!1 &1679442612504932646
 GameObject:
   m_ObjectHideFlags: 0

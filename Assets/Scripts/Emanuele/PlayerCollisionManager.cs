@@ -4,11 +4,19 @@ using UnityEngine;
 
 public class PlayerCollisionManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]Player player;
+
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.CompareTag("Trappola"))
+        {
+            player.TakeDamage(2);
+        }
     }
+
+    private void Start()
+    {
+     }
 
     // Update is called once per frame
     void Update()
