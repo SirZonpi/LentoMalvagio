@@ -1,0 +1,675 @@
+fileFormatVersion: 2
+guid: 05bf0f773d7e04b4db8ce8d47b86129b
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      74: 1827226128182048838
+    second: tenta
+  externalObjects: {}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: tenta
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 1
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0.59999996
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: tent_dx_sx_definitiva (1)(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: boss_rig:corpo_boss
+      parentName: tent_dx_sx_definitiva (1)(Clone)
+      position: {x: -0.0011241767, y: -90.00291, z: 0.03323914}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.01, y: 0.01, z: 0.01}
+    - name: boss_rig:tentacoli
+      parentName: tent_dx_sx_definitiva (1)(Clone)
+      position: {x: -4.0234966, y: 0, z: -7.2017565}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.01, y: 0.01, z: 0.01}
+    - name: boss_rig:nurbsCircle1
+      parentName: tent_dx_sx_definitiva (1)(Clone)
+      position: {x: -0, y: 1.515977, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.01, y: 0.01, z: 0.01}
+    - name: boss_rig:controller_corpo
+      parentName: boss_rig:nurbsCircle1
+      position: {x: -0.2850517, y: 180.81349, z: -1.947647}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: boss_rig:tutti_joint_corpo
+      parentName: boss_rig:controller_corpo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: boss_rig:joint_collo
+      parentName: boss_rig:tutti_joint_corpo
+      position: {x: -0.000000002043329, y: 35.009888, z: 0.2850517}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000002, y: 1, z: 1.0000002}
+    - name: boss_rig:joint_testa
+      parentName: boss_rig:joint_collo
+      position: {x: -8.658712, y: 40.973553, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000002, y: 1, z: 1.0000002}
+    - name: boss_rig:joint_braccio_sx
+      parentName: boss_rig:tutti_joint_corpo
+      position: {x: -3.7458847, y: 3.9578865, z: -43.810173}
+      rotation: {x: 0.17783102, y: -0.21853177, z: 0.67966413, w: 0.6772568}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+    - name: boss_rig:joint_braccio_sx1
+      parentName: boss_rig:joint_braccio_sx
+      position: {x: -39.346718, y: -2.5621562, z: -3.5273347}
+      rotation: {x: 0.021223545, y: -0.063563466, z: -0.062173225, w: 0.9958132}
+      scale: {x: 1, y: 1.0000004, z: 1.0000001}
+    - name: boss_rig:joint_braccio_sx2
+      parentName: boss_rig:joint_braccio_sx1
+      position: {x: -36.529762, y: -1.4264016, z: 2.3058958}
+      rotation: {x: -0.00000007450579, y: 0.000000029802315, z: 0.0038038553, w: 0.9999928}
+      scale: {x: 1.0000001, y: 1, z: 1.0000004}
+    - name: boss_rig:joint_braccio_dx
+      parentName: boss_rig:tutti_joint_corpo
+      position: {x: -3.7458847, y: 3.9578114, z: 44.380253}
+      rotation: {x: 0.5819618, y: 0.725269, z: -0.20117329, w: 0.30795246}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: boss_rig:joint_braccio_dx1
+      parentName: boss_rig:joint_braccio_dx
+      position: {x: -39.346863, y: -2.5622838, z: 3.5273376}
+      rotation: {x: 0.05941864, y: 0.07896262, z: 0.08822604, w: 0.9911865}
+      scale: {x: 1.0000008, y: 1.0000005, z: 1.0000006}
+    - name: boss_rig:joint_braccio_dx2
+      parentName: boss_rig:joint_braccio_dx1
+      position: {x: -36.52967, y: -1.426301, z: -2.305899}
+      rotation: {x: 0.0000000037252894, y: 0.00000011175868, z: 0.0038039116, w: 0.99999285}
+      scale: {x: 1, y: 1.0000001, z: 0.9999998}
+    - name: boss_rig:joint_gonna
+      parentName: boss_rig:tutti_joint_corpo
+      position: {x: -0, y: -125.914345, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000002, y: 1, z: 1.0000002}
+    - name: boss_rig:joint_centrale_tentacoli
+      parentName: tent_dx_sx_definitiva (1)(Clone)
+      position: {x: 0.010610929, y: 0.48957688, z: 0.12545039}
+      rotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+      scale: {x: 0.010000001, y: 0.01, z: 0.010000001}
+    - name: boss_rig:curve_tentacolo_back
+      parentName: boss_rig:joint_centrale_tentacoli
+      position: {x: -12.545039, y: -48.957687, z: 1.0610929}
+      rotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: boss_rig:curve_tentacolo_front
+      parentName: boss_rig:joint_centrale_tentacoli
+      position: {x: -12.545039, y: -48.957687, z: 1.0610929}
+      rotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: boss_rig:curve_tentacolo_sx
+      parentName: boss_rig:joint_centrale_tentacoli
+      position: {x: -12.545039, y: -48.957687, z: 1.0610929}
+      rotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: boss_rig:curve_tentacolo_dx
+      parentName: boss_rig:joint_centrale_tentacoli
+      position: {x: -12.545039, y: -48.957687, z: 1.0610929}
+      rotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: boss_rig:joint_t_fron_90
+      parentName: boss_rig:joint_centrale_tentacoli
+      position: {x: 1.7763568e-15, y: -0.0000005848469, z: -111.95304}
+      rotation: {x: 0.43773884, y: 0.55532414, z: -0.43773854, w: -0.555324}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: boss_rig:joint_t_fron_46 1
+      parentName: boss_rig:joint_t_fron_90
+      position: {x: -64.219, y: 0, z: 0.0001}
+      rotation: {x: -0, y: -0.0000008344649, z: 9.926166e-23, w: 1}
+      scale: {x: 1.0000004, y: 1.0000001, z: 1.0000001}
+    - name: boss_rig:joint_t_fron_47 1
+      parentName: boss_rig:joint_t_fron_46 1
+      position: {x: -64.921, y: 0, z: 0.0000011738056}
+      rotation: {x: 6.6174433e-24, y: -0.000001400709, z: 1.654361e-22, w: 1}
+      scale: {x: 1.0000005, y: 1.0000001, z: 1.0000006}
+    - name: boss_rig:joint_t_fron_48 1
+      parentName: boss_rig:joint_t_fron_47 1
+      position: {x: -67.763, y: 0, z: 0.0000036767321}
+      rotation: {x: -6.617415e-24, y: -0.0000031292434, z: 3.8381178e-22, w: 1}
+      scale: {x: 0.99999994, y: 1, z: 0.9999998}
+    - name: boss_rig:joint_t_fron_49 1
+      parentName: boss_rig:joint_t_fron_48 1
+      position: {x: -71.302, y: 0, z: -0.00009127308}
+      rotation: {x: -0.36166164, y: -0.45880452, z: -0.5024254, w: 0.63739157}
+      scale: {x: 1, y: 1, z: 1}
+    - name: boss_rig:joint_t_fron_50 1
+      parentName: boss_rig:joint_t_fron_49 1
+      position: {x: -72.336, y: 1.4210855e-14, z: 0.000018054541}
+      rotation: {x: 4.3368082e-19, y: -0.00000032782552, z: -4.5781366e-18, w: 1}
+      scale: {x: 1.0000004, y: 1.0000002, z: 1.0000002}
+    - name: boss_rig:joint_t_fron_51 1
+      parentName: boss_rig:joint_t_fron_50 1
+      position: {x: -77.414, y: -7.1054274e-15, z: 0.00003790222}
+      rotation: {x: 4.3368066e-19, y: -0.000000119209275, z: -2.1062368e-18, w: 1}
+      scale: {x: 1.0000005, y: 1.0000002, z: 1.0000006}
+    - name: boss_rig:joint_t_fron_52 1
+      parentName: boss_rig:joint_t_fron_51 1
+      position: {x: -74.508, y: -7.1054274e-15, z: -0.000028701996}
+      rotation: {x: 3.6189147e-25, y: -0.0000006258487, z: -8.564077e-18, w: 1}
+      scale: {x: 1.0000004, y: 1.0000001, z: 1.0000002}
+    - name: boss_rig:joint_t_fron_53 1
+      parentName: boss_rig:joint_t_fron_52 1
+      position: {x: -70.633, y: -1.4210855e-14, z: 0.000033634704}
+      rotation: {x: -0, y: -0, z: 2.2648931e-31, w: 1}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.99999976}
+    - name: boss_rig:joint_t_fron_54 1
+      parentName: boss_rig:joint_t_fron_53 1
+      position: {x: -71.602, y: 7.1054274e-15, z: -0.000029532806}
+      rotation: {x: -4.3368022e-19, y: -0.0000005960464, z: -7.9290986e-18, w: 1}
+      scale: {x: 1.0000004, y: 1.0000001, z: 1.0000002}
+    - name: boss_rig:joint_t_fron_55 1
+      parentName: boss_rig:joint_t_fron_54 1
+      position: {x: -77.415, y: 0, z: -0.000013230765}
+      rotation: {x: -4.3367841e-19, y: -0.00000056624407, z: -6.4267587e-18, w: 1}
+      scale: {x: 1.0000006, y: 1.0000004, z: 1.0000008}
+    - name: boss_rig:joint_t_fron_56 1
+      parentName: boss_rig:joint_t_fron_55 1
+      position: {x: -79.197, y: -7.1054274e-15, z: -0.0000070129745}
+      rotation: {x: -4.33684e-19, y: -0.00000038743013, z: -6.520009e-18, w: 1}
+      scale: {x: 0.9999998, y: 1.0000001, z: 0.99999994}
+    - name: boss_rig:joint_t_fron_57 1
+      parentName: boss_rig:joint_t_fron_56 1
+      position: {x: -79.197, y: -0.00000030339353, z: 0.000006148431}
+      rotation: {x: 1.7347221e-18, y: -0.000000119209275, z: -2.1062351e-18, w: 1}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1}
+    - name: boss_rig:joint_t_fron_58 1
+      parentName: boss_rig:joint_t_fron_57 1
+      position: {x: -79.199, y: -0.00000030340118, z: 0.000007351111}
+      rotation: {x: -1.301039e-18, y: -0.00000035762784, z: -3.716628e-18, w: 1}
+      scale: {x: 1.0000004, y: 1.0000001, z: 1.0000006}
+    - name: boss_rig:joint_t_fron_59 1
+      parentName: boss_rig:joint_t_fron_58 1
+      position: {x: -79.19, y: -0.0000003033667, z: 0.000010548456}
+      rotation: {x: 1.2407708e-24, y: -0.000001400709, z: -1.8568329e-17, w: 1}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000002}
+    - name: boss_rig:joint_t_fron_60 1
+      parentName: boss_rig:joint_t_fron_59 1
+      position: {x: -79.2, y: -0.00000030340505, z: 0.00001733101}
+      rotation: {x: -9.951826e-25, y: -0.0000037252898, z: -5.031579e-17, w: 1}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1.0000002}
+    - name: boss_rig:joint_t_fron_61 1
+      parentName: boss_rig:joint_t_fron_60 1
+      position: {x: -79.2, y: -0.00000030340502, z: 0.00003086888}
+      rotation: {x: -0.0000000019077138, y: 0.000008553266, z: -0.0000000019231947,
+        w: 1}
+      scale: {x: 0.99999946, y: 1.0000004, z: 0.9999996}
+    - name: boss_rig:joint_t_fron_62 1
+      parentName: boss_rig:joint_t_fron_61 1
+      position: {x: -79.2, y: -0.00000030340541, z: -0.00004239849}
+      rotation: {x: 2.2204458e-16, y: -0.00000065565104, z: -4.767321e-16, w: 1}
+      scale: {x: 1.0000004, y: 1.0000001, z: 1.0000004}
+    - name: boss_rig:joint_t_fron_63 1
+      parentName: boss_rig:joint_t_fron_62 1
+      position: {x: -79.19, y: -0.0000003033671, z: 0.000010754002}
+      rotation: {x: -2.2204353e-16, y: -0.0000011026858, z: 7.829704e-16, w: 1}
+      scale: {x: 1.0000002, y: 1.0000004, z: 1.0000004}
+    - name: boss_rig:joint_t_fron_64 1
+      parentName: boss_rig:joint_t_fron_63 1
+      position: {x: -79.2, y: -0.00000030340578, z: 0.000016944}
+      rotation: {x: 2.2204355e-16, y: -0.0000016689298, z: -2.972615e-16, w: 1}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000004}
+    - name: boss_rig:joint_t_fron_65 1
+      parentName: boss_rig:joint_t_fron_64 1
+      position: {x: -79.2, y: -0.00000030340655, z: 0.000029282317}
+      rotation: {x: -2.2204333e-16, y: -0.0000016689298, z: 3.6887422e-16, w: 1}
+      scale: {x: 1.0000005, y: 1.0000001, z: 1.0000007}
+    - name: boss_rig:joint_t_fron_66 1
+      parentName: boss_rig:joint_t_fron_65 1
+      position: {x: -79.19, y: -0.00000030337017, z: -0.00004602078}
+      rotation: {x: -0, y: -0, z: 2.120458e-27, w: 1}
+      scale: {x: 0.99999994, y: 1.0000001, z: 1}
+    - name: boss_rig:joint_t_fron_45
+      parentName: boss_rig:joint_centrale_tentacoli
+      position: {x: -111.95304, y: -0.0000005848469, z: 0}
+      rotation: {x: -0, y: 0.00000017881393, z: -0, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: boss_rig:joint_t_fron_46
+      parentName: boss_rig:joint_t_fron_45
+      position: {x: -64.219, y: 0, z: 0.0001}
+      rotation: {x: 1.2246469e-16, y: -0.0000013411045, z: 2.1898392e-23, w: 1}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: boss_rig:joint_t_fron_47
+      parentName: boss_rig:joint_t_fron_46
+      position: {x: -64.921, y: 0, z: 0.0000011738056}
+      rotation: {x: 1.3234888e-23, y: -0.000001788139, z: 2.1898387e-22, w: 1}
+      scale: {x: 1.0000004, y: 1, z: 1.0000004}
+    - name: boss_rig:joint_t_fron_48
+      parentName: boss_rig:joint_t_fron_47
+      position: {x: -67.763, y: 0, z: 0.0000036767321}
+      rotation: {x: -2.6469776e-23, y: -0.0000036358829, z: 4.452673e-22, w: 1}
+      scale: {x: 0.9999999, y: 1, z: 0.99999994}
+    - name: boss_rig:joint_t_fron_49
+      parentName: boss_rig:joint_t_fron_48
+      position: {x: -71.302, y: 0, z: -0.00009127308}
+      rotation: {x: -1.9025462e-11, y: 0.000007301568, z: 1.4005188e-16, w: 1}
+      scale: {x: 1.0000004, y: 1.0000002, z: 1.0000006}
+    - name: boss_rig:joint_t_fron_50
+      parentName: boss_rig:joint_t_fron_49
+      position: {x: -72.336, y: 1.4210855e-14, z: 0.000018054541}
+      rotation: {x: 9.8879225e-17, y: -0.0000029504295, z: 1.9025477e-11, w: 1}
+      scale: {x: 0.9999998, y: 1.0000001, z: 0.9999999}
+    - name: boss_rig:joint_t_fron_51
+      parentName: boss_rig:joint_t_fron_50
+      position: {x: -77.414, y: -7.1054274e-15, z: 0.00003790222}
+      rotation: {x: -1.0138646e-17, y: -0.0000007152557, z: -3.469084e-18, w: 1}
+      scale: {x: 1.0000004, y: 1.0000002, z: 1.0000002}
+    - name: boss_rig:joint_t_fron_52
+      parentName: boss_rig:joint_t_fron_51
+      position: {x: -74.508, y: -7.1054274e-15, z: -0.000028701996}
+      rotation: {x: -6.872139e-16, y: -0.0000008344649, z: 3.470012e-18, w: 1}
+      scale: {x: 0.99999994, y: 1.0000001, z: 0.99999994}
+    - name: boss_rig:joint_t_fron_53
+      parentName: boss_rig:joint_t_fron_52
+      position: {x: -70.633, y: -1.4210855e-14, z: 0.000033634704}
+      rotation: {x: 4.3285017e-16, y: -0.00000086426724, z: -1.735911e-18, w: 1}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1.0000002}
+    - name: boss_rig:joint_t_fron_54
+      parentName: boss_rig:joint_t_fron_53
+      position: {x: -71.602, y: 7.1054274e-15, z: -0.000029532806}
+      rotation: {x: 1.75584e-16, y: -0.0000025331972, z: -1.7355668e-18, w: 1}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000002}
+    - name: boss_rig:joint_t_fron_55
+      parentName: boss_rig:joint_t_fron_54
+      position: {x: -77.415, y: 0, z: -0.000013230765}
+      rotation: {x: 1.9025639e-11, y: 0.0000057816496, z: -1.902571e-11, w: 1}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000005}
+    - name: boss_rig:joint_t_fron_56
+      parentName: boss_rig:joint_t_fron_55
+      position: {x: -79.197, y: -7.1054274e-15, z: -0.0000070129745}
+      rotation: {x: 4.4408916e-16, y: -0.00000035762784, z: -8.4680785e-19, w: 1}
+      scale: {x: 1.0000004, y: 1.0000002, z: 1.0000008}
+    - name: boss_rig:joint_t_fron_57
+      parentName: boss_rig:joint_t_fron_56
+      position: {x: -79.197, y: -0.00000030339353, z: 0.000006148431}
+      rotation: {x: -0, y: -0.0000011920928, z: 1.2945044e-19, w: 1}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: boss_rig:joint_t_fron_58
+      parentName: boss_rig:joint_t_fron_57
+      position: {x: -79.199, y: -0.00000030340118, z: 0.000007351111}
+      rotation: {x: -4.458239e-16, y: -0.000002503395, z: 7.929776e-19, w: 1}
+      scale: {x: 0.9999999, y: 1.0000001, z: 1.0000002}
+    - name: boss_rig:joint_t_fron_59
+      parentName: boss_rig:joint_t_fron_58
+      position: {x: -79.19, y: -0.0000003033667, z: 0.000010548456}
+      rotation: {x: -0.000000001915456, y: 0.0000057816496, z: 1.1044949e-14, w: 1}
+      scale: {x: 1.0000005, y: 1.0000001, z: 1.0000005}
+    - name: boss_rig:joint_t_fron_60
+      parentName: boss_rig:joint_t_fron_59
+      position: {x: -79.2, y: -0.00000030340505, z: 0.00001733101}
+      rotation: {x: -4.4408916e-16, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: boss_rig:joint_t_fron_61
+      parentName: boss_rig:joint_t_fron_60
+      position: {x: -79.2, y: -0.00000030340502, z: 0.00003086888}
+      rotation: {x: 4.4408916e-16, y: -0.0000012516974, z: -0.0000000019154385, w: 1}
+      scale: {x: 1, y: 1.0000002, z: 0.99999994}
+    - name: boss_rig:joint_t_fron_62
+      parentName: boss_rig:joint_t_fron_61
+      position: {x: -79.2, y: -0.00000030340541, z: -0.00004239849}
+      rotation: {x: -4.189166e-16, y: -0.00000047683636, z: 2.2204537e-16, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 0.9999998}
+    - name: boss_rig:joint_t_fron_63
+      parentName: boss_rig:joint_t_fron_62
+      position: {x: -79.19, y: -0.0000003033671, z: 0.000010754002}
+      rotation: {x: -0, y: -0, z: 1.200356e-23, w: 1}
+      scale: {x: 1.0000001, y: 1.0000005, z: 1}
+    - name: boss_rig:joint_t_fron_64
+      parentName: boss_rig:joint_t_fron_63
+      position: {x: -79.2, y: -0.00000030340578, z: 0.000016944}
+      rotation: {x: 6.4636857e-16, y: -0.0000017285349, z: 6.6613344e-16, w: 1}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1.0000004}
+    - name: boss_rig:joint_t_fron_65
+      parentName: boss_rig:joint_t_fron_64
+      position: {x: -79.2, y: -0.00000030340655, z: 0.000029282317}
+      rotation: {x: -1.9102486e-16, y: -0.0000016391277, z: -6.661323e-16, w: 1}
+      scale: {x: 1.0000004, y: 1.0000002, z: 1.0000005}
+    - name: boss_rig:joint_t_fron_66
+      parentName: boss_rig:joint_t_fron_65
+      position: {x: -79.19, y: -0.00000030337017, z: -0.00004602078}
+      rotation: {x: -2.2204288e-16, y: -0, z: 2.2204553e-16, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1.0000004}
+    - name: boss_rig:joint_t_fron_89
+      parentName: boss_rig:joint_centrale_tentacoli
+      position: {x: -2.2688208, y: -0.36834776, z: 88.71685}
+      rotation: {x: -0, y: 0.70710665, z: -0, w: 0.707107}
+      scale: {x: 0.99999994, y: 1.0000001, z: 1}
+    - name: boss_rig:joint_t_fron_2 1
+      parentName: boss_rig:joint_t_fron_89
+      position: {x: -64.21938, y: -1.4210855e-14, z: -0.000000010191158}
+      rotation: {x: -0, y: -0.00000068545336, z: -0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000001}
+    - name: boss_rig:joint_t_fron_3 1
+      parentName: boss_rig:joint_t_fron_2 1
+      position: {x: -64.92072, y: -7.1054274e-15, z: -0.000000022808898}
+      rotation: {x: -0, y: -0.0000015497205, z: -0, w: 1}
+      scale: {x: 1.0000001, y: 0.9999999, z: 1}
+    - name: boss_rig:joint_t_fron_4 1
+      parentName: boss_rig:joint_t_fron_3 1
+      position: {x: -67.762695, y: 7.1054274e-15, z: -0.00000004484194}
+      rotation: {x: -0, y: -0.0000027418134, z: -0, w: 1}
+      scale: {x: 0.9999999, y: 1.0000002, z: 1.0000001}
+    - name: boss_rig:joint_t_fron_5 1
+      parentName: boss_rig:joint_t_fron_4 1
+      position: {x: -71.302925, y: 7.1054274e-15, z: -0.00000008613046}
+      rotation: {x: -0, y: -0.0000050067897, z: -0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: boss_rig:joint_t_fron_6 1
+      parentName: boss_rig:joint_t_fron_5 1
+      position: {x: -72.3352, y: 7.1054274e-15, z: -0.00000017028961}
+      rotation: {x: -0.0000000010817027, y: 0.000008553266, z: 0.000000001081703,
+        w: 1}
+      scale: {x: 0.9999998, y: 1.0000001, z: 0.99999994}
+    - name: boss_rig:joint_t_fron_7 1
+      parentName: boss_rig:joint_t_fron_6 1
+      position: {x: -77.414474, y: 7.1054274e-15, z: -0.00000031963248}
+      rotation: {x: -0, y: -0.0000014305114, z: 1.5518659e-16, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: boss_rig:joint_t_fron_8 1
+      parentName: boss_rig:joint_t_fron_7 1
+      position: {x: -74.50814, y: 7.1054274e-15, z: -0.0000006631961}
+      rotation: {x: 1.1102243e-16, y: -0.0000004768371, z: 1.5033801e-16, w: 1}
+      scale: {x: 1.0000002, y: 1, z: 0.99999994}
+    - name: boss_rig:joint_t_fron_9 1
+      parentName: boss_rig:joint_t_fron_8 1
+      position: {x: -70.63303, y: 0, z: -0.0000013902909}
+      rotation: {x: -2.1837566e-22, y: -0.00000044703478, z: -3.9469565e-17, w: 1}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000001}
+    - name: boss_rig:joint_t_fron_10 1
+      parentName: boss_rig:joint_t_fron_9 1
+      position: {x: -71.601814, y: 7.1054274e-15, z: -0.0000027486371}
+      rotation: {x: -1.1102337e-16, y: -0.0000018775461, z: -2.5458965e-16, w: 1}
+      scale: {x: 1.0000001, y: 1.0000002, z: 0.99999994}
+    - name: boss_rig:joint_t_fron_11 1
+      parentName: boss_rig:joint_t_fron_10 1
+      position: {x: -77.414474, y: 1.4210855e-14, z: -0.0000051137577}
+      rotation: {x: 1.1102311e-16, y: -0.0000043213363, z: 2.1057909e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: boss_rig:joint_t_fron_12 1
+      parentName: boss_rig:joint_t_fron_11 1
+      position: {x: -79.197075, y: -1.4210855e-14, z: 0.0000052255914}
+      rotation: {x: 0.0000000028544707, y: 0.000009298324, z: -0.0000000028544724,
+        w: 1}
+      scale: {x: 1, y: 1.0000001, z: 0.99999994}
+    - name: boss_rig:joint_t_fron_13 1
+      parentName: boss_rig:joint_t_fron_12 1
+      position: {x: -79.197075, y: 0, z: 0.0000052255914}
+      rotation: {x: -2.2204458e-16, y: -0.00000038743013, z: 3.2128804e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: boss_rig:joint_t_fron_14 1
+      parentName: boss_rig:joint_t_fron_13 1
+      position: {x: -79.197075, y: 0, z: 0.0000052255914}
+      rotation: {x: -1.8528843e-22, y: -0.0000009536742, z: 2.7974428e-16, w: 1}
+      scale: {x: 1.0000002, y: 1, z: 1.0000001}
+    - name: boss_rig:joint_t_fron_15 1
+      parentName: boss_rig:joint_t_fron_14 1
+      position: {x: -79.197075, y: 0, z: 0.0000052255914}
+      rotation: {x: -9.264414e-22, y: -0.0000020265577, z: 2.3363493e-16, w: 1}
+      scale: {x: 0.99999976, y: 0.9999999, z: 1.0000002}
+    - name: boss_rig:joint_t_fron_16 1
+      parentName: boss_rig:joint_t_fron_15 1
+      position: {x: -79.197075, y: 0, z: 0.0000052255914}
+      rotation: {x: -3.996939e-21, y: -0.0000041425224, z: -1.6570046e-16, w: 1}
+      scale: {x: 1.0000002, y: 0.9999999, z: 0.99999976}
+    - name: boss_rig:joint_t_fron_17 1
+      parentName: boss_rig:joint_t_fron_16 1
+      position: {x: -79.197075, y: 0, z: 0.0000052255914}
+      rotation: {x: 4.3426044e-11, y: 0.000008314847, z: -4.342645e-11, w: 1}
+      scale: {x: 0.99999976, y: 0.99999994, z: 1}
+    - name: boss_rig:joint_t_fron_18 1
+      parentName: boss_rig:joint_t_fron_17 1
+      position: {x: -79.197075, y: 0, z: 0.0000052255914}
+      rotation: {x: -2.012279e-16, y: -0.00000044703478, z: 4.077325e-16, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: boss_rig:joint_t_fron_19 1
+      parentName: boss_rig:joint_t_fron_18 1
+      position: {x: -79.197075, y: 0, z: 0.0000052255914}
+      rotation: {x: 4.857222e-16, y: -0.0000009536742, z: 9.692505e-17, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: boss_rig:joint_t_fron_20 1
+      parentName: boss_rig:joint_t_fron_19 1
+      position: {x: -79.197075, y: 0, z: 0.0000052255914}
+      rotation: {x: -1.6306516e-16, y: -0.0000014305114, z: -2.9523093e-16, w: 1}
+      scale: {x: 1.0000002, y: 1, z: 1}
+    - name: boss_rig:joint_t_fron_21 1
+      parentName: boss_rig:joint_t_fron_20 1
+      position: {x: -79.197075, y: 0, z: 0.0000052255914}
+      rotation: {x: 8.673656e-17, y: -0.0000019371507, z: 2.8535066e-16, w: 1}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000002}
+    - name: boss_rig:joint_t_fron_22 1
+      parentName: boss_rig:joint_t_fron_21 1
+      position: {x: -79.197075, y: 0, z: 0.0000052255914}
+      rotation: {x: -0, y: -0, z: 9.203128e-24, w: 1}
+      scale: {x: 1, y: 1, z: 0.9999998}
+    - name: boss_rig:joint_t_fron_1
+      parentName: boss_rig:joint_centrale_tentacoli
+      position: {x: 88.71685, y: -0.36834776, z: 2.2688208}
+      rotation: {x: -0.5336145, y: 0.8457278, z: -0.0000005960464, w: 0.00000020861623}
+      scale: {x: 1.0000002, y: 1, z: 1.0000002}
+    - name: boss_rig:joint_t_fron_2
+      parentName: boss_rig:joint_t_fron_1
+      position: {x: -64.21938, y: -1.4210855e-14, z: -0.000000010191158}
+      rotation: {x: -0, y: -0.00000074505806, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: boss_rig:joint_t_fron_3
+      parentName: boss_rig:joint_t_fron_2
+      position: {x: -64.92072, y: -7.1054274e-15, z: -0.000000022808898}
+      rotation: {x: -0, y: -0.0000015497208, z: -0, w: 1}
+      scale: {x: 1, y: 0.9999999, z: 1.0000001}
+    - name: boss_rig:joint_t_fron_4
+      parentName: boss_rig:joint_t_fron_3
+      position: {x: -67.762695, y: 7.1054274e-15, z: -0.00000004484194}
+      rotation: {x: -0, y: -0.0000027418137, z: -0, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: boss_rig:joint_t_fron_5
+      parentName: boss_rig:joint_t_fron_4
+      position: {x: -71.302925, y: 7.1054274e-15, z: -0.00000008613046}
+      rotation: {x: -0, y: -0.0000046491623, z: -0, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: boss_rig:joint_t_fron_6
+      parentName: boss_rig:joint_t_fron_5
+      position: {x: -72.3352, y: 7.1054274e-15, z: -0.00000017028961}
+      rotation: {x: -0.0000000026345706, y: 0.0000065267086, z: 0.000000002634571,
+        w: 1}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000001}
+    - name: boss_rig:joint_t_fron_7
+      parentName: boss_rig:joint_t_fron_6
+      position: {x: -77.414474, y: 7.1054274e-15, z: -0.00000031963248}
+      rotation: {x: -0, y: -0.0000018775463, z: 4.8018213e-16, w: 1}
+      scale: {x: 1.0000004, y: 1.0000006, z: 1}
+    - name: boss_rig:joint_t_fron_8
+      parentName: boss_rig:joint_t_fron_7
+      position: {x: -74.50814, y: 7.1054274e-15, z: -0.0000006631961}
+      rotation: {x: 0.00000011971537, y: -0.6052897, z: 0.0000007115633, w: 0.79600525}
+      scale: {x: 1.0000001, y: 0.9999999, z: 1}
+    - name: boss_rig:joint_t_fron_9
+      parentName: boss_rig:joint_t_fron_8
+      position: {x: -70.63303, y: 0, z: -0.0000013902909}
+      rotation: {x: 0.0000000031151113, y: -0.098277435, z: 0.000000316219, w: 0.99515903}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: boss_rig:joint_t_fron_10
+      parentName: boss_rig:joint_t_fron_9
+      position: {x: -71.601814, y: 7.1054274e-15, z: -0.0000027486371}
+      rotation: {x: 0.000000004858876, y: 0.000010728836, z: -0.0000000048588773,
+        w: 1}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000001}
+    - name: boss_rig:joint_t_fron_11
+      parentName: boss_rig:joint_t_fron_10
+      position: {x: -77.414474, y: 1.4210855e-14, z: -0.0000051137577}
+      rotation: {x: -0, y: -0.00000044703484, z: 2.2408426e-16, w: 1}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1}
+    - name: boss_rig:joint_t_fron_12
+      parentName: boss_rig:joint_t_fron_11
+      position: {x: -79.197075, y: -1.4210855e-14, z: 0.0000052255914}
+      rotation: {x: -2.923009e-22, y: -0.0000010728836, z: -1.1606384e-16, w: 1}
+      scale: {x: 1, y: 1.0000002, z: 1.0000001}
+    - name: boss_rig:joint_t_fron_13
+      parentName: boss_rig:joint_t_fron_12
+      position: {x: -79.197075, y: 0, z: 0.0000052255914}
+      rotation: {x: -1.995656e-22, y: -0.0000023841858, z: 3.8143588e-17, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: boss_rig:joint_t_fron_14
+      parentName: boss_rig:joint_t_fron_13
+      position: {x: -79.197075, y: 0, z: 0.0000052255914}
+      rotation: {x: -4.4408905e-16, y: -0.000004887581, z: 2.1142456e-16, w: 1}
+      scale: {x: 0.9999997, y: 0.9999999, z: 0.9999998}
+    - name: boss_rig:joint_t_fron_15
+      parentName: boss_rig:joint_t_fron_14
+      position: {x: -79.197075, y: 0, z: 0.0000052255914}
+      rotation: {x: -4.7401144e-10, y: 0.000009775162, z: 0.000000002224283, w: 1}
+      scale: {x: 1.0000002, y: 0.9999999, z: 1.0000002}
+    - name: boss_rig:joint_t_fron_16
+      parentName: boss_rig:joint_t_fron_15
+      position: {x: -79.197075, y: 0, z: 0.0000052255914}
+      rotation: {x: -4.440892e-16, y: -0, z: -2.9398396e-17, w: 1}
+      scale: {x: 1, y: 1.0000002, z: 1}
+    - name: boss_rig:joint_t_fron_17
+      parentName: boss_rig:joint_t_fron_16
+      position: {x: -79.197075, y: 0, z: 0.0000052255914}
+      rotation: {x: -7.216448e-16, y: -0.00000014901069, z: 5.9550175e-16, w: 1}
+      scale: {x: 1.0000004, y: 1.0000001, z: 1.0000001}
+    - name: boss_rig:joint_t_fron_18
+      parentName: boss_rig:joint_t_fron_17
+      position: {x: -79.197075, y: 0, z: 0.0000052255914}
+      rotation: {x: -1.7208455e-15, y: -0.00000038743195, z: 1.3706645e-15, w: 1}
+      scale: {x: 1, y: 0.9999998, z: 1.0000001}
+    - name: boss_rig:joint_t_fron_19
+      parentName: boss_rig:joint_t_fron_18
+      position: {x: -79.197075, y: 0, z: 0.0000052255914}
+      rotation: {x: -1.6050472e-15, y: -0.00000080466185, z: -0.0000000017502549,
+        w: 1}
+      scale: {x: 0.99999976, y: 1.0000001, z: 0.99999976}
+    - name: boss_rig:joint_t_fron_20
+      parentName: boss_rig:joint_t_fron_19
+      position: {x: -79.197075, y: 0, z: 0.0000052255914}
+      rotation: {x: 3.6896798e-16, y: -0.0000011622906, z: -1.1102547e-16, w: 1}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1}
+    - name: boss_rig:joint_t_fron_21
+      parentName: boss_rig:joint_t_fron_20
+      position: {x: -79.197075, y: 0, z: 0.0000052255914}
+      rotation: {x: 9.753583e-19, y: -0.0000019669526, z: 2.2204216e-16, w: 1}
+      scale: {x: 1.0000006, y: 1.0000004, z: 1.0000001}
+    - name: boss_rig:joint_t_fron_22
+      parentName: boss_rig:joint_t_fron_21
+      position: {x: -79.197075, y: 0, z: 0.0000052255914}
+      rotation: {x: -0, y: -0, z: 1.9184837e-24, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1.0000002}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 1
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
