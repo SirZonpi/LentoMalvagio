@@ -143,12 +143,12 @@ public class PlayerMove : MonoBehaviour
         heading = Vector3.Normalize(rightMovement + upMovement);
         Fermati = Vector3.Normalize(gameObject.transform.position + gameObject.transform.position);
 
-        if (!Input.GetMouseButton(1))
+        if (!Input.GetMouseButton(1)) //se non premo il mouseDX il giocatore guarda nella direzione in cui si muove
         {
             transform.forward = Vector3.Lerp(transform.forward, heading * roatitionSpeed, 0.1f);
         }
 
-        if (Input.GetKey(KeyCode.Space) && rolling == false && puoiRotolare)
+        if (Input.GetKey(KeyCode.Space) && rolling == false && puoiRotolare) //se premo SPACE rotolo (chiamo la coroutine della rotolata e il blocco della rotolata)
         {
             anim.SetTrigger("rollAnim");
             StartCoroutine(Rolling());
@@ -159,21 +159,21 @@ public class PlayerMove : MonoBehaviour
         transform.position += upMovement;
     }
 
-    IEnumerator CanRoll()
+    IEnumerator CanRoll() //dopo una schivata/rotolata, blocco la rotolata e poi la sblocco..per non farla spammare
     {
         rolling = true;
         yield return new WaitForSeconds(timeRoll);
         rolling = false;
     }
 
-    IEnumerator Rolling()
+    IEnumerator Rolling() //il giocatore schiva/rolla... vieni applicata una forza in avanti e poi una forza minore nella parte opposta
     {
         rb.AddForce(transform.forward * rollForce, ForceMode.Impulse);
         yield return new WaitForSeconds(rollDistance);
         rb.AddForce(-transform.forward * frenataRoll, ForceMode.Impulse);
     }
 
-    IEnumerator AttDash()
+    IEnumerator AttDash() //quando il giocatore attacca fà uno scattino in avanti: vieni applicata una forza in avanti e poi una forza minore nella parte opposta
     {
         rb.AddForce(transform.forward * rollForce, ForceMode.Impulse);
         yield return new WaitForSeconds(attDistance);
