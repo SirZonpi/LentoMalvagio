@@ -67,7 +67,7 @@ public class PlayerMove : MonoBehaviour
     {
         Debug.Log("si muov " + siMuove);
         Debug.Log("movespeed " + MoveSpeed);
-        Attack();
+        //Attack();
 
 
     }
@@ -95,7 +95,7 @@ public class PlayerMove : MonoBehaviour
 
 
         }
-        if (Input.anyKey)
+        if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
         {
             Move();
             siMuove = true;
