@@ -14,6 +14,9 @@ public class Player : Entity
 
     public List<GameObject> animeRecuperabili;
 
+    public GameObject spellPrefab;
+    public Transform spellSpawnPoint;
+
 
     void Start()
     {
@@ -62,6 +65,17 @@ public class Player : Entity
 
     }
 
+    public void CastSpell()
+    {
+        GameObject spell = Instantiate(spellPrefab, spellSpawnPoint.position, Quaternion.identity);
+
+        Rigidbody rb = spell.GetComponent<Rigidbody>();
+        rb.velocity = new Vector2(0, 0);
+
+        rb.AddForce(transform.forward * 8, ForceMode.Impulse);
+
+        Destroy(spell, 1.5f);
+    }
 
     /*
     private void OnEnable() //increedibilemnte anche se vuoto bloccava l'aggiunta della hp bar sul player...

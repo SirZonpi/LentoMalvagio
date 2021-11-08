@@ -11,7 +11,13 @@ public class PlayerAttackState : PlayerBaseState
 
     public GameObject textprefab;
     public string textToDisplay;
-   // public Rigidbody checkerRb;
+    // public Rigidbody checkerRb;
+
+
+    public Rigidbody rb;
+    public float rollForce;
+    public float attDistance;
+    public float frenataAtt;
 
     public override void EnterState(PlayerStateManager player)
     {
@@ -23,11 +29,24 @@ public class PlayerAttackState : PlayerBaseState
         anim.SetBool("cammina", false);
         //anim.SetBool("attacca2", false);
         anim.SetBool("attacca", true);
+        anim.SetBool("castaspell", false);
+
+
+        StartCoroutine(AttDash());
+
     }
 
     public override void onCollisionEnter(PlayerStateManager player)
     {
         throw new System.NotImplementedException();
+    }
+
+    public IEnumerator AttDash() //quando il giocatore attacca fà uno scattino in avanti: vieni applicata una forza in avanti e poi una forza minore nella parte opposta
+    {
+        rb.velocity = new Vector3(0,0,0); //aggiunta mia
+        rb.AddForce(transform.forward * rollForce, ForceMode.Impulse);
+        yield return new WaitForSeconds(attDistance);
+        rb.AddForce(-transform.forward * frenataAtt, ForceMode.Impulse);
     }
 
     public override void UpdateState(PlayerStateManager player)
@@ -98,6 +117,11 @@ public class PlayerAttackState : PlayerBaseState
     {
         spadaCollider.enabled = true;
         
+    }
+
+    public void DisattivaSpada()
+    {
+        spadaCollider.enabled = false;
     }
 
 

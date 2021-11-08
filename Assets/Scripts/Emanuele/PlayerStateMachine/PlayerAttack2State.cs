@@ -21,8 +21,10 @@ public class PlayerAttack2State : PlayerBaseState
         anim.SetBool("attacca2", true);
         anim.SetBool("idle", false);
         anim.SetBool("cammina", false);
-      
-       
+        anim.SetBool("castaspell", false);
+
+
+
     }
 
     public override void onCollisionEnter(PlayerStateManager player)

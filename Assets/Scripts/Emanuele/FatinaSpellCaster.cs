@@ -5,21 +5,20 @@ using UnityEngine.AI;
 
 public class FatinaSpellCaster : Enemy
 {
-    [SerializeField] float enemyDistance;
-    [SerializeField] NavMeshAgent _agent;
+    public float enemyDistance;
+    public NavMeshAgent _agent;
     public GameObject playerTransform;
-    Vector3 newPos;
+    public Vector3 newPos;
 
-    [SerializeField] GameObject bulletPrefab;
-    [SerializeField] GameObject spellSpawnPoint;
+    public GameObject bulletPrefab;
+    public GameObject spellSpawnPoint;
 
-    Vector3 dir ;
-    float timeRate = 0f;
+    public Vector3 dir ;
+    public float timeRate = 0f;
 
     // Start is called before the first frame update
     void Start()
     {
-        _agent = GetComponent<NavMeshAgent>();
         playerTransform = GameManager.instance.player.transform.gameObject;
     }
 
@@ -33,14 +32,15 @@ public class FatinaSpellCaster : Enemy
         if(bulletPrefab != null)
         fb.Setup(dir);
 
-     }
+    }
 
    
 
     // Update is called once per frame
     void Update()
     {
-      
+
+      /*
         float distance = Vector3.Distance(transform.position, playerTransform.transform.position);
 
         Debug.Log("distance " + distance);
@@ -81,5 +81,6 @@ public class FatinaSpellCaster : Enemy
             }
         }
      
+        */
     }
 }

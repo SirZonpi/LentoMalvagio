@@ -6,8 +6,14 @@ public class GoblinAttackState : GoblinBaseState
 {
     public Goblin _goblin;
 
+    public Collider pugnoDes;
+    public Collider pugnoSin;
+
     public override void EnterState(GoblinStateManager goblin)
     {
+        pugnoDes.enabled = true;
+        pugnoSin.enabled = true;
+
         Animator anim = goblin.GetComponent<Animator>();
         anim.SetBool("idle", false);
         anim.SetBool("cammina", false);
@@ -29,6 +35,10 @@ public class GoblinAttackState : GoblinBaseState
         if (distance <= _goblin.attackRadius && distance > 1.3)
         { 
             goblin.SwitchState(goblin.walkState);
+        }
+        else
+        {
+            goblin.SwitchState(goblin.attackState);
         }
     }
 }

@@ -6,8 +6,15 @@ public class GoblinWalkState : GoblinBaseState
 {
     public Goblin _goblin;
 
+
+    public Collider pugnoDes;
+    public Collider pugnoSin;
+
     public override void EnterState(GoblinStateManager goblin)
     {
+        pugnoDes.enabled = false;
+        pugnoSin.enabled = false;
+
         Animator anim = goblin.GetComponent<Animator>();
         anim.SetBool("cammina", true);
         anim.SetBool("idle", false);

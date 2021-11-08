@@ -8,7 +8,7 @@ public class PlayerCollisionManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Trappola"))
+        if (other.CompareTag("Trappola") || other.CompareTag("EnemyAttack"))
         {
             player.TakeDamage(2);
         }

@@ -7,9 +7,13 @@ public class PlayerIdleState : PlayerBaseState
 {
     //public CinemachineVirtualCamera vcam;
 
+    public Collider spadaCollider;
+
     public override void EnterState(PlayerStateManager player)
     {
         Debug.Log("CIAO A TUTTI DALLO STATE INIZIALE!");
+
+        spadaCollider.enabled = false;
 
         Animator anim = player.GetComponent<Animator>();
         anim.SetBool("idle", true);
@@ -38,10 +42,15 @@ public class PlayerIdleState : PlayerBaseState
         anim.SetBool("attacca", false);
         anim.SetBool("attacca2", false);
         anim.SetBool("attacca3", false);
+        anim.SetBool("castaspell", false);
 
         PlayerMove playerMove = GetComponent<PlayerMove>();
 
-        
+        if (Input.GetMouseButtonDown(1))
+        {
+            player.SwitchState(player.castState);
+        }
+
         if (Input.GetMouseButtonDown(0) && anim.GetBool("attacca") == false)
         {
             player.SwitchState(player.attackState);

@@ -6,8 +6,13 @@ public class GoblinIdleState : GoblinBaseState
 {
     public Goblin goblin;
 
+    public Collider pugnoDes;
+    public Collider pugnoSin;
     public override void EnterState(GoblinStateManager goblin)
     {
+        pugnoDes.enabled = false;
+        pugnoSin.enabled = false;
+
         Goblin goblinScript = GetComponent<Goblin>();
         Animator anim = goblin.GetComponent<Animator>();
         anim.SetBool("idle", true);
