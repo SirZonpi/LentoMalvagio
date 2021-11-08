@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerCastState : PlayerBaseState
 {
     public Player playerScript;
+    public PlayerMove playerMove;
 
     public override void EnterState(PlayerStateManager player)
     {
@@ -29,6 +30,11 @@ public class PlayerCastState : PlayerBaseState
         
         playerScript.CastSpell();
         player.SwitchState(player.idleState);
+
+        if (playerMove.siMuove)
+        {
+            player.SwitchState(player.walkState);
+        }
 
     }
 

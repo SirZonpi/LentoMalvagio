@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Minions : MonoBehaviour
+public class Minions : Enemy
 {
 
     public NavMeshAgent _agent;
@@ -11,7 +11,7 @@ public class Minions : MonoBehaviour
     public GameObject playerTransform;
 
     Rigidbody _rb;
-    EnemyStateManager _enemyStateManager;
+
     public Vector3 newPos;
 
     void Start()
@@ -22,7 +22,7 @@ public class Minions : MonoBehaviour
 
 
         newPos = transform.position;
-        _enemyStateManager = GetComponent<EnemyStateManager>();
+
         _agent = GetComponent<NavMeshAgent>();
         _rb = GetComponent<Rigidbody>();
     }
