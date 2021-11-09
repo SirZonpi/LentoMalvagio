@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class Player : Entity
 {
@@ -17,6 +19,7 @@ public class Player : Entity
     public GameObject spellPrefab;
     public Transform spellSpawnPoint;
 
+    public HpBarPlayer hpbar;
 
     void Start()
     {
@@ -32,6 +35,8 @@ public class Player : Entity
         }
 
         animeRecuperabili = new List<GameObject>();
+
+        hpbar.SetMaxhealth(Health);
 
     }
 
@@ -87,14 +92,17 @@ public class Player : Entity
     //override dei metodi della classe base Entity
     public override void TakeDamage(int amount)
     {
-        Debug.Log("Il player ha subito danno");
+        hpbar.SetHealth(Health-amount);
+
+        Debug.Log("Il player ha subito danno" + amount);
         base.TakeDamage(amount);
+
+        
     }
 
 
     public override void RespawnPlayer() ///override fatto oggi
     {
-  
 
         if (animeRecuperabili.Count != 0)
         {
@@ -109,6 +117,7 @@ public class Player : Entity
 
         animeRecuperabili.Add(anime);
 
+        hpbar.SetHealth(maxHealth);
         base.RespawnPlayer(); //le operazioni del metodo originario che si trova nella base class
 
     }
