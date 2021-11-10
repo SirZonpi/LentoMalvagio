@@ -64,7 +64,7 @@ public class HpBar : MonoBehaviour
     {
         //la barra deve comparire solo se il player e l'entity a cui è associata questa barra hp sono abbastanza vicini
 
-        Debug.Log("DISTANZA " + Vector3.Distance(transform.position, player.transform.position));
+        //Debug.Log("DISTANZA " + Vector3.Distance(transform.position, player.transform.position));
 
         if (Vector3.Distance(entityHealth.transform.position, player.transform.position) <= distanzaDalPlayer)
         {

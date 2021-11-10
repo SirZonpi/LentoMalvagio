@@ -26,11 +26,11 @@ public class Lupo : Enemy
     public GameObject bulletPrefab;
     public GameObject spellSpawnPoint;
 
-    Vector3 dir;
-    Vector3 newPos;
+    public Vector3 dir;
+    public Vector3 newPos;
 
-    [SerializeField] float enemyDistance;
-
+    public float enemyDistance;
+    public float distance;
 
     // Start is called before the first frame update
     void Start()
@@ -53,15 +53,15 @@ public class Lupo : Enemy
             StartCoroutine(lb.ScaleBullet(dir));
     }
 
-    float time = 0f;
+    public float time = 0f;
     // Update is called once per frame
     void Update()
     {
+        /*
+        distance = Vector3.Distance(transform.position, playerTransform.transform.position);
+        Debug.Log("distance lupo  " + distance);
 
-        float distance = Vector3.Distance(transform.position, playerTransform.transform.position);
-        Debug.Log("distance " + distance);
-
-
+        
         if (distance <= attackRadius && distance>=2)
         {
             loadSpell = true;
@@ -73,7 +73,7 @@ public class Lupo : Enemy
         }
         else { loadSpell = false; }
 
-        /*
+       
         if (distance < 2)
         {
             Vector3 dirToPlayer = transform.position - playerTransform.transform.position;
@@ -81,13 +81,11 @@ public class Lupo : Enemy
 
            _agent.SetDestination(newPos);
         }
-        */
 
+    
+         
         if (loadSpell)
         {
-
-         
-            Debug.Log("TTTTT " + time);
 
             if (time <= 4f)
             {
@@ -100,12 +98,8 @@ public class Lupo : Enemy
            
             }
         }
-
-        if ( distance <= attackRadius)
-        {
-           
-        }
-          
+ 
+          */
 
 
     }

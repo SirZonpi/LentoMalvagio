@@ -31,7 +31,7 @@ public class GoblinWalkState : GoblinBaseState
     public override void UpdateState(GoblinStateManager goblin)
     {
         float distance = Vector3.Distance(transform.position, _goblin.playerTransform.transform.position);
-        Debug.Log("distance " + distance);
+        //Debug.Log("distance " + distance);
 
 
         if (distance <= _goblin.attackRadius && distance < 1.3f)
