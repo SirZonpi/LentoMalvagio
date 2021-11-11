@@ -1249,7 +1249,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: d867b3ffec7c5234580a0ee9788b1a64, type: 3}
+  - {fileID: 2100000, guid: bc8b388a8a2cfd44d911516f50d54de0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1324,7 +1324,7 @@ GameObject:
   - component: {fileID: 5028900208993819980}
   - component: {fileID: 5028900208993819981}
   m_Layer: 0
-  m_Name: LUPO
+  m_Name: Lupo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1897,7 +1897,7 @@ PrefabInstance:
     - target: {fileID: 7925695913198141636, guid: 2d0e7ae1f8cd1404e88169f659a1dac7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.591
       objectReference: {fileID: 0}
     - target: {fileID: 7925695913198141636, guid: 2d0e7ae1f8cd1404e88169f659a1dac7,
         type: 3}

@@ -267,7 +267,7 @@ MonoBehaviour:
   currentHealth: 0
   attaccoFisico: 0
   attaccoMagico: 0
-  psMorte: {fileID: 1384874962008736978}
+  psMorte: {fileID: 1206266120888398985, guid: 5d35663872082b541b46d7d038510bd9, type: 3}
   animeDrop: 10
   animeDropPrefab: {fileID: 8676974089552751063}
   _agent: {fileID: 2768560847067052058}
@@ -475,7 +475,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8748892135801146194, guid: 6983b724a3a5746478c7d03d91ae45dc, type: 3}
+  - {fileID: 2100000, guid: bc8b388a8a2cfd44d911516f50d54de0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1166,12 +1166,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe981816911210e478087215d2bffbfd, type: 3}
---- !u!198 &1384874962008736978 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 4477205722636358376, guid: fe981816911210e478087215d2bffbfd,
-    type: 3}
-  m_PrefabInstance: {fileID: 3249956891493340730}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3282590173798485 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3247521862146307695, guid: fe981816911210e478087215d2bffbfd,

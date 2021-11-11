@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 
 public class Player : Entity
@@ -32,6 +32,8 @@ public class Player : Entity
     public float fireRate = 1f; // posso spare ogni x
     public float timeToNextShot; // tempo di attesa
 
+    public Text animeText;
+
     void Start()
     {
 
@@ -51,6 +53,8 @@ public class Player : Entity
 
         spadaInfuocata.SetActive(false);
 
+        animeText.text = minionsKilled.ToString();
+
     }
 
     private void Awake()
@@ -58,6 +62,11 @@ public class Player : Entity
         currentLevel = "Scena1";
         livelloDifficolta = "Normale";  ///aggiunto oggi
 
+    }
+
+    public void CambiaTestoAnime()
+    {
+        animeText.text = minionsKilled.ToString();
     }
 
     IEnumerator IncrementaHpCo()
@@ -187,6 +196,7 @@ public class Player : Entity
             TakeDamage(1);
            
         }
+       
 
     }
 

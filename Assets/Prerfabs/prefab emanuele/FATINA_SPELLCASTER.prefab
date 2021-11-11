@@ -87,7 +87,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 508652553876949472}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 75bf79f8876829a44bb388ccd90400a7, type: 3}
+  m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: bdbb52905fe1a00429fa5ef882070047, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
@@ -165,7 +165,7 @@ MonoBehaviour:
   currentHealth: 0
   attaccoFisico: 0
   attaccoMagico: 0
-  psMorte: {fileID: 321363217459030823}
+  psMorte: {fileID: 1206266120888398985, guid: 5d35663872082b541b46d7d038510bd9, type: 3}
   animeDrop: 15
   animeDropPrefab: {fileID: 8791989661967536532}
   enemyDistance: 4
@@ -806,7 +806,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8368722655750445499, guid: 9e0ff6c17b38dc342a2993f5c38a1e9c, type: 3}
+  - {fileID: 2100000, guid: bc8b388a8a2cfd44d911516f50d54de0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1244,7 +1244,7 @@ PrefabInstance:
     - target: {fileID: 7925695913198141636, guid: 2d0e7ae1f8cd1404e88169f659a1dac7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.88
       objectReference: {fileID: 0}
     - target: {fileID: 7925695913198141636, guid: 2d0e7ae1f8cd1404e88169f659a1dac7,
         type: 3}
@@ -1387,12 +1387,6 @@ PrefabInstance:
 --- !u!4 &1677044591168589728 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3247521862146307695, guid: fe981816911210e478087215d2bffbfd,
-    type: 3}
-  m_PrefabInstance: {fileID: 4203983563107056079}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &321363217459030823 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 4477205722636358376, guid: fe981816911210e478087215d2bffbfd,
     type: 3}
   m_PrefabInstance: {fileID: 4203983563107056079}
   m_PrefabAsset: {fileID: 0}

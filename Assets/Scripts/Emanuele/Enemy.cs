@@ -5,17 +5,18 @@ using UnityEngine;
 public class Enemy : Entity
 {
     public int animeDrop;
-    public GameObject animeDropPrefab; ////
+    public GameObject animeDropPrefab; 
 
     //override dei metodi della classe base Entity
     public override void KillEnemy()
     {
         Debug.Log("Un nemico è stato ucciso");
-        //GameObject animeDroppate = Instantiate(animeDropPrefab, transform.position, Quaternion.identity); ////
+        
         animeDropPrefab.GetComponent<TestFollowPlayer>().thisEnemyDrop = animeDrop;
         animeDropPrefab.SetActive(true);
         animeDropPrefab.transform.SetParent(null);
-
+        //animeDropPrefab.transform.position = this.transform.position;
+        //animeDropPrefab.GetComponent<SphereCollider>().enabled = true;
 
         base.KillEnemy();
     }
@@ -40,5 +41,13 @@ public class Enemy : Entity
         {
             TakeDamage(5);
         }
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            animeDropPrefab.SetActive(true);
+
+        }
+
+
     }
 }

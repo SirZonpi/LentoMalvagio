@@ -239,8 +239,10 @@ MonoBehaviour:
   hpbar: {fileID: 0}
   powerUpSpada: 0
   durataPowerupSpada: 20
+  durataPowerupMana: 0
   spadaInfuocata: {fileID: 1743331044408829068}
   iconaMelee: {fileID: 0}
+  iconaMagia: {fileID: 0}
   fireRate: 2
   timeToNextShot: 0
 --- !u!114 &1407709769445985123
@@ -260,10 +262,10 @@ MonoBehaviour:
   rollForce: 8
   StandardMoveSpeed: 4
   rollDistance: 0.3
-  timeRoll: 0
-  attDistance: 0
-  frenataRoll: 0
-  frenataAtt: 0
+  timeRoll: 1.5
+  attDistance: 0.05
+  frenataRoll: 4
+  frenataAtt: 4
   CameraPrincipale: {fileID: 0}
   cursore: {fileID: 0}
   rb: {fileID: 0}
@@ -272,6 +274,7 @@ MonoBehaviour:
   right: {x: 0, y: 0, z: 0}
   puoiMuoverti: 1
   playerStatemanager: {fileID: 1407709769445985122}
+  schivataUI: {fileID: 0}
   passaAttaccoDue: 0
   siMuove: 0
 --- !u!114 &1407709769445985122

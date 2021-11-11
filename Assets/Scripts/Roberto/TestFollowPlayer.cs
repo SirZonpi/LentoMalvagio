@@ -19,7 +19,6 @@ public class TestFollowPlayer : MonoBehaviour
 
     private void Awake()
     {
-       // this.thisEnemyDrop = this.transform.parent.GetComponent<Enemy>().animeDrop;
     }
 
     public void OnTriggerStay(Collider other)
@@ -36,8 +35,8 @@ public class TestFollowPlayer : MonoBehaviour
 
         if (distance < 0.7f)
         {
-            Debug.Log("POPORCO");
             player.minionsKilled += thisEnemyDrop;
+            player.CambiaTestoAnime();
             Destroy(this.gameObject);
         }
 
