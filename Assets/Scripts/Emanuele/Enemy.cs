@@ -5,11 +5,18 @@ using UnityEngine;
 public class Enemy : Entity
 {
     public int animeDrop;
+    public GameObject animeDropPrefab; ////
 
     //override dei metodi della classe base Entity
     public override void KillEnemy()
     {
         Debug.Log("Un nemico è stato ucciso");
+        //GameObject animeDroppate = Instantiate(animeDropPrefab, transform.position, Quaternion.identity); ////
+        animeDropPrefab.GetComponent<TestFollowPlayer>().thisEnemyDrop = animeDrop;
+        animeDropPrefab.SetActive(true);
+        animeDropPrefab.transform.SetParent(null);
+
+
         base.KillEnemy();
     }
 
@@ -20,9 +27,9 @@ public class Enemy : Entity
     }
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+       // animeDropPrefab.SetActive(false);
     }
 
     // Update is called once per frame

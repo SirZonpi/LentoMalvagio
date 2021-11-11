@@ -77,6 +77,8 @@ public class GameManager : MonoBehaviour
 
         panelPause.SetActive(false);
 
+        audioManager.PlaySound("MusicaPrincipale");
+
        // currentLivelloDifficolta = player.livelloDifficolta;
 
     }

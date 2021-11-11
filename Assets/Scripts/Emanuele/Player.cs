@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+
 
 
 public class Player : Entity
@@ -21,6 +21,17 @@ public class Player : Entity
 
     public HpBarPlayer hpbar;
 
+    public bool powerUpSpada = false;
+    public float durataPowerupSpada;
+    public float durataPowerupMana;
+    public GameObject spadaInfuocata;
+
+    [SerializeField] MeleeUI iconaMelee;
+    [SerializeField] ManaUI iconaMagia;
+
+    public float fireRate = 1f; // posso spare ogni x
+    public float timeToNextShot; // tempo di attesa
+
     void Start()
     {
 
@@ -37,6 +48,8 @@ public class Player : Entity
         animeRecuperabili = new List<GameObject>();
 
         hpbar.SetMaxhealth(Health);
+
+        spadaInfuocata.SetActive(false);
 
     }
 
@@ -70,16 +83,31 @@ public class Player : Entity
 
     }
 
+   public IEnumerator ManaPowerUp()
+    {
+        fireRate = 0;
+        yield return new WaitForSeconds(durataPowerupMana);
+        fireRate = 2;
+        yield return null;
+
+    }
+
     public void CastSpell()
     {
-        GameObject spell = Instantiate(spellPrefab, spellSpawnPoint.position, Quaternion.identity);
+        if (Time.time>timeToNextShot)
+        {
+            iconaMagia.StartCoroutine(iconaMagia.MagiaCo());
+            timeToNextShot = Time.time + fireRate;
+            GameObject spell = Instantiate(spellPrefab, spellSpawnPoint.position, Quaternion.identity);
 
-        Rigidbody rb = spell.GetComponent<Rigidbody>();
-        rb.velocity = new Vector2(0, 0);
+            Rigidbody rb = spell.GetComponent<Rigidbody>();
+            rb.velocity = new Vector2(0, 0);
 
-        rb.AddForce(transform.forward * 8, ForceMode.Impulse);
+            rb.AddForce(transform.forward * 8, ForceMode.Impulse);
 
-        Destroy(spell, 1.5f);
+            Destroy(spell, 1.5f);
+        }
+
     }
 
     /*
@@ -88,6 +116,23 @@ public class Player : Entity
    
     }
     */
+
+    public IEnumerator SpadaInfuocata()
+    {
+
+        iconaMelee.CambiaIconaSpada();
+        powerUpSpada = true;
+        int tmp = attaccoFisico;
+        attaccoFisico += 5;
+        spadaInfuocata.SetActive(true);
+        yield return new WaitForSeconds(durataPowerupSpada);
+        attaccoFisico = tmp;
+        spadaInfuocata.SetActive(false);
+        powerUpSpada = false;
+
+    }
+
+
 
     //override dei metodi della classe base Entity
     public override void TakeDamage(int amount)
@@ -142,6 +187,7 @@ public class Player : Entity
             TakeDamage(1);
            
         }
+
     }
 
     
