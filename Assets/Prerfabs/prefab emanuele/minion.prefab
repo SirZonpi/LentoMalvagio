@@ -198,7 +198,6 @@ Transform:
   - {fileID: 3282590173798485}
   - {fileID: 5692019518441794166}
   - {fileID: 4584886774096596189}
-  - {fileID: 8676974089552751066}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -269,7 +268,8 @@ MonoBehaviour:
   attaccoMagico: 0
   psMorte: {fileID: 1206266120888398985, guid: 5d35663872082b541b46d7d038510bd9, type: 3}
   animeDrop: 10
-  animeDropPrefab: {fileID: 8676974089552751063}
+  animeDropPrefab: {fileID: 7925695913198141641, guid: 2d0e7ae1f8cd1404e88169f659a1dac7,
+    type: 3}
   _agent: {fileID: 2768560847067052058}
   enemyDistanceRun: 4
   playerTransform: {fileID: 0}
@@ -1011,92 +1011,6 @@ Transform:
   m_Father: {fileID: 7443849960722586508}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 10.462699, y: 90, z: 0}
---- !u!1001 &1555843617497524510
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 2441335902178451444}
-    m_Modifications:
-    - target: {fileID: 7925695913198141636, guid: 2d0e7ae1f8cd1404e88169f659a1dac7,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7925695913198141636, guid: 2d0e7ae1f8cd1404e88169f659a1dac7,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7925695913198141636, guid: 2d0e7ae1f8cd1404e88169f659a1dac7,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7925695913198141636, guid: 2d0e7ae1f8cd1404e88169f659a1dac7,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7925695913198141636, guid: 2d0e7ae1f8cd1404e88169f659a1dac7,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7925695913198141636, guid: 2d0e7ae1f8cd1404e88169f659a1dac7,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7925695913198141636, guid: 2d0e7ae1f8cd1404e88169f659a1dac7,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7925695913198141636, guid: 2d0e7ae1f8cd1404e88169f659a1dac7,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7925695913198141636, guid: 2d0e7ae1f8cd1404e88169f659a1dac7,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7925695913198141636, guid: 2d0e7ae1f8cd1404e88169f659a1dac7,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7925695913198141636, guid: 2d0e7ae1f8cd1404e88169f659a1dac7,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7925695913198141641, guid: 2d0e7ae1f8cd1404e88169f659a1dac7,
-        type: 3}
-      propertyPath: m_Name
-      value: DropSoulsEnemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 7925695913198141641, guid: 2d0e7ae1f8cd1404e88169f659a1dac7,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2d0e7ae1f8cd1404e88169f659a1dac7, type: 3}
---- !u!1 &8676974089552751063 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7925695913198141641, guid: 2d0e7ae1f8cd1404e88169f659a1dac7,
-    type: 3}
-  m_PrefabInstance: {fileID: 1555843617497524510}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &8676974089552751066 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7925695913198141636, guid: 2d0e7ae1f8cd1404e88169f659a1dac7,
-    type: 3}
-  m_PrefabInstance: {fileID: 1555843617497524510}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3249956891493340730
 PrefabInstance:
   m_ObjectHideFlags: 0

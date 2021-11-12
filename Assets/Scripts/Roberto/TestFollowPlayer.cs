@@ -14,7 +14,7 @@ public class TestFollowPlayer : MonoBehaviour
     {
         player = GameManager.instance.player;
 
-        this.gameObject.SetActive(false);
+        //this.gameObject.SetActive(false);/////
     }
 
     private void Awake()

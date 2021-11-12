@@ -126,6 +126,14 @@ public class Player : Entity
     }
     */
 
+    public void RiattivaElementi()
+    {
+        foreach (GameObject  go in GameManager.instance.oggettidaDisattivare)
+        {
+            go.SetActive(true);
+        }
+    }
+
     public IEnumerator SpadaInfuocata()
     {
 
@@ -157,6 +165,7 @@ public class Player : Entity
 
     public override void RespawnPlayer() ///override fatto oggi
     {
+        RiattivaElementi();
 
         if (animeRecuperabili.Count != 0)
         {

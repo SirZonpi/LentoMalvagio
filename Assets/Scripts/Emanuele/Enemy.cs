@@ -11,12 +11,15 @@ public class Enemy : Entity
     public override void KillEnemy()
     {
         Debug.Log("Un nemico è stato ucciso");
-        
-        animeDropPrefab.GetComponent<TestFollowPlayer>().thisEnemyDrop = animeDrop;
-        animeDropPrefab.SetActive(true);
-        animeDropPrefab.transform.SetParent(null);
-        //animeDropPrefab.transform.position = this.transform.position;
-        //animeDropPrefab.GetComponent<SphereCollider>().enabled = true;
+
+        GameObject animeDropped = Instantiate(animeDropPrefab, transform.position, Quaternion.identity,null) as GameObject;
+        // porcodio.transform.SetParent(null);
+        animeDropped.SetActive(true);
+        animeDropped.GetComponent<TestFollowPlayer>().thisEnemyDrop = animeDrop;
+   
+        //animeDropPrefab.GetComponent<TestFollowPlayer>().thisEnemyDrop = animeDrop;
+        //animeDropPrefab.SetActive(true);
+        //animeDropPrefab.transform.SetParent(null);
 
         base.KillEnemy();
     }
