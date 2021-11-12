@@ -13,6 +13,7 @@ public class RecuperaAnime : MonoBehaviour
         {
             
              player.minionsKilled = animeDaRecuperare;
+             player.CambiaTestoAnime();
              Debug.Log("minions " + player.minionsKilled);
              Destroy(this.gameObject, 1.5f);
 

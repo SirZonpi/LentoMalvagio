@@ -34,6 +34,10 @@ public class Player : Entity
 
     public Text animeText;
 
+    public bool colpito;
+
+    [SerializeField] Material playerMaterial;
+
     void Start()
     {
 
@@ -149,14 +153,33 @@ public class Player : Entity
 
     }
 
+    public IEnumerator PlayerHittedCo()
+    {
+        playerMaterial.color = Color.red;
+        yield return new WaitForSeconds(0.2f);
+        playerMaterial.color = Color.white;
+        yield return new WaitForSeconds(0.2f);
+        playerMaterial.color = Color.red;
+        yield return new WaitForSeconds(0.2f);
+        playerMaterial.color = Color.white;
+        yield return new WaitForSeconds(0.2f);
+        playerMaterial.color = Color.red;
+        yield return new WaitForSeconds(0.2f);
+        playerMaterial.color = Color.white;
+        yield return null;
 
+    }
 
     //override dei metodi della classe base Entity
     public override void TakeDamage(int amount)
     {
+        colpito = true;
         hpbar.SetHealth(Health-amount);
 
         Debug.Log("Il player ha subito danno" + amount);
+
+        //colpito = false;
+
         base.TakeDamage(amount);
 
         
@@ -166,6 +189,7 @@ public class Player : Entity
     public override void RespawnPlayer() ///override fatto oggi
     {
         RiattivaElementi();
+       
 
         if (animeRecuperabili.Count != 0)
         {
@@ -177,6 +201,8 @@ public class Player : Entity
             anime.transform.SetParent(null); //tolgo il parent al prefab
             RecuperaAnime.animeDaRecuperare = minionsKilled; //assegno il valore delle anime raccolte fin qui alla var statica animedarecuperare
             minionsKilled = 0; //resetto il valore delle anime raccolte
+
+        CambiaTestoAnime();
 
         animeRecuperabili.Add(anime);
 

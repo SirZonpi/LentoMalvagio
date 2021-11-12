@@ -6,6 +6,7 @@ using Cinemachine;
 public class PlayerIdleState : PlayerBaseState
 {
     //public CinemachineVirtualCamera vcam;
+    public Player playerScript;
 
     public Collider spadaCollider;
 
@@ -61,7 +62,11 @@ public class PlayerIdleState : PlayerBaseState
         {
             player.SwitchState(player.walkState);
         }
-        
+
+        if (playerScript.colpito == true)
+        {
+            player.SwitchState(player.takeDamage);
+        }
 
     }
 

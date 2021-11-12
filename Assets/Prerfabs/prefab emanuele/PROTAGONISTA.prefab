@@ -110,6 +110,7 @@ GameObject:
   - component: {fileID: 1407709769445985123}
   - component: {fileID: 1407709769445985122}
   - component: {fileID: 1407709769445985126}
+  - component: {fileID: 5296109845357827240}
   - component: {fileID: 1407709769445985146}
   - component: {fileID: 1407709769445985145}
   - component: {fileID: 1407709769445985127}
@@ -228,7 +229,7 @@ MonoBehaviour:
   attaccoMagico: 1
   psMorte: {fileID: 0}
   minionsKilled: 2000
-  prefabAnime: {fileID: 7315947257023667966, guid: 4d9cf050ce7fa3641aaf27760d6c25ba,
+  prefabAnime: {fileID: 4524353274924026111, guid: 883ff8d558e4f7d4cb4b2eddb585a54b,
     type: 3}
   currentLevel: Scena1
   livelloDifficolta: 
@@ -239,12 +240,15 @@ MonoBehaviour:
   hpbar: {fileID: 0}
   powerUpSpada: 0
   durataPowerupSpada: 20
-  durataPowerupMana: 0
+  durataPowerupMana: 5
   spadaInfuocata: {fileID: 1743331044408829068}
   iconaMelee: {fileID: 0}
   iconaMagia: {fileID: 0}
   fireRate: 2
   timeToNextShot: 0
+  animeText: {fileID: 0}
+  colpito: 0
+  playerMaterial: {fileID: 2100000, guid: 2fdd4ca632f991f4bb0fafa95320a6c3, type: 2}
 --- !u!114 &1407709769445985123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,9 +266,9 @@ MonoBehaviour:
   rollForce: 8
   StandardMoveSpeed: 4
   rollDistance: 0.3
-  timeRoll: 1.5
+  timeRoll: 1
   attDistance: 0.05
-  frenataRoll: 4
+  frenataRoll: 2
   frenataAtt: 4
   CameraPrincipale: {fileID: 0}
   cursore: {fileID: 0}
@@ -296,6 +300,7 @@ MonoBehaviour:
   attack3State: {fileID: 1407709769445985125}
   castState: {fileID: 3662562691060769328}
   esecuzione: {fileID: 1407709769445985146}
+  takeDamage: {fileID: 5296109845357827240}
 --- !u!114 &1407709769445985126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -308,7 +313,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 136d08aa0f3bc2a45bc43c8fd0485725, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerScript: {fileID: 1407709769445985120}
   spadaCollider: {fileID: 2601262195503354239}
+--- !u!114 &5296109845357827240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1407709769445985134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e06fcb449a68f18459ef65ee84a58f8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerScript: {fileID: 1407709769445985120}
 --- !u!114 &1407709769445985146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -865,7 +884,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8368722655750445499, guid: 53f1c214ebecfb647a2154af2b322e1b, type: 3}
+  - {fileID: 2100000, guid: bc8b388a8a2cfd44d911516f50d54de0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1071,7 +1090,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8748892135801146194, guid: 53f1c214ebecfb647a2154af2b322e1b, type: 3}
+  - {fileID: 2100000, guid: 2fdd4ca632f991f4bb0fafa95320a6c3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

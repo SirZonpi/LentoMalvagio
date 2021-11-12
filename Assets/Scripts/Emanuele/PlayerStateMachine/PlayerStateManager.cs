@@ -13,6 +13,7 @@ public class PlayerStateManager : MonoBehaviour
     public PlayerAttack3State attack3State;
     public PlayerCastState castState;
     public PlayerEsecuzioneState esecuzione;
+    public PlayerTakeDamageState takeDamage;
 
     public void SwitchState(PlayerBaseState playerState)
     {
