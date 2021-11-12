@@ -33,7 +33,7 @@ public class LupoAttackState : LupoBaseState
 
             Vector3 dirToPlayer = transform.position - lupoScript.playerTransform.transform.position;
             lupoScript.newPos = transform.position + dirToPlayer;
-
+            transform.rotation = Quaternion.Euler( direction);///
 
             lupo.SwitchState(lupo.jumpState);
 

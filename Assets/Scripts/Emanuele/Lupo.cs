@@ -32,6 +32,10 @@ public class Lupo : Enemy
     public float enemyDistance;
     public float distance;
 
+    //aggiunti oggi
+    public Transform[] path;
+    int currentPoint;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +46,25 @@ public class Lupo : Enemy
 
     }
 
+    public void MoveToPath()
+    {
+        
+            _agent.destination = path[currentPoint].position;
+            UpdateCurrentPoint();
+
+    }
+
+    public void UpdateCurrentPoint()
+    {
+        if (currentPoint == path.Length - 1) //siamo nell ultimo nodo della path
+        {
+            currentPoint = 0;
+        }
+        else
+        {
+            currentPoint++;
+        }
+    }
     public void CastSpell()
     {
         GameObject bulletSpell = Instantiate(bulletPrefab, spellSpawnPoint.transform.position, Quaternion.identity) as GameObject;

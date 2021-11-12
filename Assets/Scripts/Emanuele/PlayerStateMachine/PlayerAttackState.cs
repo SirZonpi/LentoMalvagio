@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Cinemachine;
 
 public class PlayerAttackState : PlayerBaseState
 {
@@ -11,8 +12,11 @@ public class PlayerAttackState : PlayerBaseState
 
     public GameObject textprefab;
     public string textToDisplay;
-    // public Rigidbody checkerRb;
 
+    public CinemachineVirtualCamera vcam;
+    public float startOrtho;
+
+    public GameObject scintille1;
 
     public Rigidbody rb;
     public float rollForce;
@@ -21,6 +25,7 @@ public class PlayerAttackState : PlayerBaseState
 
     public override void EnterState(PlayerStateManager player)
     {
+
         cambia = 1;
         vaAdAttacco2 = 0;
 
@@ -30,6 +35,9 @@ public class PlayerAttackState : PlayerBaseState
         //anim.SetBool("attacca2", false);
         anim.SetBool("attacca", true);
         anim.SetBool("castaspell", false);
+        anim.SetBool("damage", false);
+
+        startOrtho = vcam.m_Lens.OrthographicSize;
 
 
         StartCoroutine(AttDash());
@@ -51,6 +59,12 @@ public class PlayerAttackState : PlayerBaseState
 
     public override void UpdateState(PlayerStateManager player)
     {
+        if (vcam.m_Lens.OrthographicSize != 8)
+        {
+            vcam.m_Lens.OrthographicSize = Mathf.MoveTowards(vcam.m_Lens.OrthographicSize, 8, 10 * Time.deltaTime);
+
+        }
+
         Debug.Log("ATTACCO 1");
         Debug.Log("CAMBIALO " + cambia);
 
@@ -116,12 +130,14 @@ public class PlayerAttackState : PlayerBaseState
     public void AttivaSpada()
     {
         spadaCollider.enabled = true;
+       // scintille1.SetActive(true);
         
     }
 
     public void DisattivaSpada()
     {
         spadaCollider.enabled = false;
+        //scintille1.SetActive(false);
     }
 
 

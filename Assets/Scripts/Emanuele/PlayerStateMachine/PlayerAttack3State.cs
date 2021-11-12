@@ -8,7 +8,7 @@ public class PlayerAttack3State : PlayerBaseState
 {
     public int cambia;
 
-   public CinemachineVirtualCamera vcam;
+    public CinemachineVirtualCamera vcam;
 
     public float zoomSpeed = 1;
     public float targetOrtho;
@@ -17,11 +17,13 @@ public class PlayerAttack3State : PlayerBaseState
     public float minOrtho = 1.0f;
     public float maxOrtho = 20.0f;
 
+    public Collider spadaCollider;
+
     public override void EnterState(PlayerStateManager player)
     {
         cambia = 1;
 
-       //startOrtho = vcam.m_Lens.OrthographicSize; 
+        startOrtho = vcam.m_Lens.OrthographicSize; 
 
         Animator anim = player.GetComponent<Animator>();
 
@@ -30,11 +32,12 @@ public class PlayerAttack3State : PlayerBaseState
         anim.SetBool("idle", false);
         anim.SetBool("cammina", false);
         //anim.SetBool("attacca", true);
+        anim.SetBool("damage", false);
 
-      
-        //vcam.m_Lens.OrthographicSize = Mathf.MoveTowards(vcam.m_Lens.OrthographicSize, 2, 10 * Time.deltaTime);
-     //   GameManager.instance.timeManager.SlowMotion();
-    
+
+       // vcam.m_Lens.OrthographicSize = Mathf.MoveTowards(vcam.m_Lens.OrthographicSize, 2, 10 * Time.deltaTime);
+       GameManager.instance.timeManager.SlowMotion();
+
 
     }
 
@@ -47,14 +50,17 @@ public class PlayerAttack3State : PlayerBaseState
     {
         Debug.Log("ATTACCO 3");
 
+        spadaCollider.enabled = true;
+
         PlayerMove playerMove = GetComponent<PlayerMove>();
 
         Animator anim = player.GetComponent<Animator>();
 
-        //vcam.m_Lens.OrthographicSize = Mathf.MoveTowards(vcam.m_Lens.OrthographicSize, 2, 10 * Time.deltaTime);
+        vcam.m_Lens.OrthographicSize = Mathf.MoveTowards(vcam.m_Lens.OrthographicSize, 2, 10 * Time.deltaTime);
 
         if (cambia == 0 && anim.GetBool("attacca3") == true)
         {
+            Debug.Log("MEDDAAAA");
             anim.SetBool("attacca3", false);
             anim.SetBool("attacca2", false);
             anim.SetBool("attacca", false);

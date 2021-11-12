@@ -1,9 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
+
 
 public class PlayerWalkState : PlayerBaseState
 {
+    public CinemachineVirtualCamera vcam;
+    public float startOrtho;
+
+    public Collider spadaCollider;
+
     public override void EnterState(PlayerStateManager player)
     {
         Debug.Log("CIAO A TUTTI DALLO STATE INIZIALE!");
@@ -15,6 +22,10 @@ public class PlayerWalkState : PlayerBaseState
         anim.SetBool("attacca2", false);
         anim.SetBool("attacca3", false);
         anim.SetBool("damage", false);
+
+        startOrtho = vcam.m_Lens.OrthographicSize;
+
+
     }
 
     public override void onCollisionEnter(PlayerStateManager player)
@@ -26,6 +37,14 @@ public class PlayerWalkState : PlayerBaseState
 
     public override void UpdateState(PlayerStateManager player)
     {
+        spadaCollider.enabled = false;
+
+        if (vcam.m_Lens.OrthographicSize != 8)
+        {
+            vcam.m_Lens.OrthographicSize = Mathf.MoveTowards(vcam.m_Lens.OrthographicSize, 8, 10 * Time.deltaTime);
+
+        }
+
         PlayerMove playerMove = GetComponent<PlayerMove>();
         //Debug.Log("ANGIOVI"+Input.GetAxis("Horizontal"));
         if (playerMove.siMuove==false)

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerStateManager : MonoBehaviour
 {
-    PlayerBaseState currentPlayerState;
+    public PlayerBaseState currentPlayerState;
  
     public PlayerIdleState idleState; 
     public PlayerWalkState walkState; 
@@ -31,7 +31,7 @@ public class PlayerStateManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("LOSTATODELLAMERDA " + currentPlayerState);
+        Debug.Log("LOSTATODELLECOSE " + currentPlayerState);
 
         currentPlayerState.UpdateState(this);
 

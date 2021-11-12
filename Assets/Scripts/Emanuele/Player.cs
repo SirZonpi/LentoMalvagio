@@ -36,6 +36,7 @@ public class Player : Entity
 
     public bool colpito;
 
+    public GameObject scintille1;
     [SerializeField] Material playerMaterial;
 
     void Start()
@@ -58,6 +59,8 @@ public class Player : Entity
         spadaInfuocata.SetActive(false);
 
         animeText.text = minionsKilled.ToString();
+
+        playerMaterial.color = Color.white;
 
     }
 
@@ -189,7 +192,8 @@ public class Player : Entity
     public override void RespawnPlayer() ///override fatto oggi
     {
         RiattivaElementi();
-       
+
+        playerMaterial.color = Color.white;
 
         if (animeRecuperabili.Count != 0)
         {

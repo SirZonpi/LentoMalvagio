@@ -41,7 +41,6 @@ public class GoblinWalkState : GoblinBaseState
 
         if (distance <= _goblin.attackRadius && distance  > 1.3f) //inseguimento
         {
-            Debug.Log("STOCCAMINCHIA 2");
             _goblin.timer += Time.deltaTime;
 
             if (_goblin.timer > _goblin.nextTime)
@@ -57,7 +56,6 @@ public class GoblinWalkState : GoblinBaseState
         }
         else if (distance > _goblin.attackRadius)
         {
-            Debug.Log("STOCCAMINCHIA");
             _goblin.inRange = false;
             _goblin.MoveToPath();
         }

@@ -28,6 +28,7 @@ public class Entity : MonoBehaviour
     {
         //controlliamo se si tratta del player o di un nemico (non vogliamo hp bar sopra la testa del player
         //nota: fare refactoring e spostare dichiarazione dei delegate da Entity a Enemy
+        Health = maxHealth;
         if (GetComponent<Player>() == false) 
         {
             OnHealthAdded(this); // se questa istanza non è il player allora, una volta abilitata, richiamiamo subito l'evento e passiamo come argomento questa stessa entity
