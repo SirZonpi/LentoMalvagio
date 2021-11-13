@@ -20,6 +20,7 @@ public class Goblin : Enemy
 
     public NavMeshAgent _agent;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -50,5 +51,9 @@ public class Goblin : Enemy
         }
     }
 
-
+    public override void KillEnemy()
+    {
+        GameManager.instance.audioManager.PlaySound("goblinmorte");
+        base.KillEnemy();
+    }
 }

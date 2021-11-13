@@ -69,7 +69,7 @@ public class CheckPoints : MonoBehaviour
             Debug.Log("checkpoint attivato");
             ActivateCheckPoint();
             Rigenera();
-            
+            GameManager.instance.audioManager.PlaySound("checkpoint");
 
             if (ps != null)
             {

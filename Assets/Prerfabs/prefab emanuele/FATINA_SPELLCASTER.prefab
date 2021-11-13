@@ -50,6 +50,7 @@ GameObject:
   - component: {fileID: 5932875830083769418}
   - component: {fileID: 15462714348479266}
   - component: {fileID: 6280936058590249749}
+  - component: {fileID: 8714335434223584181}
   m_Layer: 0
   m_Name: FATINA_SPELLCASTER
   m_TagString: Untagged
@@ -136,7 +137,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.62
-  m_Speed: 1.5
+  m_Speed: 8
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 360
@@ -168,6 +169,7 @@ MonoBehaviour:
   animeDrop: 15
   animeDropPrefab: {fileID: 7925695913198141641, guid: 2d0e7ae1f8cd1404e88169f659a1dac7,
     type: 3}
+  startPosition: {x: 0, y: 0, z: 0}
   enemyDistance: 4
   _agent: {fileID: 850741746435585205}
   playerTransform: {fileID: 0}
@@ -177,6 +179,8 @@ MonoBehaviour:
   spellSpawnPoint: {fileID: 850741746606869173}
   dir: {x: 0, y: 0, z: 0}
   timeRate: 0
+  path: []
+  audiosource: {fileID: 8714335434223584181}
 --- !u!114 &9087971955688451371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,6 +210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fatina: {fileID: 850741746435585202}
+  cambia: 0
 --- !u!114 &708522261532426249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,6 +264,103 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterCollider: {fileID: 850741746435585207}
   characterBlockCollider: {fileID: 7678014139722332759}
+--- !u!82 &8714335434223584181
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508652553876949472}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 4927908155574874906, guid: 851663d4526af8042a9f1907333291ba,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 112678b4b90ce6444bdc54a84da8ec8c, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &545776551265766675
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,8 +6,12 @@ public class FatinaCasterAttackState : FatinaCasterBaseState
 {
     public FatinaSpellCaster fatina;
 
+    public int cambia;
+
     public override void EnterState(FatinaCasterStateManager fatinaCaster)
     {
+        cambia = 0;
+
         Animator anim = fatinaCaster.GetComponent<Animator>();
         anim.SetBool("idle", false);
         anim.SetBool("cammina", false);
@@ -40,8 +44,11 @@ public class FatinaCasterAttackState : FatinaCasterBaseState
         {
             if (fatina.timeRate >= 1)
             {
-                fatina.CastSpell();
-                fatina.timeRate = 0;
+                if (cambia == 1)
+                {
+                    fatina.CastSpell();
+                    fatina.timeRate = 0;
+                }
             }
         }
         else if (distance < fatina.enemyDistance)
@@ -59,4 +66,10 @@ public class FatinaCasterAttackState : FatinaCasterBaseState
 
 
     }
+
+    public void Cambia(int _cambia)
+    {
+        cambia = _cambia;
+    }
+
 }

@@ -13,6 +13,8 @@ public class PowerUpMana : MonoBehaviour
         {
             doOnce = false;
             Player player = GameManager.instance.player;
+            GameManager.instance.audioManager.PlaySound("powerup");
+
 
             player.StartCoroutine(player.ManaPowerUp());  
                                                             

@@ -94,7 +94,7 @@ Transform:
   - {fileID: 2955146085363145292}
   m_Father: {fileID: 1484247742343444254}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0.46714777, y: 179.99622, z: -0.46717855}
+  m_LocalEulerAnglesHint: {x: 6.1741765e-15, y: 179.99995, z: 6.1741727e-15}
 --- !u!1 &231622964235735923
 GameObject:
   m_ObjectHideFlags: 0
@@ -126,7 +126,7 @@ Transform:
   - {fileID: 4816429099842935844}
   m_Father: {fileID: 7636610527751984496}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -29.961357, y: -12.935272, z: 37.14613}
+  m_LocalEulerAnglesHint: {x: -0.00000038627485, y: -0.000061034363, z: -6.1743543e-15}
 --- !u!1 &238143525514257320
 GameObject:
   m_ObjectHideFlags: 0
@@ -167,6 +167,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7252605487816848950}
+  - component: {fileID: 5308046621219947249}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_66
   m_TagString: Untagged
@@ -187,7 +188,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3930542481001365526}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -5.2966873e-31, y: 0.000000028793904, z: -7.0169247e-15}
+  m_LocalEulerAnglesHint: {x: -4.6606846e-31, y: 0.000000025336462, z: -6.174363e-15}
+--- !u!65 &5308046621219947249
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 328648835346003623}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 190.7136, y: 39.07162, z: 37.472427}
+  m_Center: {x: 14.7293215, y: -0.0000029802322, z: 4.3792524}
 --- !u!1 &334692244342060329
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,9 +274,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7843369384769765686}
   - component: {fileID: 5780048237507272601}
+  - component: {fileID: 4091633720463040256}
   m_Layer: 0
   m_Name: boss_rig:corpo_boss
-  m_TagString: Untagged
+  m_TagString: EnemyHit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -342,6 +357,20 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.9137421, y: -33.706474, z: 0.30795288}
     m_Extent: {x: 173.40425, y: 217.95868, z: 212.62617}
   m_DirtyAABB: 0
+--- !u!136 &4091633720463040256
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387829609033708721}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 204.39
+  m_Height: 545
+  m_Direction: 1
+  m_Center: {x: 0.13531521, y: 9246.9, z: -3.357742}
 --- !u!1 &402749168918132008
 GameObject:
   m_ObjectHideFlags: 0
@@ -351,6 +380,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3796428208454236705}
+  - component: {fileID: 5237891033522569596}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_58
   m_TagString: Untagged
@@ -373,7 +403,20 @@ Transform:
   - {fileID: 2863746848854817024}
   m_Father: {fileID: 8460276585630763458}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -3.7197354, y: 4.254551, z: 3.4534693}
+  m_LocalEulerAnglesHint: {x: -0.00000019313802, y: -0.00028991688, z: -6.1743543e-15}
+--- !u!65 &5237891033522569596
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 402749168918132008}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 152.32939, y: 50, z: 58.45594}
+  m_Center: {x: 33.92142, y: -0.0000029802322, z: 4.2279654}
 --- !u!1 &452363572939677336
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,7 +447,7 @@ Transform:
   - {fileID: 7636610527751984496}
   m_Father: {fileID: 3796428208454236705}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -9.540342, y: 8.051559, z: 8.29043}
+  m_LocalEulerAnglesHint: {x: 1.0274188e-12, y: 0.0006036384, z: -0.00000019533596}
 --- !u!1 &474573426430587604
 GameObject:
   m_ObjectHideFlags: 0
@@ -529,7 +572,7 @@ Transform:
   - {fileID: 3572453522680452429}
   m_Father: {fileID: 5562545512190931956}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -0.084958516, y: 0.1204821, z: 0.08477768}
+  m_LocalEulerAnglesHint: {x: 1.0811677e-14, y: 0.0006628412, z: -0.0000000018665296}
 --- !u!1 &598505628149905422
 GameObject:
   m_ObjectHideFlags: 0
@@ -539,9 +582,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 64950590438819224}
+  - component: {fileID: 5001301992984906822}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_3 1
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -560,7 +604,20 @@ Transform:
   - {fileID: 72336968874969477}
   m_Father: {fileID: 1224722183515992869}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 6.2349143, y: -7.0059395, z: -7.04609}
+  m_LocalEulerAnglesHint: {x: -0.000000087414946, y: -0.00018310547, z: 1.0675992e-20}
+--- !u!65 &5001301992984906822
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598505628149905422}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 135.10854, y: 50, z: 62.016376}
+  m_Center: {x: 42.53185, y: -0.0000029802322, z: 6.008175}
 --- !u!1 &616368164246900137
 GameObject:
   m_ObjectHideFlags: 0
@@ -758,7 +815,7 @@ GameObject:
   - component: {fileID: 1163315830164589136}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_7 1
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -778,7 +835,7 @@ Transform:
   - {fileID: 2046937643615037917}
   m_Father: {fileID: 2086540599180086017}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0.4100263, y: -0.57111657, z: -0.41413137}
+  m_LocalEulerAnglesHint: {x: -0.00000019340371, y: -0.00016784667, z: 0}
 --- !u!1 &921917853611794571
 GameObject:
   m_ObjectHideFlags: 0
@@ -883,7 +940,7 @@ GameObject:
   - component: {fileID: 6744830326321204968}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_90
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -902,7 +959,7 @@ Transform:
   - {fileID: 306995736412298830}
   m_Father: {fileID: 1484247742343444254}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 17.430958, y: -95.99634, z: -19.323282}
+  m_LocalEulerAnglesHint: {x: 0.00000000438772, y: -89.999985, z: 1.7491545e-16}
 --- !u!1 &1100834018464351638
 GameObject:
   m_ObjectHideFlags: 0
@@ -974,9 +1031,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5839773734717122813}
+  - component: {fileID: 4793570279413712245}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_10 1
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -995,7 +1053,20 @@ Transform:
   - {fileID: 304076329517554724}
   m_Father: {fileID: 4935392975011285322}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -1.7853792, y: 2.2781267, z: 1.7157857}
+  m_LocalEulerAnglesHint: {x: 0.00000005191633, y: -0.00019836424, z: -1.0675992e-20}
+--- !u!65 &4793570279413712245
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125986618171257123}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 148.4545, y: 50, z: 61.17335}
+  m_Center: {x: 35.85885, y: -0.000002980232, z: 5.586663}
 --- !u!1 &1134531597955852232
 GameObject:
   m_ObjectHideFlags: 0
@@ -1025,7 +1096,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8113076172443980432}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.43589348}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.435894}
 --- !u!1 &1164775222285283115
 GameObject:
   m_ObjectHideFlags: 0
@@ -1066,9 +1137,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 447595478563519861}
+  - component: {fileID: 6736762511082462914}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_22
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1087,6 +1159,19 @@ Transform:
   m_Father: {fileID: 6585570222674346398}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &6736762511082462914
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178722468817201810}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 102.485985, y: 24.083107, z: 26.480585}
+  m_Center: {x: -34.770134, y: 0.0000022506447, z: 0.000012225141}
 --- !u!1 &1179908025239419984
 GameObject:
   m_ObjectHideFlags: 0
@@ -1096,6 +1181,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5562545512190931956}
+  - component: {fileID: 6735555457272039428}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_54
   m_TagString: Untagged
@@ -1117,7 +1203,20 @@ Transform:
   - {fileID: 7177662539014189372}
   m_Father: {fileID: 998514800820895476}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0.5150803, y: -0.7329746, z: -0.52171606}
+  m_LocalEulerAnglesHint: {x: 0.000000001911852, y: -0.00028991696, z: -6.1741727e-15}
+--- !u!65 &6735555457272039428
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179908025239419984}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 148.65442, y: 50, z: 58.45594}
+  m_Center: {x: 35.758938, y: -0.0000029802322, z: 4.2279625}
 --- !u!1 &1180679881423721913
 GameObject:
   m_ObjectHideFlags: 0
@@ -1191,6 +1290,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8021346426380325889}
+  - component: {fileID: 6667456750199339422}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_64
   m_TagString: Untagged
@@ -1213,7 +1313,20 @@ Transform:
   - {fileID: 3930542481001365526}
   m_Father: {fileID: 2259690004239171086}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -3.256834, y: -3.300096, z: 3.4499118}
+  m_LocalEulerAnglesHint: {x: -0.00000038627263, y: -0.0001898124, z: -6.1743543e-15}
+--- !u!65 &6667456750199339422
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270561063331073478}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 152.1534, y: 42.57126, z: 45.183716}
+  m_Center: {x: 34.009422, y: 0.69826245, z: 3.220251}
 --- !u!1 &1322823280267599959
 GameObject:
   m_ObjectHideFlags: 0
@@ -1284,9 +1397,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3157620820689696318}
+  - component: {fileID: 6803687319285926850}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_21 1
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1306,7 +1420,20 @@ Transform:
   - {fileID: 8534900203687512568}
   m_Father: {fileID: 1427171881310483293}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0.8354306, y: 0.8223526, z: -0.82350826}
+  m_LocalEulerAnglesHint: {x: 0.00000018091835, y: -0.00022033633, z: 2.1351984e-20}
+--- !u!65 &6803687319285926850
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1391029033793093522}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 72.612686, y: 34.059395, z: 37.21597}
+  m_Center: {x: 73.77977, y: -0.0000029802318, z: 5.586666}
 --- !u!1 &1435298178725967166
 GameObject:
   m_ObjectHideFlags: 0
@@ -1316,9 +1443,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7986091782599436283}
+  - component: {fileID: 6831208630140404054}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_16
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1337,7 +1465,20 @@ Transform:
   - {fileID: 7860916448339817783}
   m_Father: {fileID: 6510501192072214078}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -16.22997, y: -0.11017684, z: 16.260796}
+  m_LocalEulerAnglesHint: {x: -0.000000037379728, y: -8.485066e-34, z: 1.1444243e-24}
+--- !u!65 &6831208630140404054
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435298178725967166}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 119.63334, y: 50, z: 49.999996}
+  m_Center: {x: -34.95604, y: 0.0000030258586, z: 0.000017828826}
 --- !u!1 &1525620339970220109
 GameObject:
   m_ObjectHideFlags: 0
@@ -1377,6 +1518,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5403526591052403659}
+  - component: {fileID: 6565020095518591648}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_49
   m_TagString: Untagged
@@ -1398,7 +1540,20 @@ Transform:
   - {fileID: 783027537359850296}
   m_Father: {fileID: 5841227264316400850}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 10.603403, y: -7.9355917, z: -12.17288}
+  m_LocalEulerAnglesHint: {x: -1.0811535e-14, y: 0.0006628412, z: 0.000000001866517}
+--- !u!65 &6565020095518591648
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1602651339589697268}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 67.735954, y: 50, z: 58.45594}
+  m_Center: {x: 76.21818, y: -0.0000029802322, z: 4.227967}
 --- !u!1 &1646240037244355217
 GameObject:
   m_ObjectHideFlags: 0
@@ -1408,9 +1563,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7328265124261433484}
+  - component: {fileID: 6629015595853166279}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_19
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1429,7 +1585,20 @@ Transform:
   - {fileID: 9084384305672009912}
   m_Father: {fileID: 7287768637617767219}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -7.546976, y: -4.908702, z: 8.220698}
+  m_LocalEulerAnglesHint: {x: -0.000000029947454, y: -0.00007629394, z: 0}
+--- !u!65 &6629015595853166279
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646240037244355217}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 77.7277, y: 45.456806, z: 50}
+  m_Center: {x: 11.136208, y: -0.000000014443795, z: -0.0000037824113}
 --- !u!1 &1684915520267568709
 GameObject:
   m_ObjectHideFlags: 0
@@ -1627,9 +1796,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7287768637617767219}
+  - component: {fileID: 6309776778589995162}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_18
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1648,7 +1818,20 @@ Transform:
   - {fileID: 7328265124261433484}
   m_Father: {fileID: 7860916448339817783}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -10.213217, y: -4.8105006, z: 11.103459}
+  m_LocalEulerAnglesHint: {x: -0.000000057119923, y: -0.000052489657, z: 0}
+--- !u!65 &6309776778589995162
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924924439175001290}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 73.46972, y: 50.000004, z: 49.999996}
+  m_Center: {x: 13.265206, y: 0.0000042440724, z: -0.000005860095}
 --- !u!1 &1940881183318411640
 GameObject:
   m_ObjectHideFlags: 0
@@ -1679,7 +1862,7 @@ Transform:
   - {fileID: 1226354429754181820}
   m_Father: {fileID: 6858159844743669654}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 1.9693799, y: -7.4297256, z: -7.273088}
+  m_LocalEulerAnglesHint: {x: 2.446258, y: 2.4140735, z: -68.18414}
 --- !u!1 &1943032892747505622
 GameObject:
   m_ObjectHideFlags: 0
@@ -1723,7 +1906,7 @@ GameObject:
   - component: {fileID: 853122381588334951}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_61 1
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1743,7 +1926,7 @@ Transform:
   - {fileID: 8645503255781512135}
   m_Father: {fileID: 6939052498008422289}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -16.515394, y: -13.5196085, z: 20.869507}
+  m_LocalEulerAnglesHint: {x: 1.6499114e-12, y: 0.0009765633, z: -0.00000019360354}
 --- !u!1 &2030910212133683669
 GameObject:
   m_ObjectHideFlags: 0
@@ -1897,7 +2080,7 @@ GameObject:
   - component: {fileID: 7860916448339817783}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_17
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1916,7 +2099,7 @@ Transform:
   - {fileID: 7287768637617767219}
   m_Father: {fileID: 7986091782599436283}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -13.480912, y: -3.4998825, z: 14.322014}
+  m_LocalEulerAnglesHint: {x: -0.00000005779198, y: -0.000023804287, z: 0}
 --- !u!1 &2115833298681425122
 GameObject:
   m_ObjectHideFlags: 0
@@ -1928,7 +2111,7 @@ GameObject:
   - component: {fileID: 6402588585675247762}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_17 1
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1947,7 +2130,7 @@ Transform:
   - {fileID: 7181361053766692386}
   m_Father: {fileID: 4888447731091780971}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -1.2666051, y: -1.2780284, z: 1.295184}
+  m_LocalEulerAnglesHint: {x: 3.5338137e-14, y: 0.0009527582, z: -0.000000004246161}
 --- !u!1 &2132415390430767202
 GameObject:
   m_ObjectHideFlags: 0
@@ -2021,7 +2204,7 @@ GameObject:
   - component: {fileID: 1224722183515992869}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_2 1
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2041,7 +2224,7 @@ Transform:
   - {fileID: 64950590438819224}
   m_Father: {fileID: 7692613871114405738}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 17.261976, y: -15.948392, z: -22.7567}
+  m_LocalEulerAnglesHint: {x: -0.000000287403, y: -0.00007629394, z: 0}
 --- !u!1 &2206882554027721984
 GameObject:
   m_ObjectHideFlags: 0
@@ -2102,7 +2285,7 @@ Transform:
   - {fileID: 8969858432751075944}
   m_Father: {fileID: 6541797914710892114}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 5.9613037, y: 9.667262, z: 10.677604}
+  m_LocalEulerAnglesHint: {x: -1.0100442, y: 7.56889, z: 49.76356}
 --- !u!1 &2261308662949701482
 GameObject:
   m_ObjectHideFlags: 0
@@ -2274,6 +2457,36 @@ SkinnedMeshRenderer:
     m_Center: {x: -5.1969604, y: 18.351196, z: -3.0439453}
     m_Extent: {x: 1796.6606, y: 73.16919, z: 1786.6771}
   m_DirtyAABB: 0
+--- !u!1 &2278649032011361507
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6510561170828521658}
+  m_Layer: 0
+  m_Name: SPEELSPAWNPOINT
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6510561170828521658
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2278649032011361507}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 3.038, z: 0.606}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 9122094837950656998}
+  m_RootOrder: 28
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2291372370901375254
 GameObject:
   m_ObjectHideFlags: 0
@@ -2283,6 +2496,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 783027537359850296}
+  - component: {fileID: 5974859570124385614}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_50
   m_TagString: Untagged
@@ -2304,7 +2518,20 @@ Transform:
   - {fileID: 7071124340884595089}
   m_Father: {fileID: 5403526591052403659}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 7.921513, y: -7.9869556, z: -9.105892}
+  m_LocalEulerAnglesHint: {x: 1.3032761e-10, y: -0.00015258788, z: -6.1741727e-15}
+--- !u!65 &5974859570124385614
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2291372370901375254}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 142.65587, y: 50, z: 58.45594}
+  m_Center: {x: 38.75819, y: -0.0000029802322, z: 4.227963}
 --- !u!1 &2294261327796869595
 GameObject:
   m_ObjectHideFlags: 0
@@ -2350,7 +2577,7 @@ GameObject:
   - component: {fileID: 7581929290075793993}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_55 1
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2369,7 +2596,7 @@ Transform:
   - {fileID: 5973161937764507019}
   m_Father: {fileID: 4930398251669177337}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -2.1274176, y: 1.9333677, z: 2.0568342}
+  m_LocalEulerAnglesHint: {x: 2.2238344e-10, y: -0.00006103514, z: 0}
 --- !u!1 &2372853243771263692
 GameObject:
   m_ObjectHideFlags: 0
@@ -2379,9 +2606,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4930398251669177337}
+  - component: {fileID: 7910697456440798872}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_54 1
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2400,7 +2628,20 @@ Transform:
   - {fileID: 7581929290075793993}
   m_Father: {fileID: 1940132255141648193}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -1.0791199, y: 1.054647, z: 1.0594397}
+  m_LocalEulerAnglesHint: {x: 4.449933e-12, y: -0.000061035145, z: 0}
+--- !u!65 &7910697456440798872
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2372853243771263692}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 148.4545, y: 50, z: 67.80739}
+  m_Center: {x: 35.858845, y: -0.0000029802322, z: -3.3941786}
 --- !u!1 &2394055974622650991
 GameObject:
   m_ObjectHideFlags: 0
@@ -2463,7 +2704,7 @@ Transform:
   - {fileID: 7461972662889599488}
   m_Father: {fileID: 1226419594332432462}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 1.9327272e-15, y: 0, z: -5.917271e-32}
+  m_LocalEulerAnglesHint: {x: 1.700654e-15, y: 0, z: -5.2067505e-32}
 --- !u!1 &2429535274614344211
 GameObject:
   m_ObjectHideFlags: 0
@@ -2475,7 +2716,7 @@ GameObject:
   - component: {fileID: 6457896938791910796}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_9
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2494,7 +2735,7 @@ Transform:
   - {fileID: 550570739729711449}
   m_Father: {fileID: 5633180958942271680}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0.65316874, y: -1.0305324, z: -0.66501564}
+  m_LocalEulerAnglesHint: {x: 0.00000042574806, y: -0.00055602967, z: 0}
 --- !u!1 &2473882848495505991
 GameObject:
   m_ObjectHideFlags: 0
@@ -2616,7 +2857,7 @@ Transform:
   - {fileID: 2860261717910232192}
   m_Father: {fileID: 1226419594332432462}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 40.55986, y: 163.7537, z: 71.44952}
+  m_LocalEulerAnglesHint: {x: 30.06181, y: 166.21631, z: 126.62383}
 --- !u!1 &2562462385277157151
 GameObject:
   m_ObjectHideFlags: 0
@@ -2658,7 +2899,7 @@ GameObject:
   - component: {fileID: 5143799343654288876}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_13
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2677,7 +2918,7 @@ Transform:
   - {fileID: 6135383652894098899}
   m_Father: {fileID: 4805498970737801339}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -7.8949513, y: 7.7544327, z: 6.8953595}
+  m_LocalEulerAnglesHint: {x: 0.000000011501184, y: -0.00026611268, z: 0}
 --- !u!1 &2608710178735633202
 GameObject:
   m_ObjectHideFlags: 0
@@ -2687,9 +2928,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1427171881310483293}
+  - component: {fileID: 7571219539071354722}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_20 1
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2708,7 +2950,20 @@ Transform:
   - {fileID: 3157620820689696318}
   m_Father: {fileID: 8818803664759053213}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0.39275387, y: 0.3979496, z: -0.39003333}
+  m_LocalEulerAnglesHint: {x: 0.000000073047055, y: -0.00015930118, z: -1.0675992e-20}
+--- !u!65 &7571219539071354722
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2608710178735633202}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 73.83563, y: 45.368427, z: 52.698734}
+  m_Center: {x: 73.16831, y: -0.000002980232, z: 5.5866604}
 --- !u!1 &2716750527129512718
 GameObject:
   m_ObjectHideFlags: 0
@@ -2752,7 +3007,7 @@ GameObject:
   - component: {fileID: 85360523755990935}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_49 1
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2771,7 +3026,7 @@ Transform:
   - {fileID: 185499923691806174}
   m_Father: {fileID: 4959022938757062395}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 1.4819107, y: -1.4787481, z: -1.5206616}
+  m_LocalEulerAnglesHint: {x: -4.1001134e-15, y: 0.0006341559, z: 7.419607e-10}
 --- !u!1 &2771052820533221614
 GameObject:
   m_ObjectHideFlags: 0
@@ -2844,6 +3099,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9029369563261321143}
+  - component: {fileID: 7765709677081883857}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_47
   m_TagString: Untagged
@@ -2865,7 +3121,20 @@ Transform:
   - {fileID: 5841227264316400850}
   m_Father: {fileID: 3288499292828456999}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 8.287858, y: -1.9635817, z: -8.57581}
+  m_LocalEulerAnglesHint: {x: 3.6086117e-10, y: -0.00019836424, z: -6.1741727e-15}
+--- !u!65 &7765709677081883857
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2802144785566302343}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 132.13277, y: 50, z: 58.45594}
+  m_Center: {x: 44.019733, y: -0.0000029802322, z: 4.2279634}
 --- !u!1 &2838239640237566692
 GameObject:
   m_ObjectHideFlags: 0
@@ -2875,9 +3144,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8534900203687512568}
+  - component: {fileID: 7657548674811633328}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_22 1
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2896,6 +3166,19 @@ Transform:
   m_Father: {fileID: 3157620820689696318}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &7657548674811633328
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2838239640237566692}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 199.19139, y: 23.049868, z: 31.762997}
+  m_Center: {x: 10.490407, y: -0.000002980232, z: 5.5866656}
 --- !u!1 &2871183602989509133
 GameObject:
   m_ObjectHideFlags: 0
@@ -2936,6 +3219,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3572453522680452429}
+  - component: {fileID: 7695810873683795325}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_56
   m_TagString: Untagged
@@ -2958,7 +3242,20 @@ Transform:
   - {fileID: 8460276585630763458}
   m_Father: {fileID: 7177662539014189372}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -0.75666994, y: 1.0440533, z: 0.7429897}
+  m_LocalEulerAnglesHint: {x: -0.00000019313724, y: -0.000052489628, z: -6.1741722e-15}
+--- !u!65 &7695810873683795325
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2876501843391883563}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 151.08685, y: 50, z: 58.45594}
+  m_Center: {x: 34.542694, y: -0.0000029802322, z: 4.2279644}
 --- !u!1 &2970369633582489532
 GameObject:
   m_ObjectHideFlags: 0
@@ -3000,9 +3297,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6939052498008422289}
+  - component: {fileID: 7237504289811923396}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_60 1
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3022,7 +3320,20 @@ Transform:
   - {fileID: 853122381588334951}
   m_Father: {fileID: 8053910235294418330}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -22.34343, y: -8.30158, z: 25.731373}
+  m_LocalEulerAnglesHint: {x: -0.00000019260362, y: -0.0004272457, z: 0}
+--- !u!65 &7237504289811923396
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2978752744291628432}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 149.6135, y: 50, z: 57.990074}
+  m_Center: {x: 35.27935, y: -0.0000029802322, z: -3.2049093}
 --- !u!1 &3000001971406224672
 GameObject:
   m_ObjectHideFlags: 0
@@ -3094,9 +3405,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4888447731091780971}
+  - component: {fileID: 7438661660577354377}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_16 1
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3115,7 +3427,20 @@ Transform:
   - {fileID: 6402588585675247762}
   m_Father: {fileID: 2814224639411240438}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -2.9556544, y: -2.8548882, z: 3.106651}
+  m_LocalEulerAnglesHint: {x: 0.000000038722742, y: -0.0004730224, z: 1.0675992e-20}
+--- !u!65 &7438661660577354377
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3034598520874346207}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 149.61351, y: 50, z: 61.17335}
+  m_Center: {x: 35.279358, y: -0.0000029802322, z: 5.586662}
 --- !u!1 &3042453820612995800
 GameObject:
   m_ObjectHideFlags: 0
@@ -3156,9 +3481,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6585570222674346398}
+  - component: {fileID: 7450174037301748971}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_21
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3178,7 +3504,20 @@ Transform:
   - {fileID: 447595478563519861}
   m_Father: {fileID: 9084384305672009912}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -4.012596, y: -3.7347186, z: 4.2828197}
+  m_LocalEulerAnglesHint: {x: 0.0000001609097, y: -0.00022033633, z: 0}
+--- !u!65 &7450174037301748971
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3045055435252338877}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 100, y: 32.123333, z: 39.18741}
+  m_Center: {x: -0.0000007756792, y: 0.0000016498915, z: -1.4424057}
 --- !u!1 &3062616139363340718
 GameObject:
   m_ObjectHideFlags: 0
@@ -3249,9 +3588,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4959022938757062395}
+  - component: {fileID: 7477610558384986890}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_48 1
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3270,7 +3610,20 @@ Transform:
   - {fileID: 85360523755990935}
   m_Father: {fileID: 4143467543846022168}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 2.7072356, y: -2.5650856, z: -2.83117}
+  m_LocalEulerAnglesHint: {x: -9.112734e-11, y: -0.00036621094, z: 0}
+--- !u!65 &7477610558384986890
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3090506423530729306}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 129.81235, y: 50, z: 65.78128}
+  m_Center: {x: 45.179886, y: -0.0000029802322, z: 3.2826998}
 --- !u!1 &3098035308895835382
 GameObject:
   m_ObjectHideFlags: 0
@@ -3343,9 +3696,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5633180958942271680}
+  - component: {fileID: 7388893153632099620}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_8
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3365,7 +3719,20 @@ Transform:
   - {fileID: 6457896938791910796}
   m_Father: {fileID: 7598239307413468591}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 2.2855923, y: -3.5197127, z: -2.4304585}
+  m_LocalEulerAnglesHint: {x: 0.00000027358413, y: -0.00018981875, z: 0}
+--- !u!65 &7388893153632099620
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147170839941441904}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 125.76764, y: 50, z: 50}
+  m_Center: {x: 12.883827, y: -0.000004974222, z: -0.0000025371924}
 --- !u!1 &3306397210241633707
 GameObject:
   m_ObjectHideFlags: 0
@@ -3406,9 +3773,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5973161937764507019}
+  - component: {fileID: 7179741716978015643}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_56 1
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3428,7 +3796,20 @@ Transform:
   - {fileID: 5647978213384015938}
   m_Father: {fileID: 7581929290075793993}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -3.841897, y: 3.062132, z: 3.6420128}
+  m_LocalEulerAnglesHint: {x: -0.00000019273035, y: -0.000052489628, z: 0}
+--- !u!65 &7179741716978015643
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3352350573233236429}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 146.95615, y: 50, z: 67.28878}
+  m_Center: {x: 36.608032, y: -0.0000029802325, z: -3.6623342}
 --- !u!1 &3359209001358368860
 GameObject:
   m_ObjectHideFlags: 0
@@ -3438,6 +3819,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4185581180049021845}
+  - component: {fileID: 7185544682663924744}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_52
   m_TagString: Untagged
@@ -3459,7 +3841,20 @@ Transform:
   - {fileID: 998514800820895476}
   m_Father: {fileID: 7071124340884595089}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 2.6272485, y: -3.5074432, z: -2.7931418}
+  m_LocalEulerAnglesHint: {x: 0.000000001470386, y: -0.000091552734, z: -6.1741727e-15}
+--- !u!65 &7185544682663924744
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3359209001358368860}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 134.09918, y: 50, z: 58.45594}
+  m_Center: {x: 43.036533, y: -0.0000029802322, z: 4.227961}
 --- !u!1 &3442585059308451834
 GameObject:
   m_ObjectHideFlags: 0
@@ -3469,9 +3864,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5689645849633728046}
+  - component: {fileID: 7124946156844893098}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_12 1
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3491,7 +3887,20 @@ Transform:
   - {fileID: 501644296175957175}
   m_Father: {fileID: 304076329517554724}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -14.527668, y: 10.0269575, z: 12.203721}
+  m_LocalEulerAnglesHint: {x: 2.6632275e-12, y: 0.0010614019, z: -0.00000028777708}
+--- !u!65 &7124946156844893098
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3442585059308451834}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 146.95615, y: 50, z: 61.17335}
+  m_Center: {x: 36.608032, y: -0.000002980232, z: 5.5866632}
 --- !u!1 &3459027124090931608
 GameObject:
   m_ObjectHideFlags: 0
@@ -3531,9 +3940,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5296400633514540743}
+  - component: {fileID: 9035467393574437293}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_14 1
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3552,7 +3962,20 @@ Transform:
   - {fileID: 2814224639411240438}
   m_Father: {fileID: 501644296175957175}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -23.613987, y: -16.232803, z: 31.133438}
+  m_LocalEulerAnglesHint: {x: 0.00000006531676, y: -0.000106811516, z: 0}
+--- !u!65 &9035467393574437293
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3477356845109278203}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 151.45364, y: 50, z: 61.17335}
+  m_Center: {x: 34.35929, y: -0.0000029802322, z: 5.5866647}
 --- !u!1 &3491863999847003876
 GameObject:
   m_ObjectHideFlags: 0
@@ -3583,7 +4006,7 @@ Transform:
   - {fileID: 5403526591052403659}
   m_Father: {fileID: 9029369563261321143}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 11.179664, y: -5.2810254, z: -12.252787}
+  m_LocalEulerAnglesHint: {x: -0.0000000010975489, y: -0.00041870057, z: -6.1741727e-15}
 --- !u!1 &3506036552002891531
 GameObject:
   m_ObjectHideFlags: 0
@@ -3656,7 +4079,7 @@ GameObject:
   - component: {fileID: 6510501192072214078}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_15
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3675,7 +4098,7 @@ Transform:
   - {fileID: 7986091782599436283}
   m_Father: {fileID: 6135383652894098899}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -16.422787, y: 4.8056445, z: 15.116022}
+  m_LocalEulerAnglesHint: {x: -4.6556834e-13, y: 0.0011224371, z: 0.000000047569525}
 --- !u!1 &3666923948316849317
 GameObject:
   m_ObjectHideFlags: 0
@@ -3685,9 +4108,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8645503255781512135}
+  - component: {fileID: 9207020098289631475}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_62 1
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3707,7 +4131,20 @@ Transform:
   - {fileID: 1064962299996744486}
   m_Father: {fileID: 853122381588334951}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -9.122518, y: -10.405843, z: 10.940161}
+  m_LocalEulerAnglesHint: {x: -0.00000038613743, y: -0.00006774686, z: -2.1351984e-20}
+--- !u!65 &9207020098289631475
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3666923948316849317}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 71.078804, y: 50, z: 49.095345}
+  m_Center: {x: 74.546684, y: -0.0000029802322, z: -2.736929}
 --- !u!1 &3676061894263236927
 GameObject:
   m_ObjectHideFlags: 0
@@ -3719,7 +4156,7 @@ GameObject:
   - component: {fileID: 7598239307413468591}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_7
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3738,7 +4175,7 @@ Transform:
   - {fileID: 5633180958942271680}
   m_Father: {fileID: 2044541762605653633}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 6.0015583, y: -8.510685, z: -6.9642515}
+  m_LocalEulerAnglesHint: {x: 0.000000036818783, y: -0.00021362303, z: 0}
 --- !u!1 &3697720336065380672
 GameObject:
   m_ObjectHideFlags: 0
@@ -3911,7 +4348,7 @@ Transform:
   - {fileID: 4185581180049021845}
   m_Father: {fileID: 783027537359850296}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 5.1438437, y: -6.2503524, z: -5.7370315}
+  m_LocalEulerAnglesHint: {x: 8.5902135e-10, y: -0.000091552734, z: -6.1741727e-15}
 --- !u!1 &3912656845814108621
 GameObject:
   m_ObjectHideFlags: 0
@@ -3942,7 +4379,7 @@ Transform:
   - {fileID: 5562545512190931956}
   m_Father: {fileID: 4185581180049021845}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 1.2349634, y: -1.7243279, z: -1.2726933}
+  m_LocalEulerAnglesHint: {x: 0.0000000018045657, y: -0.00009826602, z: -6.1741727e-15}
 --- !u!1 &4044256407639644868
 GameObject:
   m_ObjectHideFlags: 0
@@ -3986,7 +4423,7 @@ GameObject:
   - component: {fileID: 2814224639411240438}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_15 1
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4005,7 +4442,7 @@ Transform:
   - {fileID: 4888447731091780971}
   m_Father: {fileID: 5296400633514540743}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -7.8189006, y: -6.840323, z: 8.809191}
+  m_LocalEulerAnglesHint: {x: 0.0000000634311, y: -0.0002355951, z: 0}
 --- !u!1 &4074004511197535824
 GameObject:
   m_ObjectHideFlags: 0
@@ -4015,9 +4452,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2044541762605653633}
+  - component: {fileID: 8480178713146124804}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_6
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4036,7 +4474,20 @@ Transform:
   - {fileID: 7598239307413468591}
   m_Father: {fileID: 7728962312842277642}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 10.928117, y: -12.423771, z: -13.575123}
+  m_LocalEulerAnglesHint: {x: -1.7068649e-12, y: 0.0007391351, z: 0.00000026429538}
+--- !u!65 &8480178713146124804
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4074004511197535824}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 117.16711, y: 50, z: 50}
+  m_Center: {x: -8.583565, y: 0.0000040259188, z: 0.000003103937}
 --- !u!1 &4078745457489623629
 GameObject:
   m_ObjectHideFlags: 0
@@ -4048,7 +4499,7 @@ GameObject:
   - component: {fileID: 306995736412298830}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_46 1
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4067,7 +4518,7 @@ Transform:
   - {fileID: 4143467543846022168}
   m_Father: {fileID: 6744830326321204968}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 14.916224, y: -10.7325115, z: -17.962831}
+  m_LocalEulerAnglesHint: {x: 0.000000002146718, y: -0.000091552734, z: 0}
 --- !u!1 &4089965069976866880
 GameObject:
   m_ObjectHideFlags: 0
@@ -4264,7 +4715,7 @@ GameObject:
   - component: {fileID: 4935392975011285322}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_9 1
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4284,7 +4735,7 @@ Transform:
   - {fileID: 5839773734717122813}
   m_Father: {fileID: 2046937643615037917}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -0.6152327, y: 0.8360207, z: 0.6063218}
+  m_LocalEulerAnglesHint: {x: -0.00000012123614, y: -0.000052489657, z: 0}
 --- !u!1 &4275094216777034788
 GameObject:
   m_ObjectHideFlags: 0
@@ -4315,7 +4766,7 @@ Transform:
   - {fileID: 8113076172443980432}
   m_Father: {fileID: 1226419594332432462}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 32.5429, y: -3.69139, z: 89.12551}
+  m_LocalEulerAnglesHint: {x: 8.302568, y: 6.4482427, z: 57.44312}
 --- !u!1 &4328388846390190624
 GameObject:
   m_ObjectHideFlags: 0
@@ -4452,7 +4903,7 @@ GameObject:
   - component: {fileID: 72336968874969477}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_4 1
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4471,7 +4922,7 @@ Transform:
   - {fileID: 1390349352283604675}
   m_Father: {fileID: 64950590438819224}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 3.0156438, y: -3.7663376, z: -3.2205753}
+  m_LocalEulerAnglesHint: {x: 0.000000033717512, y: -0.00032043457, z: 0}
 --- !u!1 &4513527995158853679
 GameObject:
   m_ObjectHideFlags: 0
@@ -4481,6 +4932,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4816429099842935844}
+  - component: {fileID: 8324101081958878329}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_62
   m_TagString: Untagged
@@ -4503,7 +4955,20 @@ Transform:
   - {fileID: 2259690004239171086}
   m_Father: {fileID: 4645054295596417183}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -13.183458, y: -9.68942, z: 15.5975}
+  m_LocalEulerAnglesHint: {x: -0.00000038627456, y: -0.00005248807, z: -6.1743543e-15}
+--- !u!65 &8324101081958878329
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4513527995158853679}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 151.10815, y: 39.874268, z: 47.67164}
+  m_Center: {x: 34.532043, y: 0.7779956, z: 5.714202}
 --- !u!1 &4541657549264201792
 GameObject:
   m_ObjectHideFlags: 0
@@ -4544,9 +5009,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2086540599180086017}
+  - component: {fileID: 1005000703289622641}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_6 1
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4565,7 +5031,20 @@ Transform:
   - {fileID: 1163315830164589136}
   m_Father: {fileID: 1390349352283604675}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0.9338532, y: -1.2813293, z: -0.9549631}
+  m_LocalEulerAnglesHint: {x: -9.322198e-13, y: 0.00097656244, z: 0.00000010938828}
+--- !u!65 &1005000703289622641
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4671388160276263975}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 141.9941, y: 50, z: 61.17335}
+  m_Center: {x: 39.089077, y: -0.0000029802322, z: 5.5866647}
 --- !u!1 &4673874812220564410
 GameObject:
   m_ObjectHideFlags: 0
@@ -4577,7 +5056,7 @@ GameObject:
   - component: {fileID: 8053910235294418330}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_59 1
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4597,7 +5076,7 @@ Transform:
   - {fileID: 6939052498008422289}
   m_Father: {fileID: 71421125769214601}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -17.91488, y: 1.5338919, z: 17.448978}
+  m_LocalEulerAnglesHint: {x: -0.0000001927409, y: -0.00015930098, z: 2.1351984e-20}
 --- !u!1 &4692903986318950774
 GameObject:
   m_ObjectHideFlags: 0
@@ -4638,9 +5117,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5256892667893322140}
+  - component: {fileID: 868274946728826906}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_3
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4660,7 +5140,20 @@ Transform:
   - {fileID: 6283099780127240116}
   m_Father: {fileID: 2955146085363145292}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 6.549544, y: -1.1626875, z: -6.6835127}
+  m_LocalEulerAnglesHint: {x: -0.00000027685883, y: -0.00018310547, z: 0}
+--- !u!65 &868274946728826906
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4695806827861339210}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 164.66089, y: 50, z: 50}
+  m_Center: {x: 27.755669, y: -0.0000037894, z: -0.000009394486}
 --- !u!1 &4714992711789844613
 GameObject:
   m_ObjectHideFlags: 0
@@ -4670,9 +5163,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4805498970737801339}
+  - component: {fileID: 885349832756686035}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_12
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4691,7 +5185,20 @@ Transform:
   - {fileID: 5143799343654288876}
   m_Father: {fileID: 1394410852407240189}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -3.910126, y: 4.955548, z: 3.5859802}
+  m_LocalEulerAnglesHint: {x: 0.00000002375011, y: -0.00012878359, z: 0}
+--- !u!65 &885349832756686035
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4714992711789844613}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 159.82977, y: 50, z: 50}
+  m_Center: {x: -29.925524, y: 0.000021333828, z: 0.000047140686}
 --- !u!1 &4807895665911278393
 GameObject:
   m_ObjectHideFlags: 0
@@ -4733,7 +5240,7 @@ GameObject:
   - component: {fileID: 304076329517554724}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_11 1
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4752,7 +5259,7 @@ Transform:
   - {fileID: 5689645849633728046}
   m_Father: {fileID: 5839773734717122813}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -4.7083044, y: 5.135432, z: 4.304554}
+  m_LocalEulerAnglesHint: {x: 0.00000020297699, y: -0.00050354004, z: -8.5407936e-20}
 --- !u!1 &4837914008846288957
 GameObject:
   m_ObjectHideFlags: 0
@@ -4890,9 +5397,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7181361053766692386}
+  - component: {fileID: 815868535316242621}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_18 1
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4911,7 +5419,20 @@ Transform:
   - {fileID: 8818803664759053213}
   m_Father: {fileID: 6402588585675247762}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -0.49841458, y: -0.51165664, z: 0.50288796}
+  m_LocalEulerAnglesHint: {x: -0.0000000118726575, y: -0.000052489657, z: 0}
+--- !u!65 &815868535316242621
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5076942184919504107}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 71.07882, y: 50, z: 61.17335}
+  m_Center: {x: 74.54669, y: -0.0000029802325, z: 5.5866604}
 --- !u!1 &5077347721614859984
 GameObject:
   m_ObjectHideFlags: 0
@@ -5129,7 +5650,7 @@ Transform:
   - {fileID: 7252605487816848950}
   m_Father: {fileID: 8021346426380325889}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -1.9995908, y: -2.1736238, z: 2.0769079}
+  m_LocalEulerAnglesHint: {x: -0.00000038627286, y: -0.00018980609, z: -6.174397e-15}
 --- !u!1 &5312157675768896832
 GameObject:
   m_ObjectHideFlags: 0
@@ -5139,9 +5660,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2046937643615037917}
+  - component: {fileID: 332970991765563668}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_8 1
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5161,7 +5683,20 @@ Transform:
   - {fileID: 4935392975011285322}
   m_Father: {fileID: 1163315830164589136}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -0.06170686, y: 0.085714646, z: 0.061610725}
+  m_LocalEulerAnglesHint: {x: -0.00000022789341, y: -0.000061035153, z: 0}
+--- !u!65 &332970991765563668
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5312157675768896832}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 134.00275, y: 50, z: 61.17335}
+  m_Center: {x: 43.08473, y: -0.000002980232, z: 5.586663}
 --- !u!1 &5353052205027594581
 GameObject:
   m_ObjectHideFlags: 0
@@ -5420,9 +5955,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4143467543846022168}
+  - component: {fileID: 155629500575514838}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_47 1
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5441,7 +5977,20 @@ Transform:
   - {fileID: 4959022938757062395}
   m_Father: {fileID: 306995736412298830}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 5.455651, y: -4.7046723, z: -5.922285}
+  m_LocalEulerAnglesHint: {x: 8.018883e-10, y: -0.00015930118, z: 0}
+--- !u!65 &155629500575514838
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5696640302467773630}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 55.61354, y: 50, z: 61.17335}
+  m_Center: {x: 82.279335, y: -0.000002980232, z: 5.5866575}
 --- !u!1 &5775934136824320633
 GameObject:
   m_ObjectHideFlags: 0
@@ -5567,7 +6116,7 @@ Transform:
   - {fileID: 9029369563261321143}
   m_Father: {fileID: 8960375133736864484}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 4.114473, y: -0.34623313, z: -4.13939}
+  m_LocalEulerAnglesHint: {x: 0.0000000022924334, y: -0.000106811516, z: -6.1741727e-15}
 --- !u!1 &5838551667039649840
 GameObject:
   m_ObjectHideFlags: 0
@@ -5597,7 +6146,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2860261717910232192}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 1.2141176e-14, y: 1.2147454e-14, z: 0.43593544}
+  m_LocalEulerAnglesHint: {x: 1.0683318e-14, y: 1.0688841e-14, z: 0.43593457}
 --- !u!1 &5883011604834346790
 GameObject:
   m_ObjectHideFlags: 0
@@ -5637,9 +6186,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7728962312842277642}
+  - component: {fileID: 2082096634391450654}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_5
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5659,7 +6209,20 @@ Transform:
   - {fileID: 2044541762605653633}
   m_Father: {fileID: 6283099780127240116}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 13.090639, y: -9.622926, z: -15.470061}
+  m_LocalEulerAnglesHint: {x: -0.00000014405998, y: -0.0005255121, z: -4.2703968e-20}
+--- !u!65 &2082096634391450654
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5891684417123098694}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 99.96923, y: 50, z: 50}
+  m_Center: {x: 24.297285, y: -0.0000062981853, z: -0.000009590085}
 --- !u!1 &5943255455512515579
 GameObject:
   m_ObjectHideFlags: 0
@@ -5671,7 +6234,7 @@ GameObject:
   - component: {fileID: 6283099780127240116}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_4
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5691,7 +6254,7 @@ Transform:
   - {fileID: 7728962312842277642}
   m_Father: {fileID: 5256892667893322140}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 10.889837, y: -4.3123293, z: -11.736192}
+  m_LocalEulerAnglesHint: {x: -0.00000017289305, y: -0.00032714783, z: -4.2703968e-20}
 --- !u!1 &5953084249380087663
 GameObject:
   m_ObjectHideFlags: 0
@@ -5887,9 +6450,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6085535287366184232}
+  - component: {fileID: 2009369441066664675}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_64 1
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5909,7 +6473,20 @@ Transform:
   - {fileID: 7117389605063073991}
   m_Father: {fileID: 1064962299996744486}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -2.003824, y: -2.8646173, z: 2.1065724}
+  m_LocalEulerAnglesHint: {x: -0.0000003861829, y: -0.0001898124, z: -4.2703968e-20}
+--- !u!65 &2009369441066664675
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6252358323470743221}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 73.83559, y: 45.368427, z: 42.222977}
+  m_Center: {x: 73.16829, y: -0.000002980232, z: -1.7570869}
 --- !u!1 &6283112700004825933
 GameObject:
   m_ObjectHideFlags: 0
@@ -5981,9 +6558,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1390349352283604675}
+  - component: {fileID: 1936410302836694638}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_5 1
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6002,7 +6580,20 @@ Transform:
   - {fileID: 2086540599180086017}
   m_Father: {fileID: 72336968874969477}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 1.6619612, y: -2.2039206, z: -1.7271463}
+  m_LocalEulerAnglesHint: {x: 0.00000004542942, y: -0.00055602967, z: -2.1351984e-20}
+--- !u!65 &1936410302836694638
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6339347478107597366}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 68.50724, y: 50, z: 61.17335}
+  m_Center: {x: 75.83248, y: -0.0000029802322, z: 5.586666}
 --- !u!1 &6433326472971315921
 GameObject:
   m_ObjectHideFlags: 0
@@ -6074,9 +6665,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8818803664759053213}
+  - component: {fileID: 1668574665379081801}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_19 1
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6095,7 +6687,20 @@ Transform:
   - {fileID: 1427171881310483293}
   m_Father: {fileID: 7181361053766692386}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -0.014139295, y: -0.014490057, z: 0.014136074}
+  m_LocalEulerAnglesHint: {x: 0.000000009973829, y: -0.00009826602, z: 0}
+--- !u!65 &1668574665379081801
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6485631831432567327}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 73.28459, y: 50, z: 61.17335}
+  m_Center: {x: 73.4438, y: -0.000002980232, z: 5.586659}
 --- !u!1 &6519201722809037213
 GameObject:
   m_ObjectHideFlags: 0
@@ -6168,9 +6773,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 71421125769214601}
+  - component: {fileID: 1603207268869222899}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_58 1
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6190,7 +6796,20 @@ Transform:
   - {fileID: 8053910235294418330}
   m_Father: {fileID: 5647978213384015938}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -10.489843, y: 4.382074, z: 9.720616}
+  m_LocalEulerAnglesHint: {x: -0.00000019268124, y: -0.000030517476, z: -5.337996e-21}
+--- !u!65 &1603207268869222899
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6564520497963713957}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 151.45364, y: 50, z: 64.5216}
+  m_Center: {x: 34.35929, y: -0.0000029802325, z: -3.2982912}
 --- !u!1 &6632112109332590570
 GameObject:
   m_ObjectHideFlags: 0
@@ -6252,7 +6871,7 @@ Transform:
   - {fileID: 8021346426380325889}
   m_Father: {fileID: 4816429099842935844}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -5.969808, y: -5.3980904, z: 6.559293}
+  m_LocalEulerAnglesHint: {x: -0.00000038627414, y: 0.0000000031670169, z: -6.174363e-15}
 --- !u!1 &6658171449892782422
 GameObject:
   m_ObjectHideFlags: 0
@@ -6326,9 +6945,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9084384305672009912}
+  - component: {fileID: 1264564760897548312}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_20
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6347,7 +6967,20 @@ Transform:
   - {fileID: 6585570222674346398}
   m_Father: {fileID: 7328265124261433484}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -5.6296797, y: -4.533875, z: 6.092933}
+  m_LocalEulerAnglesHint: {x: 0.00000003474897, y: -0.00012878359, z: 0}
+--- !u!65 &1264564760897548312
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6677363715247277132}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 73.15511, y: 41.563694, z: 39.137383}
+  m_Center: {x: 13.422469, y: 0.000010374457, z: -0.000005886527}
 --- !u!1 &6737946554666700232
 GameObject:
   m_ObjectHideFlags: 0
@@ -6359,7 +6992,7 @@ GameObject:
   - component: {fileID: 1394410852407240189}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_11
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6378,7 +7011,7 @@ Transform:
   - {fileID: 4805498970737801339}
   m_Father: {fileID: 550570739729711449}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -1.8042818, y: 2.617447, z: 1.7236984}
+  m_LocalEulerAnglesHint: {x: 0.000000022356307, y: -0.000052489657, z: 6.672495e-22}
 --- !u!1 &6808764944845101184
 GameObject:
   m_ObjectHideFlags: 0
@@ -6410,7 +7043,7 @@ Transform:
   - {fileID: 3796428208454236705}
   m_Father: {fileID: 3572453522680452429}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -1.7358425, y: 2.2522511, z: 1.6689221}
+  m_LocalEulerAnglesHint: {x: -0.00000019313752, y: -0.00012878355, z: -6.1743543e-15}
 --- !u!1 &6869029701103218045
 GameObject:
   m_ObjectHideFlags: 0
@@ -6614,9 +7247,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1696994708078105516}
+  - component: {fileID: 3174470464735155399}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_52 1
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6635,7 +7269,20 @@ Transform:
   - {fileID: 1940132255141648193}
   m_Father: {fileID: 8507453649167026114}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -0.11285402, y: 0.11645486, z: 0.11264243}
+  m_LocalEulerAnglesHint: {x: -4.3129417e-10, y: -0.00006774845, z: 0}
+--- !u!65 &3174470464735155399
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7001861608467194001}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 134.00275, y: 50, z: 67.1875}
+  m_Center: {x: 43.084724, y: -0.0000029802322, z: -4.1783013}
 --- !u!1 &7050449300629522734
 GameObject:
   m_ObjectHideFlags: 0
@@ -6645,9 +7292,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 185499923691806174}
+  - component: {fileID: 3242128082291621222}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_50 1
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6666,7 +7314,20 @@ Transform:
   - {fileID: 8507453649167026114}
   m_Father: {fileID: 85360523755990935}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0.7932073, y: -0.8136725, z: -0.80454886}
+  m_LocalEulerAnglesHint: {x: -3.604786e-10, y: -0.000052489657, z: 1.04257735e-23}
+--- !u!65 &3242128082291621222
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7050449300629522734}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 141.9941, y: 50, z: 69.80755}
+  m_Center: {x: 39.089073, y: -0.0000029802322, z: -3.4644558}
 --- !u!1 &7132492686745129802
 GameObject:
   m_ObjectHideFlags: 0
@@ -6964,7 +7625,7 @@ GameObject:
   - component: {fileID: 2955146085363145292}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_2
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6984,7 +7645,7 @@ Transform:
   - {fileID: 5256892667893322140}
   m_Father: {fileID: 9026463668574756708}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 2.9341846, y: -0.17473908, z: -2.9431257}
+  m_LocalEulerAnglesHint: {x: -0.00000042352903, y: -0.00007629394, z: 0}
 --- !u!1 &7405421135491940617
 GameObject:
   m_ObjectHideFlags: 0
@@ -6994,9 +7655,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7117389605063073991}
+  - component: {fileID: 3162432184418645343}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_65 1
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7016,7 +7678,20 @@ Transform:
   - {fileID: 966007216796415694}
   m_Father: {fileID: 6085535287366184232}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -0.71927184, y: -1.0556471, z: 0.7326341}
+  m_LocalEulerAnglesHint: {x: -0.00000038629898, y: -0.00018980609, z: 0}
+--- !u!65 &3162432184418645343
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7405421135491940617}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 72.61269, y: 34.059395, z: 39.78551}
+  m_Center: {x: 73.77976, y: -0.000002980232, z: -3.293477}
 --- !u!1 &7431862220983042109
 GameObject:
   m_ObjectHideFlags: 0
@@ -7026,9 +7701,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 966007216796415694}
+  - component: {fileID: 3027869518810903659}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_66 1
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7046,7 +7722,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7117389605063073991}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0.000000028793904, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0.000000025336462, z: 0}
+--- !u!65 &3027869518810903659
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7431862220983042109}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 199.1914, y: 23.049868, z: 28.339958}
+  m_Center: {x: 10.490405, y: -0.0000029802322, z: -3.75203}
 --- !u!1 &7439795343584045252
 GameObject:
   m_ObjectHideFlags: 0
@@ -7056,9 +7745,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1064962299996744486}
+  - component: {fileID: 3033480472766012560}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_63 1
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7078,7 +7768,20 @@ Transform:
   - {fileID: 6085535287366184232}
   m_Father: {fileID: 8645503255781512135}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -4.3449593, y: -5.7759905, z: 4.806118}
+  m_LocalEulerAnglesHint: {x: -0.00000038612455, y: -0.00012878043, z: -4.2703968e-20}
+--- !u!65 &3033480472766012560
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7439795343584045252}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 73.28459, y: 50, z: 45.004185}
+  m_Center: {x: 73.44379, y: -0.0000029802316, z: -2.4979217}
 --- !u!1 &7493120305338045442
 GameObject:
   m_ObjectHideFlags: 0
@@ -7243,9 +7946,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 550570739729711449}
+  - component: {fileID: 2651006493989160099}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_10
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7264,7 +7968,20 @@ Transform:
   - {fileID: 1394410852407240189}
   m_Father: {fileID: 6457896938791910796}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -0.4655833, y: 0.7215495, z: 0.45975116}
+  m_LocalEulerAnglesHint: {x: 5.2638224e-12, y: 0.0012274163, z: -0.0000004910635}
+--- !u!65 &2651006493989160099
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7632515346466451701}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 172.67934, y: 50, z: 50}
+  m_Center: {x: -10.297057, y: 0.000002526507, z: 0.0000036162726}
 --- !u!1 &7710530399441020589
 GameObject:
   m_ObjectHideFlags: 0
@@ -7433,7 +8150,7 @@ GameObject:
   - component: {fileID: 7692613871114405738}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_89
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7452,7 +8169,7 @@ Transform:
   - {fileID: 1224722183515992869}
   m_Father: {fileID: 1484247742343444254}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 19.675507, y: 82.04262, z: -22.546474}
+  m_LocalEulerAnglesHint: {x: -0.00000055909527, y: 89.99997, z: 0}
 --- !u!1 &8150919958659088110
 GameObject:
   m_ObjectHideFlags: 0
@@ -7527,7 +8244,7 @@ GameObject:
   - component: {fileID: 501644296175957175}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_13 1
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7546,7 +8263,7 @@ Transform:
   - {fileID: 5296400633514540743}
   m_Father: {fileID: 5689645849633728046}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -37.691597, y: -3.7804565, z: 40.0655}
+  m_LocalEulerAnglesHint: {x: 0.000000045578865, y: -0.000037230868, z: 0}
 --- !u!1 &8209450816008903812
 GameObject:
   m_ObjectHideFlags: 0
@@ -7558,7 +8275,7 @@ GameObject:
   - component: {fileID: 1940132255141648193}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_53 1
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7577,7 +8294,7 @@ Transform:
   - {fileID: 4930398251669177337}
   m_Father: {fileID: 1696994708078105516}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -0.50546116, y: 0.51276654, z: 0.5009567}
+  m_LocalEulerAnglesHint: {x: -2.195835e-10, y: 3.0785127e-12, z: 6.72257e-27}
 --- !u!1 &8214210609872411596
 GameObject:
   m_ObjectHideFlags: 0
@@ -7650,9 +8367,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6135383652894098899}
+  - component: {fileID: 4597186653503086439}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_14
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7671,7 +8389,20 @@ Transform:
   - {fileID: 6510501192072214078}
   m_Father: {fileID: 5143799343654288876}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -13.37205, y: 8.434762, z: 11.548735}
+  m_LocalEulerAnglesHint: {x: -0.000000012231837, y: -0.00055602967, z: 5.337996e-21}
+--- !u!65 &4597186653503086439
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8280462746610576177}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 170.8812, y: 50, z: 50.000004}
+  m_Center: {x: -35.44057, y: 0.000009898086, z: 0.0000012275217}
 --- !u!1 &8309263385059969691
 GameObject:
   m_ObjectHideFlags: 0
@@ -7683,7 +8414,7 @@ GameObject:
   - component: {fileID: 5647978213384015938}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_57 1
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7703,7 +8434,7 @@ Transform:
   - {fileID: 71421125769214601}
   m_Father: {fileID: 5973161937764507019}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -6.1506014, y: 3.9437485, z: 5.7418847}
+  m_LocalEulerAnglesHint: {x: -0.00000019262599, y: -0.000021972026, z: 0}
 --- !u!1 &8348332855527477577
 GameObject:
   m_ObjectHideFlags: 0
@@ -7765,7 +8496,7 @@ Transform:
   - {fileID: 3288499292828456999}
   m_Father: {fileID: 1484247742343444254}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0.6758489, y: -0.00795177, z: -0.67595035}
+  m_LocalEulerAnglesHint: {x: 0.0000000046932733, y: -0.000023804287, z: 0}
 --- !u!1 &8388398511528540659
 GameObject:
   m_ObjectHideFlags: 0
@@ -7871,6 +8602,13 @@ GameObject:
   m_Component:
   - component: {fileID: 9122094837950656998}
   - component: {fileID: 8724186687250887369}
+  - component: {fileID: 4544201985509785412}
+  - component: {fileID: 2751745466616092629}
+  - component: {fileID: 1666974514885492866}
+  - component: {fileID: 7365986885792121382}
+  - component: {fileID: 5095712484155455173}
+  - component: {fileID: 2377135736037506064}
+  - component: {fileID: 249680597931980891}
   m_Layer: 0
   m_Name: BOSS
   m_TagString: Untagged
@@ -7886,7 +8624,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8490376288237349724}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.65, y: 24.404749, z: -13.36}
+  m_LocalPosition: {x: -3.876968, y: 22.207848, z: 18.584488}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2165007535675601430}
@@ -7917,6 +8655,7 @@ Transform:
   - {fileID: 4147661241200946404}
   - {fileID: 558161904379196313}
   - {fileID: 7832656309700669232}
+  - {fileID: 6510561170828521658}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7939,6 +8678,130 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4544201985509785412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8490376288237349724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ad292f3295612647977878abef071e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 0
+  attaccoFisico: 10
+  attaccoMagico: 5
+  psMorte: {fileID: 0}
+  animeDrop: 300
+  animeDropPrefab: {fileID: 7925695913198141641, guid: 2d0e7ae1f8cd1404e88169f659a1dac7,
+    type: 3}
+  startPosition: {x: 0, y: 0, z: 0}
+  rand: 0
+  stateman: {fileID: 2751745466616092629}
+  coolDownTime: 3
+  nextTimeFire: 1
+  startRot: {x: 0, y: 0, z: 0, w: 0}
+  spellPoint: {fileID: 6510561170828521658}
+  spellprefab: {fileID: 3377074279332997481, guid: c360ce351afc1844ea7581af1a2f7f2c,
+    type: 3}
+  player: {fileID: 0}
+--- !u!114 &2751745466616092629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8490376288237349724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0df7f3acd84fb848935f93dc91fd99a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentBossState: {fileID: 0}
+  idleState: {fileID: 1666974514885492866}
+  tentacoliSideState: {fileID: 2377135736037506064}
+  tentacoliFrontState: {fileID: 5095712484155455173}
+  castState: {fileID: 7365986885792121382}
+  rotolaState: {fileID: 249680597931980891}
+  allStates:
+  - {fileID: 5095712484155455173}
+  - {fileID: 2377135736037506064}
+  - {fileID: 7365986885792121382}
+  - {fileID: 249680597931980891}
+--- !u!114 &1666974514885492866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8490376288237349724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ce8e99fa3004ed40ad51f1e515f36c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossScript: {fileID: 4544201985509785412}
+  nextTimeFire: 3
+  coolDownTime: 0
+--- !u!114 &7365986885792121382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8490376288237349724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6ec2f1f437a0b14da32c6ff110ca8ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossScript: {fileID: 4544201985509785412}
+  casta: 0
+--- !u!114 &5095712484155455173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8490376288237349724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4080de1a89029e34f92612443fcd6a34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossScript: {fileID: 4544201985509785412}
+  cambia: 0
+--- !u!114 &2377135736037506064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8490376288237349724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4481d72577474341884126cdbfddb04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossScript: {fileID: 4544201985509785412}
+  cambia: 0
+--- !u!114 &249680597931980891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8490376288237349724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aa943d6ab3c79e4ca31681b7c5b81c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossScript: {fileID: 4544201985509785412}
+  cambia: 0
 --- !u!1 &8514565075269959721
 GameObject:
   m_ObjectHideFlags: 0
@@ -8108,7 +8971,7 @@ GameObject:
   - component: {fileID: 8507453649167026114}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_51 1
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8127,7 +8990,7 @@ Transform:
   - {fileID: 1696994708078105516}
   m_Father: {fileID: 185499923691806174}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0.2974666, y: -0.30827072, z: -0.2990748}
+  m_LocalEulerAnglesHint: {x: -5.0618615e-10, y: -0.0000067132873, z: 0}
 --- !u!1 &9049829614686293555
 GameObject:
   m_ObjectHideFlags: 0
@@ -8355,6 +9218,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7636610527751984496}
+  - component: {fileID: 3642078526461581576}
   m_Layer: 0
   m_Name: boss_rig:joint_t_fron_60
   m_TagString: Untagged
@@ -8377,4 +9241,17 @@ Transform:
   - {fileID: 4645054295596417183}
   m_Father: {fileID: 2863746848854817024}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -28.753996, y: 6.9572954, z: 25.573423}
+  m_LocalEulerAnglesHint: {x: -0.00000038627422, y: -0.000006712895, z: -6.174361e-15}
+--- !u!65 &3642078526461581576
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9200048127001881948}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 150.4465, y: 50, z: 58.45594}
+  m_Center: {x: 34.862873, y: -0.0000029802322, z: 4.227962}

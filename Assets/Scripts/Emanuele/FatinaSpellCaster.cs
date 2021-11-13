@@ -16,6 +16,35 @@ public class FatinaSpellCaster : Enemy
     public Vector3 dir ;
     public float timeRate = 0f;
 
+    //aggiunti oggi
+    public Transform[] path;
+
+    int currentPoint;
+
+    public AudioSource audiosource;
+
+    //aggiunti oggi
+    public void MoveToPath()
+    {
+        if (_agent.remainingDistance < 0.5f)
+        {
+            _agent.destination = path[currentPoint].position;
+            UpdateCurrentPoint();
+        }
+    }
+
+    public void UpdateCurrentPoint()
+    {
+        if (currentPoint == path.Length - 1) //siamo nell ultimo nodo della path
+        {
+            currentPoint = 0;
+        }
+        else
+        {
+            currentPoint++;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +56,7 @@ public class FatinaSpellCaster : Enemy
         Debug.Log("spella");
         
         GameObject bulletSpell = Instantiate(bulletPrefab, spellSpawnPoint.transform.position, Quaternion.identity) as GameObject;
+        audiosource.PlayOneShot(audiosource.clip);
         FatinaBullet fb = bulletSpell.GetComponent<FatinaBullet>();
         dir = (transform.forward);
         if(bulletPrefab != null)

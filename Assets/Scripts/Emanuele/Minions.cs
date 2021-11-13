@@ -27,36 +27,10 @@ public class Minions : Enemy
         _rb = GetComponent<Rigidbody>();
     }
 
-  
-    void Update()
+    public override void KillEnemy()
     {
-        /*
-        Debug.Log("ora " + transform.position + "prossima " + newPos);
-        if (Vector3.Distance(transform.position, newPos) > 0.2f)
-        {
-            //_enemyStateManager.SwitchState(_enemyStateManager.scaredState);
-            _enemyStateManager.SwitchState(_enemyStateManager.walkState);
-        }
-        else if(Vector3.Distance(transform.position,newPos) <0.2f)
-        {
-            _enemyStateManager.SwitchState(_enemyStateManager.idleState);
-        }
+        GameManager.instance.audioManager.PlaySound("minion_morte");
 
-        ////
-
-        float distance = Vector3.Distance(transform.position, playerTransform.transform.position);
-
-        if(distance < enemyDistanceRun)
-        {
-           
-            Vector3 dirToPlayer = transform.position - playerTransform.transform.position;
-              newPos = transform.position + dirToPlayer;
-
-            _agent.SetDestination(newPos);
-
-        }
-        
-        */
-
+        base.KillEnemy();
     }
 }

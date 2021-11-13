@@ -16,7 +16,6 @@ public class PlayerAttack2State : PlayerBaseState
 
     public override void EnterState(PlayerStateManager player)
     {
-        Debug.Log("SUPERMEGAPORCODIO");
 
         cambia = 1;
         vaAdAttacco3 = 0;
@@ -74,7 +73,8 @@ public class PlayerAttack2State : PlayerBaseState
 
         if (Input.GetMouseButtonDown(0) && vaAdAttacco3 == 1)
         {
-           // GameManager.instance.timeManager.SlowMotion();
+            GameManager.instance.audioManager.PlaySound("colpospada3");
+
             player.SwitchState(player.attack3State);
         }
 

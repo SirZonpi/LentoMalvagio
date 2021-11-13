@@ -73,6 +73,8 @@ public class PlayerIdleState : PlayerBaseState
 
         if (Input.GetMouseButtonDown(0) && anim.GetBool("attacca") == false)
         {
+            GameManager.instance.audioManager.PlaySound("colpospada1");
+
             player.SwitchState(player.attackState);
         }
         
@@ -84,6 +86,7 @@ public class PlayerIdleState : PlayerBaseState
 
         if (playerScript.colpito == true)
         {
+            GameManager.instance.audioManager.PlaySound("playerhit");
             player.SwitchState(player.takeDamage);
         }
 

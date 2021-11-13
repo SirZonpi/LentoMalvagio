@@ -33,6 +33,7 @@ public class Player : Entity
     public float timeToNextShot; // tempo di attesa
 
     public Text animeText;
+    Animator animTextAnime;
 
     public bool colpito;
 
@@ -62,6 +63,8 @@ public class Player : Entity
 
         playerMaterial.color = Color.white;
 
+        animTextAnime = animeText.GetComponent<Animator>();
+
     }
 
     private void Awake()
@@ -73,6 +76,7 @@ public class Player : Entity
 
     public void CambiaTestoAnime()
     {
+        animTextAnime.SetTrigger("cambiacolore");
         animeText.text = minionsKilled.ToString();
     }
 
@@ -115,7 +119,7 @@ public class Player : Entity
             iconaMagia.StartCoroutine(iconaMagia.MagiaCo());
             timeToNextShot = Time.time + fireRate;
             GameObject spell = Instantiate(spellPrefab, spellSpawnPoint.position, Quaternion.identity);
-
+            GameManager.instance.audioManager.PlaySound("magiaplayer");
             Rigidbody rb = spell.GetComponent<Rigidbody>();
             rb.velocity = new Vector2(0, 0);
 

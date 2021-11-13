@@ -9951,6 +9951,7 @@ MonoBehaviour:
   spadaCollider: {fileID: 2601262195503354239}
   vcam: {fileID: 0}
   startOrtho: 0
+  cambia: 0
 --- !u!114 &1772207347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10087,7 +10088,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69effe074d55bcf4da88f5258375de86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1407709769445985122}
+  playerState: {fileID: 1407709769445985122}
+  player: {fileID: 1407709769445985120}
   scintille1: {fileID: 1877672496}
   scintille2: {fileID: 394147058}
 --- !u!1 &2780310337982707326

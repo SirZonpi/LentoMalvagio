@@ -28,9 +28,10 @@ public class FatinaCasterWalkState : FatinaCasterBaseState
         RaycastHit hit;
         Physics.Raycast(ray, out hit, 8f);
 
-       // float distance = Vector3.Distance(transform.position, fatina.playerTransform.transform.position);
+        // float distance = Vector3.Distance(transform.position, fatina.playerTransform.transform.position);
 
         //Debug.Log("distance " + distance);
+
 
         if (distance < fatina.enemyDistance)
         {
@@ -38,9 +39,10 @@ public class FatinaCasterWalkState : FatinaCasterBaseState
             Vector3 dirToPlayer = transform.position - fatina.playerTransform.transform.position;
             fatina.newPos = transform.position + dirToPlayer;
 
-             fatina._agent.SetDestination(fatina.newPos);
+           // fatina._agent.SetDestination(fatina.newPos); //oggi
 
-           // fatinaCaster.SwitchState(fatinaCaster.walkState);
+            fatina.MoveToPath();
+
 
         }
         else if (distance > fatina.enemyDistance /*&& hit.transform == null*/)

@@ -91,6 +91,8 @@ public class PlayerAttackState : PlayerBaseState
 
         if (Input.GetMouseButtonDown(0) && vaAdAttacco2 == 1)
         {
+            GameManager.instance.audioManager.PlaySound("colpospada2");
+
             player.SwitchState(player.attack2State);
         }
        

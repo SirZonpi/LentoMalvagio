@@ -13,7 +13,7 @@ public class PowerUpSpada : MonoBehaviour
         {
             doOnce = false;
             Player player = GameManager.instance.player;
-
+            GameManager.instance.audioManager.PlaySound("powerup");
             player.StartCoroutine(player.SpadaInfuocata()); //diabolico
             //StartCoroutine(player.SpadaInfuocata());
        

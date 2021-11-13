@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class SpadaScript : MonoBehaviour
 {
-    public PlayerStateManager player;
+    public PlayerStateManager playerState;
+    public Player player;
+
     public GameObject scintille1;
     public GameObject scintille2;
 
@@ -13,16 +15,16 @@ public class SpadaScript : MonoBehaviour
 
         if (other.CompareTag("EnemyHit"))
         {
-            if (player.currentPlayerState == player.attackState)
+            if (playerState.currentPlayerState == playerState.attackState)
             {
                 StartCoroutine(ScintileCo());
             }
-             if (player.currentPlayerState == player.attack2State)
+             if (playerState.currentPlayerState == playerState.attack2State)
             {
                 Debug.Log("DIOEBREO");
                 StartCoroutine(Scintile2Co());
             }
-            other.transform.parent.GetComponent<Enemy>().TakeDamage(5);
+            other.transform.parent.GetComponent<Enemy>().TakeDamage(player.attaccoFisico);
 
         }
 

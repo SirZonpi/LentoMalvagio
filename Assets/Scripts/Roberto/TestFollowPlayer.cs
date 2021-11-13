@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class TestFollowPlayer : MonoBehaviour
 {
     public Player player;
@@ -9,17 +10,14 @@ public class TestFollowPlayer : MonoBehaviour
 
     public float distance;
     public int thisEnemyDrop;
+    public AudioSource audioSource;
+
 
     void Start()
     {
         player = GameManager.instance.player;
-
-        //this.gameObject.SetActive(false);/////
     }
 
-    private void Awake()
-    {
-    }
 
     public void OnTriggerStay(Collider other)
     {
@@ -35,8 +33,10 @@ public class TestFollowPlayer : MonoBehaviour
 
         if (distance < 0.7f)
         {
+            GameManager.instance.audioManager.PlaySound("animepop");
             player.minionsKilled += thisEnemyDrop;
             player.CambiaTestoAnime();
+
             Destroy(this.gameObject);
         }
 
