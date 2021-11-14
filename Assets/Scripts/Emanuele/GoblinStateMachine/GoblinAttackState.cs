@@ -32,13 +32,18 @@ public class GoblinAttackState : GoblinBaseState
         Animator anim = goblin.GetComponent<Animator>();
         float distance = Vector3.Distance(transform.position, _goblin.playerTransform.transform.position);
 
-        if (distance <= _goblin.attackRadius && distance > 1.3)
+        Debug.Log("ALIVI " + distance);
+
+
+        if ( distance > 1.3)
         { 
             goblin.SwitchState(goblin.walkState);
         }
+        /*
         else
         {
             goblin.SwitchState(goblin.attackState);
         }
+        */
     }
 }

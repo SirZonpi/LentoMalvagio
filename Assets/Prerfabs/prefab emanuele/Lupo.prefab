@@ -1249,7 +1249,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: d867b3ffec7c5234580a0ee9788b1a64, type: 3}
+  - {fileID: 2100000, guid: bc8b388a8a2cfd44d911516f50d54de0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1324,7 +1324,7 @@ GameObject:
   - component: {fileID: 5028900208993819980}
   - component: {fileID: 5028900208993819981}
   m_Layer: 0
-  m_Name: LUPO
+  m_Name: Lupo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1443,8 +1443,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 15
   currentHealth: 0
-  psMorte: {fileID: 1984314883988351338}
-  animeDrop: 0
+  attaccoFisico: 0
+  attaccoMagico: 0
+  psMorte: {fileID: 1206266120888398985, guid: 5d35663872082b541b46d7d038510bd9, type: 3}
+  animeDrop: 25
+  animeDropPrefab: {fileID: 7925695913198141641, guid: 2d0e7ae1f8cd1404e88169f659a1dac7,
+    type: 3}
   playerTransform: {fileID: 0}
   attackRadius: 7
   timer: 0
@@ -1875,12 +1879,6 @@ PrefabInstance:
 --- !u!4 &628826990655884781 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3247521862146307695, guid: fe981816911210e478087215d2bffbfd,
-    type: 3}
-  m_PrefabInstance: {fileID: 2714414097833884546}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &1984314883988351338 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 4477205722636358376, guid: fe981816911210e478087215d2bffbfd,
     type: 3}
   m_PrefabInstance: {fileID: 2714414097833884546}
   m_PrefabAsset: {fileID: 0}

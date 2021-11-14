@@ -9,6 +9,9 @@ public class Entity : MonoBehaviour
     public int maxHealth; //vita massima
     [SerializeField] int currentHealth; //vita current
 
+    public int attaccoFisico; /////
+    public int attaccoMagico; //////
+
     public ParticleSystem psMorte;
 
     //creo due events statici (potrò accedervi per le sottoscrizioni dei metodi dagli script HpBar e HpBarController) sono quindi eventi generici e non legati a una istanza specifica.
@@ -25,6 +28,7 @@ public class Entity : MonoBehaviour
     {
         //controlliamo se si tratta del player o di un nemico (non vogliamo hp bar sopra la testa del player
         //nota: fare refactoring e spostare dichiarazione dei delegate da Entity a Enemy
+        Health = maxHealth;
         if (GetComponent<Player>() == false) 
         {
             OnHealthAdded(this); // se questa istanza non è il player allora, una volta abilitata, richiamiamo subito l'evento e passiamo come argomento questa stessa entity
@@ -73,7 +77,7 @@ public class Entity : MonoBehaviour
 
     public virtual void KillEnemy() //comportamento base per le kill, override nella rispattiva classe per comportamenti specifici
     {
-       GameManager.instance.oggettidaDisattivare.Add(this.gameObject); //aggiungiasmo a una lista i character disattivati per riattivarli all 'occorrenza
+        GameManager.instance.oggettidaDisattivare.Add(this.gameObject); //aggiungiasmo a una lista i character disattivati per riattivarli all 'occorrenza
         if (psMorte != null)
         {
             ParticleSystem ps = Instantiate(psMorte, transform.position, Quaternion.identity);

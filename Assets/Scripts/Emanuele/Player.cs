@@ -21,6 +21,25 @@ public class Player : Entity
 
     public HpBarPlayer hpbar;
 
+    public bool powerUpSpada = false;
+    public float durataPowerupSpada;
+    public float durataPowerupMana;
+    public GameObject spadaInfuocata;
+
+    [SerializeField] MeleeUI iconaMelee;
+    [SerializeField] ManaUI iconaMagia;
+
+    public float fireRate = 1f; // posso spare ogni x
+    public float timeToNextShot; // tempo di attesa
+
+    public Text animeText;
+    Animator animTextAnime;
+
+    public bool colpito;
+
+    public GameObject scintille1;
+    [SerializeField] Material playerMaterial;
+
     void Start()
     {
 
@@ -38,6 +57,14 @@ public class Player : Entity
 
         hpbar.SetMaxhealth(Health);
 
+        spadaInfuocata.SetActive(false);
+
+        animeText.text = minionsKilled.ToString();
+
+        playerMaterial.color = Color.white;
+
+        animTextAnime = animeText.GetComponent<Animator>();
+
     }
 
     private void Awake()
@@ -45,6 +72,12 @@ public class Player : Entity
         currentLevel = "Scena1";
         livelloDifficolta = "Normale";  ///aggiunto oggi
 
+    }
+
+    public void CambiaTestoAnime()
+    {
+        animTextAnime.SetTrigger("cambiacolore");
+        animeText.text = minionsKilled.ToString();
     }
 
     IEnumerator IncrementaHpCo()
@@ -70,16 +103,31 @@ public class Player : Entity
 
     }
 
+   public IEnumerator ManaPowerUp()
+    {
+        fireRate = 0;
+        yield return new WaitForSeconds(durataPowerupMana);
+        fireRate = 2;
+        yield return null;
+
+    }
+
     public void CastSpell()
     {
-        GameObject spell = Instantiate(spellPrefab, spellSpawnPoint.position, Quaternion.identity);
+        if (Time.time>timeToNextShot)
+        {
+            iconaMagia.StartCoroutine(iconaMagia.MagiaCo());
+            timeToNextShot = Time.time + fireRate;
+            GameObject spell = Instantiate(spellPrefab, spellSpawnPoint.position, Quaternion.identity);
+            GameManager.instance.audioManager.PlaySound("magiaplayer");
+            Rigidbody rb = spell.GetComponent<Rigidbody>();
+            rb.velocity = new Vector2(0, 0);
 
-        Rigidbody rb = spell.GetComponent<Rigidbody>();
-        rb.velocity = new Vector2(0, 0);
+            rb.AddForce(transform.forward * 8, ForceMode.Impulse);
 
-        rb.AddForce(transform.forward * 8, ForceMode.Impulse);
+            Destroy(spell, 1.5f);
+        }
 
-        Destroy(spell, 1.5f);
     }
 
     /*
@@ -89,12 +137,56 @@ public class Player : Entity
     }
     */
 
+    public void RiattivaElementi()
+    {
+        foreach (GameObject  go in GameManager.instance.oggettidaDisattivare)
+        {
+            go.SetActive(true);
+        }
+    }
+
+    public IEnumerator SpadaInfuocata()
+    {
+
+        iconaMelee.CambiaIconaSpada();
+        powerUpSpada = true;
+        int tmp = attaccoFisico;
+        attaccoFisico += 5;
+        spadaInfuocata.SetActive(true);
+        yield return new WaitForSeconds(durataPowerupSpada);
+        attaccoFisico = tmp;
+        spadaInfuocata.SetActive(false);
+        powerUpSpada = false;
+
+    }
+
+    public IEnumerator PlayerHittedCo()
+    {
+        playerMaterial.color = Color.red;
+        yield return new WaitForSeconds(0.2f);
+        playerMaterial.color = Color.white;
+        yield return new WaitForSeconds(0.2f);
+        playerMaterial.color = Color.red;
+        yield return new WaitForSeconds(0.2f);
+        playerMaterial.color = Color.white;
+        yield return new WaitForSeconds(0.2f);
+        playerMaterial.color = Color.red;
+        yield return new WaitForSeconds(0.2f);
+        playerMaterial.color = Color.white;
+        yield return null;
+
+    }
+
     //override dei metodi della classe base Entity
     public override void TakeDamage(int amount)
     {
+        colpito = true;
         hpbar.SetHealth(Health-amount);
 
         Debug.Log("Il player ha subito danno" + amount);
+
+        //colpito = false;
+
         base.TakeDamage(amount);
 
         
@@ -103,6 +195,9 @@ public class Player : Entity
 
     public override void RespawnPlayer() ///override fatto oggi
     {
+        RiattivaElementi();
+
+        playerMaterial.color = Color.white;
 
         if (animeRecuperabili.Count != 0)
         {
@@ -114,6 +209,8 @@ public class Player : Entity
             anime.transform.SetParent(null); //tolgo il parent al prefab
             RecuperaAnime.animeDaRecuperare = minionsKilled; //assegno il valore delle anime raccolte fin qui alla var statica animedarecuperare
             minionsKilled = 0; //resetto il valore delle anime raccolte
+
+        CambiaTestoAnime();
 
         animeRecuperabili.Add(anime);
 
@@ -142,6 +239,8 @@ public class Player : Entity
             TakeDamage(1);
            
         }
+       
+
     }
 
     

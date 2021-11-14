@@ -1,0 +1,193 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3415412514426296117
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3415412514426296123}
+  - component: {fileID: 3415412514426296116}
+  - component: {fileID: 3415412514426296122}
+  - component: {fileID: 3415412514426296121}
+  m_Layer: 0
+  m_Name: GAME MANAGER 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3415412514426296123
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3415412514426296117}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 19.8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3415412514426296116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3415412514426296117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 561b1b29313c60549a62323288eaa5c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioManager: {fileID: 3415412514426296121}
+  player: {fileID: 0}
+  panelPause: {fileID: 0}
+  musica: {fileID: -4956844092241543014, guid: 851663d4526af8042a9f1907333291ba, type: 2}
+  sfx: {fileID: 4927908155574874906, guid: 851663d4526af8042a9f1907333291ba, type: 2}
+  sliderMusica: {fileID: 0}
+  sliderSfx: {fileID: 0}
+  oggettidaDisattivare: []
+  timeManager: {fileID: 3415412514426296122}
+  saveCanvas: {fileID: 0}
+  levelToLoad: 
+  diffDifficile: 500
+  diffFolle: 1000
+  doOnce1: 1
+  doOnce2: 1
+--- !u!114 &3415412514426296122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3415412514426296117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41e1c2a4d6c5cf54ca9d3f48bb2bbe33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slowdownFactor: 0.05
+  slowdownLenght: 2
+--- !u!114 &3415412514426296121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3415412514426296117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 491ffb9fc14669c4c92239dabe2543cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+  - audioMixerGroup: {fileID: -4956844092241543014, guid: 851663d4526af8042a9f1907333291ba,
+      type: 2}
+    clipName: MusicaPrincipale
+    audioClip: {fileID: 8300000, guid: 8e9cf898357ff8342bbab8160f9f7fcd, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    playOnAwake: 0
+  - audioMixerGroup: {fileID: -4956844092241543014, guid: 851663d4526af8042a9f1907333291ba,
+      type: 2}
+    clipName: MusicBoss
+    audioClip: {fileID: 8300000, guid: 8e9cf898357ff8342bbab8160f9f7fcd, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    playOnAwake: 0
+  - audioMixerGroup: {fileID: 4927908155574874906, guid: 851663d4526af8042a9f1907333291ba,
+      type: 2}
+    clipName: powerup
+    audioClip: {fileID: 8300000, guid: ad5f14b32d5a9ea47a986919b9c74582, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+  - audioMixerGroup: {fileID: 4927908155574874906, guid: 851663d4526af8042a9f1907333291ba,
+      type: 2}
+    clipName: colpospada1
+    audioClip: {fileID: 8300000, guid: 2795f0cf89bf6ac48b99040cb5f642a2, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+  - audioMixerGroup: {fileID: 4927908155574874906, guid: 851663d4526af8042a9f1907333291ba,
+      type: 2}
+    clipName: colpospada2
+    audioClip: {fileID: 8300000, guid: 0e23edb94c3fbf74fb09b0d8b309f83e, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+  - audioMixerGroup: {fileID: 4927908155574874906, guid: 851663d4526af8042a9f1907333291ba,
+      type: 2}
+    clipName: colpospada3
+    audioClip: {fileID: 8300000, guid: f1cbdfe4089513648916e15663631053, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+  - audioMixerGroup: {fileID: 4927908155574874906, guid: 851663d4526af8042a9f1907333291ba,
+      type: 2}
+    clipName: minion_morte
+    audioClip: {fileID: 8300000, guid: e8efb5b84c9da3f4fb809c6e09f73189, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+  - audioMixerGroup: {fileID: 4927908155574874906, guid: 851663d4526af8042a9f1907333291ba,
+      type: 2}
+    clipName: magiaplayer
+    audioClip: {fileID: 8300000, guid: 2c1272ef377d1534f95a3e9febb995ab, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+  - audioMixerGroup: {fileID: 4927908155574874906, guid: 851663d4526af8042a9f1907333291ba,
+      type: 2}
+    clipName: playerhit
+    audioClip: {fileID: 8300000, guid: 8573b5d84a99ef542b5bf92eab6c001f, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+  - audioMixerGroup: {fileID: 4927908155574874906, guid: 851663d4526af8042a9f1907333291ba,
+      type: 2}
+    clipName: goblinmorte
+    audioClip: {fileID: 8300000, guid: ae306cc97ae80294592d062d81fc691b, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+  - audioMixerGroup: {fileID: 4927908155574874906, guid: 851663d4526af8042a9f1907333291ba,
+      type: 2}
+    clipName: schivata
+    audioClip: {fileID: 8300000, guid: ec701f8738789e843a17f422f29db4b7, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+  - audioMixerGroup: {fileID: 4927908155574874906, guid: 851663d4526af8042a9f1907333291ba,
+      type: 2}
+    clipName: checkpoint
+    audioClip: {fileID: 8300000, guid: ac540ca2373d71b4dbdd20618031152c, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+  - audioMixerGroup: {fileID: 4927908155574874906, guid: 851663d4526af8042a9f1907333291ba,
+      type: 2}
+    clipName: animepop
+    audioClip: {fileID: 8300000, guid: 1976c1a919057a541ad8f0be49fab7d0, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0

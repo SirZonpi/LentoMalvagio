@@ -5,9 +5,16 @@ using Cinemachine;
 
 public class PlayerIdleState : PlayerBaseState
 {
-    //public CinemachineVirtualCamera vcam;
+    public CinemachineVirtualCamera vcam;
+    public float startOrtho;
+
+    public Player playerScript;
 
     public Collider spadaCollider;
+
+    public GameObject scintille1;
+
+
 
     public override void EnterState(PlayerStateManager player)
     {
@@ -22,6 +29,10 @@ public class PlayerIdleState : PlayerBaseState
         anim.SetBool("attacca2", false);
         anim.SetBool("attacca3", false);
         anim.SetBool("damage", false);
+
+        startOrtho = vcam.m_Lens.OrthographicSize;
+
+
     }
 
     public override void onCollisionEnter(PlayerStateManager player)
@@ -36,13 +47,22 @@ public class PlayerIdleState : PlayerBaseState
             vcam.m_Lens.OrthographicSize = Mathf.MoveTowards(vcam.m_Lens.OrthographicSize, 12, 10 * Time.deltaTime);
         */
 
-         Animator anim = player.GetComponent<Animator>();
+        //scintille1.SetActive(false) ;
+
+        if(vcam.m_Lens.OrthographicSize != 8 )
+        {
+            vcam.m_Lens.OrthographicSize = Mathf.MoveTowards(vcam.m_Lens.OrthographicSize, 8, 10 * Time.deltaTime);
+            
+        }
+
+        Animator anim = player.GetComponent<Animator>();
         anim.SetBool("idle", true);
         anim.SetBool("cammina", false);
         anim.SetBool("attacca", false);
         anim.SetBool("attacca2", false);
         anim.SetBool("attacca3", false);
         anim.SetBool("castaspell", false);
+        anim.SetBool("damage", false);
 
         PlayerMove playerMove = GetComponent<PlayerMove>();
 
@@ -53,6 +73,8 @@ public class PlayerIdleState : PlayerBaseState
 
         if (Input.GetMouseButtonDown(0) && anim.GetBool("attacca") == false)
         {
+            GameManager.instance.audioManager.PlaySound("colpospada1");
+
             player.SwitchState(player.attackState);
         }
         
@@ -61,7 +83,12 @@ public class PlayerIdleState : PlayerBaseState
         {
             player.SwitchState(player.walkState);
         }
-        
+
+        if (playerScript.colpito == true)
+        {
+            GameManager.instance.audioManager.PlaySound("playerhit");
+            player.SwitchState(player.takeDamage);
+        }
 
     }
 

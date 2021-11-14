@@ -39,7 +39,7 @@ public class GoblinWalkState : GoblinBaseState
             goblin.SwitchState(goblin.attackState);
         }
 
-        if (distance <= _goblin.attackRadius && distance  > 1.3f)
+        if (distance <= _goblin.attackRadius && distance  > 1.3f) //inseguimento
         {
             _goblin.timer += Time.deltaTime;
 

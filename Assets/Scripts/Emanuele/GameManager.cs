@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 
@@ -12,6 +14,11 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] GameObject panelPause;
     public static bool isPause = false;
+    public AudioMixerGroup musica;
+    public AudioMixerGroup sfx;
+
+    public Slider sliderMusica;
+    public Slider sliderSfx;
 
     public List<GameObject> oggettidaDisattivare;
     public TimeManager timeManager;
@@ -40,6 +47,18 @@ public class GameManager : MonoBehaviour
 
     }
 
+    public void SetVolumeMusica(float sliderValue)
+    {
+        musica.audioMixer.SetFloat("MusicaVol", Mathf.Log10(sliderValue) * 20);
+        PlayerPrefs.SetFloat("MusicaVol", sliderValue);
+        Debug.Log("diolebbroso " + PlayerPrefs.GetFloat("MusicaVol"));
+    }
+
+    public void SetVolumeSFX(float sliderValue)
+    {
+        sfx.audioMixer.SetFloat("SfxVol", Mathf.Log10(sliderValue) * 20);
+        PlayerPrefs.SetFloat("SfxVol", sliderValue);
+    }
 
     public void SavePlayer()
     {
@@ -68,7 +87,6 @@ public class GameManager : MonoBehaviour
     }
 
 
-
     void Start()
     {
         Debug.Log("scena nel GM " + levelToLoad);
@@ -77,7 +95,17 @@ public class GameManager : MonoBehaviour
 
         panelPause.SetActive(false);
 
-       // currentLivelloDifficolta = player.livelloDifficolta;
+
+        audioManager.PlaySound("MusicaPrincipale");
+        
+        SetVolumeMusica(PlayerPrefs.GetFloat("MusicaVol"));
+        SetVolumeSFX(PlayerPrefs.GetFloat("SfxVol"));
+
+        sliderMusica.value = PlayerPrefs.GetFloat("MusicaVol");
+        sliderSfx.value = PlayerPrefs.GetFloat("SfxVol");
+        
+
+        // currentLivelloDifficolta = player.livelloDifficolta;
 
     }
 
@@ -149,6 +177,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("IS LOADED " + isLoaded);
 
+        Debug.Log("SCALA TEMPO " + Time.timeScale);
 
         if (Input.GetKeyDown(KeyCode.L)) //PER DEBUG
         {

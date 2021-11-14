@@ -1,16 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class PlayerAttack2State : PlayerBaseState
 {
     public int cambia;
     public int vaAdAttacco3 = 0;
-    // public Rigidbody checkerRb;
+
+    public Collider spadaCollider;
+
+    public CinemachineVirtualCamera vcam;
+    public float startOrtho;
+
 
     public override void EnterState(PlayerStateManager player)
     {
-        Debug.Log("SUPERMEGAPORCODIO");
 
         cambia = 1;
         vaAdAttacco3 = 0;
@@ -22,7 +27,9 @@ public class PlayerAttack2State : PlayerBaseState
         anim.SetBool("idle", false);
         anim.SetBool("cammina", false);
         anim.SetBool("castaspell", false);
+        anim.SetBool("damage", false);
 
+        startOrtho = vcam.m_Lens.OrthographicSize;
 
 
     }
@@ -34,10 +41,16 @@ public class PlayerAttack2State : PlayerBaseState
 
     public override void UpdateState(PlayerStateManager player)
     {
+        if (vcam.m_Lens.OrthographicSize != 8)
+        {
+            vcam.m_Lens.OrthographicSize = Mathf.MoveTowards(vcam.m_Lens.OrthographicSize, 8, 10 * Time.deltaTime);
+
+        }
+
         Debug.Log("ATTACCO 2");
         Debug.Log("CAMBIALO2 " + cambia);
 
-        //Debug.Log("rb " + checkerRb.velocity.magnitude);
+        spadaCollider.enabled = true;
 
         PlayerMove playerMove = GetComponent<PlayerMove>();
 
@@ -60,6 +73,8 @@ public class PlayerAttack2State : PlayerBaseState
 
         if (Input.GetMouseButtonDown(0) && vaAdAttacco3 == 1)
         {
+            GameManager.instance.audioManager.PlaySound("colpospada3");
+
             player.SwitchState(player.attack3State);
         }
 

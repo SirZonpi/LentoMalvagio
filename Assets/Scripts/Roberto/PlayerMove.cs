@@ -43,6 +43,7 @@ public class PlayerMove : MonoBehaviour
     float rayLenght;
     [SerializeField] PlayerStateManager playerStatemanager;
 
+    [SerializeField] SchivataUI schivataUI;
 
     // Start is called before the first frame update
     void Start()
@@ -168,6 +169,8 @@ public class PlayerMove : MonoBehaviour
 
     IEnumerator Rolling() //il giocatore schiva/rolla... vieni applicata una forza in avanti e poi una forza minore nella parte opposta
     {
+        schivataUI.StartCoroutine(schivataUI.SchivataCo());
+        GameManager.instance.audioManager.PlaySound("schivata");
         rb.AddForce(transform.forward * rollForce, ForceMode.Impulse);
         yield return new WaitForSeconds(rollDistance);
         rb.AddForce(-transform.forward * frenataRoll, ForceMode.Impulse);
