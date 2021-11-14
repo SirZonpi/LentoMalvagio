@@ -10,6 +10,8 @@ TagManager:
   - EnemyHit
   - Trappola
   - EnemyAttack
+  - SpadaPlayer
+  - SpellPlayer
   layers:
   - Default
   - TransparentFX

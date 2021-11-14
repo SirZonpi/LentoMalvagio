@@ -9757,7 +9757,7 @@ MonoBehaviour:
   animeText: {fileID: 0}
   colpito: 0
   scintille1: {fileID: 0}
-  playerMaterial: {fileID: 2100000, guid: 2fdd4ca632f991f4bb0fafa95320a6c3, type: 2}
+  playerMaterial: {fileID: 2100000, guid: 8581fb225e0e1eb4a9b1adc26a42db58, type: 2}
 --- !u!114 &1407709769445985123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10041,7 +10041,7 @@ GameObject:
   - component: {fileID: 2601262195503354236}
   m_Layer: 9
   m_Name: SPADA_COLLIDER
-  m_TagString: Untagged
+  m_TagString: SpadaPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10626,7 +10626,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2fdd4ca632f991f4bb0fafa95320a6c3, type: 2}
+  - {fileID: 2100000, guid: 8581fb225e0e1eb4a9b1adc26a42db58, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10953,6 +10953,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 303124471295670447, guid: 6155f02de78a88e4e9784b07eca4f46e,
+        type: 3}
+      propertyPath: m_TagString
+      value: SpadaPlayer
       objectReference: {fileID: 0}
     - target: {fileID: 4567990251618587653, guid: 6155f02de78a88e4e9784b07eca4f46e,
         type: 3}

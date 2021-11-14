@@ -9,14 +9,16 @@ public class BloccaPercorso : MonoBehaviour
     //di nodi o di cambiare il funzionamento del prefab
     public Vector3 startPos;
 
-    private void Start()
+    private void Awake()
     {
         startPos = transform.position;
     }
 
     // Update is called once per frame
-    void Update()
+   
+    void LateUpdate()
     {
         transform.position = startPos;
     }
+
 }

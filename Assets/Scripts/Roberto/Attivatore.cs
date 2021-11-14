@@ -8,22 +8,12 @@ public class Attivatore : MonoBehaviour
     public bool openDoor;
 
 
-
-    private void Start()
+    private void OnTriggerEnter(Collider other)
     {
-
-    }
-
-    void Update()
-    {
-            
-    }
-
-    private void OnTriggerStay(Collider other)
-    {
-        if (Input.GetKeyDown(KeyCode.E)) //se sono nel cerchio CanTakeTheKey e premo E
+        if (other.CompareTag("SpadaPlayer") || other.CompareTag("SpellPlayer")) //se sono nel cerchio CanTakeTheKey e premo E
         {
             openDoor = true; //setto KeyTaken a true
+            GameManager.instance.audioManager.PlaySound("interruttore");
         }
     }
 }

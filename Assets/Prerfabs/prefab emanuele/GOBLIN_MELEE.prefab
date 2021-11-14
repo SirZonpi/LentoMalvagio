@@ -951,13 +951,12 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   attackRadius: 3
   path:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8423544358123677158}
+  - {fileID: 2446555203457565602}
   timer: 2
   nextTime: 0
   inRange: 0
   _agent: {fileID: 1612499854632790930}
-  audiosource: {fileID: 875581511743152856}
 --- !u!114 &944229518481106100
 MonoBehaviour:
   m_ObjectHideFlags: 0
