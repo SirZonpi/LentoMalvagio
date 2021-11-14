@@ -191,3 +191,27 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     playOnAwake: 0
+  - audioMixerGroup: {fileID: 4927908155574874906, guid: 851663d4526af8042a9f1907333291ba,
+      type: 2}
+    clipName: interruttore
+    audioClip: {fileID: 8300000, guid: c3631f95f2b6bc241b40e90f770f7b81, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+  - audioMixerGroup: {fileID: 4927908155574874906, guid: 851663d4526af8042a9f1907333291ba,
+      type: 2}
+    clipName: porta
+    audioClip: {fileID: 8300000, guid: 2c1976d80cd9d7a4d93057f8b83bea83, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+  - audioMixerGroup: {fileID: 4927908155574874906, guid: 851663d4526af8042a9f1907333291ba,
+      type: 2}
+    clipName: animerecuperate
+    audioClip: {fileID: 8300000, guid: 85bbda620db59e642969b0ec18ec21e6, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0

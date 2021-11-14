@@ -13,6 +13,7 @@ public class Attivatore : MonoBehaviour
         if (other.CompareTag("SpadaPlayer") || other.CompareTag("SpellPlayer")) //se sono nel cerchio CanTakeTheKey e premo E
         {
             openDoor = true; //setto KeyTaken a true
+            GameManager.instance.audioManager.PlaySound("interruttore");
         }
     }
 }

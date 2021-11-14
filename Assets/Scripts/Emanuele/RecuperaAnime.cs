@@ -11,7 +11,7 @@ public class RecuperaAnime : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            
+            GameManager.instance.audioManager.PlaySound("animerecuperate");
              player.minionsKilled = animeDaRecuperare;
              player.CambiaTestoAnime();
              Debug.Log("minions " + player.minionsKilled);
