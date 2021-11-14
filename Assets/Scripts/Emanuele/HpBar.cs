@@ -52,10 +52,18 @@ public class HpBar : MonoBehaviour
 
     private void LateUpdate()
     {
-        transform.position = Camera.main.WorldToScreenPoint(entityHealth.transform.position + Vector3.up * offesetY); //posizione della hp bar nello spazio mondo
+        if (entityHealth != null)
+        {
+            transform.position = Camera.main.WorldToScreenPoint(entityHealth.transform.position + Vector3.up * offesetY); //posizione della hp bar nello spazio mondo
+        }
     }
 
     private void OnDisable()
+    {
+        entityHealth.OnHealthChanged -= HandleHealthChanged; //rimuoviamo la sottoscrizione al delegate
+    }
+
+    private void OnDestroy()
     {
         entityHealth.OnHealthChanged -= HandleHealthChanged; //rimuoviamo la sottoscrizione al delegate
     }
@@ -66,15 +74,18 @@ public class HpBar : MonoBehaviour
 
         //Debug.Log("DISTANZA " + Vector3.Distance(transform.position, player.transform.position));
 
-        if (Vector3.Distance(entityHealth.transform.position, player.transform.position) <= distanzaDalPlayer)
+        if (entityHealth != null)
         {
-            sfondoImmagine.enabled = true;
-            barraImmagine.enabled = true;
-        }
-        else if (Vector3.Distance(entityHealth.transform.position, player.transform.position) > distanzaDalPlayer) 
-        {
-            sfondoImmagine.enabled = false;
-            barraImmagine.enabled = false;
+            if (Vector3.Distance(entityHealth.transform.position, player.transform.position) <= distanzaDalPlayer)
+            {
+                sfondoImmagine.enabled = true;
+                barraImmagine.enabled = true;
+            }
+            else if (Vector3.Distance(entityHealth.transform.position, player.transform.position) > distanzaDalPlayer)
+            {
+                sfondoImmagine.enabled = false;
+                barraImmagine.enabled = false;
+            }
         }
     }
 

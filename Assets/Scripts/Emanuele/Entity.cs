@@ -113,7 +113,12 @@ public class Entity : MonoBehaviour
         transform.position = CheckPoints.GetActiveCheckPointPosition();
     }
 
-   
+    private void OnDestroy()
+    {
+        OnHealthRemoved(this); //una volta disabilitato richiamiamo subito l'evento e passiamo come argomento questa stessa entity
+
+    }
+
     void Awake()
     {
         Health = maxHealth;

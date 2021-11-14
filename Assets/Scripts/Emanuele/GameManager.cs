@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
     public int diffDifficile = 500;
     public int diffFolle = 1000;
 
+    public GameObject spawnLivello2;
 
     private void Awake()
     {
