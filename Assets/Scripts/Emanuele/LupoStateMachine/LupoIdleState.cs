@@ -13,6 +13,9 @@ public class LupoIdleState : LupoBaseState
         anim.SetBool("salta", false);
         anim.SetBool("damage", false);
         anim.SetBool("attacca", false);
+
+        lupoScript.isAttacking = false;
+
     }
 
     public override void onCollisionEnter(LupoStateManager lupo)
@@ -24,7 +27,7 @@ public class LupoIdleState : LupoBaseState
     {
         float distance = Vector3.Distance(transform.position, lupoScript.playerTransform.transform.position);
 
-        if (distance < 5)
+        if (distance < 5 && distance <= 2)
         {
 
             Vector3 dirToPlayer = transform.position - lupoScript.playerTransform.transform.position;
@@ -36,7 +39,7 @@ public class LupoIdleState : LupoBaseState
 
         }
 
-        if (distance <= 8 && distance >= 5)
+        if (distance > 5 && distance < lupoScript.attackRadius)
         {
             lupoScript.loadSpell = true;
 
@@ -47,6 +50,8 @@ public class LupoIdleState : LupoBaseState
             lupo.SwitchState(lupo.attackState);
 
         }
+
+        
         /*
         else { lupoScript.loadSpell = false; }
 

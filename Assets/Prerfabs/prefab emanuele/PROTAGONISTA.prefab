@@ -9735,7 +9735,7 @@ MonoBehaviour:
   currentHealth: 0
   attaccoFisico: 2
   attaccoMagico: 1
-  psMorte: {fileID: 0}
+  psMorte: {fileID: 1206266120888398985, guid: 6c05388e90d21e04d88d0157101c0cf8, type: 3}
   minionsKilled: 2000
   prefabAnime: {fileID: 4524353274924026111, guid: 883ff8d558e4f7d4cb4b2eddb585a54b,
     type: 3}
@@ -9743,6 +9743,8 @@ MonoBehaviour:
   livelloDifficolta: 
   animeRecuperabili: []
   spellPrefab: {fileID: 3377074279332997481, guid: 2d1db776903cee2468a2352d38214813,
+    type: 3}
+  preSpellPrefab: {fileID: 3377074279332997481, guid: 83c4c18a71d402a4dbfc0bacfcb1edca,
     type: 3}
   spellSpawnPoint: {fileID: 323019832581113166}
   hpbar: {fileID: 0}
@@ -9752,11 +9754,12 @@ MonoBehaviour:
   spadaInfuocata: {fileID: 1743331044408829068}
   iconaMelee: {fileID: 0}
   iconaMagia: {fileID: 0}
+  gameOverPanel: {fileID: 0}
   fireRate: 2
   timeToNextShot: 0
   animeText: {fileID: 0}
   colpito: 0
-  scintille1: {fileID: 0}
+  scintille1: {fileID: 1877672496}
   playerMaterial: {fileID: 2100000, guid: 8581fb225e0e1eb4a9b1adc26a42db58, type: 2}
 --- !u!114 &1407709769445985123
 MonoBehaviour:

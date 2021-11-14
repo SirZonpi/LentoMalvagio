@@ -17,6 +17,7 @@ public class Player : Entity
     public List<GameObject> animeRecuperabili;
 
     public GameObject spellPrefab;
+    public GameObject preSpellPrefab;
     public Transform spellSpawnPoint;
 
     public HpBarPlayer hpbar;
@@ -28,6 +29,8 @@ public class Player : Entity
 
     [SerializeField] MeleeUI iconaMelee;
     [SerializeField] ManaUI iconaMagia;
+
+    [SerializeField] GameObject gameOverPanel;
 
     public float fireRate = 1f; // posso spare ogni x
     public float timeToNextShot; // tempo di attesa
@@ -64,6 +67,8 @@ public class Player : Entity
         playerMaterial.color = Color.white;
 
         animTextAnime = animeText.GetComponent<Animator>();
+
+        gameOverPanel.SetActive(false);
 
     }
 
@@ -197,6 +202,8 @@ public class Player : Entity
     {
         RiattivaElementi();
 
+        gameOverPanel.SetActive(true);
+
         playerMaterial.color = Color.white;
 
         if (animeRecuperabili.Count != 0)
@@ -224,7 +231,7 @@ public class Player : Entity
         StartCoroutine(IncrementaHpCo());
     }
 
-    public override void KillEnemy()
+    public override void KillEnemy() //DA RIMUOVERE
     {
         Debug.Log("Il player è stato ucciso");
         base.KillEnemy();

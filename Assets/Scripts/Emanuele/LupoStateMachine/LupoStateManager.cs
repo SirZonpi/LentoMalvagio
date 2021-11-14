@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LupoStateManager : MonoBehaviour
 {
-    LupoBaseState currentLupoState;
+    public LupoBaseState currentLupoState;
 
     public LupoIdleState idleState; 
     public LupoJumpState jumpState; 

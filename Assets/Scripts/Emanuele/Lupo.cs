@@ -36,6 +36,8 @@ public class Lupo : Enemy
     public Transform[] path;
     int currentPoint;
 
+    public bool isAttacking;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,9 +50,11 @@ public class Lupo : Enemy
 
     public void MoveToPath()
     {
-        
+        if (_agent.remainingDistance < 0.5f)
+        {
             _agent.destination = path[currentPoint].position;
             UpdateCurrentPoint();
+        }
 
     }
 
@@ -67,13 +71,16 @@ public class Lupo : Enemy
     }
     public void CastSpell()
     {
-        GameObject bulletSpell = Instantiate(bulletPrefab, spellSpawnPoint.transform.position, Quaternion.identity) as GameObject;
-        bulletSpell.transform.SetParent(null);
-        LupoBullet lb = bulletSpell.GetComponent<LupoBullet>();
-        dir = (transform.forward);
-        if (bulletPrefab != null)
-            //lb.Setup(dir);
-            StartCoroutine(lb.ScaleBullet(dir));
+        if (isAttacking)
+        {
+            GameObject bulletSpell = Instantiate(bulletPrefab, spellSpawnPoint.transform.position, Quaternion.identity) as GameObject;
+            bulletSpell.transform.SetParent(null);
+            LupoBullet lb = bulletSpell.GetComponent<LupoBullet>();
+            dir = (transform.forward);
+            if (bulletPrefab != null)
+                //lb.Setup(dir);
+                StartCoroutine(lb.ScaleBullet(dir));
+        }
     }
 
     public float time = 0f;

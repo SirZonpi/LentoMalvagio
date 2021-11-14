@@ -99,7 +99,16 @@ public class Entity : MonoBehaviour
 
 
     public virtual void RespawnPlayer()
-    {      
+    {
+        GameManager.instance.oggettidaDisattivare.Add(this.gameObject); //aggiungiasmo a una lista i character disattivati per riattivarli all 'occorrenza
+        if (psMorte != null)
+        {
+            ParticleSystem ps = Instantiate(psMorte, transform.position, Quaternion.identity);
+            ps.transform.SetParent(null);
+            ps.Play();
+            Destroy(ps, 1.5f);
+        }
+
         RestoreHealth();
         transform.position = CheckPoints.GetActiveCheckPointPosition();
     }
