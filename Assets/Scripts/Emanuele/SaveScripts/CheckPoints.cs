@@ -20,6 +20,7 @@ public class CheckPoints : MonoBehaviour
     public void Rigenera()
     {
         playerHealth.RestoreHealth();
+      
     }
 
 

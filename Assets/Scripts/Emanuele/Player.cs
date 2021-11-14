@@ -229,6 +229,7 @@ public class Player : Entity
     public override void RestoreHealth()
     {
         StartCoroutine(IncrementaHpCo());
+        hpbar.SetHealth(maxHealth);
     }
 
     public override void KillEnemy() //DA RIMUOVERE

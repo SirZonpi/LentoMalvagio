@@ -115,8 +115,14 @@ public class Entity : MonoBehaviour
 
     private void OnDestroy()
     {
-        OnHealthRemoved(this); //una volta disabilitato richiamiamo subito l'evento e passiamo come argomento questa stessa entity
-
+        if (GetComponent<Player>() == false)
+        {
+            OnHealthRemoved(this); //una volta disabilitato richiamiamo subito l'evento e passiamo come argomento questa stessa entity
+            if (GetComponent<AudioSource>())
+            {
+                GetComponent<AudioSource>().Stop();
+            }
+        }
     }
 
     void Awake()
