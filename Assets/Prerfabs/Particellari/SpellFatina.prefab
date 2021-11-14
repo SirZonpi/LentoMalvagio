@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 4546916761397693358}
   - component: {fileID: 8150498278737382041}
   - component: {fileID: 4357041894112248679}
-  - component: {fileID: 5879766125177672845}
+  - component: {fileID: 4644170774919734399}
   m_Layer: 0
-  m_Name: ColpoMagico
-  m_TagString: SpellPlayer
+  m_Name: SpellFatina
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -228,8 +228,8 @@ ParticleSystem:
       maxColor: {r: 0.52156866, g: 0.11764707, b: 0.28627452, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.54509807, g: 0.11764707, b: 0.29411766, a: 1}
-        key1: {r: 0.81568635, g: 0.15686275, b: 0.46274513, a: 1}
+        key0: {r: 0.51018524, g: 0.54509807, b: 0.11764704, a: 1}
+        key1: {r: 0.15686272, g: 0.3054407, b: 0.8156863, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -4786,7 +4786,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 2.5009856
   m_Center: {x: -0.053608894, y: -0.07964923, z: -0.2392028}
---- !u!114 &5879766125177672845
+--- !u!114 &4644170774919734399
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4795,6 +4795,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 3377074279332997481}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2b9237cd1943b345b513f8bf7824c6c, type: 3}
+  m_Script: {fileID: 11500000, guid: fdef9de4609054d4f8fb82997cb3c6d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
