@@ -21,7 +21,6 @@ public class SpadaScript : MonoBehaviour
             }
              if (playerState.currentPlayerState == playerState.attack2State)
             {
-                Debug.Log("DIOEBREO");
                 StartCoroutine(Scintile2Co());
             }
             other.transform.parent.GetComponent<Enemy>().TakeDamage(player.attaccoFisico);

@@ -22,4 +22,10 @@ public class PowerUpMana : MonoBehaviour
             this.gameObject.SetActive(false);
         }
     }
+
+    private void OnDisable()
+    {
+        doOnce = true;
+    }
+
 }

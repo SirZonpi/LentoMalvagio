@@ -33,11 +33,14 @@ public class CheckPoints : MonoBehaviour
         {
             foreach (GameObject cp in checkPointsList)
             {
-                // cerchiamo l'ultimo checkpoint attivato per ottenre la posizione di spawn
-                if (cp.GetComponent<CheckPoints>().activated)                                                                   
+                if (cp != null)
                 {
-                    result = cp.transform.position;        
-                    break;
+                    // cerchiamo l'ultimo checkpoint attivato per ottenre la posizione di spawn
+                    if (cp.GetComponent<CheckPoints>().activated)
+                    {
+                        result = cp.transform.position;
+                        break;
+                    }
                 }
             }
         }
@@ -51,8 +54,7 @@ public class CheckPoints : MonoBehaviour
         // controlliamo tutti i checkpoint in scena
         foreach (GameObject cp in checkPointsList)
         {
-            //cp.GetComponent<SpriteRenderer>().color = Color.white;                                                          
-          //  cp.GetComponent<SpriteRenderer>().sprite = checkDisabled;                                                          
+           if(cp!=null)                                                          
             cp.GetComponent<CheckPoints>().activated = false;  //li disattiviamo                                                         
         }
 
@@ -88,7 +90,9 @@ public class CheckPoints : MonoBehaviour
         {
             saveCanvas.SetActive(true);
         }
-    }private void OnTriggerExit(Collider other)
+    }
+    
+    private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("Player") && this.activated)
         {
@@ -103,6 +107,8 @@ public class CheckPoints : MonoBehaviour
 
        checkPointsList = GameObject.FindGameObjectsWithTag("CheckPoint"); //cerchiamo tutti i checkpoint in scena usando una tag
 
+        Debug.Log("cp list " + checkPointsList.Length);
+        
         //  playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
 
        

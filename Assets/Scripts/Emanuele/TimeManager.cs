@@ -16,7 +16,6 @@ public class TimeManager : MonoBehaviour
 
     public void SlowMotion()
     {
-        //Debug.Log("diopeste");
         Time.timeScale = slowdownFactor; // 1/ 0.05 = 20, il tempo scorre 20 volte più lentamente del normale
 
         Time.fixedDeltaTime = Time.timeScale * 0.02f;

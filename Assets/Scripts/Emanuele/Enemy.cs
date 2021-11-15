@@ -7,7 +7,7 @@ public class Enemy : Entity
     public int animeDrop;
     public GameObject animeDropPrefab;
 
-
+ 
 
     //override dei metodi della classe base Entity
     public override void KillEnemy()

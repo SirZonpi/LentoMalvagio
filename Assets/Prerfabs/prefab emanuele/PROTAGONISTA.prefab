@@ -9731,7 +9731,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d08b8ddbbac90042bab43758740c5cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 50
+  maxHealth: 10
   currentHealth: 0
   attaccoFisico: 2
   attaccoFisicoDefault: 0
@@ -9741,7 +9741,7 @@ MonoBehaviour:
   minionsKilled: 2000
   prefabAnime: {fileID: 4524353274924026111, guid: 883ff8d558e4f7d4cb4b2eddb585a54b,
     type: 3}
-  currentLevel: Scena1
+  currentLevel: 
   livelloDifficolta: 
   animeRecuperabili: []
   spellPrefab: {fileID: 3377074279332997481, guid: 2d1db776903cee2468a2352d38214813,
@@ -9752,6 +9752,8 @@ MonoBehaviour:
   hpbar: {fileID: 0}
   powerUpSpada: 0
   durataPowerupSpada: 20
+  spadaFuocoBonus: 5
+  attaccoSpadaPotenziato: 0
   durataPowerupMana: 5
   spadaInfuocata: {fileID: 1743331044408829068}
   iconaMelee: {fileID: 0}

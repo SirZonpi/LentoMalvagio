@@ -79,7 +79,7 @@ public class Player : Entity
 
     private void Awake()
     {
-        currentLevel = "Scena1";
+       // currentLevel = "Scena1";////////////////////
         livelloDifficolta = "Normale";  ///aggiunto oggi
 
     }

@@ -35,10 +35,12 @@ public class Entity : MonoBehaviour
 
         attaccoFisicoDefault = attaccoFisico;
 
-        if (GetComponent<Player>() == false) 
+        if (this.GetComponent<Player>() == false) 
         {
             OnHealthAdded(this); // se questa istanza non è il player allora, una volta abilitata, richiamiamo subito l'evento e passiamo come argomento questa stessa entity
         }
+
+
     }
 
     private void OnDisable()
@@ -128,22 +130,15 @@ public class Entity : MonoBehaviour
 
     }
 
-    private void OnDestroy()
-    {
-        /*
-        if (GetComponent<Player>() == false)
-        {
-        */
-            OnHealthRemoved(this); //una volta disabilitato richiamiamo subito l'evento e passiamo come argomento questa stessa entity
-        /*
-            if (GetComponent<AudioSource>())
-            {
-                GetComponent<AudioSource>().Stop();
-            }
-        
-        }
-        */
+    public void OnDestroy()
+    { 
+       OnHealthRemoved(this); //una volta disabilitato richiamiamo subito l'evento e passiamo come argomento questa stessa entity
 
+    }
+
+    public void OnApplicationQuit() //altrimenti: inquitante errore in console quando esco da play mode
+    {
+        OnHealthRemoved(this);
     }
 
     void Awake()

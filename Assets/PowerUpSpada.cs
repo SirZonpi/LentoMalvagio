@@ -5,7 +5,7 @@ using UnityEngine;
 public class PowerUpSpada : MonoBehaviour
 {
     bool doOnce = true;
-    [SerializeField] MeleeUI iconaSpada;
+    //[SerializeField] MeleeUI iconaSpada;
 
     public void OnTriggerEnter(Collider other)
     {
@@ -20,6 +20,11 @@ public class PowerUpSpada : MonoBehaviour
             GameManager.instance.oggettidaDisattivare.Add(this.gameObject);
             this.gameObject.SetActive(false);
         }
+    }
+
+    private void OnDisable()
+    {
+        doOnce = true;
     }
 
 }

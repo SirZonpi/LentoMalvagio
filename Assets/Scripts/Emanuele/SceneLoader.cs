@@ -10,14 +10,13 @@ public class SceneLoader : MonoBehaviour
 
     GameObject puntoSpawnLivello2;
 
-   // Enemy[] enemies;
+    public string scenaDaCaricare;
+    public string scenaDaScaricare;
 
     private void Start()
     {
         player = GameManager.instance.player;
         puntoSpawnLivello2 = GameManager.instance.spawnLivello2;
-
-     //   enemies =  Enemy.FindObjectsOfType<Enemy>();
 
     }
 
@@ -26,11 +25,9 @@ public class SceneLoader : MonoBehaviour
         if (other.CompareTag("Player") && doOnce==true)
         {
             doOnce = false;
-            SceneManager.LoadSceneAsync("Scena2", LoadSceneMode.Additive);
+            SceneManager.LoadSceneAsync(scenaDaCaricare, LoadSceneMode.Additive);
 
-          
-
-            SceneManager.UnloadSceneAsync("Scena1");
+            SceneManager.UnloadSceneAsync(scenaDaScaricare);
 
             player.transform.position = puntoSpawnLivello2.transform.position;
 

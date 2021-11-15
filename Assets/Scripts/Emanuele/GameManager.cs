@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
             Destroy(this);
         }
 
-       levelToLoad = player.currentLevel;
+        // levelToLoad = player.currentLevel; //////////////////////////////////////
 
     }
 
@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
     {
         musica.audioMixer.SetFloat("MusicaVol", Mathf.Log10(sliderValue) * 20);
         PlayerPrefs.SetFloat("MusicaVol", sliderValue);
-        Debug.Log("diolebbroso " + PlayerPrefs.GetFloat("MusicaVol"));
+        Debug.Log("vol " + PlayerPrefs.GetFloat("MusicaVol"));
     }
 
     public void SetVolumeSFX(float sliderValue)
@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
     public void SavePlayer()
     {
         SaveSystem.SavePlayer(player);
-        Debug.Log("vita salvata" + player.Health);
+        Debug.Log("livellosalvato " + player.currentLevel);
     }
 
     public void LoadPlayer()
@@ -74,6 +74,9 @@ public class GameManager : MonoBehaviour
         player.Health = playerData.health;
 
         levelToLoad = playerData.level;
+
+        player.currentLevel = playerData.level; ///////////////////////////////////////////////////////
+
 
         player.livelloDifficolta = playerData.difficoltà;
 
@@ -90,12 +93,14 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("scena nel GM " + levelToLoad);
+        levelToLoad = player.currentLevel;
 
-        SceneManager.LoadSceneAsync(levelToLoad, LoadSceneMode.Additive);
+        if(isLoaded==false)///
+        levelToLoad = "Scena1";///
+
+        SceneManager.LoadSceneAsync( levelToLoad , LoadSceneMode.Additive);//////////////////////////////////////
 
         panelPause.SetActive(false);
-
 
         audioManager.PlaySound("MusicaPrincipale");
         
@@ -104,7 +109,6 @@ public class GameManager : MonoBehaviour
 
         sliderMusica.value = PlayerPrefs.GetFloat("MusicaVol");
         sliderSfx.value = PlayerPrefs.GetFloat("SfxVol");
-        
 
         // currentLivelloDifficolta = player.livelloDifficolta;
 
@@ -112,7 +116,7 @@ public class GameManager : MonoBehaviour
 
     private void OnEnable()
     {
-
+        if (isLoaded) LoadPlayer();
     }
 
     public static bool isLoaded = false;
@@ -147,28 +151,7 @@ public class GameManager : MonoBehaviour
         isPause = false;
     }
 
-    /*
-    public void IncrementaDifficolta(string lvlDif)  ///aggiunto oggi
-    {
-        switch (lvlDif)
-        {
-            case LivelloDifficolta.Normale:
-                break;
-            case LivelloDifficolta.Difficile:
-
-                Enemy[] enemies = GameObject.FindObjectsOfType<Enemy>();
-
-                foreach (Enemy enemy in enemies)
-                {
-                    enemy.maxHealth += 10;
-                }
-
-                break;
-            case LivelloDifficolta.Folle:
-                break;
-        }
-    }
-    */
+   
 
     public bool doOnce1 = true;
     public bool doOnce2 = true;

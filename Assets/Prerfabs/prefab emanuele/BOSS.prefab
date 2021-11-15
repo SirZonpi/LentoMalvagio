@@ -314,7 +314,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bc8b388a8a2cfd44d911516f50d54de0, type: 2}
+  - {fileID: 2100000, guid: a2e157d0e236d9946a8b8c8585d04215, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2335,7 +2335,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bc8b388a8a2cfd44d911516f50d54de0, type: 2}
+  - {fileID: 2100000, guid: d8eb163b81673c1479f5adf15dd5b2cc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8693,6 +8693,7 @@ MonoBehaviour:
   maxHealth: 1
   currentHealth: 0
   attaccoFisico: 10
+  attaccoFisicoDefault: 0
   attaccoMagico: 5
   startPosition: {x: 0, y: 0, z: 0}
   psMorte: {fileID: 0}
