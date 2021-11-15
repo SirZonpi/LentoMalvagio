@@ -8694,13 +8694,14 @@ MonoBehaviour:
   currentHealth: 0
   attaccoFisico: 10
   attaccoMagico: 5
+  startPosition: {x: 0, y: 0, z: 0}
   psMorte: {fileID: 0}
   animeDrop: 300
   animeDropPrefab: {fileID: 7925695913198141641, guid: 2d0e7ae1f8cd1404e88169f659a1dac7,
     type: 3}
-  startPosition: {x: 0, y: 0, z: 0}
   rand: 0
   stateman: {fileID: 2751745466616092629}
+  tentacoli: {fileID: 6869029701103218045}
   coolDownTime: 3
   nextTimeFire: 1
   startRot: {x: 0, y: 0, z: 0, w: 0}

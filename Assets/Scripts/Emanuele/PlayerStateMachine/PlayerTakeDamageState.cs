@@ -15,6 +15,13 @@ public class PlayerTakeDamageState : PlayerBaseState
 
     public override void EnterState(PlayerStateManager player)
     {
+        if (playerScript.powerUpSpada == false)
+        {
+            playerScript.attaccoFisico = playerScript.attaccoFisicoDefault;
+
+        }
+        else { playerScript.attaccoFisico = playerScript.attaccoSpadaPotenziato; }
+
         spadaCollider.enabled = false;
 
         Debug.Log("LAMADONNA");

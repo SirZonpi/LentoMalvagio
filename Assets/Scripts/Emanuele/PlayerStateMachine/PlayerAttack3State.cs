@@ -6,6 +6,8 @@ using Cinemachine;
 
 public class PlayerAttack3State : PlayerBaseState
 {
+    public Player playerScript;
+
     public int cambia;
 
     public CinemachineVirtualCamera vcam;
@@ -21,6 +23,8 @@ public class PlayerAttack3State : PlayerBaseState
 
     public override void EnterState(PlayerStateManager player)
     {
+        playerScript.attaccoFisico += 2;
+
         cambia = 1;
 
         startOrtho = vcam.m_Lens.OrthographicSize; 

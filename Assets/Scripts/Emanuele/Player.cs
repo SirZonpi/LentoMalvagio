@@ -24,6 +24,8 @@ public class Player : Entity
 
     public bool powerUpSpada = false;
     public float durataPowerupSpada;
+    public int spadaFuocoBonus = 5;
+    public int attaccoSpadaPotenziato; //attaccobase + bonus fuoco;
     public float durataPowerupMana;
     public GameObject spadaInfuocata;
 
@@ -42,6 +44,7 @@ public class Player : Entity
 
     public GameObject scintille1;
     [SerializeField] Material playerMaterial;
+
 
     void Start()
     {
@@ -69,6 +72,8 @@ public class Player : Entity
         animTextAnime = animeText.GetComponent<Animator>();
 
         gameOverPanel.SetActive(false);
+
+        attaccoSpadaPotenziato = attaccoFisicoDefault + spadaFuocoBonus;
 
     }
 
@@ -152,14 +157,14 @@ public class Player : Entity
 
     public IEnumerator SpadaInfuocata()
     {
-
         iconaMelee.CambiaIconaSpada();
         powerUpSpada = true;
-        int tmp = attaccoFisico;
-        attaccoFisico += 5;
+        //int tmp = attaccoFisico;
+        attaccoFisico += spadaFuocoBonus;
         spadaInfuocata.SetActive(true);
         yield return new WaitForSeconds(durataPowerupSpada);
-        attaccoFisico = tmp;
+        //attaccoFisico = tmp;
+        attaccoFisico = attaccoFisicoDefault;
         spadaInfuocata.SetActive(false);
         powerUpSpada = false;
 

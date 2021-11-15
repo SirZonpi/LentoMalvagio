@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 
+
+
 public class PlayerIdleState : PlayerBaseState
 {
     public CinemachineVirtualCamera vcam;
@@ -15,9 +17,15 @@ public class PlayerIdleState : PlayerBaseState
     public GameObject scintille1;
 
 
-
     public override void EnterState(PlayerStateManager player)
     {
+        if (playerScript.powerUpSpada == false)
+        {
+            playerScript.attaccoFisico = playerScript.attaccoFisicoDefault;
+
+        }
+        else { playerScript.attaccoFisico = playerScript.attaccoSpadaPotenziato; }
+
         Debug.Log("CIAO A TUTTI DALLO STATE INIZIALE!");
 
         spadaCollider.enabled = false;

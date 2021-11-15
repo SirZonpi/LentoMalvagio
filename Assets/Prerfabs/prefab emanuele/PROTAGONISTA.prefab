@@ -9734,7 +9734,9 @@ MonoBehaviour:
   maxHealth: 50
   currentHealth: 0
   attaccoFisico: 2
+  attaccoFisicoDefault: 0
   attaccoMagico: 1
+  startPosition: {x: 0, y: 0, z: 0}
   psMorte: {fileID: 1206266120888398985, guid: 6c05388e90d21e04d88d0157101c0cf8, type: 3}
   minionsKilled: 2000
   prefabAnime: {fileID: 4524353274924026111, guid: 883ff8d558e4f7d4cb4b2eddb585a54b,
@@ -9871,6 +9873,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7392a4c1a78f1f41ad1fe65568a0455, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerScript: {fileID: 1407709769445985120}
   vcam: {fileID: 0}
   startOrtho: 0
   spadaCollider: {fileID: 2601262195503354239}
@@ -9886,6 +9889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d5f51952fa03e049879e9d01c34d6a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerScript: {fileID: 1407709769445985120}
   cambia: 0
   vaAdAttacco2: 0
   spadaCollider: {fileID: 2601262195503354239}
@@ -9911,6 +9915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31f2fd96601d02b43b7aefca7cd41031, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerScript: {fileID: 1407709769445985120}
   cambia: 0
   vaAdAttacco3: 0
   spadaCollider: {fileID: 2601262195503354239}
@@ -9928,6 +9933,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d28c7e958d56dc649a95b51f74f5b53a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerScript: {fileID: 1407709769445985120}
   cambia: 0
   vcam: {fileID: 0}
   zoomSpeed: 1
@@ -9955,6 +9961,7 @@ MonoBehaviour:
   vcam: {fileID: 0}
   startOrtho: 0
   cambia: 0
+  prespell: 0
 --- !u!114 &1772207347
 MonoBehaviour:
   m_ObjectHideFlags: 0

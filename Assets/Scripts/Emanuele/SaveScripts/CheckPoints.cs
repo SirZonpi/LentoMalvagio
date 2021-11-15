@@ -36,7 +36,7 @@ public class CheckPoints : MonoBehaviour
                 // cerchiamo l'ultimo checkpoint attivato per ottenre la posizione di spawn
                 if (cp.GetComponent<CheckPoints>().activated)                                                                   
                 {
-                    result = cp.transform.position;                                                                            
+                    result = cp.transform.position;        
                     break;
                 }
             }

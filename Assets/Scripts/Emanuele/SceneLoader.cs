@@ -10,14 +10,15 @@ public class SceneLoader : MonoBehaviour
 
     GameObject puntoSpawnLivello2;
 
-    Enemy[] enemies;
+   // Enemy[] enemies;
 
     private void Start()
     {
         player = GameManager.instance.player;
         puntoSpawnLivello2 = GameManager.instance.spawnLivello2;
 
-        enemies =  Enemy.FindObjectsOfType<Enemy>();
+     //   enemies =  Enemy.FindObjectsOfType<Enemy>();
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -27,14 +28,7 @@ public class SceneLoader : MonoBehaviour
             doOnce = false;
             SceneManager.LoadSceneAsync("Scena2", LoadSceneMode.Additive);
 
-            foreach (Enemy enemy in enemies)
-            {
-                //enemy.KillEnemy();
-
-               
-
-                //Destroy(enemy);
-            }
+          
 
             SceneManager.UnloadSceneAsync("Scena1");
 

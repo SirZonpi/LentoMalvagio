@@ -5707,6 +5707,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Porta 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3336740598975690330, guid: b2c3d84e121f5ea4b9d8c78fa7ad9b10,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2c3d84e121f5ea4b9d8c78fa7ad9b10, type: 3}
 --- !u!1 &1621707781 stripped
@@ -6619,6 +6624,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lupo
       objectReference: {fileID: 0}
+    - target: {fileID: 6945033471275948262, guid: f23807eec07088f479bb994aea126ba6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7722098352580035164, guid: f23807eec07088f479bb994aea126ba6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7106,12 +7116,12 @@ GameObject:
   - component: {fileID: 1983910282}
   - component: {fileID: 1983910281}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: trigger scena2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1983910281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7682,7 +7692,7 @@ PrefabInstance:
     - target: {fileID: 3605949975269264662, guid: ad5571c4b339c1f45ab56df036f6e6fb,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad5571c4b339c1f45ab56df036f6e6fb, type: 3}
@@ -7716,7 +7726,7 @@ Transform:
   - {fileID: 618515623}
   - {fileID: 5651719192112670306}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5651719192112670305
 GameObject:

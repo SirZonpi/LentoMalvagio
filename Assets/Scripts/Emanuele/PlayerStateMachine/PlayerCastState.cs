@@ -23,6 +23,13 @@ public class PlayerCastState : PlayerBaseState
 
     public override void EnterState(PlayerStateManager player)
     {
+        if (playerScript.powerUpSpada == false)
+        {
+            playerScript.attaccoFisico = playerScript.attaccoFisicoDefault;
+
+        }
+        else { playerScript.attaccoFisico = playerScript.attaccoSpadaPotenziato; }
+
         cambia = 0;
         prespell = 0;
         doOnce = true;

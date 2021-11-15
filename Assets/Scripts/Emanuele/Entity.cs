@@ -10,7 +10,10 @@ public class Entity : MonoBehaviour
     [SerializeField] int currentHealth; //vita current
 
     public int attaccoFisico; /////
+    public int attaccoFisicoDefault;
     public int attaccoMagico; //////
+
+    public Vector3 startPosition;
 
     public ParticleSystem psMorte;
 
@@ -29,6 +32,9 @@ public class Entity : MonoBehaviour
         //controlliamo se si tratta del player o di un nemico (non vogliamo hp bar sopra la testa del player
         //nota: fare refactoring e spostare dichiarazione dei delegate da Entity a Enemy
         Health = maxHealth;
+
+        attaccoFisicoDefault = attaccoFisico;
+
         if (GetComponent<Player>() == false) 
         {
             OnHealthAdded(this); // se questa istanza non è il player allora, una volta abilitata, richiamiamo subito l'evento e passiamo come argomento questa stessa entity
@@ -110,19 +116,34 @@ public class Entity : MonoBehaviour
         }
 
         RestoreHealth();
+        // transform.position = CheckPoints.GetActiveCheckPointPosition();
+        StartCoroutine(delay()); ////
+    }
+
+    public IEnumerator delay()
+    {
+        yield return new WaitForSeconds(3f);
         transform.position = CheckPoints.GetActiveCheckPointPosition();
+        yield return null;
+
     }
 
     private void OnDestroy()
     {
+        /*
         if (GetComponent<Player>() == false)
         {
+        */
             OnHealthRemoved(this); //una volta disabilitato richiamiamo subito l'evento e passiamo come argomento questa stessa entity
+        /*
             if (GetComponent<AudioSource>())
             {
                 GetComponent<AudioSource>().Stop();
             }
+        
         }
+        */
+
     }
 
     void Awake()
