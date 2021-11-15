@@ -46,7 +46,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmmisTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: ddfb0a186750a6a41b9f9755f201680f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -105,7 +105,7 @@ Material:
     - SoftEdgeColor: {r: 1, g: 1, b: 1, a: 0}
     - _BaseColor: {r: 0, g: 0.90932703, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissColor: {r: 1, g: 1, b: 1, a: 0}
+    - _EmissColor: {r: 0.8122524, g: 0.8122524, b: 0.8122524, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _HighColor: {r: 1, g: 1, b: 1, a: 0}
     - _LowColor: {r: 0, g: 0, b: 0, a: 0}

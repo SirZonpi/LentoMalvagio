@@ -4936,8 +4936,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 27138024}
-  m_LocalRotation: {x: -0.13614997, y: 0.14525323, z: -0.0817382, w: 0.9765672}
-  m_LocalPosition: {x: -1.3298073, y: -0.5775466, z: -27.498505}
+  m_LocalRotation: {x: -0.013658313, y: 0.014553873, z: -0.008175648, w: 0.99976736}
+  m_LocalPosition: {x: 155.603, y: 33.884624, z: 27.640518}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 638200119}
@@ -4963,6 +4963,7 @@ MonoBehaviour:
   m_CameraType: 0
   m_Cameras:
   - {fileID: 1303423104}
+  - {fileID: 0}
   m_RendererIndex: 0
   m_VolumeLayerMask:
     serializedVersion: 2
@@ -5000,11 +5001,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.1
+  near clip plane: 0
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 9
+  orthographic size: 11
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -5719,6 +5720,7 @@ GameObject:
   m_Component:
   - component: {fileID: 575433229}
   - component: {fileID: 575433228}
+  - component: {fileID: 575433230}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -5737,8 +5739,8 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.8679245, g: 0.8422829, b: 0.61000353, a: 1}
+  m_Intensity: 1.5
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -5747,10 +5749,10 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
+    m_Strength: 0.5
+    m_Bias: 1
+    m_NormalBias: 0
+    m_NearPlane: 10
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -5801,6 +5803,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 126.09, y: 234.2, z: 433.432}
+--- !u!114 &575433230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575433227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UsePipelineSettings: 0
 --- !u!1 &608988530
 GameObject:
   m_ObjectHideFlags: 0
@@ -5906,7 +5921,7 @@ Transform:
   m_GameObject: {fileID: 638200118}
   m_LocalRotation: {x: -0.0000006705523, y: 0.00000071525585, z: -0.0000004023312,
     w: 1}
-  m_LocalPosition: {x: -0.0000472394, y: -0.0000421163, z: 0.00000026683938}
+  m_LocalPosition: {x: -0.000059950475, y: -0.00005032923, z: -0.000010755517}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1663423371}
@@ -5935,8 +5950,8 @@ MonoBehaviour:
   m_Follow: {fileID: 8899801317460681149}
   m_Lens:
     FieldOfView: 40
-    OrthographicSize: 9
-    NearClipPlane: 0.1
+    OrthographicSize: 11
+    NearClipPlane: 0
     FarClipPlane: 5000
     Dutch: 0
     LensShift: {x: 0, y: 0}
@@ -6643,7 +6658,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 8
+  orthographic size: 11
   m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
@@ -11951,17 +11966,17 @@ PrefabInstance:
     - target: {fileID: 1784234964252660180, guid: a797669da55a3ae44949d2e3a61aa96e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.99
+      value: 158.2
       objectReference: {fileID: 0}
     - target: {fileID: 1784234964252660180, guid: a797669da55a3ae44949d2e3a61aa96e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 25.53
+      value: 21.04
       objectReference: {fileID: 0}
     - target: {fileID: 1784234964252660180, guid: a797669da55a3ae44949d2e3a61aa96e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.11
+      value: -63.1
       objectReference: {fileID: 0}
     - target: {fileID: 1784234964252660180, guid: a797669da55a3ae44949d2e3a61aa96e,
         type: 3}
