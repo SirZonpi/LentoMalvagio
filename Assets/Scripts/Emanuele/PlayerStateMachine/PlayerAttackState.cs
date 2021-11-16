@@ -86,7 +86,7 @@ public class PlayerAttackState : PlayerBaseState
         {
             Quaternion rotazione = new Quaternion (0, 45, 0, 90);
 
-            GameObject testo = Instantiate(textprefab, transform.position, rotazione);
+            //GameObject testo = Instantiate(textprefab, transform.position, rotazione);
            // testo.transform.GetChild(0).GetComponent<TextMeshPro>().SetText(textToDisplay);
 
              Debug.Log("CAMBIALO " + cambia);    

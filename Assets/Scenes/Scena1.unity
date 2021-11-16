@@ -3776,6 +3776,95 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 231.23038, y: 221.28075, z: 89.407974}
   m_Center: {x: 0, y: 110.64036, z: 0}
+--- !u!1001 &390978923
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 875581511743152856, guid: c90bd4afd30a1564cb4cf416cfdfedab,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1612499854632790930, guid: c90bd4afd30a1564cb4cf416cfdfedab,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7116481241944381454, guid: c90bd4afd30a1564cb4cf416cfdfedab,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7116481241944381454, guid: c90bd4afd30a1564cb4cf416cfdfedab,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 25.002
+      objectReference: {fileID: 0}
+    - target: {fileID: 7116481241944381454, guid: c90bd4afd30a1564cb4cf416cfdfedab,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -48.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 7116481241944381454, guid: c90bd4afd30a1564cb4cf416cfdfedab,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7116481241944381454, guid: c90bd4afd30a1564cb4cf416cfdfedab,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7116481241944381454, guid: c90bd4afd30a1564cb4cf416cfdfedab,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7116481241944381454, guid: c90bd4afd30a1564cb4cf416cfdfedab,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7116481241944381454, guid: c90bd4afd30a1564cb4cf416cfdfedab,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7116481241944381454, guid: c90bd4afd30a1564cb4cf416cfdfedab,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7116481241944381454, guid: c90bd4afd30a1564cb4cf416cfdfedab,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7116481241944381454, guid: c90bd4afd30a1564cb4cf416cfdfedab,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7211363714345359511, guid: c90bd4afd30a1564cb4cf416cfdfedab,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7604610891155440308, guid: c90bd4afd30a1564cb4cf416cfdfedab,
+        type: 3}
+      propertyPath: m_Name
+      value: GOBLIN_MELEE
+      objectReference: {fileID: 0}
+    - target: {fileID: 8908233422046166766, guid: c90bd4afd30a1564cb4cf416cfdfedab,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c90bd4afd30a1564cb4cf416cfdfedab, type: 3}
 --- !u!1 &397800348 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7953606483559150473, guid: 01975f656954e914cba492bb49422575,
@@ -20208,7 +20297,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1748454800
 PrefabInstance:
@@ -23737,7 +23826,7 @@ Transform:
   - {fileID: 1956932813}
   - {fileID: 1852945907}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2112448005 stripped
 GameObject:
@@ -24412,7 +24501,7 @@ Transform:
   - {fileID: 618515623}
   - {fileID: 5651719192112670306}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5651719192112670305
 GameObject:

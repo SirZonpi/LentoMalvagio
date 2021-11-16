@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -4936,8 +4936,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 27138024}
-  m_LocalRotation: {x: -0.14899291, y: 0.15897825, z: -0.089412406, w: 0.97187066}
-  m_LocalPosition: {x: -2.2208023, y: -1.1475649, z: -27.028248}
+  m_LocalRotation: {x: -0.00010614096, y: 0.000112920985, z: -0.00006350874, w: 1}
+  m_LocalPosition: {x: 7.842107, y: 6.681299, z: -29.876625}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 638200119}
@@ -5906,7 +5906,7 @@ Transform:
   m_GameObject: {fileID: 638200118}
   m_LocalRotation: {x: -0.0000006705523, y: 0.00000071525585, z: -0.0000004023312,
     w: 1}
-  m_LocalPosition: {x: -0.000046954, y: -0.000038190865, z: -0.0000027799551}
+  m_LocalPosition: {x: -0.00004577119, y: -0.000041013773, z: -0.000000018920302}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1663423371}
@@ -12143,6 +12143,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2601262195503354236, guid: a797669da55a3ae44949d2e3a61aa96e,
+        type: 3}
+      propertyPath: testoHitPrefab
+      value: 
+      objectReference: {fileID: 3716174470997068247, guid: 7172558a39d0f4c4ebdcfb381b2dd737,
+        type: 3}
     - target: {fileID: 3662562691060769328, guid: a797669da55a3ae44949d2e3a61aa96e,
         type: 3}
       propertyPath: vcam
