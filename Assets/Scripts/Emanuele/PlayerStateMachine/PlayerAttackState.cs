@@ -21,7 +21,7 @@ public class PlayerAttackState : PlayerBaseState
     public GameObject scintille1;
 
     public Rigidbody rb;
-    public float rollForce;
+    public float attForce;
     public float attDistance;
     public float frenataAtt;
 
@@ -60,7 +60,7 @@ public class PlayerAttackState : PlayerBaseState
     public IEnumerator AttDash() //quando il giocatore attacca fà uno scattino in avanti: vieni applicata una forza in avanti e poi una forza minore nella parte opposta
     {
         rb.velocity = new Vector3(0,0,0); //aggiunta mia
-        rb.AddForce(transform.forward * rollForce, ForceMode.Impulse);
+        rb.AddForce(transform.forward * attForce, ForceMode.Impulse);
         yield return new WaitForSeconds(attDistance);
         rb.AddForce(-transform.forward * frenataAtt, ForceMode.Impulse);
     }

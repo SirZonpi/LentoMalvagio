@@ -9,6 +9,7 @@ public class PlayerMove : MonoBehaviour
     public float MoveSpeed = 4f;
     public float roatitionSpeed = 0f;
     public float rollForce = 0f;
+    public float attForce = 0f;
     public float StandardMoveSpeed;
     public float rollDistance = 0.3f;
     public float timeRoll;
@@ -178,7 +179,7 @@ public class PlayerMove : MonoBehaviour
 
     IEnumerator AttDash() //quando il giocatore attacca fà uno scattino in avanti: vieni applicata una forza in avanti e poi una forza minore nella parte opposta
     {
-        rb.AddForce(transform.forward * rollForce, ForceMode.Impulse);
+        rb.AddForce(transform.forward * attForce, ForceMode.Impulse);
         yield return new WaitForSeconds(attDistance);
         rb.AddForce(-transform.forward * frenataAtt, ForceMode.Impulse);
     }
