@@ -63,18 +63,22 @@ public class PlayerCastState : PlayerBaseState
 
         spadaCollider.enabled = false;
 
+
         if (prespell==1 && doOnce)
         {
             GameObject preSpell = Instantiate(playerScript.preSpellPrefab, playerScript.spellSpawnPoint.transform.position, Quaternion.identity);
             doOnce = false;
         }
 
-        if (cambia==1)
+        if (cambia==1 && playerScript.puManaAttivo==false)
         {
             playerScript.CastSpell();
             player.SwitchState(player.idleState);
         }
-       
+        else if(cambia == 1)
+        {
+            playerScript.CastSpell();
+        }
         
 
         if (playerMove.siMuove)

@@ -113,11 +113,15 @@ public class Player : Entity
 
     }
 
+    public bool puManaAttivo; //////////
+
    public IEnumerator ManaPowerUp()
     {
+        puManaAttivo = true;////
         fireRate = 0;
         yield return new WaitForSeconds(durataPowerupMana);
         fireRate = 2;
+        puManaAttivo = false;//////
         yield return null;
 
     }
