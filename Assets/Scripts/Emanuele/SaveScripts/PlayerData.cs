@@ -17,7 +17,7 @@ public class PlayerData
         health = player.Health; //nota: per adesso è praticamente inutile perchè il checkpoint ricarica tutta la vita. 
         level = player.currentLevel;
 
-        difficoltà = player.livelloDifficolta; ///aggiunto oggi
+        difficoltà = player.livelloDifficolta; 
 
         position = new float[3];
         position[0] = CheckPoints.GetActiveCheckPointPosition().x;

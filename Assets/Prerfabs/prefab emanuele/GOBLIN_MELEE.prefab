@@ -939,15 +939,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3868d753fae8d0e428e477b3bed1f4e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 15
-  currentHealth: 15
+  maxHealth: 2
+  currentHealth: 2
   attaccoFisico: 0
   attaccoMagico: 0
+  startPosition: {x: 0, y: 0, z: 0}
   psMorte: {fileID: 1206266120888398985, guid: 5d35663872082b541b46d7d038510bd9, type: 3}
   animeDrop: 20
   animeDropPrefab: {fileID: 7925695913198141641, guid: 2d0e7ae1f8cd1404e88169f659a1dac7,
     type: 3}
-  startPosition: {x: 0, y: 0, z: 0}
   playerTransform: {fileID: 0}
   attackRadius: 3
   path:

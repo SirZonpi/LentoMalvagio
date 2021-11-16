@@ -6,6 +6,8 @@ using Cinemachine;
 
 public class PlayerWalkState : PlayerBaseState
 {
+    public Player playerScript;
+
     public CinemachineVirtualCamera vcam;
     public float startOrtho;
 
@@ -13,6 +15,12 @@ public class PlayerWalkState : PlayerBaseState
 
     public override void EnterState(PlayerStateManager player)
     {
+        if (playerScript.powerUpSpada == false)
+        {
+            playerScript.attaccoFisico = playerScript.attaccoFisicoDefault;
+
+        } else { playerScript.attaccoFisico = playerScript.attaccoSpadaPotenziato; }
+
         Debug.Log("CIAO A TUTTI DALLO STATE INIZIALE!");
 
         Animator anim = player.GetComponent<Animator>();

@@ -6,6 +6,8 @@ using Cinemachine;
 
 public class PlayerAttackState : PlayerBaseState
 {
+    public Player playerScript;
+
     public int cambia ;
     public int vaAdAttacco2 = 0;
     public Collider spadaCollider;
@@ -25,6 +27,12 @@ public class PlayerAttackState : PlayerBaseState
 
     public override void EnterState(PlayerStateManager player)
     {
+        if (playerScript.powerUpSpada == false)
+        {
+            playerScript.attaccoFisico = playerScript.attaccoFisicoDefault;
+
+        }
+        else { playerScript.attaccoFisico = playerScript.attaccoSpadaPotenziato; }
 
         cambia = 1;
         vaAdAttacco2 = 0;
@@ -79,7 +87,7 @@ public class PlayerAttackState : PlayerBaseState
             Quaternion rotazione = new Quaternion (0, 45, 0, 90);
 
             GameObject testo = Instantiate(textprefab, transform.position, rotazione);
-            testo.transform.GetChild(0).GetComponent<TextMeshPro>().SetText(textToDisplay);
+           // testo.transform.GetChild(0).GetComponent<TextMeshPro>().SetText(textToDisplay);
 
              Debug.Log("CAMBIALO " + cambia);    
            // player.SwitchState(player.attack2State);

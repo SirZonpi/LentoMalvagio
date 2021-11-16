@@ -13,6 +13,8 @@ public static class SaveSystem
 
         PlayerData data = new PlayerData(player);
 
+        Debug.Log("SCENASALVATA " + data.level);
+
         formatter.Serialize(fileStream, data);
         fileStream.Close();
 

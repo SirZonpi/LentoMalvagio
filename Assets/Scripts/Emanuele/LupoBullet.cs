@@ -22,7 +22,6 @@ public class LupoBullet : MonoBehaviour
 
         rb.AddForce(shootDir * speed, ForceMode.Impulse);
 
-        Debug.Log("DIOB");
     }
 
 

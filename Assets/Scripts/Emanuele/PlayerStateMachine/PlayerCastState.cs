@@ -11,14 +11,28 @@ public class PlayerCastState : PlayerBaseState
 
     public Collider spadaCollider;
 
+    //per la camera
     public CinemachineVirtualCamera vcam;
     public float startOrtho;
 
+    //variabili per animation events
     public int cambia;
+    public int prespell;
+    //per caricare il colpo di prespell una sola volta
+    bool doOnce;
 
     public override void EnterState(PlayerStateManager player)
     {
+        if (playerScript.powerUpSpada == false)
+        {
+            playerScript.attaccoFisico = playerScript.attaccoFisicoDefault;
+
+        }
+        else { playerScript.attaccoFisico = playerScript.attaccoSpadaPotenziato; }
+
         cambia = 0;
+        prespell = 0;
+        doOnce = true;
 
         Animator anim = player.GetComponent<Animator>();
 
@@ -49,6 +63,12 @@ public class PlayerCastState : PlayerBaseState
 
         spadaCollider.enabled = false;
 
+        if (prespell==1 && doOnce)
+        {
+            GameObject preSpell = Instantiate(playerScript.preSpellPrefab, playerScript.spellSpawnPoint.transform.position, Quaternion.identity);
+            doOnce = false;
+        }
+
         if (cambia==1)
         {
             playerScript.CastSpell();
@@ -69,5 +89,9 @@ public class PlayerCastState : PlayerBaseState
         cambia = _cambia;
     }
 
+    public void PreSpell(int _prespell)
+    {
+        prespell = _prespell;
+    }
 
 }

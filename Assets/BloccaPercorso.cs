@@ -21,4 +21,9 @@ public class BloccaPercorso : MonoBehaviour
         transform.position = startPos;
     }
 
+     void FixedUpdate()
+    {
+        transform.position = startPos;
+    }
+
 }

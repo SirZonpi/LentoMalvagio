@@ -13,6 +13,9 @@ public class LupoAttackState : LupoBaseState
         anim.SetBool("salta", false);
         anim.SetBool("damage", false);
         anim.SetBool("attacca", true);
+
+        lupoScript.isAttacking = true;
+
     }
 
     public override void onCollisionEnter(LupoStateManager lupo)
@@ -32,7 +35,7 @@ public class LupoAttackState : LupoBaseState
         {
 
             Vector3 dirToPlayer = transform.position - lupoScript.playerTransform.transform.position;
-            lupoScript.newPos = transform.position + dirToPlayer;
+            //lupoScript.newPos = transform.position + dirToPlayer;
             transform.rotation = Quaternion.Euler( direction);///
 
             lupo.SwitchState(lupo.jumpState);

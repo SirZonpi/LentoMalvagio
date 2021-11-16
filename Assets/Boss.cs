@@ -8,6 +8,8 @@ public class Boss : Enemy
 
     public BossStateManager stateman;
 
+    public GameObject tentacoli;
+
     public float coolDownTime=3;
     public float nextTimeFire=1;
 

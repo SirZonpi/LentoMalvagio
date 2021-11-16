@@ -10,7 +10,10 @@ public class Entity : MonoBehaviour
     [SerializeField] int currentHealth; //vita current
 
     public int attaccoFisico; /////
+    public int attaccoFisicoDefault;
     public int attaccoMagico; //////
+
+    public Vector3 startPosition;
 
     public ParticleSystem psMorte;
 
@@ -29,10 +32,15 @@ public class Entity : MonoBehaviour
         //controlliamo se si tratta del player o di un nemico (non vogliamo hp bar sopra la testa del player
         //nota: fare refactoring e spostare dichiarazione dei delegate da Entity a Enemy
         Health = maxHealth;
-        if (GetComponent<Player>() == false) 
+
+        attaccoFisicoDefault = attaccoFisico;
+
+        if (this.GetComponent<Player>() == false) 
         {
             OnHealthAdded(this); // se questa istanza non è il player allora, una volta abilitata, richiamiamo subito l'evento e passiamo come argomento questa stessa entity
         }
+
+
     }
 
     private void OnDisable()
@@ -99,12 +107,40 @@ public class Entity : MonoBehaviour
 
 
     public virtual void RespawnPlayer()
-    {      
+    {
+        GameManager.instance.oggettidaDisattivare.Add(this.gameObject); //aggiungiasmo a una lista i character disattivati per riattivarli all 'occorrenza
+        if (psMorte != null)
+        {
+            ParticleSystem ps = Instantiate(psMorte, transform.position, Quaternion.identity);
+            ps.transform.SetParent(null);
+            ps.Play();
+            Destroy(ps, 1.5f);
+        }
+
         RestoreHealth();
-        transform.position = CheckPoints.GetActiveCheckPointPosition();
+        // transform.position = CheckPoints.GetActiveCheckPointPosition();
+        StartCoroutine(delay()); ////
     }
 
-   
+    public IEnumerator delay()
+    {
+        yield return new WaitForSeconds(3f);
+        transform.position = CheckPoints.GetActiveCheckPointPosition();
+        yield return null;
+
+    }
+
+    public void OnDestroy()
+    { 
+       OnHealthRemoved(this); //una volta disabilitato richiamiamo subito l'evento e passiamo come argomento questa stessa entity
+
+    }
+
+    public void OnApplicationQuit() //altrimenti: inquitante errore in console quando esco da play mode
+    {
+        OnHealthRemoved(this);
+    }
+
     void Awake()
     {
         Health = maxHealth;

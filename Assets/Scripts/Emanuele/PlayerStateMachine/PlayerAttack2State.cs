@@ -5,6 +5,8 @@ using Cinemachine;
 
 public class PlayerAttack2State : PlayerBaseState
 {
+    public Player playerScript;
+
     public int cambia;
     public int vaAdAttacco3 = 0;
 
@@ -16,6 +18,7 @@ public class PlayerAttack2State : PlayerBaseState
 
     public override void EnterState(PlayerStateManager player)
     {
+        playerScript.attaccoFisico += 2;
 
         cambia = 1;
         vaAdAttacco3 = 0;

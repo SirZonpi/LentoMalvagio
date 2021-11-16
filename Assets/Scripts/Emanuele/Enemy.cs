@@ -7,7 +7,7 @@ public class Enemy : Entity
     public int animeDrop;
     public GameObject animeDropPrefab;
 
-    public Vector3 startPosition;
+ 
 
     //override dei metodi della classe base Entity
     public override void KillEnemy()
@@ -16,15 +16,18 @@ public class Enemy : Entity
 
         Vector3 spawnPos = new Vector3(transform.position.x, transform.position.y + 1.5f, transform.position.z);
         GameObject animeDropped = Instantiate(animeDropPrefab, spawnPos, Quaternion.identity,null) as GameObject;
-        // porcodio.transform.SetParent(null);
+
         animeDropped.SetActive(true);
         animeDropped.GetComponent<TestFollowPlayer>().thisEnemyDrop = animeDrop;
 
         //animeDropPrefab.GetComponent<TestFollowPlayer>().thisEnemyDrop = animeDrop;
         //animeDropPrefab.SetActive(true);
         //animeDropPrefab.transform.SetParent(null);
-        transform.position = startPosition;
+       
         base.KillEnemy();
+
+        transform.position = startPosition;
+
     }
 
     public override void TakeDamage(int amount)
