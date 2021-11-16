@@ -4936,8 +4936,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 27138024}
-  m_LocalRotation: {x: -0.14211336, y: 0.15162596, z: -0.08529718, w: 0.97444236}
-  m_LocalPosition: {x: -1.7434683, y: -0.8452134, z: -27.285427}
+  m_LocalRotation: {x: -0.14899291, y: 0.15897825, z: -0.089412406, w: 0.97187066}
+  m_LocalPosition: {x: -2.2208023, y: -1.1475649, z: -27.028248}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 638200119}
@@ -5906,7 +5906,7 @@ Transform:
   m_GameObject: {fileID: 638200118}
   m_LocalRotation: {x: -0.0000006705523, y: 0.00000071525585, z: -0.0000004023312,
     w: 1}
-  m_LocalPosition: {x: -0.00003824625, y: -0.0000412723, z: 0.000000016687409}
+  m_LocalPosition: {x: -0.000046954, y: -0.000038190865, z: -0.0000027799551}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1663423371}
@@ -6472,7 +6472,6 @@ GameObject:
   - component: {fileID: 1255762317}
   - component: {fileID: 1255762316}
   - component: {fileID: 1255762315}
-  - component: {fileID: 1255762319}
   m_Layer: 5
   m_Name: Canvas_CheckPoints
   m_TagString: savecanvas
@@ -6560,25 +6559,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!95 &1255762319
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1255762314}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bbd9c0b67553a4845bc506ad614530eb, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1290627899
 GameObject:
   m_ObjectHideFlags: 0

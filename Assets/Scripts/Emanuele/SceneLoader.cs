@@ -13,6 +13,8 @@ public class SceneLoader : MonoBehaviour
     public string scenaDaCaricare;
     public string scenaDaScaricare;
 
+    public string musica;
+
     private void Start()
     {
         player = GameManager.instance.player;
@@ -30,6 +32,8 @@ public class SceneLoader : MonoBehaviour
             SceneManager.UnloadSceneAsync(scenaDaScaricare);
 
             player.transform.position = puntoSpawnLivello2.transform.position;
+
+            GameManager.instance.audioManager.PlaySound(musica);
 
         }
     }

@@ -97,6 +97,12 @@ public class CheckPoints : MonoBehaviour
         if (other.gameObject.CompareTag("Player") && this.activated)
         {
             saveCanvas.SetActive(false);
+
+            if (ps != null)
+            {
+                ps.Stop();
+            }
+
         }
     }
 
