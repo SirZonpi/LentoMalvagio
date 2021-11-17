@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -197,6 +197,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4760d03b061b8fb4f89ad2becd06efce,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4760d03b061b8fb4f89ad2becd06efce, type: 3}
@@ -1612,6 +1617,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fda951d0a4a0e3543a3235fa55ab103b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fda951d0a4a0e3543a3235fa55ab103b, type: 3}
 --- !u!4 &43030854 stripped
@@ -1950,6 +1960,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fda951d0a4a0e3543a3235fa55ab103b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fda951d0a4a0e3543a3235fa55ab103b, type: 3}
@@ -2462,6 +2477,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fda951d0a4a0e3543a3235fa55ab103b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fda951d0a4a0e3543a3235fa55ab103b, type: 3}
 --- !u!4 &57300814 stripped
@@ -2711,6 +2731,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4760d03b061b8fb4f89ad2becd06efce,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4760d03b061b8fb4f89ad2becd06efce, type: 3}
@@ -3843,6 +3868,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5d5be69ed65895a49af3c79d6ff8b25c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d5be69ed65895a49af3c79d6ff8b25c, type: 3}
 --- !u!4 &100324817 stripped
@@ -4557,6 +4587,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fda951d0a4a0e3543a3235fa55ab103b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fda951d0a4a0e3543a3235fa55ab103b, type: 3}
 --- !u!4 &139200520 stripped
@@ -4774,6 +4809,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fda951d0a4a0e3543a3235fa55ab103b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fda951d0a4a0e3543a3235fa55ab103b, type: 3}
 --- !u!4 &167210858 stripped
@@ -4987,6 +5027,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5d5be69ed65895a49af3c79d6ff8b25c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d5be69ed65895a49af3c79d6ff8b25c, type: 3}
@@ -7531,6 +7576,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fda951d0a4a0e3543a3235fa55ab103b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fda951d0a4a0e3543a3235fa55ab103b, type: 3}
 --- !u!4 &306865922 stripped
@@ -7936,6 +7986,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fda951d0a4a0e3543a3235fa55ab103b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fda951d0a4a0e3543a3235fa55ab103b, type: 3}
 --- !u!4 &317521224 stripped
@@ -8054,6 +8109,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fda951d0a4a0e3543a3235fa55ab103b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fda951d0a4a0e3543a3235fa55ab103b, type: 3}
@@ -9248,6 +9308,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 278367f3dee56184da1a481152ef6b88,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 278367f3dee56184da1a481152ef6b88, type: 3}
 --- !u!4 &362891447 stripped
@@ -9351,6 +9416,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4f680750459c21b45a61e23c2e6de982,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f680750459c21b45a61e23c2e6de982, type: 3}
@@ -10689,6 +10759,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fda951d0a4a0e3543a3235fa55ab103b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fda951d0a4a0e3543a3235fa55ab103b, type: 3}
 --- !u!4 &405965234 stripped
@@ -11131,6 +11206,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5d5be69ed65895a49af3c79d6ff8b25c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d5be69ed65895a49af3c79d6ff8b25c, type: 3}
@@ -11962,6 +12042,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a008df3662a75624dbffd78df6a2ab8e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a008df3662a75624dbffd78df6a2ab8e, type: 3}
 --- !u!4 &443774022 stripped
@@ -12351,6 +12436,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fda951d0a4a0e3543a3235fa55ab103b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fda951d0a4a0e3543a3235fa55ab103b, type: 3}
@@ -12770,6 +12860,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cf3e7a72f3f1c3e4aa3f46e36ed205ae,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf3e7a72f3f1c3e4aa3f46e36ed205ae, type: 3}
 --- !u!4 &483918127 stripped
@@ -12893,6 +12988,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5d5be69ed65895a49af3c79d6ff8b25c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d5be69ed65895a49af3c79d6ff8b25c, type: 3}
@@ -13166,6 +13266,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fda951d0a4a0e3543a3235fa55ab103b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fda951d0a4a0e3543a3235fa55ab103b, type: 3}
@@ -14554,6 +14659,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3bea4132e787ab445acc6c6f6d9e3079,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bea4132e787ab445acc6c6f6d9e3079, type: 3}
 --- !u!4 &571076353 stripped
@@ -14852,6 +14962,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3bea4132e787ab445acc6c6f6d9e3079,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bea4132e787ab445acc6c6f6d9e3079, type: 3}
@@ -15169,6 +15284,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4760d03b061b8fb4f89ad2becd06efce,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4760d03b061b8fb4f89ad2becd06efce, type: 3}
@@ -15991,6 +16111,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 77124442c5572c643ab920708bb7fd5b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77124442c5572c643ab920708bb7fd5b, type: 3}
@@ -16887,6 +17012,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fda951d0a4a0e3543a3235fa55ab103b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fda951d0a4a0e3543a3235fa55ab103b, type: 3}
 --- !u!4 &650324691 stripped
@@ -17110,6 +17240,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 77124442c5572c643ab920708bb7fd5b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77124442c5572c643ab920708bb7fd5b, type: 3}
@@ -18443,6 +18578,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fda951d0a4a0e3543a3235fa55ab103b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fda951d0a4a0e3543a3235fa55ab103b, type: 3}
 --- !u!4 &690744762 stripped
@@ -19187,6 +19327,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fda951d0a4a0e3543a3235fa55ab103b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fda951d0a4a0e3543a3235fa55ab103b, type: 3}
@@ -20625,6 +20770,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3bea4132e787ab445acc6c6f6d9e3079,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bea4132e787ab445acc6c6f6d9e3079, type: 3}
 --- !u!4 &771858915 stripped
@@ -21622,6 +21772,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fda951d0a4a0e3543a3235fa55ab103b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fda951d0a4a0e3543a3235fa55ab103b, type: 3}
 --- !u!4 &824534243 stripped
@@ -22575,6 +22730,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 77124442c5572c643ab920708bb7fd5b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77124442c5572c643ab920708bb7fd5b, type: 3}
 --- !u!4 &844916972 stripped
@@ -22679,6 +22839,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 44d24a43bee8c4747a9e442e88676d45,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44d24a43bee8c4747a9e442e88676d45, type: 3}
@@ -23303,6 +23468,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4760d03b061b8fb4f89ad2becd06efce,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4760d03b061b8fb4f89ad2becd06efce, type: 3}
@@ -24327,6 +24497,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 278367f3dee56184da1a481152ef6b88,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 278367f3dee56184da1a481152ef6b88, type: 3}
@@ -26593,6 +26768,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fda951d0a4a0e3543a3235fa55ab103b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fda951d0a4a0e3543a3235fa55ab103b, type: 3}
 --- !u!4 &994781865 stripped
@@ -26941,6 +27121,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fda951d0a4a0e3543a3235fa55ab103b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fda951d0a4a0e3543a3235fa55ab103b, type: 3}
@@ -27433,6 +27618,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4760d03b061b8fb4f89ad2becd06efce,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4760d03b061b8fb4f89ad2becd06efce, type: 3}
 --- !u!4 &1024029822 stripped
@@ -27851,6 +28041,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 77124442c5572c643ab920708bb7fd5b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77124442c5572c643ab920708bb7fd5b, type: 3}
 --- !u!4 &1049580000 stripped
@@ -27955,6 +28150,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a008df3662a75624dbffd78df6a2ab8e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a008df3662a75624dbffd78df6a2ab8e, type: 3}
@@ -28320,6 +28520,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cf3e7a72f3f1c3e4aa3f46e36ed205ae,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf3e7a72f3f1c3e4aa3f46e36ed205ae, type: 3}
 --- !u!4 &1063517313 stripped
@@ -28601,6 +28806,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3bea4132e787ab445acc6c6f6d9e3079,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bea4132e787ab445acc6c6f6d9e3079, type: 3}
 --- !u!4 &1079635265 stripped
@@ -28804,6 +29014,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fda951d0a4a0e3543a3235fa55ab103b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fda951d0a4a0e3543a3235fa55ab103b, type: 3}
@@ -29898,6 +30113,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cf3e7a72f3f1c3e4aa3f46e36ed205ae,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf3e7a72f3f1c3e4aa3f46e36ed205ae, type: 3}
 --- !u!4 &1117365986 stripped
@@ -30002,6 +30222,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fda951d0a4a0e3543a3235fa55ab103b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fda951d0a4a0e3543a3235fa55ab103b, type: 3}
 --- !u!4 &1118442880 stripped
@@ -30105,6 +30330,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fda951d0a4a0e3543a3235fa55ab103b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fda951d0a4a0e3543a3235fa55ab103b, type: 3}
@@ -31775,6 +32005,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a008df3662a75624dbffd78df6a2ab8e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a008df3662a75624dbffd78df6a2ab8e, type: 3}
 --- !u!4 &1155901478 stripped
@@ -31878,6 +32113,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3bea4132e787ab445acc6c6f6d9e3079,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bea4132e787ab445acc6c6f6d9e3079, type: 3}
@@ -32392,6 +32632,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fda951d0a4a0e3543a3235fa55ab103b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fda951d0a4a0e3543a3235fa55ab103b, type: 3}
 --- !u!4 &1173545031 stripped
@@ -32588,6 +32833,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fda951d0a4a0e3543a3235fa55ab103b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fda951d0a4a0e3543a3235fa55ab103b, type: 3}
@@ -33967,6 +34217,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fda951d0a4a0e3543a3235fa55ab103b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fda951d0a4a0e3543a3235fa55ab103b, type: 3}
 --- !u!4 &1240889623 stripped
@@ -34667,6 +34922,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fda951d0a4a0e3543a3235fa55ab103b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fda951d0a4a0e3543a3235fa55ab103b, type: 3}
 --- !u!4 &1264275023 stripped
@@ -35317,6 +35577,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4760d03b061b8fb4f89ad2becd06efce,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4760d03b061b8fb4f89ad2becd06efce, type: 3}
 --- !u!4 &1305484513 stripped
@@ -35420,6 +35685,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fda951d0a4a0e3543a3235fa55ab103b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fda951d0a4a0e3543a3235fa55ab103b, type: 3}
@@ -35762,6 +36032,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4f680750459c21b45a61e23c2e6de982,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f680750459c21b45a61e23c2e6de982, type: 3}
@@ -37036,6 +37311,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fda951d0a4a0e3543a3235fa55ab103b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fda951d0a4a0e3543a3235fa55ab103b, type: 3}
 --- !u!4 &1388095103 stripped
@@ -37597,6 +37877,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fda951d0a4a0e3543a3235fa55ab103b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fda951d0a4a0e3543a3235fa55ab103b, type: 3}
@@ -38487,6 +38772,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fda951d0a4a0e3543a3235fa55ab103b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fda951d0a4a0e3543a3235fa55ab103b, type: 3}
 --- !u!4 &1434155273 stripped
@@ -38932,6 +39222,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fda951d0a4a0e3543a3235fa55ab103b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fda951d0a4a0e3543a3235fa55ab103b, type: 3}
 --- !u!4 &1443232023 stripped
@@ -39375,6 +39670,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fda951d0a4a0e3543a3235fa55ab103b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fda951d0a4a0e3543a3235fa55ab103b, type: 3}
@@ -40915,6 +41215,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fda951d0a4a0e3543a3235fa55ab103b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fda951d0a4a0e3543a3235fa55ab103b, type: 3}
@@ -43249,6 +43554,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fda951d0a4a0e3543a3235fa55ab103b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fda951d0a4a0e3543a3235fa55ab103b, type: 3}
 --- !u!4 &1609302310 stripped
@@ -44130,6 +44440,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3bea4132e787ab445acc6c6f6d9e3079,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bea4132e787ab445acc6c6f6d9e3079, type: 3}
 --- !u!4 &1663342736 stripped
@@ -44846,6 +45161,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a008df3662a75624dbffd78df6a2ab8e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a008df3662a75624dbffd78df6a2ab8e, type: 3}
 --- !u!4 &1691883212 stripped
@@ -45319,6 +45639,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3bea4132e787ab445acc6c6f6d9e3079,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bea4132e787ab445acc6c6f6d9e3079, type: 3}
@@ -45925,6 +46250,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fda951d0a4a0e3543a3235fa55ab103b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fda951d0a4a0e3543a3235fa55ab103b, type: 3}
@@ -46626,6 +46956,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4760d03b061b8fb4f89ad2becd06efce,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4760d03b061b8fb4f89ad2becd06efce, type: 3}
@@ -47603,6 +47938,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cf3e7a72f3f1c3e4aa3f46e36ed205ae,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf3e7a72f3f1c3e4aa3f46e36ed205ae, type: 3}
@@ -50141,6 +50481,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fda951d0a4a0e3543a3235fa55ab103b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fda951d0a4a0e3543a3235fa55ab103b, type: 3}
 --- !u!4 &1908340040 stripped
@@ -50333,6 +50678,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fda951d0a4a0e3543a3235fa55ab103b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fda951d0a4a0e3543a3235fa55ab103b, type: 3}
@@ -50736,6 +51086,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fda951d0a4a0e3543a3235fa55ab103b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fda951d0a4a0e3543a3235fa55ab103b, type: 3}
@@ -51776,6 +52131,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f63b9c2d38d85c4458726aa5dcec8ac8,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f63b9c2d38d85c4458726aa5dcec8ac8, type: 3}
 --- !u!4 &1957797146 stripped
@@ -52481,6 +52841,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 278367f3dee56184da1a481152ef6b88,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 278367f3dee56184da1a481152ef6b88, type: 3}
 --- !u!4 &1972542040 stripped
@@ -52893,6 +53258,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fda951d0a4a0e3543a3235fa55ab103b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fda951d0a4a0e3543a3235fa55ab103b, type: 3}
 --- !u!4 &1985922457 stripped
@@ -53089,6 +53459,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5d5be69ed65895a49af3c79d6ff8b25c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d5be69ed65895a49af3c79d6ff8b25c, type: 3}
@@ -53389,6 +53764,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4760d03b061b8fb4f89ad2becd06efce,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4760d03b061b8fb4f89ad2becd06efce, type: 3}
 --- !u!4 &2004992552 stripped
@@ -53430,7 +53810,7 @@ GameObject:
   - component: {fileID: 2010779268}
   m_Layer: 0
   m_Name: PortaMesh (1)
-  m_TagString: Untagged
+  m_TagString: Ostacolo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -53766,6 +54146,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fda951d0a4a0e3543a3235fa55ab103b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fda951d0a4a0e3543a3235fa55ab103b, type: 3}
@@ -54143,6 +54528,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fda951d0a4a0e3543a3235fa55ab103b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fda951d0a4a0e3543a3235fa55ab103b, type: 3}
@@ -54662,6 +55052,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fda951d0a4a0e3543a3235fa55ab103b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fda951d0a4a0e3543a3235fa55ab103b, type: 3}
@@ -57412,7 +57807,7 @@ GameObject:
   - component: {fileID: 5651719191240225970}
   m_Layer: 0
   m_Name: Porta
-  m_TagString: Untagged
+  m_TagString: Ostacolo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
