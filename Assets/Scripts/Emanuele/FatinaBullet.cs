@@ -9,6 +9,7 @@ public class FatinaBullet : MonoBehaviour
     Rigidbody rb;
     float speed = 25f;
 
+    public int attacco;
 
     public void Setup(Vector3 shootDir)
     {

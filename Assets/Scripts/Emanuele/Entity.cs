@@ -118,13 +118,13 @@ public class Entity : MonoBehaviour
         }
 
         RestoreHealth();
-        // transform.position = CheckPoints.GetActiveCheckPointPosition();
-        StartCoroutine(delay()); ////
+         transform.position = CheckPoints.GetActiveCheckPointPosition();
+        //StartCoroutine(delay()); ////
     }
 
     public IEnumerator delay()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
         transform.position = CheckPoints.GetActiveCheckPointPosition();
         yield return null;
 

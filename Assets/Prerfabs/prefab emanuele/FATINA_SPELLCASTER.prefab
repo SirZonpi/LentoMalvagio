@@ -169,10 +169,10 @@ MonoBehaviour:
   currentHealth: 4
   attaccoFisico: 0
   attaccoFisicoDefault: 0
-  attaccoMagico: 0
+  attaccoMagico: 2
   startPosition: {x: 0, y: 0, z: 0}
   psMorte: {fileID: 1206266120888398985, guid: 5d35663872082b541b46d7d038510bd9, type: 3}
-  animeDrop: 15
+  animeDrop: 30
   animeDropPrefab: {fileID: 7925695913198141641, guid: 2d0e7ae1f8cd1404e88169f659a1dac7,
     type: 3}
   enemyDistance: 4
