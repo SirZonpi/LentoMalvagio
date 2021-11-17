@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     public AudioManager audioManager;
     public Player player;
 
+    public Vector3 playerStartPos;
+
     public float defaultCam;
 
     [SerializeField] GameObject panelPause;
@@ -47,6 +49,8 @@ public class GameManager : MonoBehaviour
         }
 
         // levelToLoad = player.currentLevel; //////////////////////////////////////
+
+        playerStartPos = player.transform.position; //
 
     }
 

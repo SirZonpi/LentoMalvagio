@@ -9,7 +9,8 @@ public class TimeManager : MonoBehaviour
 
     private void Update()
     {
-        Time.timeScale += ( 1 / slowdownLenght) * Time.unscaledDeltaTime;
+
+        Time.timeScale += ( 1f / slowdownLenght) * Time.unscaledDeltaTime;
         Time.timeScale = Mathf.Clamp(Time.timeScale, 0f, 1f);
 
     }
@@ -18,7 +19,7 @@ public class TimeManager : MonoBehaviour
     {
         Time.timeScale = slowdownFactor; // 1/ 0.05 = 20, il tempo scorre 20 volte più lentamente del normale
 
-        Time.fixedDeltaTime = Time.timeScale * 0.02f;
+        //Time.fixedDeltaTime = Time.timeScale * 0.02f;
 
     }
 

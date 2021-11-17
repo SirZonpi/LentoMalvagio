@@ -265,12 +265,13 @@ MonoBehaviour:
   maxHealth: 1
   currentHealth: 0
   attaccoFisico: 0
+  attaccoFisicoDefault: 0
   attaccoMagico: 0
+  startPosition: {x: 0, y: 0, z: 0}
   psMorte: {fileID: 1206266120888398985, guid: 5d35663872082b541b46d7d038510bd9, type: 3}
   animeDrop: 10
   animeDropPrefab: {fileID: 7925695913198141641, guid: 2d0e7ae1f8cd1404e88169f659a1dac7,
     type: 3}
-  startPosition: {x: 0, y: 0, z: 0}
   _agent: {fileID: 2768560847067052058}
   enemyDistanceRun: 4
   playerTransform: {fileID: 0}
@@ -476,7 +477,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bc8b388a8a2cfd44d911516f50d54de0, type: 2}
+  - {fileID: 2100000, guid: 72ef0e6a308df6e448fe6588ef56c3d0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

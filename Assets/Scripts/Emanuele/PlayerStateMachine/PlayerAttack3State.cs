@@ -38,9 +38,7 @@ public class PlayerAttack3State : PlayerBaseState
         //anim.SetBool("attacca", true);
         anim.SetBool("damage", false);
 
-
-       // vcam.m_Lens.OrthographicSize = Mathf.MoveTowards(vcam.m_Lens.OrthographicSize, 2, 10 * Time.deltaTime);
-       GameManager.instance.timeManager.SlowMotion();
+        GameManager.instance.timeManager.SlowMotion();
 
 
     }
