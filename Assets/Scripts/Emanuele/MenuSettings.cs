@@ -13,6 +13,7 @@ public class MenuSettings : MonoBehaviour
     public Slider sliderSfx;
 
     public GameObject panelOpzioni;
+    public  GameObject panelCredits;
 
     public void SetVolumeMusica(float sliderValue)
     {
@@ -36,6 +37,16 @@ public class MenuSettings : MonoBehaviour
         panelOpzioni.SetActive(false);
     }
 
+    public void ChiudiPannelloCredits()
+    {
+        panelCredits.SetActive(false);
+    }
+
+    public void ApriPannelloCredits()
+    {
+        panelCredits.SetActive(true);
+    }
+
     private void Start()
     {
 
@@ -48,11 +59,10 @@ public class MenuSettings : MonoBehaviour
         if(panelOpzioni!=null)
         panelOpzioni.SetActive(false);
 
-    }
 
-    private void Update()
-    {
-        
+        if (panelCredits != null)
+        panelOpzioni.SetActive(false);
+
     }
 
 

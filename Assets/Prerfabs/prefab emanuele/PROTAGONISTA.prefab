@@ -9765,6 +9765,7 @@ MonoBehaviour:
   colpito: 0
   scintille1: {fileID: 1877672496}
   playerMaterial: {fileID: 2100000, guid: 8581fb225e0e1eb4a9b1adc26a42db58, type: 2}
+  playercollisionman: {fileID: 7151876850120109593}
   puManaAttivo: 0
 --- !u!114 &1407709769445985123
 MonoBehaviour:
@@ -10089,7 +10090,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.18360804, y: 0.14275143, z: 1.3497535}
+  m_Size: {x: 0.24, y: 0.44, z: 1.3497535}
   m_Center: {x: -0.004378838, y: 0.078827746, z: -0.6429494}
 --- !u!114 &2601262195503354236
 MonoBehaviour:
@@ -10798,6 +10799,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1407709769445985120}
+  doOnce: 0
 --- !u!1 &7348629301845630829
 GameObject:
   m_ObjectHideFlags: 0

@@ -941,7 +941,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 6
   currentHealth: 6
-  attaccoFisico: 0
+  attaccoFisico: 2
   attaccoFisicoDefault: 0
   attaccoMagico: 0
   startPosition: {x: 0, y: 0, z: 0}

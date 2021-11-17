@@ -6,27 +6,34 @@ public class PlayerCollisionManager : MonoBehaviour
 {
     [SerializeField]Player player;
 
-    bool doOnce;
+    public bool doOnce;
 
     private void OnTriggerEnter(Collider other)
     {
+        doOnce = false;
+
         if (other.CompareTag("Trappola") )
         {
             player.TakeDamage(2);
           
         }
         
-        if (other.CompareTag("EnemyAttack"))
+        if (other.CompareTag("EnemyAttack") && doOnce==false)
         {
-            //Debug.Log("UNAHIT");
+            Debug.Log("UNAHIT");
 
             if (other.gameObject.transform.root.GetComponent<Enemy>())
             {
+                doOnce = true;
+
                 Enemy enemy = other.gameObject.transform.root.GetComponent<Enemy>();
                 player.TakeDamage(enemy.attaccoFisico);
+
+                
             }
 
         }
+
         else if (other.CompareTag("SpellFatina"))
         {
             FatinaBullet fb = other.GetComponent<FatinaBullet>();
@@ -41,6 +48,7 @@ public class PlayerCollisionManager : MonoBehaviour
 
         }
 
+        
 
     }
 
