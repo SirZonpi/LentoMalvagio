@@ -9,16 +9,20 @@ public class SceneLoader : MonoBehaviour
     Player player;
 
     GameObject puntoSpawnLivello2;
+    GameObject puntoSpawnLivelloBoss;
 
     public string scenaDaCaricare;
     public string scenaDaScaricare;
 
     public string musica;
 
+    public GameObject panelLivelloSuperato;
+
     private void Start()
     {
         player = GameManager.instance.player;
         puntoSpawnLivello2 = GameManager.instance.spawnLivello2;
+        puntoSpawnLivelloBoss = GameManager.instance.spawnLivelloBoss;
 
     }
 
@@ -31,7 +35,17 @@ public class SceneLoader : MonoBehaviour
 
             SceneManager.UnloadSceneAsync(scenaDaScaricare);
 
-            player.transform.position = puntoSpawnLivello2.transform.position;
+            if (scenaDaCaricare == "Scena2")
+            {
+                player.transform.position = puntoSpawnLivello2.transform.position;
+                panelLivelloSuperato.SetActive(true);
+            }
+
+            else
+            {
+                player.transform.position = puntoSpawnLivelloBoss.transform.position;
+                panelLivelloSuperato.SetActive(true);
+            }
 
             GameManager.instance.audioManager.PlaySound(musica);
 

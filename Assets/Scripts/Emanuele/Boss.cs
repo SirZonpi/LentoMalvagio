@@ -6,6 +6,8 @@ public class Boss : Enemy
 {
     public int rand;
 
+    public BarraBoss hpBar;
+
     public BossStateManager stateman;
 
     public GameObject tentacoli;
@@ -29,7 +31,8 @@ public class Boss : Enemy
 
         rb.AddForce(transform.forward * 8, ForceMode.Impulse);
 
-        
+        SpellBoss sb = spell.GetComponent<SpellBoss>();
+        sb.attacco = attaccoMagico;
 
         Destroy(spell, 5f);
     }
@@ -45,10 +48,7 @@ public class Boss : Enemy
         }
     }
 
-    public void TentacoliSide()
-    {
-
-    }
+   
 
     public void BossGira()
     {
@@ -67,18 +67,20 @@ public class Boss : Enemy
 
     }
 
+    public override void TakeDamage(int amount)
+    {
+        hpBar.SetHealth(Health);
+        base.TakeDamage(amount);
+    }
+
     void Start()
     {
         startRot = transform.rotation;
         player = GameManager.instance.player;
+
+        hpBar.SetMaxHealth(maxHealth);
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-         
-          //  Cooldown();
-         
-        
-    }
+  
 }

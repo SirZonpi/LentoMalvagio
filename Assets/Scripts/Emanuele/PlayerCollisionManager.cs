@@ -48,7 +48,13 @@ public class PlayerCollisionManager : MonoBehaviour
 
         }
 
-        
+        else if (other.CompareTag("Spellboss"))
+        {
+            SpellBoss sb = other.GetComponent<SpellBoss>();
+            player.TakeDamage(sb.attacco);
+
+        }
+
 
     }
 

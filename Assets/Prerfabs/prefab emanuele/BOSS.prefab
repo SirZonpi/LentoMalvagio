@@ -4380,6 +4380,51 @@ Transform:
   m_Father: {fileID: 4185581180049021845}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0.0000000018045657, y: -0.00009826602, z: -6.1741727e-15}
+--- !u!1 &4033996126189114608
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8884754099453441327}
+  - component: {fileID: 1707609060492161613}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8884754099453441327
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4033996126189114608}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.15340042, y: 2.3674278, z: -0.016349792}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 9122094837950656998}
+  m_RootOrder: 29
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &1707609060492161613
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4033996126189114608}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.34
+  m_Height: 5.87
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4044256407639644868
 GameObject:
   m_ObjectHideFlags: 0
@@ -8656,6 +8701,7 @@ Transform:
   - {fileID: 558161904379196313}
   - {fileID: 7832656309700669232}
   - {fileID: 6510561170828521658}
+  - {fileID: 8884754099453441327}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8690,17 +8736,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ad292f3295612647977878abef071e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1
+  maxHealth: 50
   currentHealth: 0
-  attaccoFisico: 10
+  attaccoFisico: 2
   attaccoFisicoDefault: 0
-  attaccoMagico: 5
+  attaccoMagico: 3
   startPosition: {x: 0, y: 0, z: 0}
   psMorte: {fileID: 0}
   animeDrop: 300
   animeDropPrefab: {fileID: 7925695913198141641, guid: 2d0e7ae1f8cd1404e88169f659a1dac7,
     type: 3}
   rand: 0
+  hpBar: {fileID: 0}
   stateman: {fileID: 2751745466616092629}
   tentacoli: {fileID: 6869029701103218045}
   coolDownTime: 3

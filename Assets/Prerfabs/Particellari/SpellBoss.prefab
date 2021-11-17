@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8520991603075799968}
   m_Layer: 0
   m_Name: SpellBoss
-  m_TagString: Untagged
+  m_TagString: Spellboss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4798,3 +4798,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77e2f7ee46a3ba94d8f94568fa14d652, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attacco: 0
