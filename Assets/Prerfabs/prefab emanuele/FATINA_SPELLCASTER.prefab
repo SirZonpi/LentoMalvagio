@@ -165,8 +165,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 855e5f9a64143134388ec56d750170e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 15
-  currentHealth: 0
+  maxHealth: 4
+  currentHealth: 4
   attaccoFisico: 0
   attaccoFisicoDefault: 0
   attaccoMagico: 0

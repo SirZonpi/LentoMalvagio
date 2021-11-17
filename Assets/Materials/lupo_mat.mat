@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Lupo_MAT
+  m_Name: lupo_mat
   m_Shader: {fileID: -6465566751694194690, guid: a4aec2d89ff109847a39df6cf26a33e5,
     type: 3}
   m_ShaderKeywords: 

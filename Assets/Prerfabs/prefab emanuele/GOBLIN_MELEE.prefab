@@ -939,8 +939,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3868d753fae8d0e428e477b3bed1f4e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 2
-  currentHealth: 2
+  maxHealth: 6
+  currentHealth: 6
   attaccoFisico: 0
   attaccoFisicoDefault: 0
   attaccoMagico: 0
