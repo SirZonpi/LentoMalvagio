@@ -9765,6 +9765,7 @@ MonoBehaviour:
   colpito: 0
   scintille1: {fileID: 1877672496}
   playerMaterial: {fileID: 2100000, guid: 8581fb225e0e1eb4a9b1adc26a42db58, type: 2}
+  puManaAttivo: 0
 --- !u!114 &1407709769445985123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9780,10 +9781,11 @@ MonoBehaviour:
   MoveSpeed: 4
   roatitionSpeed: 100
   rollForce: 8
+  attForce: 5
   StandardMoveSpeed: 4
   rollDistance: 0.3
   timeRoll: 1
-  attDistance: 0.05
+  attDistance: 0.03
   frenataRoll: 2
   frenataAtt: 4
   CameraPrincipale: {fileID: 0}
@@ -9832,6 +9834,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vcam: {fileID: 0}
   startOrtho: 0
+  defaultCam: 9
   playerScript: {fileID: 1407709769445985120}
   spadaCollider: {fileID: 2601262195503354239}
   scintille1: {fileID: 1877672496}
@@ -9902,9 +9905,9 @@ MonoBehaviour:
   startOrtho: 0
   scintille1: {fileID: 1877672496}
   rb: {fileID: 1407709769445985147}
-  rollForce: 6
-  attDistance: 1
-  frenataAtt: 0
+  attForce: 6
+  attDistance: 0.03
+  frenataAtt: 3
 --- !u!114 &1407709769445985124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10104,6 +10107,8 @@ MonoBehaviour:
   player: {fileID: 1407709769445985120}
   scintille1: {fileID: 1877672496}
   scintille2: {fileID: 394147058}
+  testoHitPrefab: {fileID: 3716174470997068247, guid: 7172558a39d0f4c4ebdcfb381b2dd737,
+    type: 3}
 --- !u!1 &2780310337982707326
 GameObject:
   m_ObjectHideFlags: 0

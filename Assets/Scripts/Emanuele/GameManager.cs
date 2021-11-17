@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     public AudioManager audioManager;
     public Player player;
 
+    public float defaultCam;
+
     [SerializeField] GameObject panelPause;
     public static bool isPause = false;
     public AudioMixerGroup musica;

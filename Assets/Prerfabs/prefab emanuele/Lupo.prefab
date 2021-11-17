@@ -1604,7 +1604,6 @@ MonoBehaviour:
   - {fileID: 357098018994964020}
   - {fileID: 2631255057235958347}
   isAttacking: 0
-  lupoStateman: {fileID: 5028900208993819981}
   time: 0
 --- !u!114 &5028900208993819977
 MonoBehaviour:

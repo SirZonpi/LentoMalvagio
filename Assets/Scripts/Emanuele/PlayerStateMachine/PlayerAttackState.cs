@@ -67,9 +67,9 @@ public class PlayerAttackState : PlayerBaseState
 
     public override void UpdateState(PlayerStateManager player)
     {
-        if (vcam.m_Lens.OrthographicSize != 8)
+        if (vcam.m_Lens.OrthographicSize != startOrtho)
         {
-            vcam.m_Lens.OrthographicSize = Mathf.MoveTowards(vcam.m_Lens.OrthographicSize, 8, 10 * Time.deltaTime);
+            vcam.m_Lens.OrthographicSize = Mathf.MoveTowards(vcam.m_Lens.OrthographicSize, startOrtho, 10 * Time.deltaTime);
 
         }
 
@@ -115,10 +115,12 @@ public class PlayerAttackState : PlayerBaseState
 
         }
 
-        if (playerMove.siMuove == true)
+        /*
+        if (playerMove.siMuove == true) //TOLTO DESSO
         {
             player.SwitchState(player.walkState);
         }
+        */
 
     }
 

@@ -9,6 +9,7 @@ public class PlayerIdleState : PlayerBaseState
 {
     public CinemachineVirtualCamera vcam;
     public float startOrtho;
+    public float defaultCam;
 
     public Player playerScript;
 
@@ -39,6 +40,7 @@ public class PlayerIdleState : PlayerBaseState
         anim.SetBool("damage", false);
 
         startOrtho = vcam.m_Lens.OrthographicSize;
+        defaultCam = GameManager.instance.defaultCam;
 
 
     }
@@ -57,9 +59,9 @@ public class PlayerIdleState : PlayerBaseState
 
         //scintille1.SetActive(false) ;
 
-        if(vcam.m_Lens.OrthographicSize != 8 )
+        if(vcam.m_Lens.OrthographicSize != defaultCam )
         {
-            vcam.m_Lens.OrthographicSize = Mathf.MoveTowards(vcam.m_Lens.OrthographicSize, 8, 10 * Time.deltaTime);
+            vcam.m_Lens.OrthographicSize = Mathf.MoveTowards(vcam.m_Lens.OrthographicSize, defaultCam, 10 * Time.deltaTime);
             
         }
 

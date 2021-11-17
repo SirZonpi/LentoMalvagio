@@ -47,10 +47,15 @@ public class PlayerWalkState : PlayerBaseState
     {
         spadaCollider.enabled = false;
 
-        if (vcam.m_Lens.OrthographicSize != 8)
+        if (vcam.m_Lens.OrthographicSize != startOrtho)
         {
-            vcam.m_Lens.OrthographicSize = Mathf.MoveTowards(vcam.m_Lens.OrthographicSize, 8, 10 * Time.deltaTime);
+            vcam.m_Lens.OrthographicSize = Mathf.MoveTowards(vcam.m_Lens.OrthographicSize, startOrtho, 10 * Time.deltaTime);
 
+        }
+
+        if (Input.GetMouseButtonDown(0)) //AGGIUNTO ADESSO
+        {
+            player.SwitchState(player.attackState); 
         }
 
         PlayerMove playerMove = GetComponent<PlayerMove>();
