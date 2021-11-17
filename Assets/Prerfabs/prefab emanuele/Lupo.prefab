@@ -1578,12 +1578,13 @@ MonoBehaviour:
   maxHealth: 15
   currentHealth: 0
   attaccoFisico: 0
+  attaccoFisicoDefault: 0
   attaccoMagico: 0
+  startPosition: {x: 0, y: 0, z: 0}
   psMorte: {fileID: 1206266120888398985, guid: 5d35663872082b541b46d7d038510bd9, type: 3}
   animeDrop: 25
   animeDropPrefab: {fileID: 7925695913198141641, guid: 2d0e7ae1f8cd1404e88169f659a1dac7,
     type: 3}
-  startPosition: {x: 0, y: 0, z: 0}
   playerTransform: {fileID: 0}
   attackRadius: 7
   timer: 0
@@ -1603,6 +1604,7 @@ MonoBehaviour:
   - {fileID: 357098018994964020}
   - {fileID: 2631255057235958347}
   isAttacking: 0
+  lupoStateman: {fileID: 5028900208993819981}
   time: 0
 --- !u!114 &5028900208993819977
 MonoBehaviour:

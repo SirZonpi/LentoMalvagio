@@ -11,6 +11,8 @@ public class LupoBullet : MonoBehaviour
 
     Vector3 bulletTargetScale = new Vector3(1, 1, 1);
 
+    LupoStateManager lpm;
+
     public void Setup(Vector3 shootDir)
     {
         direzione = shootDir;
@@ -34,8 +36,21 @@ public class LupoBullet : MonoBehaviour
 
         while (elapsedTime < waitTime)
         {
-            elapsedTime += Time.deltaTime;
-            transform.localScale = Vector3.Lerp(transform.localScale, bulletTargetScale, elapsedTime / waitTime);
+           
+
+            if(lpm.currentLupoState!= lpm.attackState)
+            {
+                
+                Destroy(this.gameObject);
+               // this.enabled = false;
+                break;
+            }
+            else
+            {
+                elapsedTime += Time.deltaTime;
+                transform.localScale = Vector3.Lerp(transform.localScale, bulletTargetScale, elapsedTime / waitTime);
+            }
+
             yield return null;
 
         }
@@ -54,20 +69,23 @@ public class LupoBullet : MonoBehaviour
 
     private void OnEnable()
     {
+        lpm = transform.parent.GetComponent<LupoStateManager>(); ///
        // StartCoroutine(ScaleBullet());
         StartCoroutine(disattiva());
     }
 
     private void Awake()
     {
-        playerTransform = GameObject.FindGameObjectWithTag("Player");
+        //playerTransform = GameObject.FindGameObjectWithTag("Player");
+        playerTransform = GameManager.instance.player.transform.gameObject;
+
     }
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+     
     }
 
 

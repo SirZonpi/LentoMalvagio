@@ -73,8 +73,8 @@ public class Lupo : Enemy
     {
         if (isAttacking)
         {
-            GameObject bulletSpell = Instantiate(bulletPrefab, spellSpawnPoint.transform.position, Quaternion.identity) as GameObject;
-            bulletSpell.transform.SetParent(null);
+            GameObject bulletSpell = Instantiate(bulletPrefab, spellSpawnPoint.transform.position, Quaternion.identity,this.gameObject.transform) as GameObject;
+            //bulletSpell.transform.SetParent(null);
             LupoBullet lb = bulletSpell.GetComponent<LupoBullet>();
             dir = (transform.forward);
             if (bulletPrefab != null)
