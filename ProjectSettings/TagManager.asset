@@ -12,6 +12,8 @@ TagManager:
   - EnemyAttack
   - SpadaPlayer
   - SpellPlayer
+  - SpellFatina
+  - SpellLupo
   layers:
   - Default
   - TransparentFX

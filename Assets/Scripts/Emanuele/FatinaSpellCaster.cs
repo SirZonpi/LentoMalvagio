@@ -58,6 +58,7 @@ public class FatinaSpellCaster : Enemy
         GameObject bulletSpell = Instantiate(bulletPrefab, spellSpawnPoint.transform.position, Quaternion.identity) as GameObject;
         audiosource.PlayOneShot(audiosource.clip);
         FatinaBullet fb = bulletSpell.GetComponent<FatinaBullet>();
+        fb.attacco = attaccoMagico;
         dir = (transform.forward);
         if(bulletPrefab != null)
         fb.Setup(dir);

@@ -76,6 +76,7 @@ public class Lupo : Enemy
             GameObject bulletSpell = Instantiate(bulletPrefab, spellSpawnPoint.transform.position, Quaternion.identity,this.gameObject.transform) as GameObject;
             //bulletSpell.transform.SetParent(null);
             LupoBullet lb = bulletSpell.GetComponent<LupoBullet>();
+            lb.attacco = attaccoMagico;
             dir = (transform.forward);
             if (bulletPrefab != null)
                 //lb.Setup(dir);

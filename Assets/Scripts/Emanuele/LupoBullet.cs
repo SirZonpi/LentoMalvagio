@@ -9,6 +9,8 @@ public class LupoBullet : MonoBehaviour
     public Rigidbody rb;
     float speed = 25f;
 
+    public int attacco;
+
     Vector3 bulletTargetScale = new Vector3(1, 1, 1);
 
     LupoStateManager lpm;
