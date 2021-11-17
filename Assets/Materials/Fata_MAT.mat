@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Lupo_MAT
+  m_Name: Fata_MAT
   m_Shader: {fileID: -6465566751694194690, guid: a4aec2d89ff109847a39df6cf26a33e5,
     type: 3}
   m_ShaderKeywords: 
@@ -46,11 +46,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmmisTex:
-        m_Texture: {fileID: 2800000, guid: e41c77fd1e039a0458e8ab99b114bc84, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9264c4ef20d8eb248b4724f2e2d736bf, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 02110ad1064bb19438cbf3c3e06a9876, type: 3}
+        m_Texture: {fileID: 2800000, guid: 013fdc1636ba5da49b6628541c04fe81, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -58,7 +58,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalTex:
-        m_Texture: {fileID: 2800000, guid: d3b6540afafbb904aacdf4f15043a248, type: 3}
+        m_Texture: {fileID: 2800000, guid: d7e6a2530541fdb408bc8287022d09c5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class CheckPoints : MonoBehaviour
 {
+   
     public bool activated = false;
     public static GameObject[] checkPointsList;
 
@@ -27,7 +28,9 @@ public class CheckPoints : MonoBehaviour
     public static Vector3 GetActiveCheckPointPosition()                                                                     
     {
         // se il player muore senza aver toccato un checkpoint lo riposiziniamo in un punto predefinito
-        Vector3 result = new Vector3(0f, 25f, 0f);
+        //Vector3 result = new Vector3(5f, 25f, -103f);
+
+        Vector3 result = GameManager.instance.playerStartPos;
 
         if (checkPointsList != null)
         {
@@ -122,7 +125,7 @@ public class CheckPoints : MonoBehaviour
 
     private void Awake()
     {
-       
+
     }
 
     public void  GetScenename()

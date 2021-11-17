@@ -12,6 +12,8 @@ public class Player : Entity
 
     public string currentLevel;
 
+    //public Vector3 playerStartPos;
+
     public string livelloDifficolta;
 
     public List<GameObject> animeRecuperabili;
@@ -74,6 +76,8 @@ public class Player : Entity
         gameOverPanel.SetActive(false);
 
         attaccoSpadaPotenziato = attaccoFisicoDefault + spadaFuocoBonus;
+
+        //playerStartPos = this.transform.position;
 
     }
 
