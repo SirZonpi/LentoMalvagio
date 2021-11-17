@@ -44,9 +44,9 @@ public class PlayerAttack2State : PlayerBaseState
 
     public override void UpdateState(PlayerStateManager player)
     {
-        if (vcam.m_Lens.OrthographicSize != 8)
+        if (vcam.m_Lens.OrthographicSize != startOrtho)
         {
-            vcam.m_Lens.OrthographicSize = Mathf.MoveTowards(vcam.m_Lens.OrthographicSize, 8, 10 * Time.deltaTime);
+            vcam.m_Lens.OrthographicSize = Mathf.MoveTowards(vcam.m_Lens.OrthographicSize, startOrtho, 10 * Time.deltaTime);
 
         }
 

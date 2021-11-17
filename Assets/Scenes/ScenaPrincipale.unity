@@ -4936,8 +4936,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 27138024}
-  m_LocalRotation: {x: -0.012000591, y: 0.012790889, z: -0.007184133, w: 0.9998204}
-  m_LocalPosition: {x: 75.59503, y: -33.171585, z: -91.25903}
+  m_LocalRotation: {x: -0.027404383, y: 0.029193815, z: -0.016398102, w: 0.99906343}
+  m_LocalPosition: {x: 74.590576, y: -34.071198, z: -91.18132}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 638200119}
@@ -5920,7 +5920,7 @@ Transform:
   m_GameObject: {fileID: 638200118}
   m_LocalRotation: {x: -0.0000006705523, y: 0.00000071525585, z: -0.0000004023312,
     w: 1}
-  m_LocalPosition: {x: -0.00006144832, y: -0.00002447515, z: 0.000028382252}
+  m_LocalPosition: {x: -0.000052237287, y: -0.000032119708, z: -0.0000048050447}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1663423371}
@@ -12072,21 +12072,6 @@ PrefabInstance:
       propertyPath: schivataUI
       value: 
       objectReference: {fileID: 129455007}
-    - target: {fileID: 1407709769445985123, guid: a797669da55a3ae44949d2e3a61aa96e,
-        type: 3}
-      propertyPath: attDistance
-      value: 0.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 1407709769445985123, guid: a797669da55a3ae44949d2e3a61aa96e,
-        type: 3}
-      propertyPath: frenataAtt
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1407709769445985123, guid: a797669da55a3ae44949d2e3a61aa96e,
-        type: 3}
-      propertyPath: attForce
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 1407709769445985124, guid: a797669da55a3ae44949d2e3a61aa96e,
         type: 3}
       propertyPath: vcam
@@ -12107,21 +12092,6 @@ PrefabInstance:
       propertyPath: vcam
       value: 
       objectReference: {fileID: 638200120}
-    - target: {fileID: 1407709769445985127, guid: a797669da55a3ae44949d2e3a61aa96e,
-        type: 3}
-      propertyPath: attDistance
-      value: 0.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 1407709769445985127, guid: a797669da55a3ae44949d2e3a61aa96e,
-        type: 3}
-      propertyPath: attForce
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1407709769445985127, guid: a797669da55a3ae44949d2e3a61aa96e,
-        type: 3}
-      propertyPath: frenataAtt
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 1407709769445985134, guid: a797669da55a3ae44949d2e3a61aa96e,
         type: 3}
       propertyPath: m_Name
@@ -12187,12 +12157,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2601262195503354236, guid: a797669da55a3ae44949d2e3a61aa96e,
-        type: 3}
-      propertyPath: testoHitPrefab
-      value: 
-      objectReference: {fileID: 3716174470997068247, guid: 7172558a39d0f4c4ebdcfb381b2dd737,
-        type: 3}
     - target: {fileID: 3662562691060769328, guid: a797669da55a3ae44949d2e3a61aa96e,
         type: 3}
       propertyPath: vcam
@@ -12242,6 +12206,11 @@ PrefabInstance:
       propertyPath: spawnLivello2
       value: 
       objectReference: {fileID: 1290627899}
+    - target: {fileID: 3415412514426296116, guid: 3ca2a9f8e2a0ae0468b7aec9246938c7,
+        type: 3}
+      propertyPath: defaultCam
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3415412514426296117, guid: 3ca2a9f8e2a0ae0468b7aec9246938c7,
         type: 3}
       propertyPath: m_Name
