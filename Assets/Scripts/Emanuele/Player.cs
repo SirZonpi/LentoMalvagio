@@ -47,6 +47,7 @@ public class Player : Entity
     public GameObject scintille1;
     [SerializeField] Material playerMaterial;
 
+    [SerializeField] GameObject playercollisionman;
 
     void Start()
     {
@@ -180,6 +181,8 @@ public class Player : Entity
 
     public IEnumerator PlayerHittedCo()
     {
+        playercollisionman.SetActive(false);
+
         playerMaterial.color = Color.red;
         yield return new WaitForSeconds(0.2f);
         playerMaterial.color = Color.white;
@@ -191,6 +194,9 @@ public class Player : Entity
         playerMaterial.color = Color.red;
         yield return new WaitForSeconds(0.2f);
         playerMaterial.color = Color.white;
+
+        playercollisionman.SetActive(true);
+
         yield return null;
 
     }
@@ -261,7 +267,8 @@ public class Player : Entity
             TakeDamage(1);
            
         }
-       
+
+        Debug.Log("colpitooo " + colpito);
 
     }
 

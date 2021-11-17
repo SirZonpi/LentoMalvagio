@@ -14,6 +14,7 @@ TagManager:
   - SpellPlayer
   - SpellFatina
   - SpellLupo
+  - Ostacolo
   layers:
   - Default
   - TransparentFX
