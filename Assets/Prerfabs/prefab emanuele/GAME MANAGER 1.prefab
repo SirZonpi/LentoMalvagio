@@ -63,6 +63,7 @@ MonoBehaviour:
   spawnLivello2: {fileID: 0}
   spawnLivelloBoss: {fileID: 0}
   panelVittoria: {fileID: 0}
+  hpEnemiesBar: {fileID: 0}
   doOnce1: 1
   doOnce2: 1
 --- !u!114 &3415412514426296122
@@ -220,7 +221,7 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     playOnAwake: 0
-  - audioMixerGroup: {fileID: 4927908155574874906, guid: 851663d4526af8042a9f1907333291ba,
+  - audioMixerGroup: {fileID: -4956844092241543014, guid: 851663d4526af8042a9f1907333291ba,
       type: 2}
     clipName: musicaboss
     audioClip: {fileID: 8300000, guid: 20ce8052f62973a4da7f44583279bff4, type: 3}
@@ -228,7 +229,7 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     playOnAwake: 0
-  - audioMixerGroup: {fileID: 4927908155574874906, guid: 851663d4526af8042a9f1907333291ba,
+  - audioMixerGroup: {fileID: -4956844092241543014, guid: 851663d4526af8042a9f1907333291ba,
       type: 2}
     clipName: musicascena2
     audioClip: {fileID: 8300000, guid: d8a9c59c05831ed41ae40f24b7d17c9c, type: 3}

@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  velocity: 1
+  velocity: 2
   distance: 0
   thisEnemyDrop: 0
   audioSource: {fileID: 0}

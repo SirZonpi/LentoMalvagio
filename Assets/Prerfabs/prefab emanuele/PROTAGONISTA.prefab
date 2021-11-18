@@ -9738,7 +9738,7 @@ MonoBehaviour:
   attaccoMagico: 1
   startPosition: {x: 0, y: 0, z: 0}
   psMorte: {fileID: 1206266120888398985, guid: 6c05388e90d21e04d88d0157101c0cf8, type: 3}
-  minionsKilled: 2000
+  minionsKilled: 0
   prefabAnime: {fileID: 4524353274924026111, guid: 883ff8d558e4f7d4cb4b2eddb585a54b,
     type: 3}
   currentLevel: 

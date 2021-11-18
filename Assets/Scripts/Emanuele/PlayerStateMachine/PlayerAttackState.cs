@@ -109,11 +109,17 @@ public class PlayerAttackState : PlayerBaseState
             player.SwitchState(player.attackState);
         }
 
-        if (cambia == 0 /*|| checkerRb.velocity.magnitude != 0*/)
+        if (cambia == 0 )
         {
             player.SwitchState(player.idleState);
 
         }
+
+        if (Input.GetMouseButtonDown(1) )
+        {
+            player.SwitchState(player.castState);
+        }
+
 
         /*
         if (playerMove.siMuove == true) //TOLTO DESSO

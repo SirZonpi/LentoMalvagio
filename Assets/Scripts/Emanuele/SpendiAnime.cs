@@ -6,11 +6,13 @@ using UnityEngine.UI;
 public class SpendiAnime : MonoBehaviour
 {
     Player player;
+    public Text testo;
 
     //Text buttonText;
 
     public void UseMinionsPoints(int amount) ///aggiunto oggi
     {
+        
         amount = GameManager.instance.diffDifficile;
         player.minionsKilled -= amount;
 
@@ -20,6 +22,7 @@ public class SpendiAnime : MonoBehaviour
     {
         if( player.minionsKilled >= GameManager.instance.diffDifficile && player.livelloDifficolta == "Normale")
         {
+            
             UseMinionsPoints(GameManager.instance.diffDifficile);
             player.livelloDifficolta = "Difficile";
 
@@ -43,6 +46,6 @@ public class SpendiAnime : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        testo.text = player.minionsKilled.ToString();
     }
 }

@@ -76,6 +76,10 @@ public class PlayerAttack3State : PlayerBaseState
             player.SwitchState(player.walkState);
         }
 
+        if (Input.GetMouseButtonDown(1))
+        {
+            player.SwitchState(player.castState);
+        }
 
     }
 

@@ -6,7 +6,7 @@ public class Boss : Enemy
 {
     public int rand;
 
-    public BarraBoss hpBar;
+    //public BarraBoss hpBar;
 
     public BossStateManager stateman;
 
@@ -71,7 +71,7 @@ public class Boss : Enemy
 
     public override void TakeDamage(int amount)
     {
-        hpBar.SetHealth(Health);
+        //hpBar.SetHealth(Health);
         base.TakeDamage(amount);
     }
 
@@ -88,7 +88,7 @@ public class Boss : Enemy
 
         vittoriaPanel = GameManager.instance.panelVittoria;
 
-        hpBar.SetMaxHealth(maxHealth);
+        //hpBar.SetMaxHealth(maxHealth);
 
     }
 

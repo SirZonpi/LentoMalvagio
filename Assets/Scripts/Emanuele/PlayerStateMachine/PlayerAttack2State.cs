@@ -81,6 +81,12 @@ public class PlayerAttack2State : PlayerBaseState
             player.SwitchState(player.attack3State);
         }
 
+        if (Input.GetMouseButtonDown(1))
+        {
+            player.SwitchState(player.castState);
+        }
+
+
         if (playerMove.siMuove == true)
         {
             player.SwitchState(player.walkState);

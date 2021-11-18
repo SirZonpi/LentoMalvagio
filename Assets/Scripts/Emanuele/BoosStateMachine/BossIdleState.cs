@@ -34,7 +34,11 @@ public class BossIdleState : BossBaseState
 
     public override void UpdateState(BossStateManager boss)
     {
-
+        if (rand > 2)
+        {
+            bossScript.BossGira();
+        }
+        
         //bossScript.Cooldown();
         //boss.SwitchState(boss.rotolaState);
         //Cooldown(boss);

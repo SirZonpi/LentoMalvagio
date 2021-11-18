@@ -8,7 +8,7 @@ public class BossRotolaState : BossBaseState
 
     public int cambia;
 
-    float rotationspeed = 40;
+    float rotationspeed = 25;
     float rotationLeft = 360;
 
     float startrotY;
@@ -44,15 +44,11 @@ public class BossRotolaState : BossBaseState
         {
             rotationLeft -= rotation;
         }
-        else
-        {
-            rotation = rotationLeft;
-            rotationLeft = startrotY;
-        }
+       
 
         bossScript.tentacoli.transform.Rotate(0, rotation, 0);
 
-        if ( rotation == startrotY &&  cambia==1)
+        if (  cambia==1)
         {
             Debug.Log("PRONTOPROVA");
             transform.rotation = startRotation;

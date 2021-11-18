@@ -2,15 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DeathZone : MonoBehaviour
+public class ChiudiPorta : MonoBehaviour
 {
+    public GameObject porta;
+    public Animator anim;
+
+    public Attivatore att;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            Player player = other.gameObject.transform.root.GetComponent<Player>();
-
-            player.RespawnPlayer();
+            att.openDoor = false;
+            anim.SetTrigger("trigger");
         }
     }
+
+   
 }

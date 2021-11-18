@@ -15,6 +15,7 @@ public class SceneLoader : MonoBehaviour
     public string scenaDaScaricare;
 
     public string musica;
+    public string musicaDisattiva;
 
     public GameObject panelLivelloSuperato;
 
@@ -47,7 +48,8 @@ public class SceneLoader : MonoBehaviour
                 panelLivelloSuperato.SetActive(true);
             }
 
-            GameManager.instance.audioManager.PlaySound(musica);
+
+            GameManager.instance.audioManager.SwapMusicLevel(musicaDisattiva,musica);
 
         }
     }

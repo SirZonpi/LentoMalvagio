@@ -27,6 +27,8 @@ public class BossTentacoliSideState : BossBaseState
 
     public override void UpdateState(BossStateManager boss)
     {
+        bossScript.BossGira();
+
         if (cambia == 1)
         {
             boss.SwitchState(boss.idleState);

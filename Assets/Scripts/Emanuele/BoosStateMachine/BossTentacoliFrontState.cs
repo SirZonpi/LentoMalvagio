@@ -27,12 +27,15 @@ public class BossTentacoliFrontState : BossBaseState
 
     public override void UpdateState(BossStateManager boss)
     {
+        bossScript.BossGira();
+
         if (cambia == 1)
         {
             boss.SwitchState(boss.idleState);
         }
     }
 
+ 
     public void Cambia2(int _cambia)
     {
         cambia = _cambia;

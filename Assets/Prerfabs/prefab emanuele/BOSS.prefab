@@ -8736,7 +8736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ad292f3295612647977878abef071e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 50
+  maxHealth: 40
   currentHealth: 0
   attaccoFisico: 2
   attaccoFisicoDefault: 0
@@ -8750,13 +8750,14 @@ MonoBehaviour:
   hpBar: {fileID: 0}
   stateman: {fileID: 2751745466616092629}
   tentacoli: {fileID: 6869029701103218045}
-  coolDownTime: 3
+  coolDownTime: 6
   nextTimeFire: 1
   startRot: {x: 0, y: 0, z: 0, w: 0}
   spellPoint: {fileID: 6510561170828521658}
   spellprefab: {fileID: 3377074279332997481, guid: c360ce351afc1844ea7581af1a2f7f2c,
     type: 3}
   player: {fileID: 0}
+  vittoriaPanel: {fileID: 0}
 --- !u!114 &2751745466616092629
 MonoBehaviour:
   m_ObjectHideFlags: 0
