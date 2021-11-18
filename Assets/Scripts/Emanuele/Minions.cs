@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class Minions : Enemy
 {
+    Player player;
 
     public NavMeshAgent _agent;
     public float enemyDistanceRun=default;
@@ -20,6 +21,7 @@ public class Minions : Enemy
 
         playerTransform = GameManager.instance.player.transform.gameObject;
 
+        player = GameManager.instance.player;
 
         newPos = transform.position;
 
@@ -30,6 +32,9 @@ public class Minions : Enemy
     public override void KillEnemy()
     {
         GameManager.instance.audioManager.PlaySound("minion_morte");
+
+        player.Health+=1;
+        player.hpbar.SetHealth(player.Health);
 
         base.KillEnemy();
     }

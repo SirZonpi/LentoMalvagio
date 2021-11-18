@@ -72,6 +72,7 @@ public class CheckPoints : MonoBehaviour
         // se il player collide con un checkpoint e questo non è attualmente attivo, lo attiviamo
         if (other.gameObject.CompareTag("Player") && !this.activated)                                                                                         
         {
+            Cursor.visible = true;
             Debug.Log("checkpoint attivato");
             ActivateCheckPoint();
             Rigenera();
@@ -91,6 +92,7 @@ public class CheckPoints : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player") && this.activated)
         {
+            Cursor.visible = true;
             saveCanvas.SetActive(true);
         }
     }
@@ -100,6 +102,7 @@ public class CheckPoints : MonoBehaviour
         if (other.gameObject.CompareTag("Player") && this.activated)
         {
             saveCanvas.SetActive(false);
+            Cursor.visible = false;
 
             if (ps != null)
             {
