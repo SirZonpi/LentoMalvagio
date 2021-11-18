@@ -120,7 +120,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: 5f47adc2ec0aa2b4f989656fd460afea, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 5458e7844802d9d468aa40ed25d4a8c1, type: 2}
 --- !u!1 &2102788
 GameObject:
   m_ObjectHideFlags: 0
@@ -4937,7 +4937,7 @@ PrefabInstance:
     - target: {fileID: 5964705850654427156, guid: 4e7d34deee810464e946436017063628,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 81
+      value: -6.9
       objectReference: {fileID: 0}
     - target: {fileID: 5964705850654427156, guid: 4e7d34deee810464e946436017063628,
         type: 3}
@@ -4947,7 +4947,7 @@ PrefabInstance:
     - target: {fileID: 5964705850654427156, guid: 4e7d34deee810464e946436017063628,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 127
+      value: 102.54
       objectReference: {fileID: 0}
     - target: {fileID: 5964705850654427156, guid: 4e7d34deee810464e946436017063628,
         type: 3}
@@ -5020,8 +5020,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 27138024}
-  m_LocalRotation: {x: -0.027198654, y: 0.02897456, z: -0.016275136, w: 0.99907756}
-  m_LocalPosition: {x: -42.77563, y: 69.88542, z: 88.85477}
+  m_LocalRotation: {x: -0.03618376, y: 0.03855607, z: -0.02165275, w: 0.99836636}
+  m_LocalPosition: {x: 69.16019, y: -31.39898, z: -83.749435}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 638200119}
@@ -6004,7 +6004,7 @@ Transform:
   m_GameObject: {fileID: 638200118}
   m_LocalRotation: {x: -0.0000006705523, y: 0.00000071525585, z: -0.0000004023312,
     w: 1}
-  m_LocalPosition: {x: -0.000049310907, y: -0.00003283442, z: 0.000010665935}
+  m_LocalPosition: {x: -0.00004459263, y: -0.000036625504, z: 0.0000015678122}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1663423371}
@@ -6693,7 +6693,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1290627899}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 167.69, y: 22.48, z: -24.43}
+  m_LocalPosition: {x: 167.69, y: 22.48, z: -21.94}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6881,36 +6881,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5066cd142ce2d54bb41c30e8904ed41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1347331537
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1347331538}
-  m_Layer: 0
-  m_Name: SPAWNSCENABOSS
-  m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1347331538
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1347331537}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 598.07, y: 23.77, z: -119.14999}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1388593608
 GameObject:
   m_ObjectHideFlags: 0
@@ -12065,6 +12035,16 @@ PrefabInstance:
       propertyPath: animeText
       value: 
       objectReference: {fileID: 1791454727}
+    - target: {fileID: 1407709769445985120, guid: a797669da55a3ae44949d2e3a61aa96e,
+        type: 3}
+      propertyPath: durataPowerupSpada
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1407709769445985120, guid: a797669da55a3ae44949d2e3a61aa96e,
+        type: 3}
+      propertyPath: durataPowerupMana
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 1407709769445985123, guid: a797669da55a3ae44949d2e3a61aa96e,
         type: 3}
       propertyPath: CameraPrincipale
@@ -12113,17 +12093,17 @@ PrefabInstance:
     - target: {fileID: 1784234964252660180, guid: a797669da55a3ae44949d2e3a61aa96e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 69
+      value: 7.2
       objectReference: {fileID: 0}
     - target: {fileID: 1784234964252660180, guid: a797669da55a3ae44949d2e3a61aa96e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 22.33
+      value: 21.4
       objectReference: {fileID: 0}
     - target: {fileID: 1784234964252660180, guid: a797669da55a3ae44949d2e3a61aa96e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 127
+      value: -93.94
       objectReference: {fileID: 0}
     - target: {fileID: 1784234964252660180, guid: a797669da55a3ae44949d2e3a61aa96e,
         type: 3}
@@ -12218,7 +12198,7 @@ PrefabInstance:
         type: 3}
       propertyPath: spawnLivelloBoss
       value: 
-      objectReference: {fileID: 1347331537}
+      objectReference: {fileID: 0}
     - target: {fileID: 3415412514426296116, guid: 3ca2a9f8e2a0ae0468b7aec9246938c7,
         type: 3}
       propertyPath: panelVittoria
