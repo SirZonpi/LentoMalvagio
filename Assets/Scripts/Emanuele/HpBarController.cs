@@ -35,8 +35,13 @@ public class HpBarController : MonoBehaviour
         
             if (hpBars.ContainsKey(entityHealth) == true || entityHealth == null)
             {
-                Destroy(hpBars[entityHealth].gameObject);
-                hpBars.Remove(entityHealth);
+                if (hpBars != null)
+
+                {
+                    Destroy(hpBars[entityHealth].gameObject);
+                    hpBars.Remove(entityHealth);
+                }
+         
             }
         
     }

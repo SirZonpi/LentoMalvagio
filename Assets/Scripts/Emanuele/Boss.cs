@@ -22,6 +22,8 @@ public class Boss : Enemy
 
     public Player player;
 
+    public GameObject vittoriaPanel;
+
     public void BossCastSpell()
     {
         GameObject spell = Instantiate(spellprefab, spellPoint.transform.position, Quaternion.identity, null);
@@ -73,10 +75,18 @@ public class Boss : Enemy
         base.TakeDamage(amount);
     }
 
+    public override void KillEnemy()
+    {
+        vittoriaPanel.SetActive(true);
+        base.KillEnemy();
+    }
+
     void Start()
     {
         startRot = transform.rotation;
         player = GameManager.instance.player;
+
+        vittoriaPanel = GameManager.instance.panelVittoria;
 
         hpBar.SetMaxHealth(maxHealth);
 

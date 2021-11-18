@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 6717685412902514952}
   - component: {fileID: 1010647043953872369}
   - component: {fileID: 3571767707691462230}
+  - component: {fileID: 8742625647012945445}
+  - component: {fileID: 4227102950890400434}
   m_Layer: 4
   m_Name: Square Water
   m_TagString: Untagged
@@ -56,7 +58,6 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -81,7 +82,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &3571767707691462230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,23 +159,23 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   colorGradientTexture: {fileID: 0}
-  shallowColor: {r: 0, g: 0.42868313, b: 0.6795426, a: 1}
-  deepColor: {r: 0, g: 0.42640185, b: 0.6792453, a: 1}
-  colorDepth: 1.76
-  horizonColor: {r: 0, g: 0.22742602, b: 0.8, a: 1}
+  shallowColor: {r: 0, g: 0.6346154, b: 1, a: 1}
+  deepColor: {r: 0, g: 0.23825376, b: 0.3773585, a: 1}
+  colorDepth: 2.59
+  horizonColor: {r: 0, g: 0.20921195, b: 0.735849, a: 1}
   horizonDistance: 20
   shoreFade: 0
-  shoreColor: {r: 0, g: 0.98039216, b: 0.3019358, a: 0}
+  shoreColor: {r: 0, g: 0.98039216, b: 0.30196074, a: 0}
   shoreStrength: 0
   shoreBlend: 0
   shoreDepth: 0
   waveColor: {r: 0, g: 0, b: 0, a: 0}
-  underwaterColor: {r: 0.2038979, g: 0.3097789, b: 0.517647, a: 0}
+  underwaterColor: {r: 0.20389837, g: 0.3097794, b: 0.517647, a: 0}
   underwaterColorStrength: 0
   underwaterRefractionStrength: 0.099
   surfaceFoamTexture: {fileID: 2800000, guid: d3b0d77dfe711a04c8ff18ecc260aa66, type: 3}
-  surfaceFoamSampling: {x: 0.62, y: 0}
-  surfaceFoamCutoff: 0.62
+  surfaceFoamSampling: {x: 1, y: 0}
+  surfaceFoamCutoff: 1
   surfaceFoamDistortion: 0
   surfaceFoamBlend: 1
   surfaceFoamColor1: {r: 1, g: 1, b: 1, a: 0.3215686}
@@ -185,10 +185,10 @@ MonoBehaviour:
   surfaceFoamDirection2: 0.47
   surfaceFoamSpeed1: 0
   surfaceFoamSpeed2: 0.01
-  surfaceFoamTilingAndOffset: {x: -1, y: -1, z: 0.57, w: 0.22}
+  surfaceFoamTilingAndOffset: {x: -1, y: -1, z: 0.5, w: 0.22}
   surfaceFoamOffsetX: -1
   surfaceFoamOffsetY: -1
-  surfaceFoamScale1: 0.57
+  surfaceFoamScale1: 0.5
   surfaceFoamScale2: 0.22
   enableSurfaceFoam: 1
   surfaceFoamHeightMask: 0
@@ -200,7 +200,8 @@ MonoBehaviour:
   intersectionFoamShadowProjection: 4.6
   foamMovement: 0
   intersectionFoamDepth: 0.72
-  intersectionFoamTexture: {fileID: 2800000, guid: 772031b03d9d46e4ab03e15c8e17718c, type: 3}
+  intersectionFoamTexture: {fileID: 2800000, guid: 772031b03d9d46e4ab03e15c8e17718c,
+    type: 3}
   intersectionFoamColor: {r: 1, g: 1, b: 1, a: 1}
   intersectionFoamMovement: {x: 0, y: 0}
   intersectionFoamDirection: 0
@@ -227,19 +228,45 @@ MonoBehaviour:
   normalsStrength: 0.29
   normalsScale: 0.36
   normalsSpeed: 0.04
-  refractionStrength: 0.022
-  waveVisuals: {x: 0.087, y: 12.5, z: 1.38}
-  waveSteepness: 0.087
-  waveLength: 12.5
+  refractionStrength: 0.017
+  waveVisuals: {x: 0.055, y: 2.24, z: 1.38}
+  waveSteepness: 0.055
+  waveLength: 2.24
   waveSpeed: 1.38
-  waveDirections: {x: 0, y: 0.64, z: 1, w: 0.33}
-  waveDirection1: 0
+  waveDirections: {x: 0.2, y: 0.64, z: 0.407, w: 0.188}
+  waveDirection1: 0.2
   waveDirection2: 0.64
-  waveDirection3: 1
-  waveDirection4: 0.33
+  waveDirection3: 0.407
+  waveDirection4: 0.188
   waterUVs: 1
   hideComponents: 0
   enableFoamShadows: 1
+  enableRefraction: 0
   meshRenderer: {fileID: 1010647043953872369}
   meshFilter: {fileID: 6717685412902514952}
   material: {fileID: 2100000, guid: ea66d3ba3c5ac7d498707e8c9e54524f, type: 2}
+--- !u!65 &8742625647012945445
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601693967802005805}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.5, y: 0.9048214, z: 7.5}
+  m_Center: {x: 0, y: -0.4524107, z: 0}
+--- !u!114 &4227102950890400434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601693967802005805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaeb4e13065d10e48bf0f011c98db9ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -12115,7 +12115,7 @@ PrefabInstance:
     - target: {fileID: 5964705850654427153, guid: 4e7d34deee810464e946436017063628,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5964705850654427156, guid: 4e7d34deee810464e946436017063628,
         type: 3}
@@ -34999,7 +34999,7 @@ GameObject:
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &984630410
 Transform:
   m_ObjectHideFlags: 0
@@ -35287,7 +35287,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &987660076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36575,6 +36575,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GAME MANAGER
       objectReference: {fileID: 0}
+    - target: {fileID: 3415412514426296117, guid: 3ca2a9f8e2a0ae0468b7aec9246938c7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3415412514426296123, guid: 3ca2a9f8e2a0ae0468b7aec9246938c7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -36996,7 +37001,7 @@ GameObject:
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1068645801
 Transform:
   m_ObjectHideFlags: 0
@@ -41528,6 +41533,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas_PLAYER
       objectReference: {fileID: 0}
+    - target: {fileID: 6807002242817508566, guid: c92014bfa89f8c74198331847549e72b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6807002242817508570, guid: c92014bfa89f8c74198331847549e72b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -41646,12 +41656,12 @@ PrefabInstance:
     - target: {fileID: 6807002244211458697, guid: c92014bfa89f8c74198331847549e72b,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6807002244211458697, guid: c92014bfa89f8c74198331847549e72b,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6807002244216324229, guid: c92014bfa89f8c74198331847549e72b,
         type: 3}
@@ -44277,8 +44287,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1308628391}
-  m_LocalRotation: {x: -0.030205216, y: 0.032177504, z: -0.018074146, w: 0.9988622}
-  m_LocalPosition: {x: -42.97342, y: 69.71219, z: 88.8769}
+  m_LocalRotation: {x: -0.030221954, y: 0.03219539, z: -0.018084206, w: 0.9988609}
+  m_LocalPosition: {x: -42.974506, y: 69.7112, z: 88.877}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2010239742}
@@ -45620,7 +45630,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1355470679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47738,6 +47748,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PROTAGONISTA
+      objectReference: {fileID: 0}
+    - target: {fileID: 1407709769445985134, guid: a797669da55a3ae44949d2e3a61aa96e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1407709769445985145, guid: a797669da55a3ae44949d2e3a61aa96e,
         type: 3}
@@ -54395,6 +54410,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas HPBAR ENEMIES (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5995118381629803659, guid: b3aff598a0ff8654b83b3c5103a1a9c1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3aff598a0ff8654b83b3c5103a1a9c1, type: 3}
 --- !u!1001 &1662937708
@@ -55090,7 +55110,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1701010590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55455,7 +55475,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1704668985
 Transform:
   m_ObjectHideFlags: 0
@@ -57626,7 +57646,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1793061546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58259,6 +58279,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas HPBAR ENEMIES
+      objectReference: {fileID: 0}
+    - target: {fileID: 5995118381629803659, guid: b3aff598a0ff8654b83b3c5103a1a9c1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3aff598a0ff8654b83b3c5103a1a9c1, type: 3}
@@ -63014,7 +63039,7 @@ Transform:
   m_GameObject: {fileID: 2010239740}
   m_LocalRotation: {x: -0.0000006705523, y: 0.00000071525585, z: -0.0000004023312,
     w: 1}
-  m_LocalPosition: {x: -0.00005450954, y: -0.000034612607, z: 0.000032701177}
+  m_LocalPosition: {x: -0.00003268772, y: -0.00005491627, z: 0.0000021918809}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1550535311}

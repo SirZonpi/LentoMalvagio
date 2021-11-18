@@ -62,6 +62,7 @@ MonoBehaviour:
   diffFolle: 1000
   spawnLivello2: {fileID: 0}
   spawnLivelloBoss: {fileID: 0}
+  panelVittoria: {fileID: 0}
   doOnce1: 1
   doOnce2: 1
 --- !u!114 &3415412514426296122

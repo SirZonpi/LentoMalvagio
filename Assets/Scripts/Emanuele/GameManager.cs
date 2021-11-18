@@ -38,6 +38,9 @@ public class GameManager : MonoBehaviour
     public GameObject spawnLivello2;
     public GameObject spawnLivelloBoss;
 
+    public GameObject panelVittoria;
+    public GameObject hpEnemiesBar;
+
     private void Awake()
     {
         if (instance == null)
@@ -66,6 +69,12 @@ public class GameManager : MonoBehaviour
     {
         sfx.audioMixer.SetFloat("SfxVol", Mathf.Log10(sliderValue) * 20);
         PlayerPrefs.SetFloat("SfxVol", sliderValue);
+    }
+
+    public void TornaMenu()
+    {
+        //Destroy(hpEnemiesBar);
+        SceneManager.LoadScene("MenuScene");
     }
 
     public void SavePlayer()
