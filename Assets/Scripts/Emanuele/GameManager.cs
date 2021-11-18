@@ -77,9 +77,11 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("MenuScene");
     }
 
+
     public void SavePlayer()
     {
         SaveSystem.SavePlayer(player);
+        PlayerPrefs.SetInt("FirstSave", 1);
         Debug.Log("livellosalvato " + player.currentLevel);
     }
 
@@ -178,6 +180,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("IS LOADED " + isLoaded);
 
         Debug.Log("SCALA TEMPO " + Time.timeScale);
+
 
         if (Input.GetKeyDown(KeyCode.L)) //PER DEBUG
         {

@@ -160,7 +160,11 @@ public class Player : Entity
     {
         foreach (GameObject  go in GameManager.instance.oggettidaDisattivare)
         {
-            go.SetActive(true);
+            if (go != null)
+            {
+
+                go.SetActive(true);
+            }
         }
     }
 

@@ -1,22 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement; /// ema
 
 public class ParentPlayer : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider collision) //Se il giocatore sale su una piattaforma semovente, viene imparentato alla piattaforma così viene trasportato.
+    Player player;
+    public string scenaDiQuestoPrefab; //ema
+
+    private void Start()
     {
-        if(collision.transform.CompareTag("Player"))
+        scenaDiQuestoPrefab = this.gameObject.scene.name; //ema
+        player = GameManager.instance.player;
+    }
+
+    private void OnTriggerEnter(Collider other) //Se il giocatore sale su una piattaforma semovente, viene imparentato alla piattaforma così viene trasportato.
+    {
+        if(other.transform.CompareTag("Player"))
         {
-            collision.transform.SetParent(transform);
+            SceneManager.MoveGameObjectToScene(this.gameObject.transform.root.gameObject, SceneManager.GetSceneByName("ScenaPrincipale")); //ema
+            player.transform.SetParent(transform);
         }
         
     }
-    private void OnTriggerExit(Collider collision)//appena scende viene sparentato
+    private void OnTriggerExit(Collider other)//appena scende viene sparentato
     {
-        if(collision.transform.CompareTag("Player"))
+        if(other.transform.CompareTag("Player"))
         {
-            collision.transform.SetParent(null);
+            player.transform.SetParent(null);
+
+            SceneManager.MoveGameObjectToScene(this.gameObject.transform.root.gameObject, SceneManager.GetSceneByName(scenaDiQuestoPrefab)); //ema
+
         }
        
 
