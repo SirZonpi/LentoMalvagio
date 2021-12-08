@@ -47,6 +47,11 @@ public class MenuSettings : MonoBehaviour
         panelCredits.SetActive(true);
     }
 
+    public void Esci()
+    {
+        Application.Quit();
+    }
+
     private void Start()
     {
 
