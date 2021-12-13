@@ -78,6 +78,7 @@ public class Boss : Enemy
     public override void KillEnemy()
     {
         vittoriaPanel.SetActive(true);
+        Cursor.visible = true;
         base.KillEnemy();
     }
 

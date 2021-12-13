@@ -58,11 +58,7 @@ public class MenuSettings : MonoBehaviour
         Cursor.visible = true;
 
         
-        SetVolumeMusica(PlayerPrefs.GetFloat("MusicaVol"));
-        SetVolumeSFX(PlayerPrefs.GetFloat("SfxVol"));
 
-        sliderMusica.value = PlayerPrefs.GetFloat("MusicaVol");
-        sliderSfx.value = PlayerPrefs.GetFloat("SfxVol");
         
 
         if(panelOpzioni!=null)
