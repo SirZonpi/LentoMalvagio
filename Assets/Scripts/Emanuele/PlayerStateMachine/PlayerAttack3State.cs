@@ -23,8 +23,6 @@ public class PlayerAttack3State : PlayerBaseState
 
     public override void EnterState(PlayerStateManager player)
     {
-        Debug.Log("ATTACCO3");
-
         playerScript.attaccoFisico += 2;
 
         cambia = 1;
@@ -64,7 +62,7 @@ public class PlayerAttack3State : PlayerBaseState
 
         if (cambia == 0 && anim.GetBool("attacca3") == true)
         {
-     
+            Debug.Log("MEDDAAAA");
             anim.SetBool("attacca3", false);
             anim.SetBool("attacca2", false);
             anim.SetBool("attacca", false);
