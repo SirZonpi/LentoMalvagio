@@ -42,9 +42,6 @@ public class PlayerIdleState : PlayerBaseState
         startOrtho = vcam.m_Lens.OrthographicSize;
         defaultCam = GameManager.instance.defaultCam;
 
-        //StartCoroutine(ShowCurrentClipLength(anim)); ///
-
-       
 
     }
 
@@ -55,7 +52,6 @@ public class PlayerIdleState : PlayerBaseState
 
     public override void UpdateState(PlayerStateManager player)
     {
-
         /*
         if(vcam.m_Lens.OrthographicSize < 12)
             vcam.m_Lens.OrthographicSize = Mathf.MoveTowards(vcam.m_Lens.OrthographicSize, 12, 10 * Time.deltaTime);
@@ -63,7 +59,7 @@ public class PlayerIdleState : PlayerBaseState
 
         //scintille1.SetActive(false) ;
 
-        if (vcam.m_Lens.OrthographicSize != defaultCam )
+        if(vcam.m_Lens.OrthographicSize != defaultCam )
         {
             vcam.m_Lens.OrthographicSize = Mathf.MoveTowards(vcam.m_Lens.OrthographicSize, defaultCam, 10 * Time.deltaTime);
             
@@ -77,9 +73,6 @@ public class PlayerIdleState : PlayerBaseState
         anim.SetBool("attacca3", false);
         anim.SetBool("castaspell", false);
         anim.SetBool("damage", false);
-
-        //Debug.Log("tempoid " + anim.GetCurrentAnimatorStateInfo(0).length);
-      
 
         PlayerMove playerMove = GetComponent<PlayerMove>();
 
@@ -109,10 +102,6 @@ public class PlayerIdleState : PlayerBaseState
 
     }
 
-    IEnumerator ShowCurrentClipLength(Animator anim)
-    {
-        yield return new WaitForEndOfFrame();
-        print("current clip length = " + anim.GetCurrentAnimatorStateInfo(0).length);
-    }
+   
 
 }
