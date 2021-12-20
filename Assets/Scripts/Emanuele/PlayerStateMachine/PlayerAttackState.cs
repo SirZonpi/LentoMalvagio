@@ -6,6 +6,8 @@ using Cinemachine;
 
 public class PlayerAttackState : PlayerBaseState
 {
+    public Animation animazioneAttacco1;///
+
     public Player playerScript;
 
     public int cambia ;
@@ -25,6 +27,8 @@ public class PlayerAttackState : PlayerBaseState
     public float attDistance;
     public float frenataAtt;
 
+    public PlayerAttack2State attacco2; ///
+
     public override void EnterState(PlayerStateManager player)
     {
         if (playerScript.powerUpSpada == false)
@@ -40,7 +44,7 @@ public class PlayerAttackState : PlayerBaseState
         Animator anim = player.GetComponent<Animator>();
         anim.SetBool("idle", false);
         anim.SetBool("cammina", false);
-        //anim.SetBool("attacca2", false);
+        anim.SetBool("attacca2", false); //
         anim.SetBool("attacca", true);
         anim.SetBool("castaspell", false);
         anim.SetBool("damage", false);
@@ -49,6 +53,9 @@ public class PlayerAttackState : PlayerBaseState
 
 
         StartCoroutine(AttDash());
+
+        //StartCoroutine(ShowCurrentClipLength(anim)); ///
+
 
     }
 
@@ -73,6 +80,7 @@ public class PlayerAttackState : PlayerBaseState
 
         }
 
+
         Debug.Log("ATTACCO 1");
         Debug.Log("CAMBIALO " + cambia);
 
@@ -82,18 +90,22 @@ public class PlayerAttackState : PlayerBaseState
 
         Animator anim = player.GetComponent<Animator>();
 
-        if (Input.GetMouseButtonDown(0) && anim.GetBool("attacca")==true && cambia == 1)
+        Debug.Log("animazioneAttacco1 " + animazioneAttacco1.clip.length);
+
+
+        if (Input.GetMouseButtonDown(0) && /*anim.GetBool("attacca")==true &&*/ cambia == 1)
         {
             Quaternion rotazione = new Quaternion (0, 45, 0, 90);
 
             //GameObject testo = Instantiate(textprefab, transform.position, rotazione);
            // testo.transform.GetChild(0).GetComponent<TextMeshPro>().SetText(textToDisplay);
 
-             Debug.Log("CAMBIALO " + cambia);    
-           // player.SwitchState(player.attack2State);
+             Debug.Log("CAMBIALO " + cambia);
+            // player.SwitchState(player.attack2State);
 
+            player.SwitchState(player.idleState);
 
-         //   Debug.Log("LOSTATOCORRENTE " + player.attack2State);
+            //   Debug.Log("LOSTATOCORRENTE " + player.attack2State);
 
         }
 
@@ -101,13 +113,19 @@ public class PlayerAttackState : PlayerBaseState
         {
             GameManager.instance.audioManager.PlaySound("colpospada2");
 
+            cambia = 1;///
+
             player.SwitchState(player.attack2State);
+
+
         }
-       
+
+        /*
         if (Input.GetMouseButtonDown(0) && vaAdAttacco2 == 0)
         {
             player.SwitchState(player.attackState);
         }
+        */
 
         if (cambia == 0 )
         {
@@ -158,6 +176,10 @@ public class PlayerAttackState : PlayerBaseState
         //scintille1.SetActive(false);
     }
 
-
+    IEnumerator ShowCurrentClipLength(Animator anim)
+    {
+        yield return new WaitForEndOfFrame();
+        print("current clip length = " + anim.GetCurrentAnimatorStateInfo(0).length);
+    }
 
 }
