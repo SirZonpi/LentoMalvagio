@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MenuSettings : MonoBehaviour
 {
@@ -45,6 +46,11 @@ public class MenuSettings : MonoBehaviour
     public void ApriPannelloCredits()
     {
         panelCredits.SetActive(true);
+    }
+
+    public void StartTutorial()
+    {
+        SceneManager.LoadScene(5);
     }
 
     public void Esci()
