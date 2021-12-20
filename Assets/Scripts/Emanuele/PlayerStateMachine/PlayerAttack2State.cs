@@ -15,10 +15,16 @@ public class PlayerAttack2State : PlayerBaseState
     public CinemachineVirtualCamera vcam;
     public float startOrtho;
 
+    public  PlayerAttackState attacco1;//
+    
 
     public override void EnterState(PlayerStateManager player)
     {
+        Debug.Log("ATTACCO2"); 
+
         playerScript.attaccoFisico += 2;
+
+        //attacco1.cambia = 0;//
 
         cambia = 1;
         vaAdAttacco3 = 0;
@@ -34,6 +40,7 @@ public class PlayerAttack2State : PlayerBaseState
 
         startOrtho = vcam.m_Lens.OrthographicSize;
 
+        StartCoroutine(ShowCurrentClipLength(anim)); ///
 
     }
 
@@ -89,6 +96,7 @@ public class PlayerAttack2State : PlayerBaseState
 
         if (playerMove.siMuove == true)
         {
+            attacco1.cambia = 0; ////
             player.SwitchState(player.walkState);
         }
     }
@@ -103,5 +111,12 @@ public class PlayerAttack2State : PlayerBaseState
     {
         vaAdAttacco3 = _vaAdAttacco3;
     }
+
+    IEnumerator ShowCurrentClipLength(Animator anim)
+    {
+        yield return new WaitForEndOfFrame();
+        print("current clip length = " + anim.GetCurrentAnimatorStateInfo(0).length);
+    }
+
 
 }
