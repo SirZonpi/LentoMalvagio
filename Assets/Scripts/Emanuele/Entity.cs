@@ -17,6 +17,8 @@ public class Entity : MonoBehaviour
 
     public ParticleSystem psMorte;
 
+    //public bool isDead = false;
+
     //creo due events statici (potrò accedervi per le sottoscrizioni dei metodi dagli script HpBar e HpBarController) sono quindi eventi generici e non legati a una istanza specifica.
     //ogni volta che una nuova entity viene creata chiamiamo questi due eventi. questi due eventi vengono chiamato
     //ogni volta che una hp bar viene aggiunta o rimossa
@@ -57,6 +59,11 @@ public class Entity : MonoBehaviour
         
             if(currentHealth <= 0) //controlliamo subito con la property se currenthealth scende sotto 0
             {
+                /*
+                isDead = true; ///
+                Debug.Log("isDead " + isDead);
+                */
+
                 if (gameObject.GetComponent<Enemy>()) //se è un nemico lo uccidiamo/disattiviamo
                     KillEnemy();
                 else if (gameObject.GetComponent<Player>()) //se è il player lo facciamo respawnare
@@ -103,6 +110,11 @@ public class Entity : MonoBehaviour
     public virtual void RestoreHealth()
     {
         Health = maxHealth;
+        //isDead = false;
+        if (GetComponent<Enemy>())
+        {
+            OnHealthChanged(maxHealth);
+        }
     }
 
 
@@ -132,7 +144,7 @@ public class Entity : MonoBehaviour
 
     public void OnDestroy()
     { 
-       OnHealthRemoved(this); //una volta disabilitato richiamiamo subito l'evento e passiamo come argomento questa stessa entity
+       OnHealthRemoved(this); //una volta disabilitato richiamiamo subito l'evento e passiamo come argomento questa stessa entity. p.s. non ricordo più perchè l'ho messo sull ondestroy ma non lo tolgo manco pagato
 
     }
 

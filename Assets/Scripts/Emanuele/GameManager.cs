@@ -116,6 +116,9 @@ public class GameManager : MonoBehaviour
         if(isLoaded==false)///
         levelToLoad = "Scena1";///
 
+        if (isTutorial == true)///
+            levelToLoad = "tutorial";///
+
         SceneManager.LoadSceneAsync( levelToLoad , LoadSceneMode.Additive);//////////////////////////////////////
 
         panelPause.SetActive(false);
@@ -137,7 +140,21 @@ public class GameManager : MonoBehaviour
         if (isLoaded) LoadPlayer();
     }
 
+    /////////////////
+
     public static bool isLoaded = false;
+
+    public static bool isTutorial = false;
+
+    /////////////////
+
+    public void LoadTutorial()
+    {
+        isLoaded = false;
+        isTutorial = true;
+        SceneManager.LoadScene("ScenaPrincipale");
+    }
+
     public void LoadGame()
     {
         isLoaded = true;
@@ -180,6 +197,14 @@ public class GameManager : MonoBehaviour
         Debug.Log("IS LOADED " + isLoaded);
 
         Debug.Log("SCALA TEMPO " + Time.timeScale);
+
+        Debug.Log("tutorial " + isTutorial);
+
+        Debug.Log("leveltoload " + levelToLoad);
+
+        Debug.Log("currentlevelplayer " + player.currentLevel);
+
+
 
 
         if (Input.GetKeyDown(KeyCode.L)) //PER DEBUG

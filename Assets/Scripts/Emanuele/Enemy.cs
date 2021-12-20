@@ -1,13 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System; //per usare le action
 
 public class Enemy : Entity
 {
     public int animeDrop;
     public GameObject animeDropPrefab;
 
- 
+    //public static Action onPlayerDeath;
+
+    Player player;
 
     //override dei metodi della classe base Entity
     public override void KillEnemy()
@@ -41,6 +44,9 @@ public class Enemy : Entity
     {
         // animeDropPrefab.SetActive(false);
         startPosition = transform.position;
+
+        player = GameManager.instance.player; //////////
+
     }
 
     // Update is called once per frame
@@ -58,6 +64,11 @@ public class Enemy : Entity
 
         }
 
+        if (player.Health <= 0)
+        {
+            this.RestoreHealth();
+            //OnHealthChanged(maxHealth);
+        }
 
     }
 }

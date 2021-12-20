@@ -49,17 +49,25 @@ public class Player : Entity
 
     [SerializeField] GameObject playercollisionman;
 
+    
+
     void Start()
     {
 
-        if (GameManager.isLoaded == true)
+        if (GameManager.isLoaded == true && GameManager.isTutorial==false)
         {
             GameManager.instance.LoadPlayer();
 
         }
-        else
+        else if(GameManager.isLoaded == false && GameManager.isTutorial == false)
         {
             Health = maxHealth;
+        }
+        else if (GameManager.isTutorial == true)
+        {
+            Health = maxHealth;
+            currentLevel = "tutorial";
+            GameManager.instance.levelToLoad = "tutorial";
         }
 
         animeRecuperabili = new List<GameObject>();
@@ -223,6 +231,8 @@ public class Player : Entity
 
     public override void RespawnPlayer() ///override fatto oggi
     {
+        
+
         RiattivaElementi();
 
         gameOverPanel.SetActive(true);
@@ -245,6 +255,9 @@ public class Player : Entity
         animeRecuperabili.Add(anime);
 
         hpbar.SetHealth(maxHealth);
+
+       // isDead = false;
+
         base.RespawnPlayer(); //le operazioni del metodo originario che si trova nella base class
 
     }

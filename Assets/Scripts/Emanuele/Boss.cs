@@ -24,6 +24,7 @@ public class Boss : Enemy
 
     public GameObject vittoriaPanel;
 
+
     public void BossCastSpell()
     {
         GameObject spell = Instantiate(spellprefab, spellPoint.transform.position, Quaternion.identity, null);
@@ -93,5 +94,15 @@ public class Boss : Enemy
 
     }
 
-  
+   
+
+    private void Update()
+    {
+        if (player.Health <= 0)
+        {
+            this.RestoreHealth();
+            //OnHealthChanged(maxHealth);
+        }
+    }
+
 }
