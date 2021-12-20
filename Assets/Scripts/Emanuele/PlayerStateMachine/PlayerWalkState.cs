@@ -33,6 +33,9 @@ public class PlayerWalkState : PlayerBaseState
 
         startOrtho = vcam.m_Lens.OrthographicSize;
 
+        //StartCoroutine(ShowCurrentClipLength(anim)); ///
+
+        Debug.Log("tempo2 " + anim.GetCurrentAnimatorStateInfo(0).length);
 
     }
 
@@ -65,7 +68,14 @@ public class PlayerWalkState : PlayerBaseState
             player.SwitchState(player.idleState);
         }
 
+
     }
 
-    
+    IEnumerator ShowCurrentClipLength(Animator anim)
+    {
+        yield return new WaitForEndOfFrame();
+        print("current clip length = " + anim.GetCurrentAnimatorStateInfo(0).length);
+    }
+
+
 }

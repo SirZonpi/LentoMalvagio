@@ -46,6 +46,8 @@ public class PlayerCastState : PlayerBaseState
 
         startOrtho = vcam.m_Lens.OrthographicSize;
 
+
+
     }
 
     public override void onCollisionEnter(PlayerStateManager player)
@@ -55,6 +57,11 @@ public class PlayerCastState : PlayerBaseState
 
     public override void UpdateState(PlayerStateManager player)
     {
+        Animator anim = player.GetComponent<Animator>();
+
+        Debug.Log("tempocast " + anim.GetCurrentAnimatorStateInfo(0).length);
+
+
         if (vcam.m_Lens.OrthographicSize != startOrtho)
         {
             vcam.m_Lens.OrthographicSize = Mathf.MoveTowards(vcam.m_Lens.OrthographicSize, startOrtho, 10 * Time.deltaTime);
