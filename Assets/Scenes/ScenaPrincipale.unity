@@ -4938,7 +4938,6 @@ Transform:
   m_GameObject: {fileID: 27138024}
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> parent of 22f48d6 (aaa)
@@ -4955,10 +4954,6 @@ Transform:
   m_LocalPosition: {x: 76.04583, y: -33.195717, z: -89.38629}
 >>>>>>> parent of 8aa342d (tentativi fix anim player)
 >>>>>>> parent of 22f48d6 (aaa)
-=======
-  m_LocalRotation: {x: -0.03000462, y: 0.03196466, z: -0.0179542, w: 0.9988772}
-  m_LocalPosition: {x: 76.04583, y: -33.195717, z: -89.38629}
->>>>>>> parent of 8aa342d (tentativi fix anim player)
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 638200119}
@@ -5204,7 +5199,6 @@ Transform:
   m_Father: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> parent of 22f48d6 (aaa)
@@ -5218,9 +5212,6 @@ Transform:
   m_RootOrder: 6
 >>>>>>> parent of 8aa342d (tentativi fix anim player)
 >>>>>>> parent of 22f48d6 (aaa)
-=======
-  m_RootOrder: 6
->>>>>>> parent of 8aa342d (tentativi fix anim player)
   m_LocalEulerAnglesHint: {x: 30, y: 45, z: 0}
 --- !u!1 &94611343
 GameObject:
@@ -5620,7 +5611,6 @@ Transform:
   m_Father: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> parent of 22f48d6 (aaa)
@@ -5634,9 +5624,6 @@ Transform:
   m_RootOrder: 7
 >>>>>>> parent of 8aa342d (tentativi fix anim player)
 >>>>>>> parent of 22f48d6 (aaa)
-=======
-  m_RootOrder: 7
->>>>>>> parent of 8aa342d (tentativi fix anim player)
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &410424347
 MonoBehaviour:
@@ -5750,7 +5737,6 @@ CanvasRenderer:
   m_CullTransparentMesh: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> parent of 22f48d6 (aaa)
@@ -5791,8 +5777,6 @@ Transform:
 =======
 >>>>>>> parent of 8aa342d (tentativi fix anim player)
 >>>>>>> parent of 22f48d6 (aaa)
-=======
->>>>>>> parent of 8aa342d (tentativi fix anim player)
 --- !u!1 &575433227
 GameObject:
   m_ObjectHideFlags: 0
@@ -6059,7 +6043,6 @@ PrefabInstance:
       propertyPath: m_RootOrder
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> parent of 22f48d6 (aaa)
@@ -6073,9 +6056,6 @@ PrefabInstance:
       value: 12
 >>>>>>> parent of 8aa342d (tentativi fix anim player)
 >>>>>>> parent of 22f48d6 (aaa)
-=======
-      value: 12
->>>>>>> parent of 8aa342d (tentativi fix anim player)
       objectReference: {fileID: 0}
     - target: {fileID: 5964705850654427156, guid: 4e7d34deee810464e946436017063628,
         type: 3}
@@ -6123,7 +6103,6 @@ Transform:
     w: 1}
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> parent of 22f48d6 (aaa)
@@ -6137,9 +6116,6 @@ Transform:
   m_LocalPosition: {x: -0.000053257696, y: -0.00004126498, z: 0.00001708962}
 >>>>>>> parent of 8aa342d (tentativi fix anim player)
 >>>>>>> parent of 22f48d6 (aaa)
-=======
-  m_LocalPosition: {x: -0.000053257696, y: -0.00004126498, z: 0.00001708962}
->>>>>>> parent of 8aa342d (tentativi fix anim player)
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1663423371}
@@ -6873,7 +6849,6 @@ RectTransform:
   m_Father: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> parent of 22f48d6 (aaa)
@@ -6887,9 +6862,6 @@ RectTransform:
   m_RootOrder: 5
 >>>>>>> parent of 8aa342d (tentativi fix anim player)
 >>>>>>> parent of 22f48d6 (aaa)
-=======
-  m_RootOrder: 5
->>>>>>> parent of 8aa342d (tentativi fix anim player)
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -7144,7 +7116,6 @@ Transform:
   m_Father: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> parent of 22f48d6 (aaa)
@@ -7158,9 +7129,6 @@ Transform:
   m_RootOrder: 10
 >>>>>>> parent of 8aa342d (tentativi fix anim player)
 >>>>>>> parent of 22f48d6 (aaa)
-=======
-  m_RootOrder: 10
->>>>>>> parent of 8aa342d (tentativi fix anim player)
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1388593608
 GameObject:
@@ -12093,7 +12061,6 @@ Transform:
   m_Father: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 =======
@@ -12105,8 +12072,6 @@ Transform:
 =======
 >>>>>>> parent of 8aa342d (tentativi fix anim player)
 >>>>>>> parent of 22f48d6 (aaa)
-=======
->>>>>>> parent of 8aa342d (tentativi fix anim player)
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1597049303 stripped
@@ -12255,14 +12220,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> parent of 22f48d6 (aaa)
 =======
-=======
->>>>>>> parent of 8aa342d (tentativi fix anim player)
 --- !u!114 &2012314715 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6807002244606424329, guid: c92014bfa89f8c74198331847549e72b,
@@ -12403,7 +12365,6 @@ PrefabInstance:
       propertyPath: m_RootOrder
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> parent of 22f48d6 (aaa)
@@ -12417,9 +12378,6 @@ PrefabInstance:
       value: 2
 >>>>>>> parent of 8aa342d (tentativi fix anim player)
 >>>>>>> parent of 22f48d6 (aaa)
-=======
-      value: 2
->>>>>>> parent of 8aa342d (tentativi fix anim player)
       objectReference: {fileID: 0}
     - target: {fileID: 1784234964252660180, guid: a797669da55a3ae44949d2e3a61aa96e,
         type: 3}
@@ -12545,7 +12503,6 @@ PrefabInstance:
       propertyPath: m_RootOrder
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> parent of 22f48d6 (aaa)
@@ -12559,9 +12516,6 @@ PrefabInstance:
       value: 3
 >>>>>>> parent of 8aa342d (tentativi fix anim player)
 >>>>>>> parent of 22f48d6 (aaa)
-=======
-      value: 3
->>>>>>> parent of 8aa342d (tentativi fix anim player)
       objectReference: {fileID: 0}
     - target: {fileID: 3415412514426296123, guid: 3ca2a9f8e2a0ae0468b7aec9246938c7,
         type: 3}
