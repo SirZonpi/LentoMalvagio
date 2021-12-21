@@ -29,6 +29,8 @@ public class Entity : MonoBehaviour
     //ogni vollta che la health di questo nemico cambia questo evento viene richiamato (vedi script hpbar)
     public event Action<float> OnHealthChanged = delegate { };
 
+    public bool enemyHitted;
+
     private void OnEnable()
     {
         //controlliamo se si tratta del player o di un nemico (non vogliamo hp bar sopra la testa del player
@@ -47,7 +49,7 @@ public class Entity : MonoBehaviour
 
     private void OnDisable()
     {
-       // OnHealthRemoved(this); //da mettere dentro al metodo kill
+       // OnHealthRemoved(this); //da mettere dentro al metodo kill,  lì viene già disabilitata l entity
     }
 
 
@@ -144,7 +146,7 @@ public class Entity : MonoBehaviour
 
     public void OnDestroy()
     { 
-       OnHealthRemoved(this); //una volta disabilitato richiamiamo subito l'evento e passiamo come argomento questa stessa entity. p.s. non ricordo più perchè l'ho messo sull ondestroy ma non lo tolgo manco pagato
+       OnHealthRemoved(this); //una volta disabilitato richiamiamo subito l'evento e passiamo come argomento questa stessa entity. p.s. l'ho messo anche qui perché quando faccio stop in playmode i nemici vengono distrutti e comparirebbero mille messaggi d'errore in console
 
     }
 

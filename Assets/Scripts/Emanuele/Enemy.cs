@@ -8,7 +8,6 @@ public class Enemy : Entity
     public int animeDrop;
     public GameObject animeDropPrefab;
 
-    //public static Action onPlayerDeath;
 
     Player player;
 
@@ -33,9 +32,18 @@ public class Enemy : Entity
 
     }
 
+    IEnumerator EnemyHitted()
+    {
+        enemyHitted = true;
+        yield return new WaitForSeconds(2);
+        enemyHitted = false;
+        yield return null;
+    }
+
     public override void TakeDamage(int amount)
     {
         Debug.Log("Un nemico ha preso danno");
+        StartCoroutine(EnemyHitted());
         base.TakeDamage(amount);
     }
 
