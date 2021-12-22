@@ -72,7 +72,7 @@ public class Enemy : Entity
 
         }
 
-        if (player.Health <= 0)
+        if (player.isDead)
         {
             this.RestoreHealth();
             //OnHealthChanged(maxHealth);

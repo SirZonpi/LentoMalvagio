@@ -68,8 +68,11 @@ public class Entity : MonoBehaviour
 
                 if (gameObject.GetComponent<Enemy>()) //se è un nemico lo uccidiamo/disattiviamo
                     KillEnemy();
-                else if (gameObject.GetComponent<Player>()) //se è il player lo facciamo respawnare
-                    RespawnPlayer();
+                else if (gameObject.GetComponent<Player>())
+                { //se è il player lo facciamo respawnare
+                    Debug.Log("questo è un player");
+                    KillPlayer(); ///
+                }
             }
             else if (currentHealth > maxHealth)
             {
@@ -79,7 +82,7 @@ public class Entity : MonoBehaviour
 
     }
 
-
+ 
 
     public virtual void TakeDamage(int amount) //danno base, override per eventuali cambiamenti nelle classi figlie
     {
@@ -119,10 +122,8 @@ public class Entity : MonoBehaviour
         }
     }
 
-
-    public virtual void RespawnPlayer()
+    public virtual void KillPlayer()
     {
-        GameManager.instance.oggettidaDisattivare.Add(this.gameObject); //aggiungiasmo a una lista i character disattivati per riattivarli all 'occorrenza
         if (psMorte != null)
         {
             ParticleSystem ps = Instantiate(psMorte, transform.position, Quaternion.identity);
@@ -130,6 +131,11 @@ public class Entity : MonoBehaviour
             ps.Play();
             Destroy(ps, 1.5f);
         }
+
+    }
+
+    public virtual void RespawnPlayer()
+    {
 
         RestoreHealth();
         transform.position = CheckPoints.GetActiveCheckPointPosition();
