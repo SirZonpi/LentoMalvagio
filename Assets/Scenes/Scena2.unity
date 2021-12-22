@@ -21178,7 +21178,7 @@ GameObject:
   - component: {fileID: 713028441}
   m_Layer: 0
   m_Name: Porta
-  m_TagString: Untagged
+  m_TagString: Ostacolo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24693,7 +24693,7 @@ GameObject:
   - component: {fileID: 828277743}
   m_Layer: 0
   m_Name: Porta (2)
-  m_TagString: Untagged
+  m_TagString: Ostacolo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31071,7 +31071,7 @@ GameObject:
   - component: {fileID: 1085511493}
   m_Layer: 0
   m_Name: TerrainLVL1
-  m_TagString: Untagged
+  m_TagString: Ambiente
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -53095,7 +53095,7 @@ GameObject:
   - component: {fileID: 1856294279}
   m_Layer: 0
   m_Name: Porta (1)
-  m_TagString: Untagged
+  m_TagString: Ostacolo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

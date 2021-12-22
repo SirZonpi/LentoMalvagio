@@ -16,6 +16,7 @@ TagManager:
   - SpellLupo
   - Ostacolo
   - Spellboss
+  - Ambiente
   layers:
   - Default
   - TransparentFX

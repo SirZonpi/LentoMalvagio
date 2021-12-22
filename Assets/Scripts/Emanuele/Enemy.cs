@@ -9,7 +9,7 @@ public class Enemy : Entity
     public GameObject animeDropPrefab;
 
 
-    Player player;
+    public Player player;
 
     //override dei metodi della classe base Entity
     public override void KillEnemy()

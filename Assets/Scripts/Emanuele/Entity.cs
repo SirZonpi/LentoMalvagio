@@ -132,7 +132,7 @@ public class Entity : MonoBehaviour
         }
 
         RestoreHealth();
-         transform.position = CheckPoints.GetActiveCheckPointPosition();
+        transform.position = CheckPoints.GetActiveCheckPointPosition();
         //StartCoroutine(delay()); ////
     }
 

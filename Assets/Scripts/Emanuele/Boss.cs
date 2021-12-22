@@ -20,7 +20,7 @@ public class Boss : Enemy
     public Transform spellPoint;
     public GameObject spellprefab;
 
-    public Player player;
+    //public Player player;
 
     public GameObject vittoriaPanel;
 
