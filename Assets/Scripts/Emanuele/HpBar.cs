@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System; //////
 
 public class HpBar : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class HpBar : MonoBehaviour
 
     [SerializeField] float distanzaDalPlayer=default; //per far comparire la barra hp solo quando il player è abbastanza vicino
 
+
+
     public void SetHealth(Entity entityHealth)
     {
         this.entityHealth = entityHealth;
@@ -27,6 +30,22 @@ public class HpBar : MonoBehaviour
     void HandleHealthChanged(float percentuale) //fa partire la coroutine per il rimpicciolimento della barra hp
     {
         StartCoroutine(Percentuale(percentuale));
+        StartCoroutine(ShowHpBar());
+
+    }
+
+    IEnumerator ShowHpBar() //voglio che la barra hp del nemico compaia anche quando lo colpisco dalla distanza
+    {
+        sfondoImmagine.enabled = true;
+        barraImmagine.enabled = true;
+
+        yield return new WaitForSeconds(2);
+
+        sfondoImmagine.enabled = false;
+        barraImmagine.enabled = false;
+
+        yield return null;
+
     }
 
     IEnumerator Percentuale(float pct)
@@ -76,16 +95,18 @@ public class HpBar : MonoBehaviour
 
         if (entityHealth != null)
         {
-            if (Vector3.Distance(entityHealth.transform.position, player.transform.position) <= distanzaDalPlayer)
+
+            if (Vector3.Distance(entityHealth.transform.position, player.transform.position) <= distanzaDalPlayer || entityHealth.enemyHitted)
             {
                 sfondoImmagine.enabled = true;
                 barraImmagine.enabled = true;
             }
-            else if (Vector3.Distance(entityHealth.transform.position, player.transform.position) > distanzaDalPlayer)
+            else
             {
                 sfondoImmagine.enabled = false;
                 barraImmagine.enabled = false;
             }
+
         }
     }
 

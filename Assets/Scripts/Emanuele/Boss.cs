@@ -20,9 +20,10 @@ public class Boss : Enemy
     public Transform spellPoint;
     public GameObject spellprefab;
 
-    public Player player;
+    //public Player player;
 
     public GameObject vittoriaPanel;
+
 
     public void BossCastSpell()
     {
@@ -93,5 +94,15 @@ public class Boss : Enemy
 
     }
 
-  
+   
+
+    private void Update()
+    {
+        if (player.Health <= 0)
+        {
+            this.RestoreHealth();
+            //OnHealthChanged(maxHealth);
+        }
+    }
+
 }

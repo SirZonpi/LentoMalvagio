@@ -74,6 +74,7 @@ public class PlayerMove : MonoBehaviour
 
     }
 
+
     private void FixedUpdate()
     {
         cameraRay = CameraPrincipale.ScreenPointToRay(Input.mousePosition); //traccio un punto tramite Ray nella posizione del mouse
@@ -84,6 +85,7 @@ public class PlayerMove : MonoBehaviour
             Vector3 pointToLook = cameraRay.GetPoint(rayLenght); //il punto da guardare è nel punto calcolato del Ray
             Debug.DrawLine(cameraRay.origin, pointToLook, Color.blue);
             cursore.transform.position = pointToLook; //il mouse avrà posizione del PuntoGuardato
+
 
             if (Input.GetMouseButton(1)) //Se premo mouse destro allora il personaggio guerderà in posizione del mouse
             {

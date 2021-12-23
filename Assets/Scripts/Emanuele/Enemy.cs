@@ -1,13 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System; //per usare le action
 
 public class Enemy : Entity
 {
     public int animeDrop;
     public GameObject animeDropPrefab;
 
- 
+
+    public Player player;
 
     //override dei metodi della classe base Entity
     public override void KillEnemy()
@@ -30,9 +32,18 @@ public class Enemy : Entity
 
     }
 
+    IEnumerator EnemyHitted()
+    {
+        enemyHitted = true;
+        yield return new WaitForSeconds(2);
+        enemyHitted = false;
+        yield return null;
+    }
+
     public override void TakeDamage(int amount)
     {
         Debug.Log("Un nemico ha preso danno");
+        StartCoroutine(EnemyHitted());
         base.TakeDamage(amount);
     }
 
@@ -41,6 +52,9 @@ public class Enemy : Entity
     {
         // animeDropPrefab.SetActive(false);
         startPosition = transform.position;
+
+        player = GameManager.instance.player; //////////
+
     }
 
     // Update is called once per frame
@@ -58,6 +72,11 @@ public class Enemy : Entity
 
         }
 
+        if (player.isDead)
+        {
+            this.RestoreHealth();
+            //OnHealthChanged(maxHealth);
+        }
 
     }
 }

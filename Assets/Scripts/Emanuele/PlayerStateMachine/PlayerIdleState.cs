@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
-
+using UnityEngine.EventSystems;
 
 
 public class PlayerIdleState : PlayerBaseState
@@ -81,7 +81,7 @@ public class PlayerIdleState : PlayerBaseState
             player.SwitchState(player.castState);
         }
 
-        if (Input.GetMouseButtonDown(0) && anim.GetBool("attacca") == false)
+        if (Input.GetMouseButtonDown(0) && anim.GetBool("attacca") == false && !EventSystem.current.IsPointerOverGameObject()) //eventsystem ecc ecc = non voglio che parta l'attacco quando il pannello del checkpoint è aperto
         {
             GameManager.instance.audioManager.PlaySound("colpospada1");
 

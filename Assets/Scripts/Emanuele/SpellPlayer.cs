@@ -14,12 +14,16 @@ public class SpellPlayer : MonoBehaviour
             other.transform.parent.GetComponent<Enemy>().TakeDamage(player.attaccoMagico);
 
         }
-        else if (other.CompareTag("Ostacolo"))
+        else if (other.CompareTag("Ostacolo") || other.CompareTag("Ambiente"))
         {
+            Debug.Log("spell contro ostacolo");
             Destroy(this.gameObject);
         }
+        
+      
 
     }
+
 
     private void Start()
     {

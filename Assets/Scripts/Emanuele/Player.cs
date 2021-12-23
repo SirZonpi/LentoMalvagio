@@ -49,17 +49,25 @@ public class Player : Entity
 
     [SerializeField] GameObject playercollisionman;
 
+    public bool isDead;
+
     void Start()
     {
 
-        if (GameManager.isLoaded == true)
+        if (GameManager.isLoaded == true && GameManager.isTutorial==false)
         {
             GameManager.instance.LoadPlayer();
 
         }
-        else
+        else if(GameManager.isLoaded == false && GameManager.isTutorial == false)
         {
             Health = maxHealth;
+        }
+        else if (GameManager.isTutorial == true)
+        {
+            Health = maxHealth;
+            currentLevel = "tutorial";
+            GameManager.instance.levelToLoad = "tutorial";
         }
 
         animeRecuperabili = new List<GameObject>();
@@ -166,6 +174,9 @@ public class Player : Entity
                 go.SetActive(true);
             }
         }
+
+        GameManager.instance.oggettidaDisattivare.Clear();
+
     }
 
     public IEnumerator SpadaInfuocata()
@@ -220,9 +231,51 @@ public class Player : Entity
         
     }
 
+    public override void KillPlayer()
+    {
+        Debug.Log("CIAONE");
+
+        isDead = true;
+
+        gameOverPanel.SetActive(true);
+
+        //RespawnPlayer();
+
+        base.KillPlayer();
+
+        StartCoroutine(delayDeathCo());
+
+    }
+
+    IEnumerator delayDeathCo()
+    {
+        this.GetComponent<PlayerMove>().enabled = false;
+        yield return new WaitForSeconds(2f);
+        
+        if (animeRecuperabili.Count != 0)
+        {
+            Destroy(animeRecuperabili[0].gameObject);
+            animeRecuperabili.Remove(animeRecuperabili[0]);
+        }
+
+        GameObject anime = Instantiate(prefabAnime, transform); //istanzio il particellare delle anime perdute
+        anime.transform.SetParent(null); //tolgo il parent al prefab
+        RecuperaAnime.animeDaRecuperare = minionsKilled; //assegno il valore delle anime raccolte fin qui alla var statica animedarecuperare
+        minionsKilled = 0; //resetto il valore delle anime raccolte
+
+        CambiaTestoAnime();
+
+        animeRecuperabili.Add(anime);
+
+        RespawnPlayer();
+
+        yield return null;
+    }
 
     public override void RespawnPlayer() ///override fatto oggi
     {
+        /*
+
         RiattivaElementi();
 
         gameOverPanel.SetActive(true);
@@ -244,7 +297,16 @@ public class Player : Entity
 
         animeRecuperabili.Add(anime);
 
+        */
+
+        RiattivaElementi();
+
         hpbar.SetHealth(maxHealth);
+
+        this.GetComponent<PlayerMove>().enabled = true;
+
+        isDead = false;
+
         base.RespawnPlayer(); //le operazioni del metodo originario che si trova nella base class
 
     }

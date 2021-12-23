@@ -17,6 +17,8 @@ public class Entity : MonoBehaviour
 
     public ParticleSystem psMorte;
 
+    //public bool isDead = false;
+
     //creo due events statici (potrò accedervi per le sottoscrizioni dei metodi dagli script HpBar e HpBarController) sono quindi eventi generici e non legati a una istanza specifica.
     //ogni volta che una nuova entity viene creata chiamiamo questi due eventi. questi due eventi vengono chiamato
     //ogni volta che una hp bar viene aggiunta o rimossa
@@ -26,6 +28,8 @@ public class Entity : MonoBehaviour
     //questo evento rispetto ai due precedenti non è statico. viene chiamato ogni volta che la health di QUESTA entity cambia (una nuova istanza).
     //ogni vollta che la health di questo nemico cambia questo evento viene richiamato (vedi script hpbar)
     public event Action<float> OnHealthChanged = delegate { };
+
+    public bool enemyHitted;
 
     private void OnEnable()
     {
@@ -45,7 +49,7 @@ public class Entity : MonoBehaviour
 
     private void OnDisable()
     {
-       // OnHealthRemoved(this); //da mettere dentro al metodo kill
+       // OnHealthRemoved(this); //da mettere dentro al metodo kill,  lì viene già disabilitata l entity
     }
 
 
@@ -57,10 +61,18 @@ public class Entity : MonoBehaviour
         
             if(currentHealth <= 0) //controlliamo subito con la property se currenthealth scende sotto 0
             {
+                /*
+                isDead = true; ///
+                Debug.Log("isDead " + isDead);
+                */
+
                 if (gameObject.GetComponent<Enemy>()) //se è un nemico lo uccidiamo/disattiviamo
                     KillEnemy();
-                else if (gameObject.GetComponent<Player>()) //se è il player lo facciamo respawnare
-                    RespawnPlayer();
+                else if (gameObject.GetComponent<Player>())
+                { //se è il player lo facciamo respawnare
+                    Debug.Log("questo è un player");
+                    KillPlayer(); ///
+                }
             }
             else if (currentHealth > maxHealth)
             {
@@ -70,7 +82,7 @@ public class Entity : MonoBehaviour
 
     }
 
-
+ 
 
     public virtual void TakeDamage(int amount) //danno base, override per eventuali cambiamenti nelle classi figlie
     {
@@ -103,12 +115,15 @@ public class Entity : MonoBehaviour
     public virtual void RestoreHealth()
     {
         Health = maxHealth;
+        //isDead = false;
+        if (GetComponent<Enemy>())
+        {
+            OnHealthChanged(maxHealth);
+        }
     }
 
-
-    public virtual void RespawnPlayer()
+    public virtual void KillPlayer()
     {
-        GameManager.instance.oggettidaDisattivare.Add(this.gameObject); //aggiungiasmo a una lista i character disattivati per riattivarli all 'occorrenza
         if (psMorte != null)
         {
             ParticleSystem ps = Instantiate(psMorte, transform.position, Quaternion.identity);
@@ -117,8 +132,13 @@ public class Entity : MonoBehaviour
             Destroy(ps, 1.5f);
         }
 
+    }
+
+    public virtual void RespawnPlayer()
+    {
+
         RestoreHealth();
-         transform.position = CheckPoints.GetActiveCheckPointPosition();
+        transform.position = CheckPoints.GetActiveCheckPointPosition();
         //StartCoroutine(delay()); ////
     }
 
@@ -132,7 +152,7 @@ public class Entity : MonoBehaviour
 
     public void OnDestroy()
     { 
-       OnHealthRemoved(this); //una volta disabilitato richiamiamo subito l'evento e passiamo come argomento questa stessa entity
+      // OnHealthRemoved(this); //una volta disabilitato richiamiamo subito l'evento e passiamo come argomento questa stessa entity. p.s. l'ho messo anche qui perché quando faccio stop in playmode i nemici vengono distrutti e comparirebbero mille messaggi d'errore in console
 
     }
 

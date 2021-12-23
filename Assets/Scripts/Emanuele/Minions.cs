@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class Minions : Enemy
 {
-    Player player;
+    //Player player; //devo toglierlo da qui, il campo è già presente nello script base Enemy
 
     public NavMeshAgent _agent;
     public float enemyDistanceRun=default;
