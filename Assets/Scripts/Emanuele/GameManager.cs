@@ -73,7 +73,6 @@ public class GameManager : MonoBehaviour
 
     public void TornaMenu()
     {
-        //Destroy(hpEnemiesBar);
         SceneManager.LoadScene("MenuScene");
     }
 
