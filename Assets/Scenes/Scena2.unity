@@ -9615,6 +9615,8 @@ MonoBehaviour:
   porta: {fileID: 313077877}
   attivatore: {fileID: 1628057402}
   attivatoreAttivo: {fileID: 2100000, guid: fb7f9f094e6275b4399e0da78f313854, type: 2}
+  attivatoreDisattivato: {fileID: 2100000, guid: f2053a87d40f12a4b95dc0706c2b460d,
+    type: 2}
   door: {fileID: 313077881}
 --- !u!23 &313077883
 MeshRenderer:
@@ -33330,6 +33332,8 @@ MonoBehaviour:
   porta: {fileID: 1160905175}
   attivatore: {fileID: 747589839}
   attivatoreAttivo: {fileID: 2100000, guid: fb7f9f094e6275b4399e0da78f313854, type: 2}
+  attivatoreDisattivato: {fileID: 2100000, guid: 436d5f000aa79bd409b4d2bddf05af1d,
+    type: 2}
   door: {fileID: 1160905179}
 --- !u!23 &1160905181
 MeshRenderer:
@@ -39975,6 +39979,8 @@ MonoBehaviour:
   porta: {fileID: 1348759179}
   attivatore: {fileID: 103097845}
   attivatoreAttivo: {fileID: 2100000, guid: fb7f9f094e6275b4399e0da78f313854, type: 2}
+  attivatoreDisattivato: {fileID: 2100000, guid: c6c1ba388dfc69b4c91d58bdce87e725,
+    type: 2}
   door: {fileID: 1348759183}
 --- !u!23 &1348759185
 MeshRenderer:
