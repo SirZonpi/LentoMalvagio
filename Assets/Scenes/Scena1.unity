@@ -43789,6 +43789,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3336740597773014856, guid: b2c3d84e121f5ea4b9d8c78fa7ad9b10,
+        type: 3}
+      propertyPath: attivatoreDisattivato
+      value: 
+      objectReference: {fileID: 2100000, guid: f2053a87d40f12a4b95dc0706c2b460d, type: 2}
     - target: {fileID: 3336740597773014858, guid: b2c3d84e121f5ea4b9d8c78fa7ad9b10,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -53698,6 +53703,8 @@ MonoBehaviour:
   porta: {fileID: 2036701280}
   attivatore: {fileID: 1201156199}
   attivatoreAttivo: {fileID: 2100000, guid: fb7f9f094e6275b4399e0da78f313854, type: 2}
+  attivatoreDisattivato: {fileID: 2100000, guid: 436d5f000aa79bd409b4d2bddf05af1d,
+    type: 2}
   door: {fileID: 2036701284}
 --- !u!23 &2036701286
 MeshRenderer:
@@ -57074,6 +57081,8 @@ MonoBehaviour:
   porta: {fileID: 5651719192182969766}
   attivatore: {fileID: 5651719192112670305}
   attivatoreAttivo: {fileID: 2100000, guid: fb7f9f094e6275b4399e0da78f313854, type: 2}
+  attivatoreDisattivato: {fileID: 2100000, guid: c6c1ba388dfc69b4c91d58bdce87e725,
+    type: 2}
   door: {fileID: 5651719192182969773}
 --- !u!1 &5651719192182969766
 GameObject:

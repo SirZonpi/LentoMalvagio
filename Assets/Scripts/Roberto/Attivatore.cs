@@ -16,4 +16,13 @@ public class Attivatore : MonoBehaviour
             GameManager.instance.audioManager.PlaySound("interruttore");
         }
     }
+
+    private void Update()
+    {
+        if (GameManager.instance.player.isDead == true)
+        {
+            openDoor = false;
+        }
+    }
+
 }

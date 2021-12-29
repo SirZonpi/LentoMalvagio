@@ -9,7 +9,9 @@ public class Porta : MonoBehaviour
     public GameObject porta;
     public GameObject attivatore;
     public Material attivatoreAttivo;
+    public Material attivatoreDisattivato;
     public Animator door;
+
 
     void SuonoPorta()
     {
@@ -22,10 +24,18 @@ public class Porta : MonoBehaviour
          {
             attivatore.GetComponent<MeshRenderer>().material = attivatoreAttivo;
             door.SetBool("apriPorta", true);
-           Invoke("SuonoPorta", 1f);
+            door.SetBool("chiudi", false);
+            Invoke("SuonoPorta", 1f);
          }
-        else
+
+         else if(attDaAttivare.openDoor == false)
+         {
             door.SetBool("apriPorta", false);
+            door.SetBool("chiudi", true);
+            attivatore.GetComponent<MeshRenderer>().material = attivatoreDisattivato;
+         }
+            
+
 
 
 
