@@ -157,6 +157,7 @@ public class GameManager : MonoBehaviour
     public void LoadGame()
     {
         isLoaded = true;
+        isTutorial = false;
         SceneManager.LoadScene("ScenaPrincipale");
      
     }
@@ -164,6 +165,7 @@ public class GameManager : MonoBehaviour
     public void NewGame()
     {
         isLoaded = false;
+        isTutorial=false;
         SceneManager.LoadScene("ScenaPrincipale");
       
     }
