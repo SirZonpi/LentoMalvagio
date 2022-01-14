@@ -75,6 +75,7 @@ public class PlayerIdleState : PlayerBaseState
         anim.SetBool("damage", false);
 
         PlayerMove playerMove = GetComponent<PlayerMove>();
+        playerMove.enabled = true; //
 
         if (Input.GetMouseButtonDown(1))
         {

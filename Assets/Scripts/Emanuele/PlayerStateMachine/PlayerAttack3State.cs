@@ -31,6 +31,9 @@ public class PlayerAttack3State : PlayerBaseState
 
         Animator anim = player.GetComponent<Animator>();
 
+        PlayerMove movement = player.GetComponent<PlayerMove>(); //
+        movement.enabled = false;
+
         anim.SetBool("attacca3", true);
         //anim.SetBool("attacca2", true);
         anim.SetBool("idle", false);

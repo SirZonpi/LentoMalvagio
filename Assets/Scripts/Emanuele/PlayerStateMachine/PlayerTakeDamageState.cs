@@ -15,6 +15,10 @@ public class PlayerTakeDamageState : PlayerBaseState
 
     public override void EnterState(PlayerStateManager player)
     {
+
+        PlayerMove movement = player.GetComponent<PlayerMove>(); //
+        movement.enabled = true;
+
         if (playerScript.powerUpSpada == false)
         {
             playerScript.attaccoFisico = playerScript.attaccoFisicoDefault;

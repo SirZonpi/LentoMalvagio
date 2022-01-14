@@ -38,9 +38,13 @@ public class PlayerAttackState : PlayerBaseState
         vaAdAttacco2 = 0;
 
         Animator anim = player.GetComponent<Animator>();
+
+        PlayerMove movement = player.GetComponent<PlayerMove>(); //
+        movement.enabled = true;
+
         anim.SetBool("idle", false);
         anim.SetBool("cammina", false);
-        //anim.SetBool("attacca2", false);
+        anim.SetBool("attacca2", false); //
         anim.SetBool("attacca", true);
         anim.SetBool("castaspell", false);
         anim.SetBool("damage", false);
@@ -104,10 +108,12 @@ public class PlayerAttackState : PlayerBaseState
             player.SwitchState(player.attack2State);
         }
        
+
         if (Input.GetMouseButtonDown(0) && vaAdAttacco2 == 0)
         {
             player.SwitchState(player.attackState);
         }
+
 
         if (cambia == 0 )
         {
@@ -119,6 +125,8 @@ public class PlayerAttackState : PlayerBaseState
         {
             player.SwitchState(player.castState);
         }
+
+         
 
 
         /*
