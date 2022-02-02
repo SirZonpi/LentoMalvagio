@@ -243,7 +243,29 @@ public class Player : Entity
 
         base.KillPlayer();
 
-        StartCoroutine(delayDeathCo());
+        this.GetComponent<PlayerMove>().enabled = false;
+      //  yield return new WaitForSeconds(2f);
+
+        if (animeRecuperabili.Count != 0)
+        {
+            Destroy(animeRecuperabili[0].gameObject);
+            animeRecuperabili.Remove(animeRecuperabili[0]);
+        }
+
+        GameObject anime = Instantiate(prefabAnime, transform); //istanzio il particellare delle anime perdute
+        anime.transform.SetParent(null); //tolgo il parent al prefab
+        RecuperaAnime.animeDaRecuperare = minionsKilled; //assegno il valore delle anime raccolte fin qui alla var statica animedarecuperare
+        minionsKilled = 0; //resetto il valore delle anime raccolte
+
+        //yield return new WaitForSeconds(2f);//////
+
+        CambiaTestoAnime();
+
+        animeRecuperabili.Add(anime);
+
+        RespawnPlayer();
+
+        // StartCoroutine(delayDeathCo());
 
     }
 
@@ -262,6 +284,8 @@ public class Player : Entity
         anime.transform.SetParent(null); //tolgo il parent al prefab
         RecuperaAnime.animeDaRecuperare = minionsKilled; //assegno il valore delle anime raccolte fin qui alla var statica animedarecuperare
         minionsKilled = 0; //resetto il valore delle anime raccolte
+
+        //yield return new WaitForSeconds(2f);//////
 
         CambiaTestoAnime();
 

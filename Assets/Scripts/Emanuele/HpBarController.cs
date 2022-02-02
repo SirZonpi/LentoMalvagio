@@ -46,5 +46,10 @@ public class HpBarController : MonoBehaviour
         
     }
 
+    private void OnDestroy() //altrimenti succedono polpette
+    {
+        Entity.OnHealthAdded -= AddHpBar;  
+        Entity.OnHealthRemoved -= RemoveHpBar;
+    }
 
 }

@@ -152,7 +152,7 @@ public class Entity : MonoBehaviour
 
     public void OnDestroy()
     { 
-      // OnHealthRemoved(this); //una volta disabilitato richiamiamo subito l'evento e passiamo come argomento questa stessa entity. p.s. l'ho messo anche qui perché quando faccio stop in playmode i nemici vengono distrutti e comparirebbero mille messaggi d'errore in console
+       OnHealthRemoved(this); //una volta disabilitato richiamiamo subito l'evento e passiamo come argomento questa stessa entity. p.s. l'ho messo anche qui perché quando faccio stop in playmode i nemici vengono distrutti e comparirebbero mille messaggi d'errore in console
 
     }
 
